@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.top-navigation {
+    background-color:#3c3c3b;
+}
+
+.fa-bicycle {
+    margin-top: 0.75em;
+    color: orange;  
+    font-size: 1.25em;
+}
+
+.navlink-alignment {
+    font-size: 1.25em;
+    line-height: -5;
+}
+
+.telephone-number {
+    font-size: 1.25em;
+}
+
+.fa-search {
+    color: #fafafa;
+}
+/* not currently in use but may need
+.top-discount-banner {
+    font-size: 1em;
+    width: auto;
+    height: 5.5vh;
+    background-color:#FF5733 ;
+    position:relative;
+    animation: fadein 3s;
+    -moz-animation: fadein 3s ;
+    -webkit-animation: fadein 3s;
+    -moz-animation: fadein 3s;
+}
+.top-discount-banner h1 {
+    padding-top: 0.125em;
+    font-size: x-large;
+}
+*/
+
+
+
+/* --------- Keyframes Calls -------------- */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* -- Firefox -- */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* -- Safari, Opera and Chrome --  */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* --- IE --- */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+/* --------- Media queries ---------------- */
+/*- < 250px-*/
+@media only screen and (max-width: 249px) {
+    .fa-bicycle, .telephone-number{
+        display: none;
+    }
+}
+  /*- 250px - 320px -*/
+  @media only screen and (min-width: 250px) and (max-width: 320px) {
+    .fa-bicycle, .telephone-number{
+        display: none;
+    }
+  }
+  /*- 321px - 499px -*/
+  @media only screen and (min-width: 321px) and (max-width: 499px) {
+    .fa-bicycle, .telephone-number{
+        display: none;
+    }
+  }
+  
+  /*- 500px - 767px -*/
+  @media only screen and (min-width: 500px) and (max-width: 767px) {
+ .fa-bicycle, .telephone-number{
+     display: none;
+ }
+  }
+  
+  /*- 992px - 1023px -*/
+  @media only screen and (min-width: 992px) and (max-width: 1023px) {
+
+ 
+   
+  }
+  
+  /*- 1024px - 1200px -*/
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  
+  }
+
+  /* 1200px -> */
+  @media only screen and (min-width: 1200px) {
+
+ 
+}
