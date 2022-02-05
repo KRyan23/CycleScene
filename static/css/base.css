@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fafafa;
 }
 
 a, a:hover {
@@ -14,13 +15,29 @@ ul {
 }
 
 .top-navigation {
-    background-color:#3c3c3b;
+    background-color:fafafa;
 }
 
 .fa-bicycle {
     margin-top: 0.75em;
     color: orange;  
     font-size: 1.25em;
+}
+
+.fa-shopping-bag {
+    color: orange;
+    font-size: 1.25em;
+    margin: 0.35em 1.0em 0 1em;
+    border: 1px solid #6C757D;
+    border-radius: 5px;
+    padding: 5px 5px 5px 5px;
+    
+}
+
+.shopping-bag-total {
+    font-size: 0.75em;
+    color:#6C757D;
+    padding-left: 1em;
 }
 
 .navlink-alignment {
@@ -33,6 +50,26 @@ ul {
 }
 
 .fa-search {
+    color: orange;
+    border-color: orange;
+}
+
+.btn-outline-secondary {
+    margin: 0 2px 0 20px;
+}
+
+.main-logo {
+    height: 90px;
+    width: 90px;
+    margin: 0 10px 20px 0px;
+}
+
+.shopping-cart-mobile {
+    background-color: #6C757D;
+    height: 42px;
+}
+
+.shopping-cart-mobile span{
     color: #fafafa;
 }
 /* not currently in use but may need
@@ -87,41 +124,89 @@ ul {
     .fa-bicycle, .telephone-number{
         display: none;
     }
+
+    
 }
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
     .fa-bicycle, .telephone-number{
         display: none;
     }
+
+    .btn-outline-secondary {
+        margin: 0 2px 0 2px;
+    }
+
+    .search-box {
+        max-width: 100px;
+    }
+        
   }
   /*- 321px - 499px -*/
   @media only screen and (min-width: 321px) and (max-width: 499px) {
     .fa-bicycle, .telephone-number{
         display: none;
     }
+    
+    .btn-outline-secondary {
+        margin: 0 2px 0 2px;
+    }
+
+    .main-logo {
+       margin: 0 -10px 0px 0px;
+    }
+    .search-box {
+        max-width: 120px;
+    }
   }
   
   /*- 500px - 767px -*/
   @media only screen and (min-width: 500px) and (max-width: 767px) {
- .fa-bicycle, .telephone-number{
+    
+    .fa-bicycle, .telephone-number{
      display: none;
- }
+    }
+
+  }
+
+  /*- 767px - 992px -*/
+  @media only screen and (min-width: 767px) and (max-width: 992px) {
+    
+    .fa-bicycle, .telephone-number{
+     display: none;
+    }
+
+    .shopping-cart-mobile {
+        display:none;
+    }
   }
   
   /*- 992px - 1023px -*/
   @media only screen and (min-width: 992px) and (max-width: 1023px) {
 
- 
+    .shopping-cart-mobile {
+        display:none;
+    }
+
+    .shopping-cart-mobile {
+        display:none;
+    }
    
   }
   
   /*- 1024px - 1200px -*/
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   
+    .shopping-cart-mobile {
+        display:none;
+    }
   }
 
   /* 1200px -> */
   @media only screen and (min-width: 1200px) {
 
+    .shopping-cart-mobile {
+        display:none;
+    }
  
 }
