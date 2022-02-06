@@ -15,13 +15,7 @@ ul {
 }
 
 .top-navigation {
-    background-color:fafafa;
-}
-
-.fa-bicycle {
-    margin-top: 0.75em;
-    color: orange;  
-    font-size: 1.25em;
+    background-color:#fafafa;
 }
 
 .fa-shopping-bag {
@@ -54,6 +48,11 @@ ul {
     border-color: orange;
 }
 
+.form-control:focus {
+    border-color: #6C757D !important;
+    box-shadow: 0 0 7px #6C757D !important;
+}
+
 .btn-outline-secondary {
     margin: 0 2px 0 20px;
 }
@@ -62,37 +61,56 @@ ul {
     height: 90px;
     width: 90px;
     margin: 0 10px 20px 0px;
+    animation: rotate 3s linear;
 }
 
 .shopping-cart-mobile {
-    background-color: #6C757D;
+    background-color: #a0a0a0;
     height: 42px;
 }
 
 .shopping-cart-mobile span{
     color: #fafafa;
 }
-/* not currently in use but may need
-.top-discount-banner {
-    font-size: 1em;
-    width: auto;
-    height: 5.5vh;
-    background-color:#FF5733 ;
-    position:relative;
-    animation: fadein 3s;
-    -moz-animation: fadein 3s ;
-    -webkit-animation: fadein 3s;
-    -moz-animation: fadein 3s;
+
+.fa-shopping-bag {
+    border: 1px solid #a0a0a0;
 }
-.top-discount-banner h1 {
-    padding-top: 0.125em;
-    font-size: x-large;
+
+.desktop-navigation {
+    background-color:#a0a0a0;
 }
-*/
 
+.fa-home {
+    color: orange;
+}
 
+.fa-bicycle {
+    color: #fafafa;
+    margin-left: -1.75em;
+    margin-top: 1.5em; 
+    
+}
 
+ul > li {
+    display: inline-block;
+    
+}
+
+.nav-link {
+    color:#6C757D;
+}
+
+.nav-link:hover {
+    color: orange;
+}
 /* --------- Keyframes Calls -------------- */
+
+@keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -121,17 +139,15 @@ ul {
 /* --------- Media queries ---------------- */
 /*- < 250px-*/
 @media only screen and (max-width: 249px) {
-    .fa-bicycle, .telephone-number{
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
         display: none;
-    }
-
-    
+    }    
 }
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
-    .fa-bicycle, .telephone-number{
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
         display: none;
-    }
+    } 
 
     .btn-outline-secondary {
         margin: 0 2px 0 2px;
@@ -144,9 +160,10 @@ ul {
   }
   /*- 321px - 499px -*/
   @media only screen and (min-width: 321px) and (max-width: 499px) {
-    .fa-bicycle, .telephone-number{
+
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
         display: none;
-    }
+    } 
     
     .btn-outline-secondary {
         margin: 0 2px 0 2px;
@@ -158,21 +175,22 @@ ul {
     .search-box {
         max-width: 120px;
     }
+
   }
   
   /*- 500px - 767px -*/
   @media only screen and (min-width: 500px) and (max-width: 767px) {
     
-    .fa-bicycle, .telephone-number{
-     display: none;
-    }
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
+        display: none;
+    } 
 
   }
 
   /*- 767px - 992px -*/
   @media only screen and (min-width: 767px) and (max-width: 992px) {
     
-    .fa-bicycle, .telephone-number{
+    .telephone-number{
      display: none;
     }
 
