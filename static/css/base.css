@@ -89,26 +89,38 @@ ul {
     color: #fafafa;
     margin-left: -1.75em;
     margin-top: 1.5em; 
-    
+    animation: slidein 5s;
 }
 
 ul > li {
-    display: inline-block;
-    
+    display: inline-block;   
 }
 
 .nav-link {
     color:#6C757D;
 }
 
-.nav-link:hover {
+.nav-link:hover, .override-link-color:hover {
     color: orange;
 }
 /* --------- Keyframes Calls -------------- */
 
+/* Rotates the CycleScence icon on load to simulate a bike wheel */
 @keyframes rotate {
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+/* Slides the bicycle into the house icon */
+@keyframes slidein {
+    100% {
+        margin-left: -1.75em;
+      
+    }
+    50% {
+      color: #6C757D;
+      margin-left: -7em;
     }
   }
 
