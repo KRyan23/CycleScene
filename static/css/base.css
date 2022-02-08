@@ -103,6 +103,22 @@ ul > li {
 .nav-link:hover, .override-link-color:hover {
     color: orange;
 }
+
+.carousel-item {
+    min-height: 280px;
+    max-height: 450px;
+}
+
+.carousel-heading {
+    color: #6C757D;
+    font-weight:bolder;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
