@@ -60,7 +60,8 @@ ul {
 .main-logo {
     height: 90px;
     width: 90px;
-    margin: 0 10px 20px 0px;
+    margin: 0 10px 20px 20px;
+    padding: 5px 5px 5px 5px;
     animation: rotate 3s linear;
 }
 
@@ -105,18 +106,23 @@ ul > li {
 }
 
 .carousel-item {
-    min-height: 280px;
-    max-height: 450px;
+    
+    max-height: auto;
 }
 
 .carousel-heading {
-    color: #6C757D;
-    font-weight:bolder;
+    color: white;
+    font-weight:900;
     position: absolute;
-    top: 10%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: fadein 5s;
     
+}
+
+.image-opacity-9 {
+    opacity: 0.9;
 }
 
 /* --------- Keyframes Calls -------------- */
@@ -169,7 +175,12 @@ ul > li {
 @media only screen and (max-width: 249px) {
     .telephone-number, .shopping-cart-desktop, .desktop-navigation {
         display: none;
-    }    
+    }
+    
+    .carousel-heading {
+        font-size: 1em;
+        top: 20%;    
+    }
 }
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
@@ -184,6 +195,11 @@ ul > li {
     .search-box {
         max-width: 100px;
     }
+
+    .carousel-heading {
+        font-size: 1em;
+        top: 20%;    
+    }
         
   }
   /*- 321px - 499px -*/
@@ -197,11 +213,14 @@ ul > li {
         margin: 0 2px 0 2px;
     }
 
-    .main-logo {
-       margin: 0 -10px 0px 0px;
-    }
     .search-box {
         max-width: 120px;
+    }
+
+    .carousel-heading {
+        font-size: 1.5em;
+        top: 50%;
+               
     }
 
   }
@@ -211,7 +230,11 @@ ul > li {
     
     .telephone-number, .shopping-cart-desktop, .desktop-navigation {
         display: none;
-    } 
+    }
+    
+    .carousel-heading {
+        font-size: 2em;        
+    }
 
   }
 
@@ -225,6 +248,10 @@ ul > li {
     .shopping-cart-mobile {
         display:none;
     }
+
+    .carousel-heading {
+        font-size: 3em;        
+    }
   }
   
   /*- 992px - 1023px -*/
@@ -237,6 +264,10 @@ ul > li {
     .shopping-cart-mobile {
         display:none;
     }
+
+    .carousel-heading {
+        font-size: 3.5em;        
+    }
    
   }
   
@@ -246,6 +277,10 @@ ul > li {
     .shopping-cart-mobile {
         display:none;
     }
+
+    .carousel-heading {
+        font-size: 3.5em;        
+    }
   }
 
   /* 1200px -> */
@@ -253,6 +288,10 @@ ul > li {
 
     .shopping-cart-mobile {
         display:none;
+    }
+
+    .carousel-heading {
+        font-size: 4em;        
     }
  
 }

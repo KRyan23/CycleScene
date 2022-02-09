@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+  <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+  
+<title>CycleScene</title>
+
+ </head>
+<body>
+<header class="top-navigation">
+    <div>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <img class="main-logo" alt="main logo" src="media/logo101.png">
+     <a href="#" class="navbar-brand"><span class="brand-heading"></span></a>
+     <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
+      <form class="d-flex">
+        
+     <input type="text" class="form-control search-box" placeholder="Search here..."></div><button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
+    </form>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="ToggleNavigation">
+     <span class="navbar-toggler-icon"></span>
+     </button>
+    <div class="collapse navbar-collapse" id="toggleMobileMenu">
+    <ul class="navbar-nav ms-auto">
+        <li><a href="#" class="nav-link navlink-alignment"><span class="override-link-color">Register</span></a></li>
+        <li><a href="#" class="nav-link navlink-alignment"><span class="override-link-color">Login</span></a></li>
+        <li><a href="tel:018551522" class="nav-link" aria-label="telephone" title="telephone"><span class="telephone-number">(01)8551522</span></a></li>
+        <li><i class="fas fa-shopping-bag fa-lg shopping-cart-desktop"><span class="shopping-bag-total">€0.00</span></i> </li>
+    </ul>
+    </div>
+</nav>
+</div>
+<div class="shopping-cart-mobile text-center">
+  <i class="fas fa-shopping-bag fa-lg"><span class="shopping-bag-total">€0.00</span></i>
+</div>
+<div class="desktop-navigation">
+  <nav>
+<ul class="text-center bg-light">
+  <li><a href="#" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i class="fas fa-bicycle"></i></a></li>
+  <li><a href="#" class="nav-link navlink-alignment">Bikes</a></li>
+  <li><a href="#" class="nav-link navlink-alignment">Parts</a></li>
+  <li><a href="#" class="nav-link navlink-alignment">Nutrition</a></li>
+  <li><a href="#" class="nav-link navlink-alignment">Accesories</a></li>
+  <li><a href="#" class="nav-link navlink-alignment">Clothing</a></li>
+  <li><a href="#" class="nav-link navlink-alignment">Services</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div id="mainCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="hover">
+   <div class="carousel-inner">    
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="media/hero-1.jpg" class="d-block w-100 image-opacity-9" alt="hero1">
+      <h2 class="carousel-heading w-mt-2">ADVENTURE AWAITS</h2>
+    </div>
+    <div class="carousel-item" data-bs-interval="8000">
+      <img src="media/hero-2.jpg" class="d-block w-100 image-opacity-9" alt="hero2">
+      <h2 class="carousel-heading w-mt-2">GET RIDE READY</h2>
+    </div>
+    <div class="carousel-item" data-bs-interval="6000">
+      <img src="media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="hero3">
+      <h2 class="carousel-heading w-mt-2">CHOOSE YOUR STYLE</h2>
+    </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="hero">
+<img src="media/hero-1.jpg" class="d-block w-100 " alt="hero3">
+</div>
+<h2 style="display:none;">This is the home page extending the base.html</h2>
+  
+  <!-- This will be for the hero image at the top of each category, bike, part, clothes-->
+
+  
+  
+  <!-- This will be for products inside in each category-->
+
+  
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+</body>
+</html>
