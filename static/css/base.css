@@ -22,7 +22,6 @@ ul {
     color: orange;
     font-size: 1.25em;
     margin: 0.35em 1.0em 0 1em;
-    border: 1px solid #6C757D;
     border-radius: 5px;
     padding: 5px 5px 5px 5px;
     
@@ -31,7 +30,7 @@ ul {
 .shopping-bag-total {
     font-size: 0.75em;
     color:#6C757D;
-    padding-left: 1em;
+    padding:0 1em 0 1em;
 }
 
 .navlink-alignment {
@@ -66,16 +65,8 @@ ul {
 }
 
 .shopping-cart-mobile {
-    background-color: #a0a0a0;
+    background-color: #E9E9EB;
     height: 42px;
-}
-
-.shopping-cart-mobile span{
-    color: #fafafa;
-}
-
-.fa-shopping-bag {
-    border: 1px solid #a0a0a0;
 }
 
 .desktop-navigation {
@@ -105,13 +96,8 @@ ul > li {
     color: orange;
 }
 
-.carousel-item {
-    
-    max-height: auto;
-}
-
 .carousel-heading {
-    color: white;
+    color:white;
     font-weight:900;
     position: absolute;
     top: 50%;
@@ -122,8 +108,16 @@ ul > li {
 }
 
 .image-opacity-9 {
-    opacity: 0.9;
+    opacity: 0.75;
 }
+
+.categories {
+    border:1px solid #fafafa;
+    color:#6C757D;
+    background-color: #E9E9EB;
+    height: 42px;
+}
+
 
 /* --------- Keyframes Calls -------------- */
 
@@ -241,27 +235,19 @@ ul > li {
   /*- 767px - 992px -*/
   @media only screen and (min-width: 767px) and (max-width: 992px) {
     
-    .telephone-number{
+    .telephone-number, .mobile-navigation, .shopping-cart-mobile{
      display: none;
     }
 
-    .shopping-cart-mobile {
-        display:none;
-    }
-
-    .carousel-heading {
-        font-size: 3em;        
+   .carousel-heading {
+     font-size: 3em;        
     }
   }
   
   /*- 992px - 1023px -*/
   @media only screen and (min-width: 992px) and (max-width: 1023px) {
 
-    .shopping-cart-mobile {
-        display:none;
-    }
-
-    .shopping-cart-mobile {
+    .shopping-cart-mobile, .shopping-cart-mobile, .mobile-navigation {
         display:none;
     }
 
@@ -269,12 +255,13 @@ ul > li {
         font-size: 3.5em;        
     }
    
+    
   }
   
   /*- 1024px - 1200px -*/
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   
-    .shopping-cart-mobile {
+    .shopping-cart-mobile, .mobile-navigation {
         display:none;
     }
 
@@ -286,12 +273,17 @@ ul > li {
   /* 1200px -> */
   @media only screen and (min-width: 1200px) {
 
-    .shopping-cart-mobile {
+    .shopping-cart-mobile, .mobile-navigation {
         display:none;
     }
 
     .carousel-heading {
         font-size: 4em;        
     }
- 
+    /*Dont think we need this */
+    .img {
+        max-height: 35vh;!important
+        max-width: 10vw;!important 
+     }
+
 }

@@ -253,17 +253,18 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [1 - Main Cycle Scene Icon ](https://looka.com/editor/81919265)
 
-[1 - Image for ]()
+[1 - Image for carousel hero-1](https://www.pexels.com/photo/rear-view-of-man-on-mountain-road-against-sky-258045/)
 
-[2 - Image for ]()
+[2 - Image for carousel hero-2](https://www.pexels.com/photo/group-of-men-riding-bicycles-on-road-5970275/)
 
-[3 - Image for  ]()
+[3 - Image for carousel hero-3]()
 
-[4 - Image for ]()
+[4 - Image for Womans Bike](https://www.pexels.com/photo/woman-holding-yellow-bike-at-daytime-1112627/)
+(https://www.pexels.com/photo/woman-wearing-black-dress-seating-near-green-bicycle-956724/)
 
-[5 - Image for ]()
+[5 - Image for mans bike](https://www.pexels.com/photo/photo-of-man-sitting-near-bike-2224699/)
 
-[6 - Image for ]()
+[6 - Image for Road Bikes](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/iplq6m7f5bxssxwglfyl/MY22PropelAdvancedPro0Disc_ColorAPanther.jpg")
 
 [7 - Image for ]()
 
