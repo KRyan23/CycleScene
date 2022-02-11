@@ -118,6 +118,11 @@ ul > li {
     height: 42px;
 }
 
+.grow-effect:hover, .grow-effect:active {
+    transform: scale(1, 1.02);
+    transition: transform .55s;
+    background-color:#fafafa;
+}
 
 /* --------- Keyframes Calls -------------- */
 
