@@ -270,7 +270,11 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [8 - Image for mountain bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kp73ggadc1nkvogcwkmx/MY21REIGN_29_SX_ColorAConcrete.jpg)
 
-[9 - Image for city bike](https://images.giant-bicycles.com/b_white,c_fill,h_1000,q_80/pa38fxbidbwohrh2bmlp/showcase_Alight-1-DD-D_Color-A-Eclipse.jpg)
+[9 - Image for city bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kdjhmafk6kp9ki2l3cd9/MY21Alight3City_ColorATrekkingGreen.jpg)
+
+[10 - Image for Wheels](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/spnwdwmcmavefnboqozj/350000128-350000128-SLR1-DISC-65MM.jpg)
+
+[11 - Image for Saddle](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg)
 
 The Icons on the various pages were chosen from the following sources.
 
