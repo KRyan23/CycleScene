@@ -240,6 +240,7 @@ The project was deployed using the steps below.
 -   Privacy Policy - Some of the privacy policy was borrowed from [this link]() to save time on the project. 
 -   The remaining content was written by myself with some minor contributions by family and friends.
 
+-   The quote on the main page is by a famous long distance cyclist - Heinz Stucke
 &nbsp;
 
 ### Media

@@ -106,10 +106,6 @@ ul > li {
     animation: fadein 3.5s;
 }
 
-.carousel {
-
-}
-
 .image-opacity-9 {
     opacity: 0.75;
 }
@@ -125,11 +121,20 @@ ul > li {
     transform: scale(1, 1.02);
     transition: transform .55s;
     background-color:#fafafa;
+    border: 1px solid #5C636A;
 }
 
-.carousel-control-next-icon {
-    background-image: none;
+.main-page-quote {
+    padding: 2em 1em 1em 1em;
+    font-weight: 900;
+    background-clip: text;
+    color: transparent;
+    background: #5C636A;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.9);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
 }
+
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
@@ -150,7 +155,7 @@ ul > li {
       margin-left: -7em;
     }
   }
-
+/* fades in an element */
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -178,7 +183,7 @@ ul > li {
 /* --------- Media queries ---------------- */
 /*- < 250px-*/
 @media only screen and (max-width: 249px) {
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
         display: none;
     }
     
@@ -189,7 +194,8 @@ ul > li {
 }
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
+
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
         display: none;
     } 
 
@@ -210,7 +216,7 @@ ul > li {
   /*- 321px - 499px -*/
   @media only screen and (min-width: 321px) and (max-width: 499px) {
 
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
         display: none;
     } 
     
@@ -224,8 +230,7 @@ ul > li {
 
     .carousel-heading {
         font-size: 1.5em;
-        top: 50%;
-               
+        top: 50%;   
     }
 
   }
@@ -233,7 +238,7 @@ ul > li {
   /*- 500px - 767px -*/
   @media only screen and (min-width: 500px) and (max-width: 767px) {
     
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation {
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
         display: none;
     }
     
@@ -246,7 +251,7 @@ ul > li {
   /*- 767px - 992px -*/
   @media only screen and (min-width: 767px) and (max-width: 992px) {
     
-    .telephone-number, .mobile-navigation, .shopping-cart-mobile{
+    .telephone-number, .mobile-navigation, .shopping-cart-mobile, .mobile-caret {
      display: none;
     }
 
@@ -258,33 +263,33 @@ ul > li {
   /*- 992px - 1023px -*/
   @media only screen and (min-width: 992px) and (max-width: 1023px) {
 
-    .shopping-cart-mobile, .shopping-cart-mobile, .mobile-navigation {
+    .shopping-cart-mobile, .shopping-cart-mobile, .mobile-navigation, .mobile-caret {
         display:none;
     }
 
     .carousel-heading {
         font-size: 3.5em;        
     }
-   
     
   }
   
   /*- 1024px - 1200px -*/
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   
-    .shopping-cart-mobile, .mobile-navigation {
+    .shopping-cart-mobile, .mobile-navigation, .mobile-caret {
         display:none;
     }
 
     .carousel-heading {
         font-size: 3.5em;        
     }
+
   }
 
   /* 1200px -> */
   @media only screen and (min-width: 1200px) {
 
-    .shopping-cart-mobile, .mobile-navigation {
+    .shopping-cart-mobile, .mobile-navigation, .mobile-caret {
         display:none;
     }
 
