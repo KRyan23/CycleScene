@@ -135,6 +135,15 @@ ul > li {
     -moz-background-clip: text;
 }
 
+.footer-heading-padding {
+    padding:1em 0 0 0;
+    margin:0 0 0 0;
+}
+
+.footer-category-padding {
+    padding-left: 3em;;
+}
+
 
 /* --------- Keyframes Calls -------------- */
 
