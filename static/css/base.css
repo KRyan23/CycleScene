@@ -137,11 +137,7 @@ ul > li {
 
 .footer-heading-padding {
     padding:1em 0 0 0;
-    margin:0 0 0 0;
-}
-
-.footer-category-padding {
-    font-size: 0.5em;;
+    margin:0 0 0 0.85em;
 }
 
 
@@ -326,10 +322,6 @@ ul > li {
     .carousel-heading {
         font-size: 4em;        
     }
-    /*Dont think we need this */
-    .img {
-        max-height: 35vh;!important
-        max-width: 10vw;!important 
-     }
+    
 
 }
