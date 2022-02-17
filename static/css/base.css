@@ -92,7 +92,7 @@ ul > li {
     color:#6C757D;
 }
 
-.nav-link:hover, .override-link-color:hover {
+.nav-link:hover, .override-link-color:hover, .footer-link:hover {
     color: orange;
 }
 
