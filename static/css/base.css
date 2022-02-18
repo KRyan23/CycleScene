@@ -139,8 +139,6 @@ ul > li {
     font-weight: 900;
 }
 
-
-
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
@@ -237,6 +235,12 @@ ul > li {
     .input-group {
         width: 100%;
     }
+
+    .search-box {
+        max-width: 160px;
+        margin-left: 0.2em;
+        margin-right: 0;
+    }
         
   }
   /*- 321px - 499px -*/
@@ -249,7 +253,7 @@ ul > li {
     .main-logo {
         margin: 0 10px 10px 0px;
         padding: 3px 3px 3px 3px;
-    } /* left off here */
+    }
 
     .form-control {
         width:auto;
@@ -261,7 +265,7 @@ ul > li {
 
     .search-box {
         max-width: 160px;
-        margin-left: -1.5em;
+        margin-left: -1.7em;
         margin-right: 0;
     }
 
@@ -349,5 +353,6 @@ ul > li {
         font-size: 4em;        
     }
     
+    /* Above 1200px neeed to change the laout of the navigation next to the search bar*/
 
 }
