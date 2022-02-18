@@ -92,7 +92,7 @@ ul > li {
     color:#6C757D;
 }
 
-.nav-link:hover, .override-link-color:hover, .footer-link:hover, .social-media:hover, .payment-types:hover{
+.nav-link:hover, .override-link-color:hover, .footer-link:hover, .social-media:hover, .payment-types:hover, .maps-location:hover{
     color: orange;
 }
 
@@ -135,9 +135,11 @@ ul > li {
     -moz-background-clip: text;
 }
 
-.newsletter-input-box {
-    width: 225px;
+.text-font-weight {
+    font-weight: 900;
 }
+
+
 
 /* --------- Keyframes Calls -------------- */
 
@@ -199,6 +201,10 @@ ul > li {
     .main-page-quote > h2 {
         font-size: 1em;
     }
+
+    body {
+        font-size: 1.1em;
+    }
 }
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
@@ -222,6 +228,14 @@ ul > li {
 
     .main-page-quote > h2 {
         font-size: 1em;
+    }
+
+    body {
+        font-size: 1.1em;
+    }
+
+    .input-group {
+        width: 100%;
     }
         
   }
@@ -249,6 +263,9 @@ ul > li {
         font-size: 1em;
     }
 
+    body {
+        font-size: 1.1em;
+    }
   }
   
   /*- 500px - 767px -*/
