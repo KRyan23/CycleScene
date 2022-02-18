@@ -244,14 +244,25 @@ ul > li {
 
     .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us {
         display: none;
-    } 
+    }
+    
+    .main-logo {
+        margin: 0 10px 10px 0px;
+        padding: 3px 3px 3px 3px;
+    } /* left off here */
+
+    .form-control {
+        width:auto;
+    }
     
     .btn-outline-secondary {
         margin: 0 2px 0 2px;
     }
 
     .search-box {
-        max-width: 120px;
+        max-width: 160px;
+        margin-left: -1.5em;
+        margin-right: 0;
     }
 
     .carousel-heading {
