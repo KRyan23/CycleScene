@@ -187,7 +187,7 @@ ul > li {
 /* --------- Media queries ---------------- */
 /*- < 250px-*/
 @media only screen and (max-width: 249px) {
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us {
         display: none;
     }
     
@@ -203,7 +203,7 @@ ul > li {
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
 
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us {
         display: none;
     } 
 
@@ -228,7 +228,7 @@ ul > li {
   /*- 321px - 499px -*/
   @media only screen and (min-width: 321px) and (max-width: 499px) {
 
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us {
         display: none;
     } 
     
@@ -254,7 +254,7 @@ ul > li {
   /*- 500px - 767px -*/
   @media only screen and (min-width: 500px) and (max-width: 767px) {
     
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret {
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us {
         display: none;
     }
     
@@ -271,7 +271,7 @@ ul > li {
   /*- 767px - 992px -*/
   @media only screen and (min-width: 767px) and (max-width: 992px) {
     
-    .hide-on-desktop, .mobile-navigation, .shopping-cart-mobile, .mobile-caret {
+    .hide-on-desktop, .mobile-navigation, .shopping-cart-mobile, .mobile-caret, .mobile-contact-us {
      display: none;
     }
 
@@ -287,7 +287,7 @@ ul > li {
   /*- 992px - 1023px -*/
   @media only screen and (min-width: 992px) and (max-width: 1023px) {
 
-    .shopping-cart-mobile, .hide-on-desktop, .mobile-navigation, .mobile-caret {
+    .shopping-cart-mobile, .hide-on-desktop, .mobile-navigation, .mobile-caret, .mobile-contact-us {
         display:none;
     }
 
@@ -300,7 +300,7 @@ ul > li {
   /*- 1024px - 1200px -*/
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   
-    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop {
+    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop, .mobile-contact-us {
         display:none;
     }
 
@@ -313,7 +313,7 @@ ul > li {
   /* 1200px -> */
   @media only screen and (min-width: 1200px) {
 
-    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop {
+    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop, .mobile-contact-us {
         display:none;
     }
 
