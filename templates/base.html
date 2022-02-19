@@ -15,58 +15,68 @@
 <body>
   <!--Navigation start-->
 <header class="top-navigation">
-  <div>
+  <div >
     <nav class="navbar navbar-expand-lg navbar-light">
       <img class="main-logo" alt="main logo" src="media/logo101.png">
       <a href="#" class="navbar-brand"><span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
-        <form class="d-flex">
+        <form class="d-flex alpha">
           <input type="text" class="form-control search-box" placeholder="Search here...">
-      </div><button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
+      </div><button type="submit" class="btn btn-outline-secondary desktop-search-button"><i class="fa fa-search"></i></button>
       </form>
-      <button class="navbar-toggler mx-1" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+      <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
         aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="ToggleNavigation">
-       <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="toggleMobileMenu">
         <ul class="navbar-nav ms-auto">
-          <li><a href="#" class="nav-link navlink-alignment"><span class="override-link-color">Register</span></a></li>
-          <li><a href="#" class="nav-link navlink-alignment"><span class="override-link-color">Login</span></a></li>
+          <li class="hide-on-desktop display-on-smallscreen"><form class="d-flex">
+            <input type="text" class="mx-3" placeholder="Search here...">
+            <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
+        </form></li>
+          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span class="override-link-color text-font-weight">Register</span></a></li>
+          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span class="override-link-color text-font-weight">Login</span></a></li>
           <hr class="hide-on-desktop">
-          <li><a href="tel:018551522" class="nav-link" aria-label="telephone" title="telephone"><span
-                class="telephone-number ">(01)8551522</span></a></li>
-          <li><i class="fas fa-shopping-bag fa-lg shopping-cart-desktop"><span
-                class="shopping-bag-total hide-on-desktop">€0.00</span></i> </li>
+          <li><span class="shopping-bag-total-desktop hide-on-desktop"><i class="fas fa-shopping-bag fa-lg shopping-cart-desktop">
+          </i>€0.00</span></i> </li>
           <li><a href="#" class="nav-link navlink-alignment"><span
-                class="override-link-color hide-on-desktop">Bikes</span></a></li>
+                class="override-link-color hide-on-desktop text-font-weight mx-3">Bikes</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
-                class="override-link-color hide-on-desktop">Components</span></a></li>
+                class="override-link-color hide-on-desktop text-font-weight mx-3">Components</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
-                class="override-link-color hide-on-desktop">Nutrition</span></a></li>
+                class="override-link-color hide-on-desktop text-font-weight mx-3">Nutrition</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
-                class="override-link-color hide-on-desktop">Accesories</span></a></li>
+                class="override-link-color hide-on-desktop text-font-weight mx-3">Accesories</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
-                class="override-link-color hide-on-desktop">Clothing</span></a></li>
+                class="override-link-color hide-on-desktop text-font-weight mx-3">Clothing</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
-                class="override-link-color hide-on-desktop">Services</span></a></li>
+                class="override-link-color hide-on-desktop text-font-weight mx-3">Services</span></a></li>
+          
         </ul>
       </div>
     </nav>
   </div>
-  <div class="shopping-cart-mobile text-center">
-    <i class="fas fa-shopping-bag fa-lg"><span class="shopping-bag-total">€0.00</span></i>
+  <div class="">
+    <div class="row">
+      <div class="col-12 text-center mb-0">
+        <div class="shopping-cart-mobile">
+          <i class="fas fa-shopping-bag fa-lg"><span class="shopping-bag-total">€0.00</span></i>
+        </div>
+      </div>
+    </div>
   </div>
+  
   <div class="desktop-navigation">
     <nav>
       <ul class="text-center bg-light">
         <li><a href="#" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
               class="fas fa-bicycle"></i></a></li>
-        <li><a href="#" class="nav-link navlink-alignment">Bikes</a></li>
-        <li><a href="#" class="nav-link navlink-alignment">Components</a></li>
-        <li><a href="#" class="nav-link navlink-alignment">Nutrition</a></li>
-        <li><a href="#" class="nav-link navlink-alignment">Accesories</a></li>
-        <li><a href="#" class="nav-link navlink-alignment">Clothing</a></li>
-        <li><a href="#" class="nav-link navlink-alignment">Services</a></li>
+        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Bikes</a></li>
+        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Components</a></li>
+        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Nutrition</a></li>
+        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Accesories</a></li>
+        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Clothing</a></li>
+        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Services</a></li>
       </ul>
     </nav>
   </div>
@@ -86,7 +96,7 @@
      </div>
      <div class="carousel-item" data-bs-interval="6000">
        <img src="media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="hero3">
-       <h2 class="carousel-heading w-mt-2">CHOOSE YOUR STYLE</h2>
+       <h2 class="carousel-heading mx-3">CHOOSE A STYLE</h2>
      </div>
      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
        <i class="fas fa-caret-left mobile-caret"></i>
@@ -280,9 +290,15 @@
           <a class="btn btn-lg payment-types" href="https://stripe.com/" target="_blank" rel="noopener"
             aria-label="stripe" title="stripe" role="button">
             <i class="fab fa-cc-stripe fa-2x mt-2"></i></a>
-          <a class="btn btn-lg payment-types" href="https://www.visa.ie/" target="_blank" rel="noopener"
+          <a class="btn btn-lg payment-types disabled-feature" href="https://www.visa.ie/" target="_blank" rel="noopener"
             aria-label="visa" title="visa" role="button">
             <i class="fab fa-cc-visa fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.mastercard.ie/" target="_blank" rel="noopener"
+            aria-label="mastercard" title="mastercard" role="button">
+            <i class="fab fa-cc-mastercard fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.paypal.com/" target="_blank" rel="noopener"
+            aria-label="paypal" title="paypal" role="button">
+            <i class="fab fa-cc-paypal fa-2x mt-2"></i></a>
         </div>
       </div>
     </div>
@@ -297,7 +313,7 @@
   </div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
         <hr>
       </div>
       <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Bikes</a></div>
@@ -327,7 +343,8 @@
     </div>
   </div>
   <!--copyright and terms and conditions-->
-  <div class="container-fluid mt-5 mb-3">
+  <hr>
+  <div class="container-fluid mt-5 mb-2">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
         <p class="text-wrap">© Copyright 2022 CycleScene all rights reserved. <a href="#" class="footer-link">Privacy
