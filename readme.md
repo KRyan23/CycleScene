@@ -45,22 +45,22 @@
 -   ### Design
     -   #### Colour Scheme
         -   The colour palette used for the site is listed below.
-            - ![#e5e5e5](https://via.placeholder.com/15/e5e5e5/000000?text=+) `Lighter Grey`
-            - ![#f0f0f0](https://via.placeholder.com/15/f0f0f0/000000?text=+) `Light Grey`
-            - ![#0F0F0F](https://via.placeholder.com/15/0F0F0F/000000?text=+) `Black Transistion`
-            - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `White`
+            - ![#FFA500](https://via.placeholder.com/15/FFA500/000000?text=+) `Orange`
             - ![#FAFAFA](https://via.placeholder.com/15/FAFAFA/000000?text=+) `Off White`
-            - ![#198754](https://via.placeholder.com/15/198754/000000?text=+) `Dark Green Transistion`
-            - ![#282828](https://via.placeholder.com/15/282828/000000?text=+) `Charcoal Transistion`
-            - ![#FF0000](https://via.placeholder.com/15/FF0000/000000?text=+) `Red`
+            - ![#000000](https://via.placeholder.com/15/000000/000000?text=+) `Black`
+            - ![#6C757D](https://via.placeholder.com/15/6C757D/000000?text=+) `Dark Gray`
+            - ![#E9E9EB](https://via.placeholder.com/15/E9E9EB/000000?text=+) `Dusk Grey`
+            - ![#a0a0a0](https://via.placeholder.com/15/a0a0a0/000000?text=+) `Light Grey`
+            - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `White`
+            - ![#5C636A](https://via.placeholder.com/15/5C636A/000000?text=+) `Darker Grey`
             
             
     -   #### Typography
         -   
-        The Roboto font was used as the main body font due to its readability and popularity on countless other sites as as always should these font be inaccessable san-serif was chosen to be the backup font.
+        The "Source Sans Pro" font was used as the main body font due to its no nonsense feel and popularity on countless other sites as as always should these font be inaccessable san-serif was chosen to be the backup font.
 
     -   #### Imagery
-        -  Any imagery that was chosen, its purpose is to convey an instant message to the visitor.
+        -  The main carousel imagery was chosen to covey a particular message to range of different cycling enthusiasts, from the 'lone wolf' to the serious group rider and lastly to the casual cyclist. The rest of the product images were chosen from 1 or 2 cycling sites, from previous projects I had found mixing images from a lot of different sources produced an inconsistent look and feel to the site.
 
 *   ### Wireframes
 
@@ -81,7 +81,7 @@
 
 -   Create your own login/account.
 
--   The ability to purchase good from the store.
+-   The ability to purchase goods from the store.
 
 -   Showcase working with Django and Sql databases.
 
@@ -96,7 +96,7 @@
 
 ### Databases Used
 
--   [MongoDb](https://en.wikipedia.org/wiki/MongoDB)
+-   
 
 ### Services Used
 
@@ -111,7 +111,7 @@
 2. [JQuery:](https://code.jquery.com/)
     - Some JQuery was used to simplify frontend deployment.  
 3. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import "Pacifico" and "Roboto" fonts into the style.css file which is used on all pages throughout the site, sans-serif was the backup font.
+    - Google fonts were used to import the "Source Sans Pro" font into the style.css file which is used on all pages throughout the site, sans-serif was the backup font.
 4. [Font Awesome v5.15.4:](https://fontawesome.com/)
     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 5. [GitPod:](https://www.gitpod.io/)
@@ -120,6 +120,8 @@
     - Paint.net was used for resizing images and editing photos for the website.
 7. [Balsamiq:](https://balsamiq.com/)
     - Balsamiq 4.2.1 was used to create the WireFraming during the design process.
+8. [Django:](https://www.djangoproject.com/)
+    - Django was the chosen framework for the project, I found it very useful that it was so similar to flask in many ways.
 
 
 ## Testing
@@ -252,40 +254,63 @@ Images
 
 The images on the Home Page / base template were chosen from the following sources.
 
-[1 - Main Cycle Scene Icon ](https://looka.com/editor/81919265)
+[1 - Main Cycle Scene Icon was generated here](https://looka.com)
 
-[1 - Image for carousel hero-1](https://www.pexels.com/photo/rear-view-of-man-on-mountain-road-against-sky-258045/)
+[1 - The Image for carousel hero-1 was found here](https://www.pexels.com/photo/rear-view-of-man-on-mountain-road-against-sky-258045/)
 
-[2 - Image for carousel hero-2](https://www.pexels.com/photo/group-of-men-riding-bicycles-on-road-5970275/)
+[2 - The Image for carousel hero-2 was found here](https://www.pexels.com/photo/group-of-men-riding-bicycles-on-road-5970275/)
 
-[3 - Image for carousel hero-3]()
+[3 - The Image for carousel hero-3 was found here](https://images.unsplash.com/photo-1604413764976-15c29d2680ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80)
 
-[4 - Image for Womans Bike](https://www.pexels.com/photo/woman-holding-yellow-bike-at-daytime-1112627/)
-(https://www.pexels.com/photo/woman-wearing-black-dress-seating-near-green-bicycle-956724/)
+[4 - Card Image for Road Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/iplq6m7f5bxssxwglfyl/MY22PropelAdvancedPro0Disc_ColorAPanther.jpg)
 
-[5 - Image for mans bike](https://www.pexels.com/photo/photo-of-man-sitting-near-bike-2224699/)
+[5 - Card Image for Mountain Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kp73ggadc1nkvogcwkmx/MY21REIGN_29_SX_ColorAConcrete.jpg)
 
-[6 - Image for Road Bikes](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/iplq6m7f5bxssxwglfyl/MY22PropelAdvancedPro0Disc_ColorAPanther.jpg")
+[6 - Card Image for City Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kdjhmafk6kp9ki2l3cd9/MY21Alight3City_ColorATrekkingGreen.jpg)
 
-[7 - Image for road bike hers](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/glxxhhve8bcvchum6hfl/MY22LangmaAdvanced2Disc_ColorBChameleonPurple.jpg)
+[7 - Card Image for Wheels](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/spnwdwmcmavefnboqozj/350000128-350000128-SLR1-DISC-65MM.jpg)
 
-[8 - Image for mountain bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kp73ggadc1nkvogcwkmx/MY21REIGN_29_SX_ColorAConcrete.jpg)
+[8 - Card Image for Saddle](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg)
 
-[9 - Image for city bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kdjhmafk6kp9ki2l3cd9/MY21Alight3City_ColorATrekkingGreen.jpg)
+[9 - Card Image for Bottles and Cages](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/fauazh4vrmz88ibvznuj/480000361.jpg)
 
-[10 - Image for Wheels](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/spnwdwmcmavefnboqozj/350000128-350000128-SLR1-DISC-65MM.jpg)
+[10 - Card Image for Pumps](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/livhngzrauuzx2jrzh0m/2016_Giant_Control_Mini_Combo_Fold_Out_Mini_Track_Pump.jpg)
 
-[11 - Image for Saddle](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg)
+[11 - Card Image for Jerseys](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/ncx7zm6imyiz66gldj8w/RACE-DAY-SS-JERSEY@-BLACK-BLUE-1.jpg)
+
+[12 - Card Image for Lights](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/saigrabs9broldzopte1/400000167_RECON-HL-200_01.jpg)
 
 The Icons on the various pages were chosen from the following sources.
 
-[1 - Facebook Footer Icon](https://fontawesome.com/v5.15/icons/facebook?style=brands)
+[1 - Search Header Icon](https://fontawesome.com/v5/icons/search?s=solid)
 
-[2 - YouTube Footer Icon](https://fontawesome.com/v5.15/icons/youtube-square?style=brands)
+[2 - Home Header Icon](https://fontawesome.com/v5/icons/home?s=solid)
 
-[3 - Twitter Footer Icon](https://fontawesome.com/v5.15/icons/twitter?style=brands)
+[3 - Shopping Cart Header Icon](https://fontawesome.com/v5/icons/shopping-bag?s=solid)
 
-[4 - Instagram Footer Icon](https://fontawesome.com/v5.15/icons/instagram?style=brands)
+[4 - Bicycle Header Icon](https://fontawesome.com/v5/icons/bicycle?s=solid)
+
+[5 - Carret Left Icon](https://fontawesome.com/v5/icons/caret-left?s=solid)
+
+[6 - Carret Right Icon](https://fontawesome.com/v5/icons/caret-right?s=solid)
+
+[7 - Map Marker Icon](https://fontawesome.com/v5/icons/map-marker-alt?s=solid)
+
+[8 - Facebook Footer Icon](https://fontawesome.com/v5.15/icons/facebook?style=brands)
+
+[9 - YouTube Footer Icon](https://fontawesome.com/v5.15/icons/youtube-square?style=brands)
+
+[10 - Twitter Footer Icon](https://fontawesome.com/v5.15/icons/twitter?style=brands)
+
+[11 - Instagram Footer Icon](https://fontawesome.com/v5.15/icons/instagram?style=brands)
+
+[12 - Stripe Footer Icon](https://fontawesome.com/v5/icons/cc-stripe?s=brands)
+
+[13 - Visa Footer Icon](https://fontawesome.com/v5/icons/cc-visa?s=brands)
+
+[14 - Mastercard Footer Icon](https://fontawesome.com/v5/icons/cc-mastercard?s=brands)
+
+[15 - PayPal Footer Icon](https://fontawesome.com/v5/icons/cc-paypal?s=brands)
 
 ### Acknowledgements
 - My Mentor
