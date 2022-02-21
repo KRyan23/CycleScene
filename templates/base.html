@@ -15,15 +15,16 @@
 <body>
   <!--Navigation start-->
 <header class="top-navigation">
-  <div >
+  <div>
     <nav class="navbar navbar-expand-lg navbar-light">
       <img class="main-logo" alt="main logo" src="media/logo101.png">
       <a href="#" class="navbar-brand"><span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
         <form class="d-flex alpha">
           <input type="text" class="form-control search-box" placeholder="Search here...">
-      </div><button type="submit" class="btn btn-outline-secondary desktop-search-button"><i class="fa fa-search"></i></button>
+      <button type="submit" class="btn btn-outline-secondary desktop-search-button"><i class="fa fa-search"></i></button>
       </form>
+      </div>
       <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
         aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="ToggleNavigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,11 +35,11 @@
             <input type="text" class="mx-3" placeholder="Search here...">
             <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
         </form></li>
-          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span class="override-link-color text-font-weight">Register</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span class="override-link-color text-font-weight">Login</span></a></li>
-          <hr class="hide-on-desktop">
+          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span class="override-link-color text-font-weight">Register</span></a></li>
+          
           <li><span class="shopping-bag-total-desktop hide-on-desktop"><i class="fas fa-shopping-bag fa-lg shopping-cart-desktop">
-          </i>€0.00</span></i> </li>
+          </i>€0.00</span></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
                 class="override-link-color hide-on-desktop text-font-weight mx-3">Bikes</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
@@ -109,6 +110,7 @@
        <span class="visually-hidden">Next</span>
      </button>
    </div>
+  </div>
    <!--mobile only-->
 <div class="mobile-navigation container-fluid my-1">
   <div class="row">
@@ -123,16 +125,14 @@
 <!-- Inspriational quote -->
 <div class="main-page-quote text-center">
   <h2>" It is the unknown around the corner that turns my wheels "</h2>
+  <p class="my-4">long distance cyclist - <em>Heinz Stucke</em></p>
 </div>
-<figcaption class="blockquote-footer text-center ">
-  long distance cyclist<cite title="Source Title"> Heinz Stucke</cite>
-</figcaption>
 <div class="container-fluid my-0">
   <div class="row ">
   <!-- Bike Row -->
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
       <div class="card my-3 grow-effect">
-       <img src="media/road-card.jpg"/>
+       <img src="media/road-card.jpg" alt="road bike"/>
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title ">ROAD BIKES</h3>
           <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -141,7 +141,7 @@
     </div>
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="card my-3 grow-effect">
-        <img src="media/mountain-card.jpg" />
+        <img src="media/mountain-card.jpg" alt="mountain bike" />
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title">MOUNTAIN BIKES</h3>
           <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -150,7 +150,7 @@
     </div>
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="card my-3 grow-effect">
-        <img src="media/city-card.jpg" />
+        <img src="media/city-card.jpg" alt="city bike" />
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title">CITY BIKES</h3>
           <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -160,7 +160,7 @@
 <!--Components -->
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/wheels-card.jpg" />
+    <img src="media/wheels-card.jpg" alt="wheels" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">WHEELS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -169,7 +169,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/saddle-card.jpg" />
+    <img src="media/saddle-card.jpg" alt="saddles" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">SADDLES</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -178,7 +178,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/bottle-card.jpg" />
+    <img src="media/bottle-card.jpg" alt="bottles and cages" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">BOTTLES & CAGES</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -187,7 +187,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/pump-card.jpg" />
+    <img src="media/pump-card.jpg" alt="pumps" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">PUMPS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -196,7 +196,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/jersey-card.jpg" />
+    <img src="media/jersey-card.jpg" alt="jerseys" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">JERSEYS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -205,7 +205,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/light-card.jpg" />
+    <img src="media/light-card.jpg" alt="lights" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">LIGHTS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
