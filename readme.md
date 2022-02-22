@@ -255,13 +255,13 @@ Images
 The images on the Home Page / base template were chosen from the following sources.
 
 [1 - Main Cycle Scene Icon was generated here](https://looka.com)
-
+#### Carousel Images
 [1 - The Image for carousel hero-1 was found here](https://www.pexels.com/photo/rear-view-of-man-on-mountain-road-against-sky-258045/)
 
 [2 - The Image for carousel hero-2 was found here](https://www.pexels.com/photo/group-of-men-riding-bicycles-on-road-5970275/)
 
 [3 - The Image for carousel hero-3 was found here](https://images.unsplash.com/photo-1604413764976-15c29d2680ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80)
-
+#### Card Images
 [4 - Card Image for Road Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/iplq6m7f5bxssxwglfyl/MY22PropelAdvancedPro0Disc_ColorAPanther.jpg)
 
 [5 - Card Image for Mountain Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kp73ggadc1nkvogcwkmx/MY21REIGN_29_SX_ColorAConcrete.jpg)
@@ -279,6 +279,61 @@ The images on the Home Page / base template were chosen from the following sourc
 [11 - Card Image for Jerseys](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/ncx7zm6imyiz66gldj8w/RACE-DAY-SS-JERSEY@-BLACK-BLUE-1.jpg)
 
 [12 - Card Image for Lights](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/saigrabs9broldzopte1/400000167_RECON-HL-200_01.jpg)
+
+#### Products
+[13 - Lock 1](https://www.giant-cork.ie/ie/giant-surelock-flex-key-15)
+
+[14 - Lock 2](https://www.giant-cork.ie/ie/giant-surelock-protector-1-dt)
+
+[15 - Lock 3](https://www.giant-cork.ie/ie/giant-surelock-flex-combo-12)
+
+[16 - Bottle 1](https://www.giant-cork.ie/ie/doublespring-waterbottle-750cc-2019)
+
+[17 -Bottle 2](https://www.giant-cork.ie/ie/airway-composite-water-bottle-cage)
+
+[18 - Bottle 3](https://www.giant-cork.ie/ie/liv-pourfast-double-spring-bottle--750ml--liv)
+
+[19 - Brake 1](https://www.giant-cork.ie/ie/giant-caliper-pad---holder)
+
+[20 - Brake 2](https://www.giant-cork.ie/ie/giant-tri-comp-linear-pull--v-style--brake-pad---holder)
+
+[21 - Brake 3](https://www.giant-cork.ie/ie/conduct-rotor)
+
+[22 -City Bike 1](https://www.giant-cork.ie/ie/alight-3-city)
+
+[23 - City Bike 2](https://www.giant-cork.ie/ie/flourish-fs-2)
+
+[24 - City Bike 3](https://www.giant-cork.ie/ie/escape-1-disc)
+
+[25 - Glove 1](https://www.giant-cork.ie/ie/diversion-long-finger-thermal-gloves-2019)
+
+[26 - Glove 2](https://www.giant-cork.ie/ie/illume-short-finger-gloves-2019)
+
+[27 - Glove 3](https://www.giant-cork.ie/ie/passion-womens-short-finger-gloves)
+
+[28 - Helmet 1](https://www.giant-cork.ie/ie/rev-mips-road-helmet)
+
+[29 - Helmet 2](https://www.giant-cork.ie/ie/rev-mips-road-helmet)
+
+[30 - Helmet 3](https://www.giant-cork.ie/ie/rev--mips--womens-road-helmet-2017)
+
+[31 - Helmet 4](https://www.giant-cork.ie/ie/rail-sx-mips-off-road-helmet)
+
+[32 - Jacket 1](https://www.giant-cork.ie/ie/energize-off-road-rain-jacket-2019)
+
+[33 - Jacket 2](https://www.giant-cork.ie/ie/proshield-mtb-jacket-2020)
+
+[34 - Jacket 3]()
+
+[35 - Jacket 4]()
+
+[36 -]()
+
+[37 -]()
+
+[38 -]()
+
+[39 -]()
 
 The Icons on the various pages were chosen from the following sources.
 
