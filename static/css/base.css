@@ -364,7 +364,7 @@ ul > li {
   /*- 992px - 1023px -*/
   @media only screen and (min-width: 992px) and (max-width: 1023px) {
 
-    .shopping-cart-mobile, .hide-on-desktop, .mobile-navigation, .mobile-caret, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
+    .shopping-cart-mobile, .hide-on-desktop, .mobile-caret, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
         display:none;
     }
 
@@ -372,7 +372,7 @@ ul > li {
         font-size: 3.5em;        
     }
 
-    .shopping-bag-total {
+    .shopping-bag-total-desktop {
         display:contents;
     }
 
