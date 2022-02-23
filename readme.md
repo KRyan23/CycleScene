@@ -323,17 +323,103 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [33 - Jacket 2](https://www.giant-cork.ie/ie/proshield-mtb-jacket-2020)
 
-[34 - Jacket 3]()
+[34 - Jacket 3](https://www.wiggle.co.uk/castelli-womens-movimento-endurance-cycling-jacket)
 
-[35 - Jacket 4]()
+[35 - Jacket 4](https://www.wiggle.co.uk/dhb-flashlight-force-waterproof-jacket)
 
-[36 -]()
+[36 - Bar 1](https://www.wiggle.co.uk/science-in-sport-protein-20-bar-12-x-64g)
 
-[37 -]()
+[37 - Bar 2](https://www.wiggle.co.uk/powerbar-energize-advanced-bar-25-x-55g)
 
-[38 -]()
+[38 - Bar2-2](https://www.wiggle.co.uk/powerbar-energize-advanced-bar-25-x-55g)
 
-[39 -]()
+[39 - Gel 1](https://www.wiggle.co.uk/science-in-sport-go-isotonic-energy-gel-mixed-pack-30-x-60ml)
+
+[40 - Gel 2](https://www.wiggle.co.uk/science-in-sport-go-isotonic-energy-gels-30-x-60ml)
+
+[41 - Jersey 1](https://www.giant-cork.ie/ie/race-day-short-sleeve-jersey-2021)
+
+[42 - Jersey 2](https://www.giant-cork.ie/ie/race-day-short-sleeve-jersey-liv-2021)
+
+[43 - Jersey 3](https://www.giant-cork.ie/ie/illume-mid-thermal-long-sleeve-jersey-2020)
+
+[44 - Light 1](https://www.giant-cork.ie/ie/recon-tl-200-rear-light-2020)
+
+[45 - Light 2](https://www.wiggle.co.uk/lifeline-pavo-2000-lumen-front-light)
+
+[46 - Light 3](https://www.wiggle.co.uk/lezyne-femto-usb-drive-bike-light-pair)
+
+[47 - Bike 1](https://www.giant-cork.ie/ie/reign-sx-29)
+
+[48 - Bike 2](https://www.giant-cork.ie/ie/embolden-2)
+
+[49 - Bike 3](https://www.giant-cork.ie/ie/trance-x-advanced-eplus-0-2022)
+
+[50 - Bike 4](https://www.giant-cork.ie/ie/reign-advanced-pro-29-1-2022)
+
+[51 - Pedal 1](https://www.wiggle.co.uk/nukeproof-horizon-cs-crmo-trail-pedals)
+
+[52 - Pedal 2](https://www.wiggle.co.uk/dmr-v6-plastic-flat-pedals)
+
+[53 - Pedal 3](https://www.wiggle.co.uk/crankbrothers-mallet-3-pedals)
+
+[54 - Pedal 4](https://www.wiggle.co.uk/nukeproof-horizon-pro-sam-hill-enduro-pedals)
+
+[55 - Pump 1 ](https://www.giant-cork.ie/ie/giant-control-mini-combo)
+
+[56 - Pump 2 ](https://www.giant-cork.ie/ie/control-tower-2-track-pump-2019)
+
+[57 - Pump 3](https://www.giant-cork.ie/ie/giant-control-mini-mtb)
+
+[58 - Road Bike 1](https://www.giant-cork.ie/ie/propel-advanced-pro-disc-0-2022)
+
+[59 - Road Bike 2](https://www.giant-cork.ie/ie/enviliv-advanced-pro-disc-1-2022)
+
+[60 - Road Bike 3](https://www.giant-cork.ie/ie/propel-advanced-pro-disc-0)
+
+[61 - Road Bike 4](https://www.giant-cork.ie/ie/langma-advanced-2-disc)
+
+[62 - Saddle 1](https://www.giant-cork.ie/ie/cadex-boost-saddle)
+
+[63 - Saddle 2](https://www.wiggle.co.uk/nukeproof-vector-am-comp-cro-mo-saddle)
+
+[63 - Saddle 3](https://www.giant-cork.ie/ie/alacra-sl-saddle-2021)
+
+[64 - Shorts 1](https://www.wiggle.co.uk/castelli-womens-velocissima-2-cycle-short)
+
+[65 - Shorts 2](https://www.wiggle.co.uk/endura-fs260-pro-cycling-shorts-1)
+
+[66 - Shorts 3](https://www.wiggle.co.uk/dhb-flashlight-waist-shorts-1)
+
+[67 - Sunglasses 1](https://www.wiggle.co.uk/dhb-clark-revo-lens-sunglasses)
+
+[68 - Sunglasses 2](https://www.wiggle.co.uk/dhb-pro-triple-lens-sunglasses)
+
+[69 - Sunglasses 3](https://www.wiggle.co.uk/tifosi-eyewear-crit-matte-smoke-fototec-sunglasses)
+
+[70 - Book 1](https://www.wiggle.co.uk/cordee-complete-bicycle-maintenance-haynes)
+
+[71 - Book 2](https://www.wiggle.co.uk/cordee-at-the-edge-danny-macaskill-pb)
+
+[72 - Book 3](https://www.wiggle.co.uk/cordee-eat-bike-cook)
+
+[73 - Tool 1](https://www.wiggle.co.uk/topeak-mini-p20-multi-tool)
+
+[74 - Tool 2](https://www.wiggle.co.uk/fabric-color-coded-11-in-1-multitool)
+
+[75 - Tool 3](https://www.wiggle.co.uk/topeak-alien-x-multi-tool)
+
+[76 - Wheel 1](https://www.giant-cork.ie/ie/slr-1-disc-full-carbon-aero-65mm-wheelsystem)
+
+[77 - Wheel 2](https://www.wiggle.co.uk/nukeproof-horizon-v2-wheel-ard-and-sealant-bundle)
+
+[78 - Wheel 3](https://www.giant-cork.ie/ie/sl-1-disc-centre-lock-wheelsystem)
+
+[79 - Tyre 1](https://www.wiggle.co.uk/panaracer-fire-xc-pro-tlc-folding-mtb-tyre)
+
+[80 - Tyre 2](https://www.wiggle.co.uk/continental-sprinter-gatorskin-tubular-tyre)
+
+[81 - Tyre 3](https://www.wiggle.co.uk/continental-contact-city-tyre-1)
 
 The Icons on the various pages were chosen from the following sources.
 
