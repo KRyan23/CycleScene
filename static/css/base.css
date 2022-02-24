@@ -148,7 +148,11 @@ ul > li {
     opacity: 0.5;
     pointer-events: none;
 }
+/* General Rule to hide main page contents on templates */
 
+.hide-main-page-content {
+    display: none;
+}
 
 /* --------- Keyframes Calls -------------- */
 
