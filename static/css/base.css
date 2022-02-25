@@ -86,7 +86,7 @@ ul {
     color: #fafafa;
     margin-left: -1.75em;
     margin-top: 1.5em; 
-    animation: slidein 5s;
+    animation:  slidein 5s;
 }
 
 ul > li {
@@ -148,11 +148,6 @@ ul > li {
     opacity: 0.5;
     pointer-events: none;
 }
-/* General Rule to hide main page contents on templates */
-
-.hide-main-page-content {
-    display: none;
-}
 
 /* --------- Keyframes Calls -------------- */
 
@@ -166,14 +161,18 @@ ul > li {
 /* Slides the bicycle into the house icon */
 @keyframes slidein {
     100% {
-        margin-left: -1.75em;
-      
+        opacity: 1;
     }
+
     50% {
-      color: #6C757D;
-      margin-left: -7em;
+        color: #6C757D;
+        opacity: 0.5;
     }
-  }
+
+    0% {
+        opacity: 1;
+    }
+    }
 /* fades in an element */
 @keyframes fadein {
     from { opacity: 0; }
