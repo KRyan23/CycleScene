@@ -65,7 +65,7 @@
 *   ### Wireframes
     - Sitemap   - [View here](/assets/docs/wireframes/CycleScene-SiteMap.pdf)
     - Desktop Wireframes - [View here](/assets/docs/wireframes/CycleScene-Desktop-Home.pdf)
-    - Tablet Wireframes - [View here](/assets/docs/wireframes/)
+    - Tablet Wireframes - [View here](/assets/docs/wireframes/CycleScene-Tablet-Home.pdf)
     - Mobile Wireframes - [View here](/assets/docs/wireframes/)
 
 
