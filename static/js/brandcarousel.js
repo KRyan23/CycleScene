@@ -1,18 +1,4 @@
-/*
-//Not sure if I will use this yet
-
-var itemsbyviewport;
-var mq = window.matchMedia( "(min-width: 321px)" );
-if (mq.matches) {
-    itemsbyviewport = 2; //width less than 376 in this case
-}
-else {
-     itemsbyviewport = 5; // width greater than 376 in this case
-}
-*/
-
-
-/* From Tiny slider https://github.com/ganlanyuan/tiny-slider */
+/* Documentation from Tiny slider https://github.com/ganlanyuan/tiny-slider */
 tns({
     container: '.slider',
     mode: 'carousel', // or 'gallery'
@@ -34,7 +20,7 @@ tns({
     autoplayTimeout: 3000,
     autoplayDirection: 'forward',
     autoplayText: ['start', 'stop'],
-    autoplayHoverPause: false,
+    autoplayHoverPause: true,
     autoplayButton: false,
     autoplayButtonOutput: false,
     autoplayResetOnVisibility: true,

@@ -175,7 +175,7 @@ ul > li {
 }
 
 .brand-carousel-3 {
-    background-image: url('/media/brands-continental.png');
+    background-image: url('/media/brand-continental.png');
     width: 100vw;
     height: 15vh;
     background-size: cover;
@@ -185,30 +185,48 @@ ul > li {
 }
 
 .brand-carousel-4 {
-    background-image: url('/media/');
+    background-image: url('/media/brand-giant.png');
     width: 100vw;
-    height: 15vh;
+    height: 12vh;
     background-size: cover;
     background-position: center;
-    margin: 4em 0 3em 0;
+    margin: 3.75em 5em 3em 5em;
 }
 
 .brand-carousel-5 {
-    background-image: url('/media/');
+    background-image: url('/media/brand-oakley.png');
     width: 100vw;
     height: 12vh;
     background-size: cover;
     background-position: center;
-    margin: 4em 0 3em 0;
+    margin: 3.5em 0 3em 0;
 }
 
 .brand-carousel-6 {
-    background-image: url('/media/');
+    background-image: url('/media/brand-sis.png');
     width: 100vw;
     height: 12vh;
     background-size: cover;
     background-position: center;
-    margin: 4em 0 3em 0;
+    margin: 4em 0.5em 3em 2em;
+}
+
+.brand-carousel-7 {
+    background-image: url('/media/brand-liv.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 3.5em 0 3em 0;
+}
+
+.brand-carousel-8 {
+    background-image: url('/media/brand-schwalbe.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 4em 3em 3em 2em;
 }
 
 /* --------- Keyframes Calls -------------- */
@@ -451,7 +469,7 @@ ul > li {
     }
     
     .brand-carousel-3 {
-        background-image: url('/media/brands-continental.png');
+        background-image: url('/media/brand-continental.png');
         width: 40vw;
         height: 5vh;
         background-size: cover;
@@ -461,30 +479,48 @@ ul > li {
     }
     
     .brand-carousel-4 {
-        background-image: url('/media/');
-        width: 100vw;
-        height: 15vh;
+        background-image: url('/media/brand-giant.png');
+        width: 40vw;
+        height: 5vh;
         background-size: cover;
         background-position: center;
-        margin: 3em 0 0 0;
+        margin: 2.5em 4.5em 0 4.5em;
     }
     
     .brand-carousel-5 {
-        background-image: url('/media/');
-        width: 100vw;
-        height: 12vh;
+        background-image: url('/media/brand-oakley.png');
+        width: 40vw;
+        height: 5vh;
         background-size: cover;
         background-position: center;
-        margin: 3em 0 0 0;
+        margin: 2.25em 0 0 0;
     }
     
     .brand-carousel-6 {
-        background-image: url('/media/');
-        width: 100vw;
-        height: 12vh;
+        background-image: url('/media/brand-sis.png');
+        width: 40vw;
+        height: 5vh;
         background-size: cover;
         background-position: center;
-        margin: 3em 0 0 0;
+        margin: 2.5em 1em 0 3em;
+    }
+
+    .brand-carousel-7 {
+        background-image: url('/media/brand-liv.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+    
+    .brand-carousel-8 {
+        background-image: url('/media/brand-schwalbe.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 3em 0 2.5em;
     }
     
 
