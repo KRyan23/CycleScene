@@ -63,8 +63,8 @@
         -  The main carousel imagery was chosen to covey a particular message to range of different cycling enthusiasts, from the 'lone wolf' to the serious group rider and lastly to the casual cyclist. The rest of the product images were chosen from 1 or 2 cycling sites, from previous projects I had found mixing images from a lot of different sources produced an inconsistent look and feel to the site.
 
 *   ### Wireframes
-
-    - Desktop Wireframes - [View here](/assets/docs/wireframes/)
+    - Sitemap   - [View here](/assets/docs/wireframes/CycleScene-SiteMap.pdf)
+    - Desktop Wireframes - [View here](/assets/docs/wireframes/CycleScene-Desktop-Home.pdf)
     - Tablet Wireframes - [View here](/assets/docs/wireframes/)
     - Mobile Wireframes - [View here](/assets/docs/wireframes/)
 

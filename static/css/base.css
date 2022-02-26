@@ -366,11 +366,6 @@ ul > li {
         margin-left: 0.9em;
     }
 
-    /*.brands-logo {
-        height: 34.4vh;
-        width: 26vw;
-    }*/
-
     .brands-logo {
         width: 100%;
         height: 100%; 
@@ -434,6 +429,64 @@ ul > li {
     .mobile-navigation-topmenu {
         margin-left: 0.9em;
     }
+
+    .brand-carousel-1 {
+        background-image: url('/media/brand-altura.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 0 0 0;
+        
+    }
+    
+    .brand-carousel-2 {
+        background-image: url('/media/brand-shimano.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 5em 0 5em;
+        
+    }
+    
+    .brand-carousel-3 {
+        background-image: url('/media/brands-continental.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.9em 0 0 0;
+        
+    }
+    
+    .brand-carousel-4 {
+        background-image: url('/media/');
+        width: 100vw;
+        height: 15vh;
+        background-size: cover;
+        background-position: center;
+        margin: 3em 0 0 0;
+    }
+    
+    .brand-carousel-5 {
+        background-image: url('/media/');
+        width: 100vw;
+        height: 12vh;
+        background-size: cover;
+        background-position: center;
+        margin: 3em 0 0 0;
+    }
+    
+    .brand-carousel-6 {
+        background-image: url('/media/');
+        width: 100vw;
+        height: 12vh;
+        background-size: cover;
+        background-position: center;
+        margin: 3em 0 0 0;
+    }
+    
 
   }
   
