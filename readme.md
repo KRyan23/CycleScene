@@ -56,8 +56,7 @@
             
             
     -   #### Typography
-        -   
-        The "Source Sans Pro" font was used as the main body font due to its no nonsense feel and popularity on countless other sites as as always should these font be inaccessable san-serif was chosen to be the backup font.
+        - The "Source Sans Pro" font was used as the main body font due to its no nonsense feel and popularity on countless other sites as as always should these font be inaccessable san-serif was chosen to be the backup font.
 
     -   #### Imagery
         -  The main carousel imagery was chosen to covey a particular message to range of different cycling enthusiasts, from the 'lone wolf' to the serious group rider and lastly to the casual cyclist. The rest of the product images were chosen from 1 or 2 cycling sites, from previous projects I had found mixing images from a lot of different sources produced an inconsistent look and feel to the site.
@@ -66,7 +65,7 @@
     - Sitemap   - [View here](/assets/docs/wireframes/CycleScene-SiteMap.pdf)
     - Desktop Wireframes - [View here](/assets/docs/wireframes/CycleScene-Desktop-Home.pdf)
     - Tablet Wireframes - [View here](/assets/docs/wireframes/CycleScene-Tablet-Home.pdf)
-    - Mobile Wireframes - [View here](/assets/docs/wireframes/)
+    - Mobile Wireframes - [View here](/assets/docs/wireframes/CycleScene-Mobile-Home.pdf)
 
 
 *   ### Screenshots
@@ -209,10 +208,6 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 The project was deployed using the steps below.
 
 
-### MongoDb
-
-[Steps to setup MongoDb](assets/docs/setup-and-deployment/setting_up_mongo_db.pdf)
-
 ### GitHub
 
 [Steps to setup GitHub](assets/docs/setup-and-deployment/github-setup-and-instructions.pdf)
@@ -225,16 +220,12 @@ The project was deployed using the steps below.
 
 [Steps to deploy to Heroku](assets/docs/setup-and-deployment/deploying_to_heroku.pdf)
 
-### Recapcha
-
-[Steps to setup Recapcha](assets/docs/setup-and-deployment/recapcha.pdf)
 
 ## Credits
 
 ### Code
 
 - All code was written by myself except for that is explicitly listed in the project files
-- The Recapcha code used was from google and is listed above in the deployment section.
 
 
 ### Content
