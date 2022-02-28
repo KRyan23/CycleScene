@@ -310,13 +310,13 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [31 - Helmet 4](https://www.giant-cork.ie/ie/rail-sx-mips-off-road-helmet)
 
-[32 - Jacket 1](https://www.giant-cork.ie/ie/energize-off-road-rain-jacket-2019)
+[32 - Cassette 1](https://www.wiggle.co.uk/shimano-tourney-tz500-7-speed-cassette)
 
-[33 - Jacket 2](https://www.giant-cork.ie/ie/proshield-mtb-jacket-2020)
+[33 - Cassette 2](https://www.wiggle.co.uk/sram-pg1030-10-speed-mtb-cassette)
 
-[34 - Jacket 3](https://www.wiggle.co.uk/castelli-womens-movimento-endurance-cycling-jacket)
+[34 - Cassette 3](https://www.wiggle.co.uk/shimano-ultegra-6600-10-speed-cassette)
 
-[35 - Jacket 4](https://www.wiggle.co.uk/dhb-flashlight-force-waterproof-jacket)
+[35 - Cassette 4](https://www.wiggle.co.uk/sunrace-12-speed-xd-cassette)
 
 [36 - Bar 1](https://www.wiggle.co.uk/science-in-sport-protein-20-bar-12-x-64g)
 
@@ -328,11 +328,11 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [40 - Gel 2](https://www.wiggle.co.uk/science-in-sport-go-isotonic-energy-gels-30-x-60ml)
 
-[41 - Jersey 1](https://www.giant-cork.ie/ie/race-day-short-sleeve-jersey-2021)
+[41 - Chainset 1](https://www.wiggle.co.uk/fsa-k-force-light-386evo-double-chainset-wo-bb)
 
-[42 - Jersey 2](https://www.giant-cork.ie/ie/race-day-short-sleeve-jersey-liv-2021)
+[42 - Chainset 2](https://www.wiggle.co.uk/sram-red-axs-dub-12-speed-crankset)
 
-[43 - Jersey 3](https://www.giant-cork.ie/ie/illume-mid-thermal-long-sleeve-jersey-2020)
+[43 - Chainset 3](https://www.wiggle.co.uk/shimano-xtr-m9020-trail-crank-arms)
 
 [44 - Light 1](https://www.giant-cork.ie/ie/recon-tl-200-rear-light-2020)
 
@@ -376,11 +376,11 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [63 - Saddle 3](https://www.giant-cork.ie/ie/alacra-sl-saddle-2021)
 
-[64 - Shorts 1](https://www.wiggle.co.uk/castelli-womens-velocissima-2-cycle-short)
+[64 - Grip 1](https://www.wiggle.co.uk/ergon-gp5-comfort-grips)
 
-[65 - Shorts 2](https://www.wiggle.co.uk/endura-fs260-pro-cycling-shorts-1)
+[65 - Grip 2](https://www.wiggle.co.uk/brand-x-half-waffle-lock-on-handlebar-grips)
 
-[66 - Shorts 3](https://www.wiggle.co.uk/dhb-flashlight-waist-shorts-1)
+[66 - Grip 3](https://www.wiggle.co.uk/lizard-skins-494-single-compound-handlebar-grips)
 
 [67 - Sunglasses 1](https://www.wiggle.co.uk/dhb-clark-revo-lens-sunglasses)
 

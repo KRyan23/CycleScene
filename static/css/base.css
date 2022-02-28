@@ -289,7 +289,7 @@ ul > li {
 /* --------- Media queries ---------------- */
 /*- < 250px-*/
 @media only screen and (max-width: 249px) {
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us, .shopping-bag-total-desktop, .search-box, .desktop-search-button, .brands{
+    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us, .shopping-bag-total-desktop, .search-box, .desktop-search-button, .brands {
         display: none;
     }
     
@@ -552,6 +552,81 @@ ul > li {
     .text-font-weight {
         font-weight: 200;
     }
+
+    .brand-carousel-1 {
+        background-image: url('/media/brand-altura.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 0 0 0;
+        
+    }
+    
+    .brand-carousel-2 {
+        background-image: url('/media/brand-shimano.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 5em 0 5em;
+        
+    }
+    
+    .brand-carousel-3 {
+        background-image: url('/media/brand-continental.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.9em 0 0 0;
+        
+    }
+    
+    .brand-carousel-4 {
+        background-image: url('/media/brand-giant.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 4.5em 0 4.5em;
+    }
+    
+    .brand-carousel-5 {
+        background-image: url('/media/brand-oakley.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+    
+    .brand-carousel-6 {
+        background-image: url('/media/brand-sis.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 1em 0 3em;
+    }
+
+    .brand-carousel-7 {
+        background-image: url('/media/brand-liv.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+    
+    .brand-carousel-8 {
+        background-image: url('/media/brand-schwalbe.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 3em 0 2.5em;
+    }
     
   }
   
@@ -572,6 +647,81 @@ ul > li {
 
     .text-font-weight {
         font-weight: 200;
+    }
+
+    .brand-carousel-1 {
+        background-image: url('/media/brand-altura.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 0 0 0;
+        
+    }
+    
+    .brand-carousel-2 {
+        background-image: url('/media/brand-shimano.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 5em 0 5em;
+        
+    }
+    
+    .brand-carousel-3 {
+        background-image: url('/media/brand-continental.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.9em 0 0 0;
+        
+    }
+    
+    .brand-carousel-4 {
+        background-image: url('/media/brand-giant.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 4.5em 0 4.5em;
+    }
+    
+    .brand-carousel-5 {
+        background-image: url('/media/brand-oakley.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+    
+    .brand-carousel-6 {
+        background-image: url('/media/brand-sis.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 1em 0 3em;
+    }
+
+    .brand-carousel-7 {
+        background-image: url('/media/brand-liv.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+    
+    .brand-carousel-8 {
+        background-image: url('/media/brand-schwalbe.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 3em 0 2.5em;
     }
 
   }
