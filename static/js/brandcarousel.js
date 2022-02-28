@@ -29,10 +29,11 @@ tns({
     autoHeight: false,
     responsive: false,
     lazyload: true,
-    touch: true,
+    touch: false,
     mouseDrag: false,
     swipeAngle: 15,
     nested: false,
     freezable: true,
-    onInit: false
+    onInit: false,
+    preventScrollOnTouch: 'auto'
   });

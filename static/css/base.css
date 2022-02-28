@@ -209,6 +209,7 @@ ul > li {
     background-size: cover;
     background-position: center;
     margin: 4em 0.5em 3em 2em;
+    link:
 }
 
 .brand-carousel-7 {
@@ -228,6 +229,13 @@ ul > li {
     background-position: center;
     margin: 4em 3em 3em 2em;
 }
+
+.brand-carousel-link:hover {
+    display:block; 
+    height:100%; 
+    width:100%;
+}
+
 
 /* --------- Keyframes Calls -------------- */
 
