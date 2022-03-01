@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"><!-- For Tiny Slider 2-->
-  <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  
+  
 <title>CycleScene</title>
  </head>
 <body>
@@ -19,7 +22,7 @@
 <header class="top-navigation">
   <div>
     <nav class="navbar navbar-expand-lg navbar-light">
-      <img class="main-logo" alt="main logo" src="media/logo101.png">
+      <img class="main-logo" alt="main logo" src="../media/logo101.png">
       <a href="#" class="navbar-brand"><span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
         <form class="d-flex alpha">
@@ -72,9 +75,9 @@
   <div class="desktop-navigation">
     <nav>
       <ul class="text-center bg-light">
-        <li><a href="#" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
+        <li><a href="{% url 'home' %}" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
               class="fas fa-bicycle"></i></a></li>
-        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Bikes</a></li>
+        <li><a href="{% url 'products' %}" class="nav-link navlink-alignment text-font-weight">Bikes</a></li>
         <li><a href="#" class="nav-link navlink-alignment text-font-weight">Components</a></li>
         <li><a href="#" class="nav-link navlink-alignment text-font-weight">Nutrition</a></li>
         <li><a href="#" class="nav-link navlink-alignment text-font-weight">Accesories</a></li>
@@ -94,15 +97,15 @@
  <div id="mainCarousel" class="carousel slide carousel-fade carousel-dark my-1 shadow p-3 mb-5 bg-body" data-bs-ride="carousel" data-bs-pause="hover">
    <div class="carousel-inner">
      <div class="carousel-item active " data-bs-interval="6000">
-       <img src="media/hero-1.jpg" class="d-block w-100 image-opacity-9" alt="hero1">
+       <img src="../media/hero-1.jpg" class="d-block w-100 image-opacity-9" alt="hero1">
        <h2 class="carousel-heading w-mt-2">ADVENTURE AWAITS</h2>
      </div>
      <div class="carousel-item" data-bs-interval="6000">
-       <img src="media/hero-2.jpg" class="d-block w-100 image-opacity-9" alt="hero2">
+       <img src="../media/hero-2.jpg" class="d-block w-100 image-opacity-9" alt="hero2">
        <h2 class="carousel-heading w-mt-2">GET RIDE READY</h2>
      </div>
      <div class="carousel-item" data-bs-interval="6000">
-       <img src="media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="hero3">
+       <img src="../media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="hero3">
        <h2 class="carousel-heading mx-3">CHOOSE A STYLE</h2>
      </div>
      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
@@ -138,7 +141,7 @@
   <!-- Bike Row -->
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
       <div class="card my-3 grow-effect">
-       <img src="media/road-card.jpg" alt="road bike"/>
+       <img src="../media/road-card.jpg" alt="road bike"/>
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title ">ROAD BIKES</h3>
           <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -147,7 +150,7 @@
     </div>
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="card my-3 grow-effect">
-        <img src="media/mountain-card.jpg" alt="mountain bike" />
+        <img src="../media/mountain-card.jpg" alt="mountain bike" />
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title">MOUNTAIN BIKES</h3>
           <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -156,7 +159,7 @@
     </div>
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
       <div class="card my-3 grow-effect">
-        <img src="media/city-card.jpg" alt="city bike" />
+        <img src="../media/city-card.jpg" alt="city bike" />
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title">CITY BIKES</h3>
           <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -166,7 +169,7 @@
 <!--Components -->
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/wheels-card.jpg" alt="wheels" />
+    <img src="../media/wheels-card.jpg" alt="wheels" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">WHEELS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -175,7 +178,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/saddle-card.jpg" alt="saddles" />
+    <img src="../media/saddle-card.jpg" alt="saddles" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">SADDLES</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -184,7 +187,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/bottle-card.jpg" alt="bottles and cages" />
+    <img src="../media/bottle-card.jpg" alt="bottles and cages" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">BOTTLES & CAGES</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -193,7 +196,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/pump-card.jpg" alt="pumps" />
+    <img src="../media/pump-card.jpg" alt="pumps" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">PUMPS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -202,7 +205,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/helmet-card.jpg" alt="helmet" />
+    <img src="../media/helmet-card.jpg" alt="helmet" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">HELMETS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -211,7 +214,7 @@
 </div>
 <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
   <div class="card my-3 grow-effect">
-    <img src="media/light-card.jpg" alt="lights" />
+    <img src="../media/light-card.jpg" alt="lights" />
     <div class="card-body card-thumbnails-body">
       <h3 class="card-title">LIGHTS</h3>
       <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>

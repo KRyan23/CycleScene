@@ -1,25 +1,28 @@
 {% extends "base.html" %}
 {% load static %}
 
+
+
 {% block content %}
 
 <div class="container-fluid my-0">
     <div class="row ">
-        {% for p in products %}
+        {% for product in products %}
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
         <div class="card my-3 grow-effect">
-         <img src="media/road-card.jpg" alt="road bike"/>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title ">{{ products }}</h3>
-            <a href="#" class="btn btn-secondary stretched-link override-link-color">BUY NOW</a>
-          </div>
+         <img src="{{ product.image.url }}" alt="road bike"/>
+         <h2>Category</h2><p>{{ product.category }} </p> 
+         <h2>Name</h2><p>{{ product.name }}</p>
+         <h2>Price</h2><p>${{ product.price }}</p>
+         <h2>Description</h2><p>{{ product.description }} </p> 
+         <h2>Rating</h2><p>{{ product.rating }} </p> 
         </div>
       </div>
 {% endfor %}
       </div>
     </div>
 {% endblock %}
-
 {% block scripts %}
 <script src="/static/js/hidebase.js"></script>
+
 {% endblock %}

@@ -261,13 +261,13 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [7 - Card Image for Wheels](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/spnwdwmcmavefnboqozj/350000128-350000128-SLR1-DISC-65MM.jpg)
 
-[8 - Card Image for Saddle](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg)
+[8 - Card Image for Saddles](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg)
 
 [9 - Card Image for Bottles and Cages](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/fauazh4vrmz88ibvznuj/480000361.jpg)
 
 [10 - Card Image for Pumps](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/livhngzrauuzx2jrzh0m/2016_Giant_Control_Mini_Combo_Fold_Out_Mini_Track_Pump.jpg)
 
-[11 - Card Image for Jerseys](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/ncx7zm6imyiz66gldj8w/RACE-DAY-SS-JERSEY@-BLACK-BLUE-1.jpg)
+[11 - Card Image for Helmets](https://www.giant-cork.ie/ie/rev-mips-road-helmet)
 
 [12 - Card Image for Lights](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/saigrabs9broldzopte1/400000167_RECON-HL-200_01.jpg)
 
@@ -360,7 +360,7 @@ The images on the Home Page / base template were chosen from the following sourc
 
 [56 - Pump 2 ](https://www.giant-cork.ie/ie/control-tower-2-track-pump-2019)
 
-[57 - Pump 3](https://www.giant-cork.ie/ie/giant-control-mini-mtb)
+[57 - Pump 3 ](https://www.giant-cork.ie/ie/giant-control-mini-mtb)
 
 [58 - Road Bike 1](https://www.giant-cork.ie/ie/propel-advanced-pro-disc-0-2022)
 
