@@ -88,8 +88,7 @@
   </div>
 </header>
  <!--Navigation start-->
- {% block content %}
- {% endblock %}
+ 
 
 <div id="hideMainContent">
 <!-- Start hide main page content -->
@@ -228,7 +227,8 @@
 <!-- End hide main page content -->
   
   <!-- This will be for the hero image at the top of each category, bike, part, clothes-->
-  
+  {% block content %}
+ {% endblock %}
   <!-- This will be for products inside in each category-->
 <!-- Brands we use carousel start -->
 <div class="brands">
