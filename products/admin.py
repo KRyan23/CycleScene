@@ -6,8 +6,15 @@ from .models import Product, Category
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'sku',
+        'ean',
+        'highlights',
+        'frame',
+        'fork',
+        'groupset',
+        'wheels',
         'category',
+        'instock',
+        'discount',
         'price',
         'description',
         'rating',
