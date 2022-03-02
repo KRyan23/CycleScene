@@ -21,9 +21,9 @@
   <!--Navigation start-->
 <header class="top-navigation">
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
       <img class="main-logo" alt="main logo" src="../media/logo101.png">
-      <a href="#" class="navbar-brand"><span class="brand-heading"></span></a>
+      <span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
         <form class="d-flex alpha">
           <input type="text" class="form-control search-box" placeholder="Search here...">
@@ -45,7 +45,7 @@
           
           <li><span class="shopping-bag-total-desktop hide-on-desktop"><i class="fas fa-shopping-bag fa-lg shopping-cart-desktop">
           </i>€0.00</span></li>
-          <li><a href="#" class="nav-link navlink-alignment"><span
+          <li><a href="{% url 'products' %}" class="nav-link navlink-alignment"><span
                 class="override-link-color hide-on-desktop text-font-weight mx-3">Bikes</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
                 class="override-link-color hide-on-desktop text-font-weight mx-3">Components</span></a></li>

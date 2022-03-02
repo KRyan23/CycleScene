@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+<div class="card">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb mx-1 mt-2">
+      <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'home' %}">Home</a></li>
+      <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'products' %}">Bikes</a></li>
+      <li class="breadcrumb-item active bg-gradient-secondary fs-6" aria-current="page">{{ product.name|title }}</li>
+    </ol>
+    
+  </nav>
+  <h1 class="card-title text-center mt-3">{{ product.name|upper }}</h1>
+  <span class="text-center mt-1">{{ product.rating }}</span>
+    <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    
+    <h2 class="text-center ">Highlights</h2>
+    <p class="card-text">{{ product.highlights }}</p>
+  
+  <h3 class="text-center">Description</h3>
+  <p class="card-text">{{ product.description }}</p>
+
+</div><!-- add logic here to filter out unused fiedls in minor products -->
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Frame: {{ product.frame }}</li>
+    <li class="list-group-item">Fork: {{ product.fork }}</li>
+    <li class="list-group-item">Wheels: {{ product.wheels }}</li>
+    <li class="list-group-item">Groupset: {{ product.groupset }}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Back to top</a>
+    <a href="#" class="card-link">Add to Basket</a>
+  </div>
+  
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script src="/static/js/hidebase.js"></script>
+{% endblock %}
