@@ -444,6 +444,10 @@ The Icons on the various pages were chosen from the following sources.
 
 [15 - PayPal Footer Icon](https://fontawesome.com/v5/icons/cc-paypal?s=brands)
 
+[16 - Favicon Site Icon](http://faviconer.com/icon/index) 
+ Created favicon using this site.
+
+
 ### Acknowledgements
 - My Mentor
 - Other cycling enthusiasts!
