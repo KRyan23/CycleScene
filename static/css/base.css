@@ -19,7 +19,7 @@ ul {
     
 }
 
-.fa-shopping-bag {
+.shopping-bag {
     color: orange;
     font-size: 1.25em;
     margin: 0.35em 0.5em 0 1em;
@@ -47,7 +47,7 @@ ul {
     font-size: 1.25em;
 }
 
-.fa-search {
+.fa-search, .starcolor {
     color: orange;
     border-color: orange;
 }
@@ -97,7 +97,7 @@ ul > li {
     color:#6C757D;
 }
 
-.nav-link:hover, .override-link-color:hover, .footer-link:hover, .social-media:hover, .payment-types:hover, .maps-location:hover{
+.nav-link:hover, .override-link-color:hover, .footer-link:hover, .social-media:hover, .payment-types:hover, .maps-location:hover, .btn-secondary:hover {
     color: orange;
 }
 
@@ -235,6 +235,14 @@ ul > li {
     width:100%;
 }
 
+.empty-star {
+    color:#E9E9EB;
+}
+
+.star-color-effect:hover {
+    transform: scale(1, 1.02);
+    transition: transform 1s;
+}
 
 /* --------- Keyframes Calls -------------- */
 
