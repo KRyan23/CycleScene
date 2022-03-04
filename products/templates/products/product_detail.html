@@ -28,7 +28,6 @@
     <li class="list-group-item h4">Wheels:<small class="lead"> {{ product.wheels|title }}</small></li>
     <li class="list-group-item h4">Groupset:<small class="lead"> {{ product.groupset|title }}</small></li>
   </ul>
-
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center">
@@ -36,18 +35,19 @@
           top</a>
       </div>
       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-8 text-center">
-        <form class="mt-5 form"><a href="#" class="btn btn-outline-success mx-2" role="button"><i class="fas fa-shopping-bag mx-2"></i>Add
-          to Bag</a><a href="#" class="btn btn-outline-success btn-minus"><i class="fa fa-minus"></i></a><input class="text-center form-control form-quantity" min="0" name="quantity" value="1" type="number"><a class="btn btn-outline-success btn-plus">
+        <form class="mt-5 form"><a href="#" class="btn btn-outline-success mx-2" role="button"><i
+              class="fas fa-shopping-bag mx-2"></i>Add
+            to Bag</a><a class="btn btn-outline-success btn-minus" onclick="decrement()"><i class="fa fa-minus"></i></a><input
+            id="bag-quantity" class="text-center form-control form-quantity" min="0" name="quantity" value="1" type="number">
+            <a class="btn btn-outline-success btn-plus" onclick="increment()">
             <i class="fa fa-plus"></i></a></form>
       </div>
       <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center">
-        <a href="{% url 'products' %}" class="btn btn-outline-secondary mt-5" role="button">{{ product.category|lower|capfirst }}<i class="fas fa-arrow-right mx-2"></i>
-          </a>
+        <a href="{% url 'products' %}" class="btn btn-outline-secondary mt-5"
+          role="button">{{ product.category|lower|capfirst }}<i class="fas fa-arrow-right mx-2"></i>
+        </a>
       </div>
     </div>
-  
-    
-
   </div>
   <div class="mt-5">
   </div>
@@ -58,4 +58,5 @@
 {% block scripts %}
 <script src="/static/js/hidebase.js"></script>
 <script src="/static/js/rating.js"></script>
+<script src="/static/js/quantity.js"></script>
 {% endblock %}
