@@ -2,8 +2,9 @@
 {% load static %}
 
 {% block content %}
-<span id="readStarRating" class="d-none">{{ product.rating }}</span>
 <!-- This is just targetted by rating.js to pull the rating value -->
+<span id="readStarRating" class="d-none">{{ product.rating }}</span>
+<!-- breadcrumb nav -->
 <div class="card">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb mx-1 mt-2">
@@ -14,8 +15,36 @@
   </nav>
   <h1 class="card-title text-center mt-3">{{ product.name|upper }}</h1>
   <div class="text-center mt-1" id="displayStarRating" title="{{ product.rating }}"></div>
+  <!--rating value -->
   <span class="text-center mt-1 grow-element">Rating: {{ product.rating }}</span>
-  <img src="{{ product.image1.url }}" class="card-img-top" alt="...">
+  <!-- Image Carousel start -->
+  <div id="productDetailCarousel" class="carousel slide carousel-fade carousel-dark" >
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#productDetailCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#productDetailCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#productDetailCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+    <div class="carousel-inner text-center">
+      <div class="carousel-item active">
+        <img src="{{ product.image1.url }}" class="card-img-top reduce-image mb-5" alt="image1">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ product.image2.url }}" class="card-img-top reduce-image mb-5" alt="image2">
+      </div>
+      <div class="carousel-item">
+        <img src="{{ product.image3.url }}" class="card-img-top reduce-image mb-5" alt="image3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#productDetailCarousel" data-bs-slide="next">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#productDetailCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Image Carousel start -->
   <div class="card-body">
     <h2 class="text-center mb-3">Highlights</h2>
     <p class="card-text">{{ product.highlights|lower|capfirst }}</p>
@@ -52,8 +81,6 @@
   <div class="mt-5">
   </div>
 </div>
-
-
 {% endblock %}
 {% block scripts %}
 <script src="/static/js/hidebase.js"></script>

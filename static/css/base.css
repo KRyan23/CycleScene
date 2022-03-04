@@ -263,6 +263,12 @@ ul > li {
     font-weight: 600;
 }
 
+.reduce-image {
+    margin: 2em 0 2em 0;
+    max-width: 70%;
+    max-height: 50%;
+}
+
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
@@ -313,9 +319,11 @@ ul > li {
 
 @keyframes grow {
     from {
+      opacity: 0;
       transform: scale(0);
     }
     to {
+      opacity: 0.5;
       transform: scale(1);
     }
   }
