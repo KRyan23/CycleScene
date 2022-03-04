@@ -7,7 +7,7 @@
   <!-- Products Row -->{% for product in products %} <!-- add specific category eg: roadbikes -->
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
       <div class="card my-3 grow-effect">
-        <img src="{{ product.image.url }}" alt="{{ product.name }}"/>
+        <img src="{{ product.image1.url }}" alt="{{ product.name }}"/>
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title">{{ product.name|upper }}</h3>
           <p>€ {{ product.price }}</p>

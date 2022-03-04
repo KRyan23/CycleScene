@@ -14,7 +14,9 @@
       "price": 4999.99,
       "category": 1,
       "rating": 4,
-      "image": "road-bike1.jpg",
+      "image1": "road-bike1.jpg",
+      "image2": "road-bike1-2.jpg",
+      "image3": "road-bike1-3.jpg",
       "instock": "yes",
       "discount": "no"
     }
@@ -34,7 +36,9 @@
       "price": 3999.99,
       "category": 1,
       "rating": 4,
-      "image": "road-bike2.jpg",
+      "image1": "road-bike2.jpg",
+      "image2": "road-bike2-2.jpg",
+      "image3": "road-bike3-3.jpg",
       "instock": "yes",
       "discount": "no"
     }
