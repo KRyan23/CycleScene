@@ -1,4 +1,4 @@
-/* Documentation from Tiny slider https://github.com/ganlanyuan/tiny-slider */
+/* settings for tiny slider, docs @ https://github.com/ganlanyuan/tiny-slider */
 tns({
     container: '.slider',
     mode: 'carousel', // or 'gallery'
