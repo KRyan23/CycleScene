@@ -14,7 +14,7 @@
   </nav>
   <h1 class="card-title text-center mt-3">{{ product.name|upper }}</h1>
   <div class="text-center mt-1" id="displayStarRating" title="{{ product.rating }}"></div>
-  <span class="text-center mt-1">Rating: {{ product.rating }}</span>
+  <span class="text-center mt-1 grow-element">Rating: {{ product.rating }}</span>
   <img src="{{ product.image.url }}" class="card-img-top" alt="...">
   <div class="card-body">
     <h2 class="text-center mb-3">Highlights</h2>
@@ -28,15 +28,31 @@
     <li class="list-group-item h4">Wheels:<small class="lead"> {{ product.wheels|title }}</small></li>
     <li class="list-group-item h4">Groupset:<small class="lead"> {{ product.groupset|title }}</small></li>
   </ul>
-  <div class="card-body">
-    <a href="#" class="btn btn-secondary" role="button" aria-disabled="true"><i class="fas fa-arrow-up mx-2"></i>Back to
-      top</a>
-    <a href="#" class="btn btn-secondary" role="button" aria-disabled="true"><i class="fas fa-shopping-bag mx-2"></i>Add
-      to Basket</a>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center">
+        <a href="#" class="btn btn-outline-secondary mt-5" role="button"><i class="fas fa-arrow-up mx-2"></i>Back to
+          top</a>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 col-xl-8 text-center">
+        <form class="mt-5 form"><a href="#" class="btn btn-outline-success mx-2" role="button"><i class="fas fa-shopping-bag mx-2"></i>Add
+          to Bag</a><a href="#" class="btn btn-outline-success btn-minus"><i class="fa fa-minus"></i></a><input class="text-center form-control form-quantity" min="0" name="quantity" value="1" type="number"><a class="btn btn-outline-success btn-plus">
+            <i class="fa fa-plus"></i></a></form>
+      </div>
+      <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center">
+        <a href="{% url 'products' %}" class="btn btn-outline-secondary mt-5" role="button">{{ product.category|lower|capfirst }}<i class="fas fa-arrow-right mx-2"></i>
+          </a>
+      </div>
+    </div>
+  
+    
 
   </div>
-
+  <div class="card-body">
+  </div>
 </div>
+
 
 {% endblock %}
 {% block scripts %}
