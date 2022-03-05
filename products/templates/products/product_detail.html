@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+{% firstof product.category.id as categorynum %} {{ categorynum }} <!-- for debug only-->
 <!-- This is just targetted by rating.js to pull the rating value -->
 <span id="readStarRating" class="d-none">{{ product.rating }}</span>
 <!-- breadcrumb nav -->
@@ -9,7 +10,7 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb mx-1 mt-2">
       <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'home' %}">Home</a></li>
-      <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'products' %}">Bikes</a></li>
+      <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'products' %}?category={{ product.category }}">{{ product.category|title }}</a></li>
       <li class="breadcrumb-item active bg-gradient-secondary fs-6" aria-current="page">{{ product.name|title }}</li>
     </ol>
   </nav>
@@ -50,13 +51,23 @@
     <p class="card-text">{{ product.highlights|lower|capfirst }}</p>
     <h3 class="text-center mt-4 mb-3">Description</h3>
     <p class="card-text">{{ product.description|lower|capfirst }}</p>
-  </div><!-- add logic here to filter out unused fields in minor products -->
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item h4">Frame:<small class="lead"> {{ product.frame|title }}</small></li>
-    <li class="list-group-item h4">Fork:<small class="lead"> {{ product.fork|title}}</small></li>
-    <li class="list-group-item h4">Wheels:<small class="lead"> {{ product.wheels|title }}</small></li>
-    <li class="list-group-item h4">Groupset:<small class="lead"> {{ product.groupset|title }}</small></li>
+  </div>
+  {% if product.category.id == 19  %}
+  <ul class="list-group list-group-flush mt-5">
+    <li class="list-group-item h5 product-bike-features"><span>Fork:</span><small class="lead"> {{ product.feature1|title }}</small></li>
+    <li class="list-group-item h5 product-bike-features"><span>Frame:</span><small class="lead"> {{ product.feature2|title}}</small></li>
+    <li class="list-group-item h5 product-bike-features"><span>Wheels:</span><small class="lead"> {{ product.feature3|title }}</small></li>
+    <li class="list-group-item h5 product-bike-features"><span>Groupset:</span><small class="lead"> {{ product.feature4|title }}</small></li>
   </ul>
+  {% else %}
+  <h3 class="mt-5 mx-3">Features</h3>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item h5 product-bike-features"><i class="fas fa-bicycle features-bulletpoint"></i><span class="features-text">- {{ product.feature1|title }}</span></li>
+    <li class="list-group-item h5 product-bike-features"><i class="fas fa-bicycle features-bulletpoint"></i><span class="features-text">- {{ product.feature2|title }}</span></li>
+    <li class="list-group-item h5 product-bike-features"><i class="fas fa-bicycle features-bulletpoint"></i><span class="features-text">- {{ product.feature3|title }}</span></li>
+    <li class="list-group-item h5 product-bike-features"><i class="fas fa-bicycle features-bulletpoint"></i><span class="features-text">- {{ product.feature4|title }}</span></li>
+  </ul>
+{% endif %}
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center">
@@ -72,7 +83,7 @@
             <i class="fa fa-plus"></i></a></form>
       </div>
       <div class="col-sm-12 col-md-3 col-lg-3 col-xl-2 text-center">
-        <a href="{% url 'products' %}" class="btn btn-outline-secondary mt-5"
+        <a href="{% url 'products' %}?category={{ product.category }}" class="btn btn-outline-secondary mt-5"
           role="button">{{ product.category|lower|capfirst }}<i class="fas fa-arrow-right mx-2"></i>
         </a>
       </div>

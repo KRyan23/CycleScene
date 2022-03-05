@@ -4,7 +4,8 @@
 {% block content %}
 <div class="container-fluid my-0">
   <div class="row ">
-  <!-- Products Row -->{% for product in products %} <!-- add specific category eg: roadbikes -->
+  <!-- Products Row -->
+  {% for product in products %}
     <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
       <div class="card my-3 grow-effect">
         <img src="{{ product.image1.url }}" alt="{{ product.name }}"/>
@@ -16,7 +17,7 @@
       </div>
     </div>
     
-                      {% endfor %}
+{% endfor %}
 </div>
 </div>
  

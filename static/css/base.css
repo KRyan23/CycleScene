@@ -97,7 +97,7 @@ ul > li {
     color:#6C757D;
 }
 
-.nav-link:hover, .override-link-color:hover, .footer-link:hover, .social-media:hover, .payment-types:hover, .maps-location:hover, .btn-secondary:hover, .btn-outline-success:hover, .btn-outline-secondary {
+.nav-link:hover, .override-link-color:hover, .footer-link:hover, .social-media:hover, .payment-types:hover, .maps-location:hover, .btn-secondary:hover, .btn-outline-success:hover, .btn-outline-secondary, .features-bulletpoint {
     color: orange;
 }
 
@@ -269,6 +269,24 @@ ul > li {
     max-height: 50%;
 }
 
+.features-bulletpoint, .features-text {
+    margin-left: 1em;
+}
+
+.product-bike-features {
+    
+    zzborder: 1px solid #5C636A;
+    
+}
+
+.product-bike-features:hover{
+    transform: scale(1, 1.01);
+    transition: transform 0.01s;
+    background-color: #E9E9EB;
+    font-weight: 900;
+    
+     
+}
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
@@ -359,6 +377,11 @@ ul > li {
         margin-left: 0.5em;
         margin-right: 0.5em;
     }
+
+    .features-bulletpoint, .features-text {
+        margin-left: 0.25em;
+        font-size:small;
+    }
 }
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
@@ -413,6 +436,11 @@ ul > li {
         width:auto;
         margin-left: 0.5em;
         margin-right: 0.5em;
+    }
+
+    .features-bulletpoint, .features-text {
+        margin-left: 0.25em;
+        font-size:medium;
     }
 
   }
@@ -470,6 +498,11 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
+
+    .features-bulletpoint, .features-text {
+        margin-left: 0.25em;
+        font-size:medium;
+    }
   }
   
   /*- 500px - 767px -*/
@@ -496,6 +529,7 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
+
   }
 
   /*- 767px - 992px -*/
@@ -613,6 +647,7 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
+
   }
   
   /*- 992px - 1023px -*/
@@ -714,7 +749,8 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
-  }
+
+}
   
   /*- 1024px - 1200px -*/
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -815,6 +851,7 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
+
   }
 
   /* 1200px - 1300px */
@@ -841,6 +878,7 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
+    
 }
 
 /* 1300px - 2000px */
@@ -878,6 +916,7 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
+
 }
 @media only screen and (min-width: 2000px){
 
@@ -918,4 +957,5 @@ ul > li {
         -webkit-appearance: none;
         margin: 0;
     }
+
 }
