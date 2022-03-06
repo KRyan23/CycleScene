@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,23 +12,26 @@
     type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"><!-- For Tiny Slider 2-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <!-- For Tiny Slider 2-->
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
-  
-  
-<title>CycleScene</title>
- </head>
+
+
+  <title>CycleScene</title>
+</head>
+
 <body>
   <!--Navigation start-->
   <div>
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
-      <img class="main-logo" alt="main logo" src="../media/logo101.png">
-      <span class="brand-heading"></span></a>
+        <img class="main-logo" alt="main logo" src="../media/logo101.png">
+        <span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
         <form class="d-flex alpha">
           <input type="text" class="form-control search-box" placeholder="Search here...">
-      <button type="submit" class="btn btn-outline-secondary desktop-search-button"><i class="fa fa-search"></i></button>
-      </form>
+          <button type="submit" class="btn btn-outline-secondary desktop-search-button"><i
+              class="fa fa-search"></i></button>
+        </form>
       </div>
       <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
         aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="ToggleNavigation">
@@ -35,16 +39,21 @@
       </button>
       <div class="collapse navbar-collapse" id="toggleMobileMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="hide-on-desktop display-on-smallscreen"><form class="d-flex">
-            <input type="text" class="mx-3" placeholder="Search here...">
-            <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
-        </form></li>
-          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span class="override-link-color text-font-weight">Login</span></a></li>
-          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span class="override-link-color text-font-weight">Register</span></a></li>
-          
-          <li><span class="shopping-bag-total-desktop hide-on-desktop"><i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
-          </i>€0.00</span></li>
-          <li><a href="{% url 'products' %}?category=bikes" class="nav-link navlink-alignment"><span
+          <li class="hide-on-desktop display-on-smallscreen">
+            <form class="d-flex">
+              <input type="text" class="mx-3" placeholder="Search here...">
+              <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
+            </form>
+          </li>
+          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+                class="override-link-color text-font-weight">Login</span></a></li>
+          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+                class="override-link-color text-font-weight">Register</span></a></li>
+
+          <li><span class="shopping-bag-total-desktop hide-on-desktop"><i
+                class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
+              </i>€0.00</span></li>
+          <li><a href="{% url 'products' %}?category=roadbikes" class="nav-link navlink-alignment"><span
                 class="override-link-color hide-on-desktop text-font-weight mx-3">Bikes</span></a></li>
           <li><a href="{% url 'products' %}?category=components" class="nav-link navlink-alignment"><span
                 class="override-link-color hide-on-desktop text-font-weight mx-3">Components</span></a></li>
@@ -69,398 +78,410 @@
       </div>
     </div>
   </div>
-  
   <div class="desktop-navigation">
     <nav>
       <ul class="text-center bg-light">
         <li><a href="{% url 'home' %}" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
               class="fas fa-bicycle"></i></a></li>
         <li class="nav-item dropdown">
-          <a href="{% url 'products' %}?category=bikes" class="dropdown-toggle navlink-alignment desktop-nav-link" id="bikesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
+          <a class="dropdown-toggle navlink-alignment desktop-nav-link"
+            id="bikesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
           <div class="dropdown-menu" aria-labelledby="bikesDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="#">Mountain Bikes</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Road Bikes</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">City Bikes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=mountainbikes">Mountain Bikes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=roadbikes">Road Bikes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=citybikes">City Bikes</a>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a href="{% url 'products' %}?category=components" class="dropdown-toggle navlink-alignment desktop-nav-link" id="componenetsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+          <a href="{% url 'products' %}?category=components" class="dropdown-toggle navlink-alignment desktop-nav-link"
+            id="componenetsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
           <div class="dropdown-menu" aria-labelledby="componenetsDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="#">Chainsets</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Cassettes</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Saddles</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Wheels</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Pedals</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Brakes</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Grips</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Tyres</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=chainsets">Chainsets</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=cassettes">Cassettes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=saddles">Saddles</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=wheels">Wheels</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=pedals">Pedals</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=brakes">Brakes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=grips">Grips</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=tyres">Tyres</a>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="nutritionDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
+          <a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="nutritionDropdown"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
           <div class="dropdown-menu" aria-labelledby="bikesDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="#">Bars</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Gels and Energy</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bars">Bars</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=gels">Gels and Energy</a>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment desktop-nav-link" id="accesoriesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
+          <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment desktop-nav-link"
+            id="accesoriesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
           <div class="dropdown-menu" aria-labelledby="accessoriesDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="#">Tools</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Lights</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Books</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Pumps</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Bike Locks</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Bottles & Cages</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=tools">Tools</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=lights">Lights</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=books">Books</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=pumps">Pumps</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bikelocks">Bike Locks</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bottlesandcages">Bottles & Cages</a>
           </div>
         </li>
-        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="riderDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
+        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
+            id="riderDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
           <div class="dropdown-menu" aria-labelledby="riderDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="#">Gloves</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Helmets</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Eyewear</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=gloves">Gloves</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=helmets">Helmets</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=eyewear">Eyewear</a>
           </div>
         </li>
-        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="servicesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
+            id="servicesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="#">Bike Repair</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Road Rescue</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bikerepair">Bike Repair</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=roadrescue">Road Rescue</a>
           </div>
         </li>
       </ul>
     </nav>
   </div>
- <!--Navigation end-->
- 
+  <!--Navigation end-->
 
-<div id="hideMainContent">
-<!-- Start hide main page content -->
- <!--carousel-->
- <div id="mainCarousel" class="carousel slide carousel-fade carousel-dark my-1 shadow p-3 mb-5 bg-body" data-bs-ride="carousel" data-bs-pause="hover">
-   <div class="carousel-inner">
-     <div class="carousel-item active " data-bs-interval="6000">
-       <img src="../media/hero-1.jpg" class="d-block w-100 image-opacity-9" alt="hero1">
-       <h2 class="carousel-heading w-mt-2">ADVENTURE AWAITS</h2>
-     </div>
-     <div class="carousel-item" data-bs-interval="6000">
-       <img src="../media/hero-2.jpg" class="d-block w-100 image-opacity-9" alt="hero2">
-       <h2 class="carousel-heading w-mt-2">GET RIDE READY</h2>
-     </div>
-     <div class="carousel-item" data-bs-interval="6000">
-       <img src="../media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="hero3">
-       <h2 class="carousel-heading mx-3">CHOOSE A STYLE</h2>
-     </div>
-     <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-       <i class="fas fa-caret-left mobile-caret"></i>
-       <i class="fas fa-caret-left desktop-caret fa-3x"></i>
-       <span class="visually-hidden">Previous</span>
-     </button>
-     <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-       <i class="fas fa-caret-right mobile-caret"></i>
-       <i class="fas fa-caret-right desktop-caret fa-3x"></i>
-       <span class="visually-hidden">Next</span>
-     </button>
-   </div>
-  </div>
-   <!--mobile only-->
-<div class="mobile-navigation container-fluid my-1">
-  <div class="row">
-    <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">BIKES</div>
-    <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">COMPONENTS</div>
-    <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">NUTRITION</div>
-    <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">ACCESORIES</div>
-    <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">RIDER SAFETY</div>
-    <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">SERVICES</div>
-  </div>
-</div>
-<!-- Inspriational quote -->
-<div class="main-page-quote text-center">
-  <h2>" It is the unknown around the corner that turns my wheels "</h2>
-  <p class="my-4">long distance cyclist - <em>Heinz Stucke</em></p>
-</div>
-<div class="container-fluid my-0">
-  <div class="row ">
-  <!-- Bike Row -->
-    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
-      <div class="card my-3 grow-effect">
-       <img src="../media/road-card.jpg" alt="road bike"/>
-        <div class="card-body card-thumbnails-body">
-          <h3 class="card-title ">ROAD BIKES</h3>
-          <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-      <div class="card my-3 grow-effect">
-        <img src="../media/mountain-card.jpg" alt="mountain bike" />
-        <div class="card-body card-thumbnails-body">
-          <h3 class="card-title">MOUNTAIN BIKES</h3>
-          <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-      <div class="card my-3 grow-effect">
-        <img src="../media/city-card.jpg" alt="city bike" />
-        <div class="card-body card-thumbnails-body">
-          <h3 class="card-title">CITY BIKES</h3>
-          <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-        </div>
-      </div>
-    </div>
-<!--Components -->
-<div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-  <div class="card my-3 grow-effect">
-    <img src="../media/wheels-card.jpg" alt="wheels" />
-    <div class="card-body card-thumbnails-body">
-      <h3 class="card-title">WHEELS</h3>
-      <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-    </div>
-  </div>
-</div>
-<div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-  <div class="card my-3 grow-effect">
-    <img src="../media/saddle-card.jpg" alt="saddles" />
-    <div class="card-body card-thumbnails-body">
-      <h3 class="card-title">SADDLES</h3>
-      <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-    </div>
-  </div>
-</div>
-<div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-  <div class="card my-3 grow-effect">
-    <img src="../media/bottle-card.jpg" alt="bottles and cages" />
-    <div class="card-body card-thumbnails-body">
-      <h3 class="card-title">BOTTLES & CAGES</h3>
-      <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-    </div>
-  </div>
-</div>
-<div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-  <div class="card my-3 grow-effect">
-    <img src="../media/pump-card.jpg" alt="pumps" />
-    <div class="card-body card-thumbnails-body">
-      <h3 class="card-title">PUMPS</h3>
-      <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-    </div>
-  </div>
-</div>
-<div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-  <div class="card my-3 grow-effect">
-    <img src="../media/helmet-card.jpg" alt="helmet" />
-    <div class="card-body card-thumbnails-body">
-      <h3 class="card-title">HELMETS</h3>
-      <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-    </div>
-  </div>
-</div>
-<div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-  <div class="card my-3 grow-effect">
-    <img src="../media/light-card.jpg" alt="lights" />
-    <div class="card-body card-thumbnails-body">
-      <h3 class="card-title">LIGHTS</h3>
-      <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-    </div>
-  </div>
-</div>
-  </div>
-</div>
 
-</div> 
-<!-- End hide main page content -->
-  
-  <!-- This will be for the hero image at the top of each category, bike, part, clothes-->
-  {% block content %}
- {% endblock %}
-  <!-- This will be for products inside in each category-->
-<!-- Brands we use carousel start -->
-<div class="brands">
-  <h3 class="text-center my-5">Some of our brands</h3>
-  <hr class="text-center">
-  <div class="container">
-    <div class="slider">
-      <div class="brand-carousel-1">
-        <!--Altura-->
-        <a href="https://altura.eu" class="brand-carousel-link" target="_blank" rel="noopener" aria-label="altura"
-          title="altura"></a>
-      </div>
-      <div class="brand-carousel-2">
-        <!--Shimano-->
-        <a href="https://www.shimano.com/en/" class="brand-carousel-link" target="_blank" rel="noopener"
-          aria-label="shimano" title="shimano"></a>
-      </div>
-      <div class="brand-carousel-3">
-        <!--Continental-->
-        <a href="https://www.continental-tires.com/bicycle" class="brand-carousel-link" target="_blank" rel="noopener"
-          aria-label="continental" title="continental"></a>
-      </div>
-      <div class="brand-carousel-4">
-        <!--Giant-->
-        <a href="https://www.giant-bicycles.com/ie" class="brand-carousel-link" target="_blank" rel="noopener"
-          aria-label="giant" title="giant"></a>
-      </div>
-      <div class="brand-carousel-5">
-        <!--Oakley-->
-        <a href="https://www.oakley.com/en-ie" class="brand-carousel-link" target="_blank" rel="noopener"
-          aria-label="oakley" title="oakley"></a>
-      </div>
-      <div class="brand-carousel-6">
-        <!--SiS-->
-        <a href="https://www.scienceinsport.com/" class="brand-carousel-link" target="_blank" rel="noopener"
-          aria-label="SIS" title="SIS"></a>
-      </div>
-      <div class="brand-carousel-7">
-        <!--Liv-->
-        <a href="https://www.liv-cycling.com/ie" class="brand-carousel-link" target="_blank" rel="noopener"
-          aria-label="liv" title="liv"></a>
-      </div>
-      <div class="brand-carousel-8">
-        <!--Schwalbe-->
-        <a href="https://www.schwalbe.com/en/start" class="brand-carousel-link" target="_blank" rel="noopener"
-          aria-label="schwalbe" title="schwalbe"></a>
+  <div id="hideMainContent">
+    <!-- Start hide main page content -->
+    <!--carousel-->
+    <div id="mainCarousel" class="carousel slide carousel-fade carousel-dark my-1 shadow p-3 mb-5 bg-body"
+      data-bs-ride="carousel" data-bs-pause="hover">
+      <div class="carousel-inner">
+        <div class="carousel-item active " data-bs-interval="6000">
+          <img src="../media/hero-1.jpg" class="d-block w-100 image-opacity-9" alt="hero1">
+          <h2 class="carousel-heading w-mt-2">ADVENTURE AWAITS</h2>
+        </div>
+        <div class="carousel-item" data-bs-interval="6000">
+          <img src="../media/hero-2.jpg" class="d-block w-100 image-opacity-9" alt="hero2">
+          <h2 class="carousel-heading w-mt-2">GET RIDE READY</h2>
+        </div>
+        <div class="carousel-item" data-bs-interval="6000">
+          <img src="../media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="hero3">
+          <h2 class="carousel-heading mx-3">CHOOSE A STYLE</h2>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+          <i class="fas fa-caret-left mobile-caret"></i>
+          <i class="fas fa-caret-left desktop-caret fa-3x"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+          <i class="fas fa-caret-right mobile-caret"></i>
+          <i class="fas fa-caret-right desktop-caret fa-3x"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-  </div>
-</div>
-<!-- Brands we use carousel end -->
-
-<!-- footer start-->
-<footer class="panel-primary">
-  <div class="desktop-footer bg-light">
-    <div class="container-fluid">
+    <!--mobile only-->
+    <div class="mobile-navigation container-fluid my-1">
       <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-          <h5 class="mx-3 mt-5">Newsletter</h5>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-          <h5 class="mx-3 mt-5 desktop-contact-us">Contact Us</h5>
-        </div>
+        <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">BIKES</div>
+        <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">COMPONENTS</div>
+        <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">NUTRITION</div>
+        <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">ACCESORIES</div>
+        <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">RIDER SAFETY</div>
+        <div class="categories nav-link col-xm-3 col-sm-6 col-md-2 col-6 grow-effect">SERVICES</div>
       </div>
     </div>
-    <hr>
-    <!--Newsletter-->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-          <p class="mx-3 mt-3">Sign up to our newsletter for great deals, discounts and much much more.</p>
-          <div class="input-group w-75 mt-4">
-            <label for="email"></label>
-            <input type="email" id="email" class="form-control mt-4 mx-3" placeholder="Please Enter Email"
-              aria-label="enter email address">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary mt-4" type="button">Sign Up</button>
+    <!-- Inspriational quote -->
+    <div class="main-page-quote text-center">
+      <h2>" It is the unknown around the corner that turns my wheels "</h2>
+      <p class="my-4">long distance cyclist - <em>Heinz Stucke</em></p>
+    </div>
+    <div class="container-fluid my-0">
+      <div class="row ">
+        <!-- Bike Row -->
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
+          <div class="card my-3 grow-effect">
+            <img src="../media/road-card.jpg" alt="road bike" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title ">ROAD BIKES</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
             </div>
           </div>
         </div>
-        <!--Contact-->
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-          <h5 class="mx-3 mt-5 mobile-contact-us">Contact Us</h5>
-          <hr class="mobile-contact-us px-0">
-          <p class="mx-3 mt-3">CycleScene Ltd. 101 Snugborough Road, Blanchardstown,
-            Dublin 15, D15 CXC2 | <a href="https://goo.gl/maps/B68KscoY3XgKWkRD6" class="maps-location">Map<i
-                class="fas fa-map-marker-alt fa-1x mx-1"></i></a></p>
-          <p class="mx-3">Landline:<a href="tel:018551522" class="footer-link"><span class="text-font-weight"> (01) 8551522</span></a></p>
-          <a class="btn btn-lg" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="facebook"
-            title="facebook" role="button">
-            <i class="fab fa-facebook social-media fa-2x"></i></a>
-          <a class="btn btn-lg" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="youtube"
-            title="youtube" role="button">
-            <i class="fab fa-youtube-square social-media fa-2x"></i></a>
-          <a class="btn btn-lg" href="https://twitter.com/?lang=en/" target="_blank" rel="noopener" aria-label="twitter"
-            title="twitter" role="button">
-            <i class="fab fa-twitter social-media fa-2x"></i></a>
-          <a class="btn btn-lg" href="https://instagram.com/?lang=en/" target="_blank" rel="noopener"
-            aria-label="instagram" title="instagram" role="button">
-            <i class="fab fa-instagram social-media fa-2x"></i></a>
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/mountain-card.jpg" alt="mountain bike" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">MOUNTAIN BIKES</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/city-card.jpg" alt="city bike" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">CITY BIKES</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <!--Components -->
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/wheels-card.jpg" alt="wheels" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">WHEELS</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/saddle-card.jpg" alt="saddles" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">SADDLES</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/bottle-card.jpg" alt="bottles and cages" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">BOTTLES & CAGES</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/pump-card.jpg" alt="pumps" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">PUMPS</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/helmet-card.jpg" alt="helmet" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">HELMETS</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+          <div class="card my-3 grow-effect">
+            <img src="../media/light-card.jpg" alt="lights" />
+            <div class="card-body card-thumbnails-body">
+              <h3 class="card-title">LIGHTS</h3>
+              <a href="#" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--About-->
+
+  </div>
+  <!-- End hide main page content -->
+
+  <!-- This will be for the hero image at the top of each category, bike, part, clothes-->
+  {% block content %}
+  {% endblock %}
+  <!-- This will be for products inside in each category-->
+  <!-- Brands we use carousel start -->
+  <div class="brands">
+    <h3 class="text-center my-5">Some of our brands</h3>
+    <hr class="text-center">
+    <div class="container">
+      <div class="slider">
+        <div class="brand-carousel-1">
+          <!--Altura-->
+          <a href="https://altura.eu" class="brand-carousel-link" target="_blank" rel="noopener" aria-label="altura"
+            title="altura"></a>
+        </div>
+        <div class="brand-carousel-2">
+          <!--Shimano-->
+          <a href="https://www.shimano.com/en/" class="brand-carousel-link" target="_blank" rel="noopener"
+            aria-label="shimano" title="shimano"></a>
+        </div>
+        <div class="brand-carousel-3">
+          <!--Continental-->
+          <a href="https://www.continental-tires.com/bicycle" class="brand-carousel-link" target="_blank" rel="noopener"
+            aria-label="continental" title="continental"></a>
+        </div>
+        <div class="brand-carousel-4">
+          <!--Giant-->
+          <a href="https://www.giant-bicycles.com/ie" class="brand-carousel-link" target="_blank" rel="noopener"
+            aria-label="giant" title="giant"></a>
+        </div>
+        <div class="brand-carousel-5">
+          <!--Oakley-->
+          <a href="https://www.oakley.com/en-ie" class="brand-carousel-link" target="_blank" rel="noopener"
+            aria-label="oakley" title="oakley"></a>
+        </div>
+        <div class="brand-carousel-6">
+          <!--SiS-->
+          <a href="https://www.scienceinsport.com/" class="brand-carousel-link" target="_blank" rel="noopener"
+            aria-label="SIS" title="SIS"></a>
+        </div>
+        <div class="brand-carousel-7">
+          <!--Liv-->
+          <a href="https://www.liv-cycling.com/ie" class="brand-carousel-link" target="_blank" rel="noopener"
+            aria-label="liv" title="liv"></a>
+        </div>
+        <div class="brand-carousel-8">
+          <!--Schwalbe-->
+          <a href="https://www.schwalbe.com/en/start" class="brand-carousel-link" target="_blank" rel="noopener"
+            aria-label="schwalbe" title="schwalbe"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Brands we use carousel end -->
+
+  <!-- footer start-->
+  <footer class="panel-primary">
+    <div class="desktop-footer bg-light">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+            <h5 class="mx-3 mt-5">Newsletter</h5>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+            <h5 class="mx-3 mt-5 desktop-contact-us">Contact Us</h5>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!--Newsletter-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <p class="mx-3 mt-3">Sign up to our newsletter for great deals, discounts and much much more.</p>
+            <div class="input-group w-75 mt-4">
+              <label for="email"></label>
+              <input type="email" id="email" class="form-control mt-4 mx-3" placeholder="Please Enter Email"
+                aria-label="enter email address">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary mt-4" type="button">Sign Up</button>
+              </div>
+            </div>
+          </div>
+          <!--Contact-->
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+            <h5 class="mx-3 mt-5 mobile-contact-us">Contact Us</h5>
+            <hr class="mobile-contact-us px-0">
+            <p class="mx-3 mt-3">CycleScene Ltd. 101 Snugborough Road, Blanchardstown,
+              Dublin 15, D15 CXC2 | <a href="https://goo.gl/maps/B68KscoY3XgKWkRD6" class="maps-location">Map<i
+                  class="fas fa-map-marker-alt fa-1x mx-1"></i></a></p>
+            <p class="mx-3">Landline:<a href="tel:018551522" class="footer-link"><span class="text-font-weight"> (01)
+                  8551522</span></a></p>
+            <a class="btn btn-lg" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="facebook"
+              title="facebook" role="button">
+              <i class="fab fa-facebook social-media fa-2x"></i></a>
+            <a class="btn btn-lg" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="youtube"
+              title="youtube" role="button">
+              <i class="fab fa-youtube-square social-media fa-2x"></i></a>
+            <a class="btn btn-lg" href="https://twitter.com/?lang=en/" target="_blank" rel="noopener"
+              aria-label="twitter" title="twitter" role="button">
+              <i class="fab fa-twitter social-media fa-2x"></i></a>
+            <a class="btn btn-lg" href="https://instagram.com/?lang=en/" target="_blank" rel="noopener"
+              aria-label="instagram" title="instagram" role="button">
+              <i class="fab fa-instagram social-media fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+      <!--About-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+            <h5 class="mt-3 mx-3">About CycleScene</h5>
+            <hr>
+            <p class="mx-3 mt-4">CycleScene was formed in 1992 by 2 passionate riders from very different backgrounds.
+              There goal was simply to deliver great products at competitve prices.</p>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+            <h5 class="mt-3 mx-3">Payment</h5>
+            <hr>
+            <a class="btn btn-lg payment-types" href="https://stripe.com/" target="_blank" rel="noopener"
+              aria-label="stripe" title="stripe" role="button">
+              <i class="fab fa-cc-stripe fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.visa.ie/" target="_blank"
+              rel="noopener" aria-label="visa" title="visa" role="button">
+              <i class="fab fa-cc-visa fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.mastercard.ie/" target="_blank"
+              rel="noopener" aria-label="mastercard" title="mastercard" role="button">
+              <i class="fab fa-cc-mastercard fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.paypal.com/" target="_blank"
+              rel="noopener" aria-label="paypal" title="paypal" role="button">
+              <i class="fab fa-cc-paypal fa-2x mt-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Shop by category -->
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-          <h5 class="mt-3 mx-3">About CycleScene</h5>
-          <hr>
-          <p class="mx-3 mt-4">CycleScene was formed in 1992 by 2 passionate riders from very different backgrounds.
-            There goal was simply to deliver great products at competitve prices.</p>
-        </div>
-        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-          <h5 class="mt-3 mx-3">Payment</h5>
-          <hr>
-          <a class="btn btn-lg payment-types" href="https://stripe.com/" target="_blank" rel="noopener"
-            aria-label="stripe" title="stripe" role="button">
-            <i class="fab fa-cc-stripe fa-2x mt-2"></i></a>
-          <a class="btn btn-lg payment-types disabled-feature" href="https://www.visa.ie/" target="_blank" rel="noopener"
-            aria-label="visa" title="visa" role="button">
-            <i class="fab fa-cc-visa fa-2x mt-2"></i></a>
-            <a class="btn btn-lg payment-types disabled-feature" href="https://www.mastercard.ie/" target="_blank" rel="noopener"
-            aria-label="mastercard" title="mastercard" role="button">
-            <i class="fab fa-cc-mastercard fa-2x mt-2"></i></a>
-            <a class="btn btn-lg payment-types disabled-feature" href="https://www.paypal.com/" target="_blank" rel="noopener"
-            aria-label="paypal" title="paypal" role="button">
-            <i class="fab fa-cc-paypal fa-2x mt-2"></i></a>
+        <div class="col-md-6 col-lg-6 col-xl-6 pt-5">
+          <h5 class="mx-3">Shop By Product</h5>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Shop by category -->
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-6 col-lg-6 col-xl-6 pt-5">
-        <h5 class="mx-3">Shop By Product</h5>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+          <hr>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">City Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Mountain Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Saddles</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Wheels</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Pedals</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Tyres</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Brakes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bottles & Cages</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Pumps</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Locks</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Tools</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Lights</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Cassettes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bars & Snacks</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Books</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Helmets</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Gloves</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Frames</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bar Grips</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Chainsets</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Eyewear</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Repair</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Rescue</a></div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-        <hr>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Bikes</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">City Bikes</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Mountain Bikes</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Saddles</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Wheels</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Pedals</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Tyres</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Brakes</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bottles & Cages</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Pumps</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Locks</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Tools</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Lights</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Cassettes</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bars & Snacks</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Books</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Helmets</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Gloves</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Frames</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bar Grips</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Chainsets</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Eyewear</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Repair</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Rescue</a></div>
-    </div>
-  </div>
-  <!--copyright and terms and conditions-->
-  <hr>
-  <div class="container-fluid mt-5 mb-4">
-    <div class="row">
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-        <p class="text-wrap">© Copyright 2022 CycleScene all rights reserved. <a href="#" class="footer-link">Privacy
-            Policy</a> | <a href="#" class="footer-link">Terms and Conditions.</a> | <a href="#"
-            class="footer-link">Returns Policy.</a></p>
+    <!--copyright and terms and conditions-->
+    <hr>
+    <div class="container-fluid mt-5 mb-4">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <p class="text-wrap">© Copyright 2022 CycleScene all rights reserved. <a href="#" class="footer-link">Privacy
+              Policy</a> | <a href="#" class="footer-link">Terms and Conditions.</a> | <a href="#"
+              class="footer-link">Returns Policy.</a></p>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-<!--footer end-->
-<!--scripts-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script><!-- For Tiny Slider 2-->
+  </footer>
+  <!--footer end-->
+  <!--scripts-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <!-- For Tiny Slider 2-->
   <script src="/static/js/brandcarousel.js"></script>
   {% block scripts %}
   {% endblock %}
 </body>
+
 </html>

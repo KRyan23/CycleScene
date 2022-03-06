@@ -275,12 +275,11 @@ ul > li {
 
 .features-bulletpoint, .features-text {
     margin-left: 1em;
+    
 }
 
-.product-bike-features {
-    
-    zzborder: 1px solid #5C636A;
-    
+.fa-bicycle {
+    animation: rotate 3s linear;
 }
 
 .product-bike-features:hover{
@@ -288,9 +287,8 @@ ul > li {
     transition: transform 0.01s;
     background-color: #E9E9EB;
     font-weight: 900;
-    
-     
 }
+
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
