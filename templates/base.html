@@ -19,7 +19,6 @@
  </head>
 <body>
   <!--Navigation start-->
-<header class="top-navigation">
   <div>
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
       <img class="main-logo" alt="main logo" src="../media/logo101.png">
@@ -57,7 +56,6 @@
                 class="override-link-color hide-on-desktop text-font-weight mx-3">Rider Safety</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment"><span
                 class="override-link-color hide-on-desktop text-font-weight mx-3">Services</span></a></li>
-          
         </ul>
       </div>
     </nav>
@@ -77,17 +75,62 @@
       <ul class="text-center bg-light">
         <li><a href="{% url 'home' %}" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
               class="fas fa-bicycle"></i></a></li>
-        <li><a href="{% url 'products' %}?category=bikes" class="nav-link navlink-alignment text-font-weight">Bikes</a></li>
-        <li><a href="{% url 'products' %}?category=components" class="nav-link navlink-alignment text-font-weight">Components</a></li>
-        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Nutrition</a></li>
-        <li><a href="{% url 'products' %}?category=accessories" class="nav-link navlink-alignment text-font-weight">Accesories</a></li>
-        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Rider Safety</a></li>
-        <li><a href="#" class="nav-link navlink-alignment text-font-weight">Services</a></li>
+        <li class="nav-item dropdown">
+          <a href="{% url 'products' %}?category=bikes" class="dropdown-toggle navlink-alignment desktop-nav-link" id="bikesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
+          <div class="dropdown-menu" aria-labelledby="bikesDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="#">Mountain Bikes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Road Bikes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">City Bikes</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="{% url 'products' %}?category=components" class="dropdown-toggle navlink-alignment desktop-nav-link" id="componenetsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+          <div class="dropdown-menu" aria-labelledby="componenetsDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="#">Chainsets</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Cassettes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Saddles</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Wheels</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Pedals</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Brakes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Grips</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Tyres</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="nutritionDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
+          <div class="dropdown-menu" aria-labelledby="bikesDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="#">Bars</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Gels and Energy</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment desktop-nav-link" id="accesoriesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
+          <div class="dropdown-menu" aria-labelledby="accessoriesDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="#">Tools</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Lights</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Books</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Pumps</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Bike Locks</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Bottles & Cages</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="riderDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
+          <div class="dropdown-menu" aria-labelledby="riderDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="#">Gloves</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Helmets</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Eyewear</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="servicesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="#">Bike Repair</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Road Rescue</a>
+          </div>
+        </li>
       </ul>
     </nav>
   </div>
-</header>
- <!--Navigation start-->
+ <!--Navigation end-->
  
 
 <div id="hideMainContent">
@@ -394,8 +437,8 @@
       <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Frames</a></div>
       <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bar Grips</a></div>
       <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Chainsets</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Sunglasses</a></div>
-      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Repair Service</a></div>
+      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Eyewear</a></div>
+      <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Repair</a></div>
       <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Rescue</a></div>
     </div>
   </div>
