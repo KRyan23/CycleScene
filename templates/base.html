@@ -120,7 +120,6 @@
           <div class="dropdown-menu" aria-labelledby="accessoriesDropdown">
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=tools">Tools</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=lights">Lights</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=books">Books</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=pumps">Pumps</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bikelocks">Bike Locks</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bottlesandcages">Bottles & Cages</a>
@@ -137,8 +136,8 @@
         <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
             id="servicesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bikerepair">Bike Repair</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=roadrescue">Road Rescue</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Bike Repair</a>
+            <a class="nav-link dropdown-item text-font-weight" href="#">Road Rescue</a>
           </div>
         </li>
       </ul>
@@ -432,30 +431,30 @@
         <div class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
           <hr>
         </div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Bikes</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">City Bikes</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Mountain Bikes</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Saddles</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Wheels</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Pedals</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Tyres</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Brakes</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bottles & Cages</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Pumps</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Locks</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Tools</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Lights</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Cassettes</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bars & Snacks</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Books</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Helmets</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Gloves</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Frames</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bar Grips</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Chainsets</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Eyewear</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Repair</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Rescue</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=roadbikes" class="nav-link">Road Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=citybikes" class="nav-link">City Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=mountainbikes" class="nav-link">Mountain Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=saddles" class="nav-link">Saddles</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=wheels" class="nav-link">Wheels</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=pedals" class="nav-link">Pedals</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=tyres" class="nav-link">Tyres</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=brakes" class="nav-link">Brakes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=bottlesandcages" class="nav-link">Bottles & Cages</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=pumps" class="nav-link">Pumps</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=bikelocks" class="nav-link">Bike Locks</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=tools" class="nav-link">Tools</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=lights" class="nav-link">Lights</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=cassettes" class="nav-link">Cassettes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=bars" class="nav-link">Bars</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=gels" class="nav-link">Gels & Energy</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=helmets" class="nav-link">Helmets</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=gloves" class="nav-link">Gloves</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=frames" class="nav-link">Frames</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=grips" class="nav-link">Bar Grips</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=chainsets" class="nav-link">Chainsets</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=eyewear" class="nav-link">Eyewear</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Repair</a></div><!-- link to a shared template road rescue-->
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Rescue</a></div><!-- link to a shared template Bike Repair ^-->
       </div>
     </div>
     <!--copyright and terms and conditions-->
