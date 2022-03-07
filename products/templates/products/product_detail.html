@@ -48,9 +48,9 @@
   <!-- Image Carousel start -->
   <div class="card-body">
     <h2 class="text-center mb-3">Highlights</h2>
-    <p class="card-text">{{ product.highlights|lower|capfirst }}</p>
+    <p class="card-text description-highlights">{{ product.highlights|lower|capfirst }}</p>
     <h3 class="text-center mt-4 mb-3">Description</h3>
-    <p class="card-text">{{ product.description|lower|capfirst }}</p>
+    <p class="card-text description-highlights">{{ product.description|lower|capfirst }}</p>
   </div>
   {% if product.category.id == 19  %}
   <ul class="list-group list-group-flush mt-5">

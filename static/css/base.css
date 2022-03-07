@@ -249,6 +249,14 @@ ul > li {
     
 }
 
+.description-highlights:hover {
+    background-color: #fafafa;
+    color: black;
+    transform: scale(1, 1.05);
+    transition: transform 0.01s;
+    
+}
+
 .star-color-effect {
     animation: rotate 2s reverse;
 }
@@ -347,6 +355,8 @@ ul > li {
       transform: scale(1);
     }
   }
+
+  
 
 /* --------- Media queries ---------------- */
 /*- < 250px-*/
