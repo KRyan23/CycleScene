@@ -7,7 +7,7 @@ body {
 
 a, a:hover {
     text-decoration: none;
-    color: black;
+    color: orange;
 }
 
 ul {
@@ -26,14 +26,18 @@ ul {
     border-radius: 5px;
     border-color: orange;
     padding: 5px 5px 5px 5px;
-    
-    
 }
 
-.shopping-bag-total, .shopping-bag-total-desktop {
+.shopping-bag-total-desktop {
     font-size: 1.25em;
-    color:#6C757D;
-    padding:0 1em 0 1em;
+    color: #6C757D;
+    padding: 0 1em 0 1em;
+}
+
+.shopping-bag-total {
+    font-size: 0.85em;
+    color: #6C757D;
+    padding: 0 1em 0 1em;
 }
 
 .desktop-nav-link {
@@ -254,7 +258,6 @@ ul > li {
     color: black;
     transform: scale(1, 1.05);
     transition: transform 0.01s;
-    
 }
 
 .star-color-effect {
@@ -296,6 +299,21 @@ ul > li {
     background-color: #E9E9EB;
     font-weight: 900;
 }
+
+.no-products {
+    background-color: whitesmoke;
+    padding: 10em 0 10em 0;
+}
+
+.mobile-dropdown-heading {
+        color: #6C757D;
+        font-size: 1.25em;
+        font-weight: 900;
+        margin-left: 0.85em;
+        line-height: 2;
+}
+
+/* left off here need to change colour of mobile dropdown link to match parent */
 
 /* --------- Keyframes Calls -------------- */
 
