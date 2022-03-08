@@ -10,6 +10,10 @@ a, a:hover {
     color: #5C636A;
 }
 
+a:active, a:focus {
+    color:orange;
+}
+
 ul {
     list-style-type: none;
 }
@@ -986,6 +990,10 @@ ul > li {
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
+
+    .carousel-heading {
+        font-size: 4em;
     }
 
 }
