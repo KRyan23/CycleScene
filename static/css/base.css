@@ -7,7 +7,7 @@ body {
 
 a, a:hover {
     text-decoration: none;
-    color: orange;
+    color: #5C636A;
 }
 
 ul {
@@ -565,7 +565,7 @@ ul > li {
   /*- 767px - 992px -*/
   @media only screen and (min-width: 767px) and (max-width: 992px) {
     
-     .mobile-navigation, .mobile-caret, .mobile-contact-us, .shopping-bag-total-desktop, .display-on-smallscreen {
+     .mobile-navigation, .mobile-caret, .mobile-contact-us, .shopping-bag-total-desktop, .display-on-smallscreen, .desktop-navigation {
      display: none;
     }
 
