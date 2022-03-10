@@ -17,7 +17,8 @@
   <h1 class="card-title text-center mt-3">{{ product.name|upper }}</h1>
   <div class="text-center mt-1" id="displayStarRating" title="{{ product.rating }}"></div>
   <!--rating value -->
-  <span class="text-center mt-1 grow-element">Rating: {{ product.rating }}</span>
+  <span id="ratingMessage" class="text-center mt-1 grow-element">Rating: {{ product.rating }}</span>
+  <span id="noRatingMessage" class="text-center mt-1 grow-element"></span>
   <!-- Image Carousel start -->
   <div id="productDetailCarousel" class="carousel slide carousel-fade carousel-dark" >
     <div class="carousel-indicators">
