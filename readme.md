@@ -277,10 +277,7 @@ The project was deployed using the steps below.
 ### Media
 
 
-| A | B  |  C |  D |  E |  F | G  | H  | I  | J | K  |  L |  x |
-|:-:|---|---|---|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |   |   |
+
 
 Images
 
@@ -313,6 +310,33 @@ The images on the Home Page / base template were chosen from the following sourc
 12 - Card Image for Lights](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/saigrabs9broldzopte1/400000167_RECON-HL-200_01.jpg)
 
 #### Products
+
+| | Item1 | Item1 | Item1 | Item2 | Item2 | Item2 | Item3 | Item3 | Item3 | Item4 | Item4  | Item4  | Item5  | Item5 | Item5  | Item6  | Item6  | Item6  |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| M-Bikes  |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| R-Bikes  |Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| C-Bikes  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Chainsets  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Cassettes  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Saddles  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Wheels  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Pedals  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Brakes  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Grips  |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Tyres  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Frames | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Bars  |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Gels  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Tools |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Lights | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Pumps |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| B-Locks |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| B&Cages | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Eyewear | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Helmets |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Gloves |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+
+
 13 - Lock 1](https://www.giant-cork.ie/ie/giant-surelock-flex-key-15)
 
 14 - Lock 2](https://www.giant-cork.ie/ie/giant-surelock-protector-1-dt)
