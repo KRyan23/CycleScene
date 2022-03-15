@@ -54,7 +54,8 @@
     <p class="card-text description-highlights">{{ product.description|lower|capfirst }}</p>
   </div>
   {% if product.category.id == 19  %}
-  <ul class="list-group list-group-flush mt-5">
+  <h3 class="mt-4 text-center">Features</h3>
+  <ul class="list-group list-group-flush mt-4">
     <li class="list-group-item h5 product-bike-features"><span>Fork:</span><small class="lead"> {{ product.feature1|title }}</small></li>
     <li class="list-group-item h5 product-bike-features"><span>Frame:</span><small class="lead"> {{ product.feature2|title}}</small></li>
     <li class="list-group-item h5 product-bike-features"><span>Wheels:</span><small class="lead"> {{ product.feature3|title }}</small></li>

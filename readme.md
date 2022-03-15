@@ -277,207 +277,59 @@ The project was deployed using the steps below.
 ### Media
 
 
-
-
-Images
-
 The images on the Home Page / base template were chosen from the following sources.
 
-1 - Main Cycle Scene Icon was generated here](https://looka.com)
-#### Carousel Images
-1 - The Image for carousel hero-1 was found here](https://www.pexels.com/photo/rear-view-of-man-on-mountain-road-against-sky-258045/)
+The Main Cycle Scene Icon was generated here](https://looka.com)
 
-2 - The Image for carousel hero-2 was found here](https://www.pexels.com/photo/group-of-men-riding-bicycles-on-road-5970275/)
+| Main Carousel  | Product Card 1st row  | Product Card 2nd row  | Product Card 3rd row  | Brands Carousel  |   |   |
+|---|---|---|---|---|---|---|
+| [Hero Pic1](https://www.pexels.com/photo/rear-view-of-man-on-mountain-road-against-sky-258045/) | [Road Bikes](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/iplq6m7f5bxssxwglfyl/MY22PropelAdvancedPro0Disc_ColorAPanther.jpg)  | [Wheels](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/spnwdwmcmavefnboqozj/350000128-350000128-SLR1-DISC-65MM.jpg)  | [Pumps](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/livhngzrauuzx2jrzh0m/2016_Giant_Control_Mini_Combo_Fold_Out_Mini_Track_Pump.jpg) | [Schwalbe](https://images.app.goo.gl/rtGqHv85aN9qaLsB9) | [Giant](https://images.app.goo.gl/FPGubZFewiSxy7Eo9) | [Shimano](https://images.app.goo.gl/955hzHemhxmY9ggN8) |   |   |
+| [Hero Pic2](https://www.pexels.com/photo/group-of-men-riding-bicycles-on-road-5970275/) | [Mountain Bikes](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kp73ggadc1nkvogcwkmx/MY21REIGN_29_SX_ColorAConcrete.jpg) | [Saddles](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg) | [Helmets](https://www.giant-cork.ie/ie/rev-mips-road-helmet)  | [Liv](https://images.app.goo.gl/GbSC7CUdJZ8y3TmU7) | [Oakley](https://images.app.goo.gl/YcYajP9YWBN4dcbdA) | [Altura](https://images.app.goo.gl/DPBxnpFdhSmVstiz5) |   |   |
+| [Hero Pic3](https://images.unsplash.com/photo-1604413764976-15c29d2680ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80) | [City Bikes](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kdjhmafk6kp9ki2l3cd9/MY21Alight3City_ColorATrekkingGreen.jpg) | [Bottles&Cages](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/fauazh4vrmz88ibvznuj/480000361.jpg) | [Lights](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/saigrabs9broldzopte1/400000167_RECON-HL-200_01.jpg)  | [Continental](https://images.app.goo.gl/CRTJJART7nv1QaqFA) | [SiS](https://images.app.goo.gl/e7oKEWWiWGpdN87H6) |   |   |
 
-3 - The Image for carousel hero-3 was found here](https://images.unsplash.com/photo-1604413764976-15c29d2680ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80)
-#### Card Images
-4 - Card Image for Road Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/iplq6m7f5bxssxwglfyl/MY22PropelAdvancedPro0Disc_ColorAPanther.jpg)
+&nbsp;
 
-5 - Card Image for Mountain Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kp73ggadc1nkvogcwkmx/MY21REIGN_29_SX_ColorAConcrete.jpg)
-
-6 - Card Image for City Bike](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kdjhmafk6kp9ki2l3cd9/MY21Alight3City_ColorATrekkingGreen.jpg)
-
-7 - Card Image for Wheels](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/spnwdwmcmavefnboqozj/350000128-350000128-SLR1-DISC-65MM.jpg)
-
-8 - Card Image for Saddles](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg)
-
-9 - Card Image for Bottles and Cages](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/fauazh4vrmz88ibvznuj/480000361.jpg)
-
-10 - Card Image for Pumps](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/livhngzrauuzx2jrzh0m/2016_Giant_Control_Mini_Combo_Fold_Out_Mini_Track_Pump.jpg)
-
-11 - Card Image for Helmets](https://www.giant-cork.ie/ie/rev-mips-road-helmet)
-
-12 - Card Image for Lights](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/saigrabs9broldzopte1/400000167_RECON-HL-200_01.jpg)
 
 #### Products
 
-| | Item1 | Item1 | Item1 | Item2 | Item2 | Item2 | Item3 | Item3 | Item3 | Item4 | Item4  | Item4  | Item5  | Item5 | Item5  | Item6  | Item6  | Item6  |
+* <u>Please note:</u> for items that seem to appear to have the same link for all 3 pictures to the same photo, that is because this is the same photo for all 3 pictures, its just edited to look like 3 distinct images. The reason is that suitible different angled images for this product were unavailible at the time.  
+
+| Category | Item1 | Item1 | Item1 | Item2 | Item2 | Item2 | Item3 | Item3 | Item3 | Item4 | Item4  | Item4  | Item5  | Item5 | Item5  | Item6  | Item6  | Item6  |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| M-Bikes  |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| R-Bikes  |Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| C-Bikes  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Chainsets  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Cassettes  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Saddles  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Wheels  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Pedals  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Brakes  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Grips  |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Tyres  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| M-Bikes  |  [Pic1](https://www.giant-cork.ie/ie/reign-sx-29) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/embolden-2)  | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/trance-x-advanced-eplus-0-2022) | Pic2 | Pic3 | [Pic1](https://www.giant-cork.ie/ie/reign-advanced-pro-29-1-2022) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| R-Bikes  | [Pic1](https://www.giant-cork.ie/ie/propel-advanced-pro-disc-0-2022) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/enviliv-advanced-pro-disc-1-2022) | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/propel-advanced-pro-disc-0) | Pic2 | Pic3 | [Pic1](https://www.giant-cork.ie/ie/langma-advanced-2-disc) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| C-Bikes  | [Pic1](https://www.giant-cork.ie/ie/alight-3-city) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/flourish-fs-2)  | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/escape-1-disc) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Chainsets  | [Pic1](https://www.wiggle.co.uk/fsa-k-force-light-386evo-double-chainset-wo-bb) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/sram-red-axs-dub-12-speed-crankset)  | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/shimano-xtr-m9020-trail-crank-arms) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Cassettes  | [Pic1](https://www.wiggle.co.uk/shimano-tourney-tz500-7-speed-cassette) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/sram-pg1030-10-speed-mtb-cassette)  | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/shimano-ultegra-6600-10-speed-cassette) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Saddles  | [Pic1](https://www.giant-cork.ie/ie/cadex-boost-saddle) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/nukeproof-vector-am-comp-cro-mo-saddle) | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/alacra-sl-saddle-2021) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Wheels  | [Pic1](https://www.giant-cork.ie/ie/slr-1-disc-full-carbon-aero-65mm-wheelsystem) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/nukeproof-horizon-v2-wheel-ard-and-sealant-bundle) | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/sl-1-disc-centre-lock-wheelsystem) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Pedals  | [Pic1](https://www.wiggle.co.uk/nukeproof-horizon-cs-crmo-trail-pedals) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/dmr-v6-plastic-flat-pedals)  | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/crankbrothers-mallet-3-pedals) | Pic2 | Pic3 | [Pic1](https://www.wiggle.co.uk/nukeproof-horizon-pro-sam-hill-enduro-pedals) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Brakes  | [Pic1](https://www.giant-cork.ie/ie/giant-caliper-pad---holder) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/giant-tri-comp-linear-pull--v-style--brake-pad---holder)  | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/conduct-rotor) | Pic2 | Pic3 | [Pic1](https://www.wiggle.co.uk/sunrace-12-speed-xd-cassette) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Grips  |  [Pic1](https://www.wiggle.co.uk/ergon-gp5-comfort-grips) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/brand-x-half-waffle-lock-on-handlebar-grips)  | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/lizard-skins-494-single-compound-handlebar-grips) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Tyres  | [Pic1](https://www.wiggle.co.uk/panaracer-fire-xc-pro-tlc-folding-mtb-tyre) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/continental-sprinter-gatorskin-tubular-tyre) | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/continental-contact-city-tyre-1) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
 | Frames | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Bars  |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Gels  | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Tools |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Lights | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Pumps |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| B-Locks |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| B&Cages | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Eyewear | Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Helmets |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
-| Gloves |  Pic1 | Pic2 | Pic3  | Pic1  | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Bars  |  [Pic1](https://www.wiggle.co.uk/science-in-sport-protein-20-bar-12-x-64g) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/powerbar-energize-advanced-bar-25-x-55g)  | [Pic2](https://www.wiggle.co.uk/powerbar-energize-advanced-bar-25-x-55g)  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Gels  | [Pic1](https://www.wiggle.co.uk/science-in-sport-go-isotonic-energy-gel-mixed-pack-30-x-60ml) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/science-in-sport-go-isotonic-energy-gels-30-x-60ml) | Pic2  | Pic3  | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Tools |  [Pic1](https://www.wiggle.co.uk/topeak-mini-p20-multi-tool) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/fabric-color-coded-11-in-1-multitool) | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/topeak-alien-x-multi-tool) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Lights | [Pic1](https://www.giant-cork.ie/ie/recon-tl-200-rear-light-2020) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/lifeline-pavo-2000-lumen-front-light) | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/lezyne-femto-usb-drive-bike-light-pair) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Pumps |  [Pic1](https://www.giant-cork.ie/ie/giant-control-mini-combo) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/control-tower-2-track-pump-2019)  | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/giant-control-mini-mtb) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| B-Locks |  [Pic1](https://www.giant-cork.ie/ie/giant-surelock-flex-key-15) | [Pic2](https://www.giant-cork.ie/ie/giant-surelock-flex-key-15) | [Pic3](https://www.giant-cork.ie/ie/giant-surelock-flex-key-15)  | [Pic1](https://www.giant-cork.ie/ie/giant-surelock-protector-1-dt)  | [Pic2](https://www.giant-cork.ie/ie/giant-surelock-protector-1-dt)  | [Pic3](https://www.giant-cork.ie/ie/giant-surelock-protector-1-dt)  | [Pic1](https://www.giant-cork.ie/ie/giant-surelock-flex-combo-12) | [Pic2](https://www.giant-cork.ie/ie/giant-surelock-flex-combo-12) | [Pic3](https://www.giant-cork.ie/ie/giant-surelock-flex-combo-12) | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| B&Cages | [Pic1](https://www.giant-cork.ie/ie/doublespring-waterbottle-750cc-2019) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/airway-composite-water-bottle-cage)  | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/liv-pourfast-double-spring-bottle--750ml--liv) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Eyewear | [Pic1](https://www.wiggle.co.uk/dhb-clark-revo-lens-sunglasses) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/dhb-pro-triple-lens-sunglasses) | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/tifosi-eyewear-crit-matte-smoke-fototec-sunglasses) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Helmets |  [Pic1](https://www.giant-cork.ie/ie/rev-mips-road-helmet) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/rev-mips-road-helmet)  | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/rev--mips--womens-road-helmet-2017) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+| Gloves |  [Pic1](https://www.giant-cork.ie/ie/diversion-long-finger-thermal-gloves-2019) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/illume-short-finger-gloves-2019) | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/passion-womens-short-finger-gloves) | Pic2 | Pic3 | [Pic1](https://www.giant-cork.ie/ie/rail-sx-mips-off-road-helmet) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
 
 
-13 - Lock 1](https://www.giant-cork.ie/ie/giant-surelock-flex-key-15)
 
-14 - Lock 2](https://www.giant-cork.ie/ie/giant-surelock-protector-1-dt)
-
-15 - Lock 3](https://www.giant-cork.ie/ie/giant-surelock-flex-combo-12)
-
-16 - Bottle 1](https://www.giant-cork.ie/ie/doublespring-waterbottle-750cc-2019)
-
-17 -Bottle 2](https://www.giant-cork.ie/ie/airway-composite-water-bottle-cage)
-
-18 - Bottle 3](https://www.giant-cork.ie/ie/liv-pourfast-double-spring-bottle--750ml--liv)
-
-19 - Brake 1](https://www.giant-cork.ie/ie/giant-caliper-pad---holder)
-
-20 - Brake 2](https://www.giant-cork.ie/ie/giant-tri-comp-linear-pull--v-style--brake-pad---holder)
-
-21 - Brake 3](https://www.giant-cork.ie/ie/conduct-rotor)
-
-22 -City Bike 1](https://www.giant-cork.ie/ie/alight-3-city)
-
-23 - City Bike 2](https://www.giant-cork.ie/ie/flourish-fs-2)
-
-24 - City Bike 3](https://www.giant-cork.ie/ie/escape-1-disc)
-
-25 - Glove 1](https://www.giant-cork.ie/ie/diversion-long-finger-thermal-gloves-2019)
-
-26 - Glove 2](https://www.giant-cork.ie/ie/illume-short-finger-gloves-2019)
-
-27 - Glove 3](https://www.giant-cork.ie/ie/passion-womens-short-finger-gloves)
-
-28 - Helmet 1](https://www.giant-cork.ie/ie/rev-mips-road-helmet)
-
-29 - Helmet 2](https://www.giant-cork.ie/ie/rev-mips-road-helmet)
-
-30 - Helmet 3](https://www.giant-cork.ie/ie/rev--mips--womens-road-helmet-2017)
-
-31 - Helmet 4](https://www.giant-cork.ie/ie/rail-sx-mips-off-road-helmet)
-
-32 - Cassette 1](https://www.wiggle.co.uk/shimano-tourney-tz500-7-speed-cassette)
-
-33 - Cassette 2](https://www.wiggle.co.uk/sram-pg1030-10-speed-mtb-cassette)
-
-34 - Cassette 3](https://www.wiggle.co.uk/shimano-ultegra-6600-10-speed-cassette)
-
-35 - Cassette 4](https://www.wiggle.co.uk/sunrace-12-speed-xd-cassette)
-
-36 - Bar 1](https://www.wiggle.co.uk/science-in-sport-protein-20-bar-12-x-64g)
-
-37 - Bar 2](https://www.wiggle.co.uk/powerbar-energize-advanced-bar-25-x-55g)
-
-38 - Bar2-2](https://www.wiggle.co.uk/powerbar-energize-advanced-bar-25-x-55g)
-
-39 - Gel 1](https://www.wiggle.co.uk/science-in-sport-go-isotonic-energy-gel-mixed-pack-30-x-60ml)
-
-40 - Gel 2](https://www.wiggle.co.uk/science-in-sport-go-isotonic-energy-gels-30-x-60ml)
-
-41 - Chainset 1](https://www.wiggle.co.uk/fsa-k-force-light-386evo-double-chainset-wo-bb)
-
-42 - Chainset 2](https://www.wiggle.co.uk/sram-red-axs-dub-12-speed-crankset)
-
-43 - Chainset 3](https://www.wiggle.co.uk/shimano-xtr-m9020-trail-crank-arms)
-
-44 - Light 1](https://www.giant-cork.ie/ie/recon-tl-200-rear-light-2020)
-
-45 - Light 2](https://www.wiggle.co.uk/lifeline-pavo-2000-lumen-front-light)
-
-46 - Light 3](https://www.wiggle.co.uk/lezyne-femto-usb-drive-bike-light-pair)
-
-47 - Bike 1](https://www.giant-cork.ie/ie/reign-sx-29)
-
-48 - Bike 2](https://www.giant-cork.ie/ie/embolden-2)
-
-49 - Bike 3](https://www.giant-cork.ie/ie/trance-x-advanced-eplus-0-2022)
-
-50 - Bike 4](https://www.giant-cork.ie/ie/reign-advanced-pro-29-1-2022)
-
-51 - Pedal 1](https://www.wiggle.co.uk/nukeproof-horizon-cs-crmo-trail-pedals)
-
-52 - Pedal 2](https://www.wiggle.co.uk/dmr-v6-plastic-flat-pedals)
-
-53 - Pedal 3](https://www.wiggle.co.uk/crankbrothers-mallet-3-pedals)
-
-54 - Pedal 4](https://www.wiggle.co.uk/nukeproof-horizon-pro-sam-hill-enduro-pedals)
-
-55 - Pump 1 ](https://www.giant-cork.ie/ie/giant-control-mini-combo)
-
-56 - Pump 2 ](https://www.giant-cork.ie/ie/control-tower-2-track-pump-2019)
-
-57 - Pump 3 ](https://www.giant-cork.ie/ie/giant-control-mini-mtb)
-
-58 - Road Bike 1](https://www.giant-cork.ie/ie/propel-advanced-pro-disc-0-2022)
-
-59 - Road Bike 2](https://www.giant-cork.ie/ie/enviliv-advanced-pro-disc-1-2022)
-
-60 - Road Bike 3](https://www.giant-cork.ie/ie/propel-advanced-pro-disc-0)
-
-61 - Road Bike 4](https://www.giant-cork.ie/ie/langma-advanced-2-disc)
-
-62 - Saddle 1](https://www.giant-cork.ie/ie/cadex-boost-saddle)
-
-63 - Saddle 2](https://www.wiggle.co.uk/nukeproof-vector-am-comp-cro-mo-saddle)
-
-63 - Saddle 3](https://www.giant-cork.ie/ie/alacra-sl-saddle-2021)
-
-64 - Grip 1](https://www.wiggle.co.uk/ergon-gp5-comfort-grips)
-
-65 - Grip 2](https://www.wiggle.co.uk/brand-x-half-waffle-lock-on-handlebar-grips)
-
-66 - Grip 3](https://www.wiggle.co.uk/lizard-skins-494-single-compound-handlebar-grips)
-
-67 - Sunglasses 1](https://www.wiggle.co.uk/dhb-clark-revo-lens-sunglasses)
-
-68 - Sunglasses 2](https://www.wiggle.co.uk/dhb-pro-triple-lens-sunglasses)
-
-69 - Sunglasses 3](https://www.wiggle.co.uk/tifosi-eyewear-crit-matte-smoke-fototec-sunglasses)
-
-70 - Book 1](https://www.wiggle.co.uk/cordee-complete-bicycle-maintenance-haynes)
-
-71 - Book 2](https://www.wiggle.co.uk/cordee-at-the-edge-danny-macaskill-pb)
-
-72 - Book 3](https://www.wiggle.co.uk/cordee-eat-bike-cook)
-
-73 - Tool 1](https://www.wiggle.co.uk/topeak-mini-p20-multi-tool)
-
-74 - Tool 2](https://www.wiggle.co.uk/fabric-color-coded-11-in-1-multitool)
-
-75 - Tool 3](https://www.wiggle.co.uk/topeak-alien-x-multi-tool)
-
-76 - Wheel 1](https://www.giant-cork.ie/ie/slr-1-disc-full-carbon-aero-65mm-wheelsystem)
-
-77 - Wheel 2](https://www.wiggle.co.uk/nukeproof-horizon-v2-wheel-ard-and-sealant-bundle)
-
-78 - Wheel 3](https://www.giant-cork.ie/ie/sl-1-disc-centre-lock-wheelsystem)
-
-79 - Tyre 1](https://www.wiggle.co.uk/panaracer-fire-xc-pro-tlc-folding-mtb-tyre)
-
-80 - Tyre 2](https://www.wiggle.co.uk/continental-sprinter-gatorskin-tubular-tyre)
-
-81 - Tyre 3](https://www.wiggle.co.uk/continental-contact-city-tyre-1)
 
 The Icons on the various pages were chosen from the following sources.
+
+
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
 
 1 - Search Header Icon](https://fontawesome.com/v5/icons/search?s=solid)
 
@@ -507,9 +359,7 @@ The Icons on the various pages were chosen from the following sources.
 
 14 - Mastercard Footer Icon [View here](https://fontawesome.com/v5/icons/cc-mastercard?s=brands)
 
-15 - PayPal Footer Icon [View here](https://fontawesome.com/v5/icons/cc-paypal?s=brands)
-
-16 - Created favicon using this site [View here](http://faviconer.com/icon/index) 
+15 - Created favicon using this site [View here](http://faviconer.com/icon/index) 
  
 
 
