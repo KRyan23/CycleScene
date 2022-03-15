@@ -11,7 +11,7 @@
     <ol class="breadcrumb mx-1 mt-2">
       <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'home' %}">Home</a></li>
       <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'products' %}?category={{ product.category }}">{{ product.category|title }}</a></li>
-      <li class="breadcrumb-item active bg-gradient-secondary fs-6" aria-current="page">{{ product.name|title }}</li>
+      <li class="breadcrumb-item active bg-gradient-secondary fs-6" aria-current="page"><span class="breadcrumb">{{ product.name|title }}</span></li>
     </ol>
   </nav>
   <h1 class="card-title text-center mt-3">{{ product.name|upper }}</h1>

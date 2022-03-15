@@ -181,11 +181,11 @@ JSHint was used for the javascript linter, and pylint for the python linter.
     -   #### BROWSING AND NAVIGATION
         &nbsp;
 
-        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome | Tested-Outcome | Complete  |
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome | Tested Outcome | Complete  |
         | :---:        | :---        |    :---  |          :--- | :--- | :---: |
-        | 1 | As a First Time Visitor | I would like to easily understand the purpose of the site| So that I can decide if I am interested in the sites contents  | Tested outcome here Tested outcome here | &#9744; |
-        | 2 | As a First Time, Returning or Frequent Visitor | I would like to view different product categories | So that I easily identify a particular category I am interested in |  Tested outcome here Tested outcome here | &#9744;|
-        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view individual products details | So that I can easily identify, price, product highlights, description, features, extra images and star ratings |  Tested outcome here Tested outcome here | &#9744;|
+        | 1 | As a First Time Visitor | I would like to easily understand the purpose of the site| So that I can decide if I am interested in the sites contents  | Upon landing on the main page users are greeted with a clean responsive site whose imagery and text convey a message that the sites primary goal revolves around cycling,and purchasing cycling related products, services and accesories | &#9745; |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to view different product categories | So that I easily identify a particular category I am interested in |  This user story is catered for in both the header and footer, the simple categorised main navigation menu along with  the footer section 'Browse by category' are allways obvious and present on every page reasuring the user that they will allways be able to jump between different categories | &#9745; |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view individual products details | So that I can easily identify, price, product highlights, description, features, extra images and star ratings |   This user story has been tested so that when the user clicks/taps on a product be it in mobile or desktop, all product details are displayed in a user friendly format. These include the 'star rating' first followed by, extra images, highlights, description, features and price. | &#9745;|
         | 4 | As a First Time, Returning or Frequent Visitor | I would like to identify special offers and discounts | So that I can take advantage of offers on products I would like to purchase |  Tested outcome here Tested outcome here | &#9744; |
         | 5 | As a First Time, Returning or Frequent Visitor | I would like to see the total of my shopping basket easily | So that I can keep track of how much I am going to spend |  Tested outcome here Tested outcome here | &#9744; |
         &nbsp;
@@ -194,21 +194,21 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 
         | Number  | Visitor Type   | Visitor Requirements | Desired Outcome | Tested Outcome | Complete  |
         | :---:        | :---        |    :---  |          :--- | :--- | :---: |
-        | 1 | As a First Time Visitor | I would like to be able to register for a free account| So that I can make my first purchase from the store | Tested outcome here Tested outcome here  | [x] |
-        | 2 | As a Returning or Frequent Visitor | I would like to be able to login and out of my profile | So that I can browse the site without needing to be logged in, and login if I need to make a purchase | Tested outcome here Tested outcome here | [x] |
-        | 3 | As a Returning or Frequent Visitor | I would like to be able to reset my password if I forget it| So that I can quickly restore access to my account | Tested outcome here Tested outcome here | [x] |
-        | 4 | As a First Time Visitor | I would like to receive an email confirmation upon signup| So that I can verify my registration was successful | Tested outcome here Tested outcome here | [x] |
-        | 5 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. | Tested outcome here Tested outcome here | [x] |
+        | 1 | As a First Time Visitor | I would like to be able to register for a free account| So that I can make my first purchase from the store | Tested outcome here Tested outcome here  | &#9744; |
+        | 2 | As a Returning or Frequent Visitor | I would like to be able to login and out of my profile | So that I can browse the site without needing to be logged in, and login if I need to make a purchase | Tested outcome here Tested outcome here | &#9744; |
+        | 3 | As a Returning or Frequent Visitor | I would like to be able to reset my password if I forget it| So that I can quickly restore access to my account | Tested outcome here Tested outcome here | &#9744; |
+        | 4 | As a First Time Visitor | I would like to receive an email confirmation upon signup| So that I can verify my registration was successful | Tested outcome here Tested outcome here | &#9744; |
+        | 5 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. | Tested outcome here Tested outcome here | &#9744; |
         &nbsp;
     -   #### SORT AND SEARCH
         &nbsp;
 
         | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
         | :---:        | :---        |    :---  |          :--- |          :---: |
-        | 1 | As a First Time, Returning or Frequent Visitor | I would like to sort a list of products | So that I can Identify the, best rated & best priced products | [ ] |
-        | 2 | As a First Time, Returning or Frequent Visitor | I would like to sort a specific category of products | So that I can find the best priced or best rated product, in a specific category | [ ] |
-        | 3 | As a First Time, Returning or Frequent Visitor | I would like to search for a product by name or description | So that I can find a particular item I would like to purchase | [ ] |
-        | 4 | As a First Time, Returning or Frequent Visitor | I would like to see what ive searched for and the number of results | So that I see if the item Ive searched for is availible on the site | [ ] |
+        | 1 | As a First Time, Returning or Frequent Visitor | I would like to sort a list of products | So that I can Identify the, best rated & best priced products | &#9744; |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to sort a specific category of products | So that I can find the best priced or best rated product, in a specific category | &#9744; |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to search for a product by name or description | So that I can find a particular item I would like to purchase | &#9744;|
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to see what ive searched for and the number of results | So that I see if the item Ive searched for is availible on the site | &#9744;|
         
         &nbsp;
     -   #### CHECKOUT, PAYMENT AND ORDERS
@@ -216,62 +216,21 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 
         | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
         | :---:        | :---        |    :---  |          :--- |          :---: |
-        | 1 | As a First Time Visitor, Returning or Frequent Visitor | I would like to see a summary of my order before payment | So that I can be sure of ordering the right amount of the correct item | [] |
-        | 2 | As a First Time, Returning or Frequent Visitor | I would like to change the quantity or remove an item  before payment | So that we can change our mind last minute if we need to update the shopping bag| [ ] |
-        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view my past orders in my profile | So that I can check back over an old order in case we need to return an item. | [ ] |
-        | 4 | As a First Time, Returning or Frequent Visitor | I would like to cancel the checkout process and not proceed to payment | So that I can easily exit out of the payment process should we change our mind | [ ] |
+        | 1 | As a First Time Visitor, Returning or Frequent Visitor | I would like to see a summary of my order before payment | So that I can be sure of ordering the right amount of the correct item | &#9744; |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to change the quantity or remove an item  before payment | So that we can change our mind last minute if we need to update the shopping bag| &#9744; |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view my past orders in my profile | So that I can check back over an old order in case we need to return an item. | &#9744; |
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to cancel the checkout process and not proceed to payment | So that I can easily exit out of the payment process should we change our mind | &#9744; |
        
         &nbsp;
     
-    1. As a First Time Visitor, I want to easily understand the main purpose of the site.
+    'Checked'
+     &#9745;
 
-        1. Upon landing on the main page users are greeted with a clean responsive site whose imagery and text convey a message that the sites primary goal revolves around Cycling,and purchasing cycling related products, services and accesories.
-        
+      I would like to view individual products details | So that I can easily identify, price, product highlights, description, features, extra images and star ratings.
 
-    2. As a First Time Visitor
-
-        1. 
-        2. 
-
-    3. As a First Time Visitor
-
-        1. 
-    4.  As a First Time Visitor
-
-        1. 
-
--   #### Returning Visitor Goals
-
-    1. As a Returning Visitor
-
-        1. 
-
+      This user story has been tested so that when the user clicks/taps on a product be it in mobile or desktop, all product details are displayed in a user friendly format. These include the 'star rating' first followed by, extra images, highlights, description, features and price.
     
-    2. As a Returning Visitor
-
-        1. 
-
-    3. As a Returning Visitor
-
-        1. 
-
--   #### Frequent User Goals  
-        
-        
-    1. As a Frequent Visitor,
-
-        1. 
-        
-    2. As a Frequent Visitor,
-
-        1. 
-    3. As a Frequent Visitor, 
-
-        1. 
-      
-    4. As a Frequent Visitor, 
-        
-        1. 
+    
 
 ### Further Testing
 
