@@ -25,45 +25,45 @@
     -   #### BROWSING AND NAVIGATION
         &nbsp;
 
-        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
-        | :---:        | :---        |    :---  |          :--- |          :---: |
-        | 1 | As a First Time Visitor | I would like to easily understand the purpose of the site| So that I can decide if I am interested in the sites contents  | [x] |
-        | 2 | As a First Time, Returning or Frequent Visitor | I would like to view different product categories | So that I easily identify a particular category I am interested in | [ ] |
-        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view individual products details | So that I can easily identify, price, product highlights, description, features, extra images and star ratings | [ ] |
-        | 4 | As a First Time, Returning or Frequent Visitor | I would like to identify special offers and discounts | So that I can take advantage of offers on products I would like to purchase | [ ] |
-        | 5 | As a First Time, Returning or Frequent Visitor | I would like to see the total of my shopping basket easily | So that I can keep track of how much I am going to spend | [ ] |
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     |
+        | :---:        | :---        |    :---  |          :--- |
+        | 1 | As a First Time Visitor | I would like to easily understand the purpose of the site| So that I can decide if I am interested in the sites contents  |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to view different product categories | So that I easily identify a particular category I am interested in |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view individual products details | So that I can easily identify, price, product highlights, description, features, extra images and star ratings |
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to identify special offers and discounts | So that I can take advantage of offers on products I would like to purchase |
+        | 5 | As a First Time, Returning or Frequent Visitor | I would like to see the total of my shopping basket easily | So that I can keep track of how much I am going to spend |
         &nbsp;
     -   #### REGISTRATION AND USER ACCOUNTS
         &nbsp;
 
-        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
-        | :---:        | :---        |    :---  |          :--- |          :---: |
-        | 1 | As a First Time Visitor | I would like to be able to register for a free account| So that I can make my first purchase from the store | [ ] |
-        | 2 | As a Returning or Frequent Visitor | I would like to be able to login and out of my profile | So that I can browse the site without needing to be logged in, and login if I need to make a purchase | [ ] |
-        | 3 | As a Returning or Frequent Visitor | I would like to be able to reset my password if I forget it| So that I can quickly restore access to my account | [ ] |
-        | 4 | As a First Time Visitor | I would like to receive an email confirmation upon signup| So that I can verify my registration was successful | [ ] |
-        | 5 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. | [ ] |
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome |
+        | :---:        | :---        |    :---  |          :--- |
+        | 1 | As a First Time Visitor | I would like to be able to register for a free account| So that I can make my first purchase from the store |
+        | 2 | As a Returning or Frequent Visitor | I would like to be able to login and out of my profile | So that I can browse the site without needing to be logged in, and login if I need to make a purchase |
+        | 3 | As a Returning or Frequent Visitor | I would like to be able to reset my password if I forget it| So that I can quickly restore access to my account |
+        | 4 | As a First Time Visitor | I would like to receive an email confirmation upon signup| So that I can verify my registration was successful |
+        | 5 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. |
         &nbsp;
     -   #### SORT AND SEARCH
         &nbsp;
 
-        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
-        | :---:        | :---        |    :---  |          :--- |          :---: |
-        | 1 | As a First Time, Returning or Frequent Visitor | I would like to sort a list of products | So that I can Identify the, best rated & best priced products | [ ] |
-        | 2 | As a First Time, Returning or Frequent Visitor | I would like to sort a specific category of products | So that I can find the best priced or best rated product, in a specific category | [ ] |
-        | 3 | As a First Time, Returning or Frequent Visitor | I would like to search for a product by name or description | So that I can find a particular item I would like to purchase | [ ] |
-        | 4 | As a First Time, Returning or Frequent Visitor | I would like to see what ive searched for and the number of results | So that I see if the item Ive searched for is availible on the site | [ ] |
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome |
+        | :---:        | :---        |    :---  |          :--- |
+        | 1 | As a First Time, Returning or Frequent Visitor | I would like to sort a list of products | So that I can Identify the, best rated & best priced products |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to sort a specific category of products | So that I can find the best priced or best rated product, in a specific category |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to search for a product by name or description | So that I can find a particular item I would like to purchase |
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to see what ive searched for and the number of results | So that I see if the item Ive searched for is availible on the site |
         
         &nbsp;
     -   #### CHECKOUT, PAYMENT AND ORDERS
         &nbsp;
 
-        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
-        | :---:        | :---        |    :---  |          :--- |          :---: |
-        | 1 | As a First Time Visitor, Returning or Frequent Visitor | I would like to see a summary of my order before payment | So that I can be sure of ordering the right amount of the correct item | [] |
-        | 2 | As a First Time, Returning or Frequent Visitor | I would like to change the quantity or remove an item  before payment | So that we can change our mind last minute if we need to update the shopping bag| [ ] |
-        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view my past orders in my profile | So that I can check back over an old order in case we need to return an item. | [ ] |
-        | 4 | As a First Time, Returning or Frequent Visitor | I would like to cancel the checkout process and not proceed to payment | So that I can easily exit out of the payment process should we change our mind | [ ] |
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     |
+        | :---:        | :---        |    :---  |          :--- |
+        | 1 | As a First Time Visitor, Returning or Frequent Visitor | I would like to see a summary of my order before payment | So that I can be sure of ordering the right amount of the correct item |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to change the quantity or remove an item  before payment | So that we can change our mind last minute if we need to update the shopping bag|
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view my past orders in my profile | So that I can check back over an old order in case we need to return an item. |
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to cancel the checkout process and not proceed to payment | So that I can easily exit out of the payment process should we change our mind |
        
         &nbsp;
 -   ### Design
@@ -167,13 +167,62 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 -   [pylint ](https://pylint.org/) - [Results](/assets/docs/testing-and-troubleshooting/pylint-results.pdf)
 -    Code Refactoring  - [Results](/assets/docs/testing-and-troubleshooting/code-refactoring.pdf)
 
+&nbsp;
 
-### Testing User Stories from User Experience Section
 
-### Users Stories
+----
+## <center>User Experience</center> 
+----
 
--   #### First Time Visitor Goals
 
+-   ### Testing User Stories from User Experience Section
+    &nbsp;  
+
+    -   #### BROWSING AND NAVIGATION
+        &nbsp;
+
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome | Tested-Outcome | Complete  |
+        | :---:        | :---        |    :---  |          :--- | :--- | :---: |
+        | 1 | As a First Time Visitor | I would like to easily understand the purpose of the site| So that I can decide if I am interested in the sites contents  | Tested outcome here Tested outcome here | &#9744; |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to view different product categories | So that I easily identify a particular category I am interested in |  Tested outcome here Tested outcome here | &#9744;|
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view individual products details | So that I can easily identify, price, product highlights, description, features, extra images and star ratings |  Tested outcome here Tested outcome here | &#9744;|
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to identify special offers and discounts | So that I can take advantage of offers on products I would like to purchase |  Tested outcome here Tested outcome here | &#9744; |
+        | 5 | As a First Time, Returning or Frequent Visitor | I would like to see the total of my shopping basket easily | So that I can keep track of how much I am going to spend |  Tested outcome here Tested outcome here | &#9744; |
+        &nbsp;
+    -   #### REGISTRATION AND USER ACCOUNTS 
+        &nbsp;
+
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome | Tested Outcome | Complete  |
+        | :---:        | :---        |    :---  |          :--- | :--- | :---: |
+        | 1 | As a First Time Visitor | I would like to be able to register for a free account| So that I can make my first purchase from the store | Tested outcome here Tested outcome here  | [x] |
+        | 2 | As a Returning or Frequent Visitor | I would like to be able to login and out of my profile | So that I can browse the site without needing to be logged in, and login if I need to make a purchase | Tested outcome here Tested outcome here | [x] |
+        | 3 | As a Returning or Frequent Visitor | I would like to be able to reset my password if I forget it| So that I can quickly restore access to my account | Tested outcome here Tested outcome here | [x] |
+        | 4 | As a First Time Visitor | I would like to receive an email confirmation upon signup| So that I can verify my registration was successful | Tested outcome here Tested outcome here | [x] |
+        | 5 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. | Tested outcome here Tested outcome here | [x] |
+        &nbsp;
+    -   #### SORT AND SEARCH
+        &nbsp;
+
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
+        | :---:        | :---        |    :---  |          :--- |          :---: |
+        | 1 | As a First Time, Returning or Frequent Visitor | I would like to sort a list of products | So that I can Identify the, best rated & best priced products | [ ] |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to sort a specific category of products | So that I can find the best priced or best rated product, in a specific category | [ ] |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to search for a product by name or description | So that I can find a particular item I would like to purchase | [ ] |
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to see what ive searched for and the number of results | So that I see if the item Ive searched for is availible on the site | [ ] |
+        
+        &nbsp;
+    -   #### CHECKOUT, PAYMENT AND ORDERS
+        &nbsp;
+
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
+        | :---:        | :---        |    :---  |          :--- |          :---: |
+        | 1 | As a First Time Visitor, Returning or Frequent Visitor | I would like to see a summary of my order before payment | So that I can be sure of ordering the right amount of the correct item | [] |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to change the quantity or remove an item  before payment | So that we can change our mind last minute if we need to update the shopping bag| [ ] |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to view my past orders in my profile | So that I can check back over an old order in case we need to return an item. | [ ] |
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to cancel the checkout process and not proceed to payment | So that I can easily exit out of the payment process should we change our mind | [ ] |
+       
+        &nbsp;
+    
     1. As a First Time Visitor, I want to easily understand the main purpose of the site.
 
         1. Upon landing on the main page users are greeted with a clean responsive site whose imagery and text convey a message that the sites primary goal revolves around Cycling,and purchasing cycling related products, services and accesories.
@@ -275,13 +324,15 @@ The project was deployed using the steps below.
 &nbsp;
 
 ### Media
+&nbsp;
 
 
-The images on the Home Page / base template were chosen from the following sources.
+#### Home Page
+    
+    1.The images on the Home Page/base template were chosen from the following sources
+    2.The Main Cycle Scene Icon was generated here(https://looka.com)
 
-The Main Cycle Scene Icon was generated here](https://looka.com)
-
-| Main Carousel  | Product Card 1st row  | Product Card 2nd row  | Product Card 3rd row  | Brands Carousel  |   |   |
+| Main Carousel  | Product Card 1st row  | Product Card 2nd row  | Product Card 3rd row  | Brands Carousel -> |   |   |
 |---|---|---|---|---|---|---|
 | [Hero Pic1](https://www.pexels.com/photo/rear-view-of-man-on-mountain-road-against-sky-258045/) | [Road Bikes](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/iplq6m7f5bxssxwglfyl/MY22PropelAdvancedPro0Disc_ColorAPanther.jpg)  | [Wheels](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/spnwdwmcmavefnboqozj/350000128-350000128-SLR1-DISC-65MM.jpg)  | [Pumps](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/livhngzrauuzx2jrzh0m/2016_Giant_Control_Mini_Combo_Fold_Out_Mini_Track_Pump.jpg) | [Schwalbe](https://images.app.goo.gl/rtGqHv85aN9qaLsB9) | [Giant](https://images.app.goo.gl/FPGubZFewiSxy7Eo9) | [Shimano](https://images.app.goo.gl/955hzHemhxmY9ggN8) |   |   |
 | [Hero Pic2](https://www.pexels.com/photo/group-of-men-riding-bicycles-on-road-5970275/) | [Mountain Bikes](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/kp73ggadc1nkvogcwkmx/MY21REIGN_29_SX_ColorAConcrete.jpg) | [Saddles](https://images.giant-bicycles.com/b_white,c_pad,h_650,q_80/upclyhmiiq3tsw0ncvw7/1_CADEX_Boost_Saddle_top_angle.jpg) | [Helmets](https://www.giant-cork.ie/ie/rev-mips-road-helmet)  | [Liv](https://images.app.goo.gl/GbSC7CUdJZ8y3TmU7) | [Oakley](https://images.app.goo.gl/YcYajP9YWBN4dcbdA) | [Altura](https://images.app.goo.gl/DPBxnpFdhSmVstiz5) |   |   |
@@ -292,7 +343,8 @@ The Main Cycle Scene Icon was generated here](https://looka.com)
 
 #### Products
 
-* <u>Please note:</u> for items that seem to appear to have the same link for all 3 pictures to the same photo, that is because this is the same photo for all 3 pictures, its just edited to look like 3 distinct images. The reason is that suitible different angled images for this product were unavailible at the time.  
+    1. I've populated each category with 6 unique products all of which have 3 sepparate pictures. So Item1 refers to an individual product and each item has 3 pictures associated with it (Pic1,Pic2,Pic3)
+    2. Please note: For items that seem to appear to have the same link for all 3 pictures to the same photo, that is because this is the same photo for all 3 pictures, its just edited to look like 3 distinct images. The reason is that suitible different angled images for this product were unavailible at the time
 
 | Category | Item1 | Item1 | Item1 | Item2 | Item2 | Item2 | Item3 | Item3 | Item3 | Item4 | Item4  | Item4  | Item5  | Item5 | Item5  | Item6  | Item6  | Item6  |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -318,49 +370,27 @@ The Main Cycle Scene Icon was generated here](https://looka.com)
 | Eyewear | [Pic1](https://www.wiggle.co.uk/dhb-clark-revo-lens-sunglasses) | Pic2 | Pic3  | [Pic1](https://www.wiggle.co.uk/dhb-pro-triple-lens-sunglasses) | Pic2  | Pic3  | [Pic1](https://www.wiggle.co.uk/tifosi-eyewear-crit-matte-smoke-fototec-sunglasses) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
 | Helmets |  [Pic1](https://www.giant-cork.ie/ie/rev-mips-road-helmet) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/rev-mips-road-helmet)  | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/rev--mips--womens-road-helmet-2017) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
 | Gloves |  [Pic1](https://www.giant-cork.ie/ie/diversion-long-finger-thermal-gloves-2019) | Pic2 | Pic3  | [Pic1](https://www.giant-cork.ie/ie/illume-short-finger-gloves-2019) | Pic2  | Pic3  | [Pic1](https://www.giant-cork.ie/ie/passion-womens-short-finger-gloves) | Pic2 | Pic3 | [Pic1](https://www.giant-cork.ie/ie/rail-sx-mips-off-road-helmet) | Pic2 | Pic3 | Pic1 | Pic2 | Pic3  | Pic1 | Pic2 | Pic3 |
+&nbsp;
 
 
+#### Icons
+
+&nbsp;
+
+    The Icons on the various pages were chosen from the following sources
 
 
-The Icons on the various pages were chosen from the following sources.
-
-
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |
-
-1 - Search Header Icon](https://fontawesome.com/v5/icons/search?s=solid)
-
-2 - Home Header Icon](https://fontawesome.com/v5/icons/home?s=solid)
-
-3 - Shopping Cart Header Icon](https://fontawesome.com/v5/icons/shopping-bag?s=solid)
-
-4 - Bicycle Header Icon](https://fontawesome.com/v5/icons/bicycle?s=solid)
-
-5 - Carret Left Icon](https://fontawesome.com/v5/icons/caret-left?s=solid)
-
-6 - Carret Right Icon](https://fontawesome.com/v5/icons/caret-right?s=solid)
-
-7 - Map Marker Icon](https://fontawesome.com/v5/icons/map-marker-alt?s=solid)
-
-8 - Facebook Footer Icon](https://fontawesome.com/v5.15/icons/facebook?style=brands)
-
-9 - YouTube Footer Icon](https://fontawesome.com/v5.15/icons/youtube-square?style=brands)
-
-10 - Twitter Footer Icon](https://fontawesome.com/v5.15/icons/twitter?style=brands)
-
-11 - Instagram Footer Icon](https://fontawesome.com/v5.15/icons/instagram?style=brands)
-
-12 - Stripe Footer Icon](https://fontawesome.com/v5/icons/cc-stripe?s=brands)
-
-13 - Visa Footer Icon [View here](https://fontawesome.com/v5/icons/cc-visa?s=brands)
-
-14 - Mastercard Footer Icon [View here](https://fontawesome.com/v5/icons/cc-mastercard?s=brands)
-
-15 - Created favicon using this site [View here](http://faviconer.com/icon/index) 
- 
+| Header Icons | Footer Icons  | Other Icons  |
+|---|---|---|
+| [Search](https://fontawesome.com/v5/icons/search?s=solid) | [Map-Pin](https://fontawesome.com/v5/icons/map-marker-alt?s=solid) | [Carret Left](https://fontawesome.com/v5/icons/caret-left?s=solid) |
+| [Home](https://fontawesome.com/v5/icons/home?s=solid)  | [Facebook](https://fontawesome.com/v5.15/icons/facebook?style=brands) | [Carret Right](https://fontawesome.com/v5/icons/caret-right?s=solid) | 
+| [Bag](https://fontawesome.com/v5/icons/shopping-bag?s=solid) | [YouTube](https://fontawesome.com/v5.15/icons/youtube-square?style=brands) | [Created Favicon](http://faviconer.com/icon/index) |
+| [Bicycle](https://fontawesome.com/v5/icons/bicycle?s=solid) | [Twitter](https://fontawesome.com/v5.15/icons/twitter?style=brands) |
+| | [Instagram](https://fontawesome.com/v5.15/icons/instagram?style=brands) |
+| | [Mastercard](https://fontawesome.com/v5/icons/cc-mastercard?s=brands) |
+| | [Stripe](https://fontawesome.com/v5/icons/cc-stripe?s=brands) |
+| | [Visa](https://fontawesome.com/v5/icons/cc-visa?s=brands) |
+&nbsp;
 
 
 ### Acknowledgements
