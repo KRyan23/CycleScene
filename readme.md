@@ -203,12 +203,12 @@ JSHint was used for the javascript linter, and pylint for the python linter.
     -   #### SORT AND SEARCH
         &nbsp;
 
-        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Complete     |
-        | :---:        | :---        |    :---  |          :--- |          :---: |
-        | 1 | As a First Time, Returning or Frequent Visitor | I would like to sort a list of products | So that I can Identify the, best rated & best priced products | &#9744; |
-        | 2 | As a First Time, Returning or Frequent Visitor | I would like to sort a specific category of products | So that I can find the best priced or best rated product, in a specific category | &#9744; |
-        | 3 | As a First Time, Returning or Frequent Visitor | I would like to search for a product by name or description | So that I can find a particular item I would like to purchase | &#9744;|
-        | 4 | As a First Time, Returning or Frequent Visitor | I would like to see what ive searched for and the number of results | So that I see if the item Ive searched for is availible on the site | &#9744;|
+        | Number  | Visitor Type   | Visitor Requirements | Desired Outcome     | Tested Outcome | Complete  |
+        | :---:        | :---        |    :---  |          :--- |          :--- | :---: |
+        | 1 | As a First Time, Returning or Frequent Visitor | I would like to sort a list of products | So that I can Identify the, best rated & best priced products | Tested outcome here Tested outcome here  | &#9744; |
+        | 2 | As a First Time, Returning or Frequent Visitor | I would like to sort a specific category of products | So that I can find the best priced or best rated product, in a specific category | Tested outcome here Tested outcome here  | &#9744; |
+        | 3 | As a First Time, Returning or Frequent Visitor | I would like to search for a product by name, description, or product highlight | So that I can find a particular item I would like to purchase | This user story was verified by selecting certain search terms that were common or unique to a particular product. Due to it being a 'OR' search request, should the search term not be found the results will display a message to the user and bring them back to safety with a call to action button. If the search term query is blank, it best to display 'all products' with an associated message to the user rather than a blank result | &#9745; |
+        | 4 | As a First Time, Returning or Frequent Visitor | I would like to see what ive searched for and the number of results | So that I see if the item Ive searched for is availible on the site | Tested outcome here Tested outcome here  | &#9744; |
         
         &nbsp;
     -   #### CHECKOUT, PAYMENT AND ORDERS

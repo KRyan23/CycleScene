@@ -30,8 +30,8 @@
         <img class="main-logo" alt="main logo" src="../media/logo101.png">
         <span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
-        <form class="d-flex alpha">
-          <input type="text" class="form-control search-box" placeholder="Search here...">
+        <form method="GET" action="{% url 'products' %}" class="d-flex alpha">
+          <input type="text" class="form-control search-box" name="q" placeholder="Search here...">
           <button type="submit" class="btn btn-outline-secondary desktop-search-button"><i
               class="fa fa-search"></i></button>
         </form>
@@ -43,7 +43,7 @@
       <div class="collapse navbar-collapse" id="toggleMobileMenu">
         <ul class="navbar-nav ms-auto">
           <li class="hide-on-desktop display-on-smallscreen">
-            <form class="d-flex">
+            <form method="GET" action="{% url 'products' %}" class="d-flex">
               <input type="text" class="mx-3" placeholder="Search here...">
               <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
             </form>
