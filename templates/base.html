@@ -19,6 +19,11 @@
 </head>
 
 <body>
+  {% if request.user.is_authenticated %}
+  <div id="discount" class="top-discount-banner text-center">
+    <div class="text-grow">Get 10% off your order Today !</div>
+  </div>
+  {% endif %}
   <!--Navigation start-->
   <div>
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
@@ -124,7 +129,7 @@
     <nav>
       <ul class="text-center bg-light">
         <li><a href="{% url 'home' %}" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
-              class="fas fa-bicycle"></i></a></li>
+              class="fas fa-bicycle bike"></i></a></li>
         <li class="nav-item dropdown">
           <a class="dropdown-toggle navlink-alignment desktop-nav-link"
             id="bikesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
