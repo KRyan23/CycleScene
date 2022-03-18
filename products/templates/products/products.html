@@ -2,35 +2,99 @@
 {% load static %}
 
 {% block content %}
+<!-- Left off here, currently searching through all products with these links -->
+<div class="container mt-5">
+  <div class="row d-flex text-center">
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+      <ul style="border: 1px solid #E9E9EB; border-radius: 5px; margin: 0 0 0 0;">
+        Price
+        <li><a class="nav-link" href="{% url 'products' %}?sort=price&direction=asc"><i class="fas fa-angle-up"></i></a>
+        </li>
+        <li><a class="nav-link" href="{% url 'products' %}?sort=price&direction=desc"><i
+              class="fas fa-angle-down"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+      <ul style="border: 1px solid #E9E9EB; border-radius: 5px; margin: 0 0 0 0;">
+        Rating
+        <li><a class="nav-link" href="{% url 'products' %}?sort=rating&direction=asc"><i
+              class="fas fa-angle-up"></i></a></li>
+        <li><a class="nav-link" href="{% url 'products' %}?sort=rating&direction=desc"><i
+              class="fas fa-angle-down"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+      <ul style="border: 1px solid #E9E9EB; border-radius: 5px; margin: 0 0 0 0;">
+        Category
+        <li><a class="nav-link" href="{% url 'products' %}?sort=category&direction=asc"><i
+              class="fas fa-angle-up"></i></a></li>
+        <li><a class="nav-link" href="{% url 'products' %}?sort=category&direction=desc"><i
+              class="fas fa-angle-down"></i></a></li>
+      </ul>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-3">
+      <ul style="border: 1px solid #E9E9EB; border-radius: 5px; margin: 0 0 0 0;">
+        Name
+        <li><a class="nav-link" href="{% url 'products' %}?sort=name&direction=asc"><i class="fas fa-angle-up"></i></a>
+        </li>
+        <li><a class="nav-link" href="{% url 'products' %}?sort=name&direction=desc"><i
+              class="fas fa-angle-down"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<hr>
 <!-- breadcrumb nav for each category  -->
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb mx-1 mt-2">
-    <li class="breadcrumb-item bg-gradient-secondary fs-6"><a href="{% url 'home' %}">Home</a></li>
-    <li class="breadcrumb-item bg-gradient-secondary fs-6">
-      {% for product in products %}
-      {% if forloop.last %}
-      {{ product.category|title }}
-      {% endif %}
-      {% endfor %}
-    </li>
-  </ol>
-</nav>
-  <div class="container-fluid my-0">
+<div class="">
+  <div class="row d-flex">
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-3 ">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb mt-0">
+          <li class="breadcrumb-item bg-gradient-secondary fs-5 mx-3 px-0"><a href="{% url 'home' %}">Home</a></li>
+          {% for category in current_categories %}
+          {% if forloop.last %}
+          <li class="breadcrumb-item bg-gradient-secondary fs-5">
+            <span class="mx-1">{{ category.friendly_name }}</span></li>
+          {% endif %}
+          {% endfor %}
+          </li>
+        </ul>
+      </nav>
+    </div>
+    {% if current_categories or search_term  %}
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-9">
+      <div class="float-end mx-3"><span class="badge rounded-pill bg-secondary text-light"><a
+            class="results-number mx-1">{{ products|length }}</a> Products Found</span></div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if products|length == 0 %}
+<div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-9">
+  <div class="float-end mx-3">Sorry No Products Found <a class="#">Back to safety</a></div>
+</div>
+  {% endif %}
+<!-- Renders out each product -->
+<div class="container-fluid my-0">
   <div class="row">
-  <!-- Products Row -->
-  {% for product in products %}
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
+    {% for product in products %}
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
       <div class="card my-3 grow-effect">
-        <img src="{{ product.image1.url }}" alt="{{ product.name }}"/>
+        <span class="text-center my-2">{{ product.category.friendly_name }}</span>
+        <hr class="my-1">
+        <img src="{{ product.image1.url }}" alt="{{ product.name }}" />
         <div class="card-body card-thumbnails-body">
           <h3 class="card-title">{{ product.name|upper }}</h3>
           <p>€ {{ product.price }}</p>
-         <a href="{% url 'product_detail' product.id %}" class="btn btn-secondary stretched-link override-link-color">More Details</a>
+          <a href="{% url 'product_detail' product.id %}"
+            class="btn btn-secondary stretched-link override-link-color">More Details</a>
         </div>
       </div>
     </div>
-{% endfor %}
-</div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}
 {% block scripts %}

@@ -63,7 +63,7 @@ ul {
     font-size: 1.25em;
 }
 
-.fa-search, .starcolor {
+.fa-search, .starcolor, .results-number {
     color: orange;
     border-color: orange;
 }
