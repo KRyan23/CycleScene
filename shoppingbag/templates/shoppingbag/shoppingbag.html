@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 class="text-center">This is the shopping bag</h1>
+
+
+{% if shoppingbag_items %}
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          <tbody>
+            <tr>
+              
+              <td></td>
+              <td></td>
+{% for item in shoppingbag_items %}
+<td>{{ item }}</td>
+{% endfor %}
+</tr>
+</tbody>
+</table>
+{% else %}
+<h2 class="text-center"><em>"Your shopping bag is empty"</em></h2>
+{% endif %}
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/hidebase.js"></script>
+{% endblock %}

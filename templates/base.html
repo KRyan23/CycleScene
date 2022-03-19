@@ -53,9 +53,10 @@
           <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
                 class="override-link-color text-font-weight">Register</span></a></li>
 
-          <li class="mx-5"><span class="shopping-bag-total-desktop hide-on-desktop"><i
-                class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
-              </i>€0.00</span></li>
+          <li class="mx-5"><span class="shopping-bag-total-desktop hide-on-desktop">
+            <a href="{% url 'view_shoppingbag' %}">
+            <i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
+              </i>€0.00</span></li></a>
               <li class="nav-item dropdown hide-on-desktop">
                 <a class="dropdown-toggle  mobile-dropdown-heading"
                   id="bikesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
@@ -119,8 +120,8 @@
   <div>
     <div class="row">
       <div class="col-12 text-center mb-0">
-        <div class="shopping-cart-mobile">
-          <i class="fas fa-shopping-bag fa-lg shopping-bag"><span class="shopping-bag-total">€0.00</span></i>
+        <div class="shopping-cart-mobile"><a href="{% url 'view_shoppingbag' %}">
+          <i class="fas fa-shopping-bag fa-lg shopping-bag"><span class="shopping-bag-total">€0.00</span></i></a>
         </div>
       </div>
     </div>
