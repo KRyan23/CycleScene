@@ -329,13 +329,25 @@ ul > li {
     margin: 0 0 0 0;
 }
 
-
 .text-grow {
     animation: pulse 3s forwards;
     color: orange;
     font-weight: 900;
 }
 
+.product-filter-boxes {
+    border: 1px solid #E9E9EB; 
+    border-radius: 5px; 
+    margin: 0 0 0 0; 
+    padding-left: 5px;
+}
+
+.no-products-found {
+    min-width: auto;
+    margin:6em 0 6em 0;
+    min-height: 200px;
+    color: orange;
+}
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
@@ -439,6 +451,10 @@ ul > li {
         margin-left: 0.25em;
         font-size:small;
     }
+
+    .product-filter-boxes {
+        font-size: smaller;
+    }
 }
   /*- 250px - 320px -*/
   @media only screen and (min-width: 250px) and (max-width: 320px) {
@@ -498,6 +514,10 @@ ul > li {
     .features-bulletpoint, .features-text {
         margin-left: 0.25em;
         font-size:medium;
+    }
+
+    .product-filter-boxes {
+        font-size: 50%;
     }
 
   }
@@ -560,6 +580,11 @@ ul > li {
         margin-left: 0.25em;
         font-size:medium;
     }
+
+    .product-filter-boxes {
+        font-size: smaller;
+    }
+   
   }
   
   /*- 500px - 767px -*/
@@ -585,6 +610,11 @@ ul > li {
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
+
+    .product-filter-boxes {
+        font-size: smaller;
+        text-align: center;
     }
 
   }
@@ -705,6 +735,12 @@ ul > li {
         margin: 0;
     }
 
+
+    .product-filter-boxes {
+        font-size: smaller;
+        text-align: center;
+    }
+
   }
   
   /*- 992px - 1023px -*/
@@ -805,6 +841,11 @@ ul > li {
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
+
+    .product-filter-boxes {
+        font-size: small;
+        text-align: center;
     }
 
 }
@@ -909,6 +950,11 @@ ul > li {
         margin: 0;
     }
 
+    .product-filter-boxes {
+        font-size: small;
+        text-align: center;
+    }
+
   }
 
   /* 1200px - 1300px */
@@ -934,6 +980,10 @@ ul > li {
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
+
+    .product-filter-boxes {
+       text-align: center;
     }
     
 }
@@ -974,7 +1024,12 @@ ul > li {
         margin: 0;
     }
 
-}
+    .product-filter-boxes {
+        text-align: center;
+        font-size:medium;
+    }
+
+  }
 @media only screen and (min-width: 2000px){
 
     .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
@@ -1018,6 +1073,11 @@ ul > li {
     .carousel-heading {
         font-size: 4em;
     }
+
+    .product-filter-boxes {
+        text-align: center;
+        font-size: small;
+     }
 
 }
 
