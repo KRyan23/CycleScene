@@ -3,5 +3,5 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('', views.view_shoppingbag, name='view_shoppingbag')
+    path('', views.view_shoppingbag, name='view_shoppingbag'),
 ]

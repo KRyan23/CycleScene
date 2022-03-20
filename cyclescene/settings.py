@@ -75,8 +75,10 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth', # dont remove required by allauth
+                'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
+                'shoppingbag.contexts.shoppingbag_contents',
             ],
         },
     },
@@ -160,6 +162,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+FREE_DELIVERY_DELTA = 30
+STANDARD_DELIVERY_COST = 10
+INTERNATIONAL_DELIVERY_COST = 10
+LOCAL_PICKUP_COST = 1
+
 
 
 # Default primary key field type
