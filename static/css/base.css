@@ -348,6 +348,13 @@ ul > li {
     min-height: 200px;
     color: orange;
 }
+
+
+.add-to-bag {
+    border-radius: 5px;
+    border: 1px solid #a0a0a0;
+    max-width: 100px;
+}
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
