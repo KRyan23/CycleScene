@@ -77,6 +77,7 @@
             - ![#a0a0a0](https://via.placeholder.com/15/a0a0a0/000000?text=+) `Light Grey`
             - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `White`
             - ![#5C636A](https://via.placeholder.com/15/5C636A/000000?text=+) `Darker Grey`
+            - ![#198754](https://via.placeholder.com/15/198754/000000?text=+) `Green`
             
             
     -   #### Typography
@@ -222,13 +223,6 @@ JSHint was used for the javascript linter, and pylint for the python linter.
         | 4 | As a First Time, Returning or Frequent Visitor | I would like to cancel the checkout process and not proceed to payment | So that I can easily exit out of the payment process should we change our mind | &#9744; |
        
         &nbsp;
-    
-    'Checked'
-     &#9745;
-
-      I would like to view individual products details | So that I can easily identify, price, product highlights, description, features, extra images and star ratings.
-
-      This user story has been tested so that when the user clicks/taps on a product be it in mobile or desktop, all product details are displayed in a user friendly format. These include the 'star rating' first followed by, extra images, highlights, description, features and price.
     
     
 
