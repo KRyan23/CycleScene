@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 html {
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,13 +9,15 @@ body {
     background-color: #fafafa;
 }
 
-a, a:hover {
+a,
+a:hover {
     text-decoration: none;
     color: #5C636A;
 }
 
-a:active, a:focus {
-    color:orange;
+a:active,
+a:focus {
+    color: orange;
 }
 
 ul {
@@ -23,8 +25,8 @@ ul {
 }
 
 .top-navigation {
-    background-color:#fafafa;
-    
+    background-color: #fafafa;
+
 }
 
 .shopping-bag {
@@ -50,8 +52,8 @@ ul {
 
 .desktop-nav-link {
     font-size: 1.25em;
-    color:#6C757D;
-    padding:0 0.5em 0 0.5em;
+    color: #6C757D;
+    padding: 0 0.5em 0 0.5em;
 }
 
 .navlink-alignment {
@@ -63,7 +65,9 @@ ul {
     font-size: 1.25em;
 }
 
-.fa-search, .starcolor, .results-number {
+.fa-search,
+.starcolor,
+.results-number {
     color: orange;
     border-color: orange;
 }
@@ -91,7 +95,7 @@ ul {
 }
 
 .desktop-navigation {
-    background-color:#a0a0a0;
+    background-color: #a0a0a0;
 }
 
 .fa-home {
@@ -101,25 +105,36 @@ ul {
 .bike {
     color: #fafafa;
     margin-left: -1.75em;
-    margin-top: 1.5em; 
-    animation:  fadein 5s;
+    margin-top: 1.5em;
+    animation: fadein 5s;
 }
 
-ul > li {
-    display: inline-block;   
+ul>li {
+    display: inline-block;
 }
 
 .nav-link {
-    color:#6C757D;
+    color: #6C757D;
 }
 
-.nav-link:hover, .breadcrumb, .override-link-color:hover, .footer-link:hover, .social-media:hover, .payment-types:hover, .maps-location:hover, .btn-secondary:hover, .btn-outline-success:hover, .btn-outline-secondary, .features-bulletpoint, .desktop-nav-link:hover {
+.nav-link:hover,
+.breadcrumb,
+.override-link-color:hover,
+.footer-link:hover,
+.social-media:hover,
+.payment-types:hover,
+.maps-location:hover,
+.btn-secondary:hover,
+.btn-outline-success:hover,
+.btn-outline-secondary,
+.features-bulletpoint,
+.desktop-nav-link:hover {
     color: orange;
 }
 
 .carousel-heading {
-    color:white;
-    font-weight:900;
+    color: white;
+    font-weight: 900;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -132,16 +147,17 @@ ul > li {
 }
 
 .categories {
-    border:1px solid #fafafa;
-    color:#6C757D;
+    border: 1px solid #fafafa;
+    color: #6C757D;
     background-color: #E9E9EB;
     height: 42px;
 }
 
-.grow-effect:hover, .grow-effect:active {
+.grow-effect:hover,
+.grow-effect:active {
     transform: scale(1, 1.02);
     transition: transform .55s;
-    background-color:#fafafa;
+    background-color: #fafafa;
     border: 1px solid #5C636A;
 }
 
@@ -151,7 +167,7 @@ ul > li {
     background-clip: text;
     color: transparent;
     background: #5C636A;
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.9);
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.9);
     -webkit-background-clip: text;
     -moz-background-clip: text;
 }
@@ -177,7 +193,7 @@ ul > li {
     background-size: cover;
     background-position: center;
     margin: 4em 0 3em 0;
-    
+
 }
 
 .brand-carousel-2 {
@@ -187,7 +203,7 @@ ul > li {
     background-size: cover;
     background-position: center;
     margin: 4em 5em 3em 5em;
-    
+
 }
 
 .brand-carousel-3 {
@@ -197,7 +213,7 @@ ul > li {
     background-size: cover;
     background-position: center;
     margin: 3.75em 0 3em 0;
-    
+
 }
 
 .brand-carousel-4 {
@@ -246,19 +262,19 @@ ul > li {
 }
 
 .brand-carousel-link:hover {
-    display:block; 
-    height:100%; 
-    width:100%;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 
 .empty-star {
-    color:#E9E9EB;
+    color: #E9E9EB;
 }
 
 .star-color-effect:hover {
     transform: scale(1, 1.25);
     transition: transform 0.1s;
-    
+
 }
 
 .description-highlights:hover {
@@ -273,7 +289,7 @@ ul > li {
 }
 
 .form-quantity {
-    display:inline!important;
+    display: inline !important;
     padding-top: 5px;
     padding-bottom: 10px;
     max-width: 150px;
@@ -292,16 +308,17 @@ ul > li {
     max-height: 50%;
 }
 
-.features-bulletpoint, .features-text {
+.features-bulletpoint,
+.features-text {
     margin-left: 1em;
-    
+
 }
 
 .bike-rotate {
     animation: rotate 3s linear;
 }
 
-.product-bike-features:hover{
+.product-bike-features:hover {
     transform: scale(1, 1.01);
     transition: transform 0.01s;
     background-color: #E9E9EB;
@@ -336,25 +353,34 @@ ul > li {
 }
 
 .product-filter-boxes {
-    border: 1px solid #E9E9EB; 
-    border-radius: 5px; 
-    margin: 0 0 0 0; 
+    border: 1px solid #E9E9EB;
+    border-radius: 5px;
+    margin: 0 0 0 0;
     padding-left: 5px;
 }
 
 .no-products-found {
     min-width: auto;
-    margin:6em 0 6em 0;
+    margin: 6em 0 6em 0;
     min-height: 200px;
     color: orange;
 }
 
 .price-hr {
-    max-width: 200px; 
-    margin:auto;
+    max-width: 200px;
+    margin: auto;
     color: #198754;
     animation: fadein 15s forwards;
 }
+
+.quantity-error-message {
+    display: block;
+    margin-bottom: 1em;
+    color: red;
+    font-weight: 900;
+    font-style: italic;
+}
+
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
@@ -393,48 +419,73 @@ ul > li {
 
 /* -- Firefox -- */
 @-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* -- Safari, Opera and Chrome --  */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* --- IE --- */
 @-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes grow {
     from {
-      opacity: 0;
-      transform: scale(0);
+        opacity: 0;
+        transform: scale(0);
     }
-    to {
-      opacity: 0.5;
-      transform: scale(1);
-    }
-  }
 
-  
+    to {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+
 
 /* --------- Media queries ---------------- */
 /*- < 250px-*/
 @media only screen and (max-width: 249px) {
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us, .shopping-bag-total-desktop, .search-box, .desktop-search-button, .brands {
+
+    .telephone-number,
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .search-box,
+    .desktop-search-button,
+    .brands {
         display: none;
     }
-    
+
     .carousel-heading {
         font-size: 1em;
-        top: 20%;    
+        top: 20%;
     }
 
-    .main-page-quote > h2 {
+    .main-page-quote>h2 {
         font-size: 1em;
     }
 
@@ -442,21 +493,23 @@ ul > li {
         font-size: 1.1em;
     }
 
-    .btn-minus, .btn-plus {
+    .btn-minus,
+    .btn-plus {
         display: none;
     }
-    
+
     .form-quantity {
         padding-top: 5px;
         padding-bottom: 10px;
-        width:auto;
+        width: auto;
         margin-left: 0.5em;
         margin-right: 0.5em;
     }
 
-    .features-bulletpoint, .features-text {
+    .features-bulletpoint,
+    .features-text {
         margin-left: 0.25em;
-        font-size:small;
+        font-size: small;
     }
 
     .product-filter-boxes {
@@ -467,12 +520,21 @@ ul > li {
         font-size: 1.2em;
     }
 }
-  /*- 250px - 320px -*/
-  @media only screen and (min-width: 250px) and (max-width: 320px) {
 
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us, .shopping-bag-total-desktop, .search-box, .desktop-search-button, .brands {
+/*- 250px - 320px -*/
+@media only screen and (min-width: 250px) and (max-width: 320px) {
+
+    .telephone-number,
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .search-box,
+    .desktop-search-button,
+    .brands {
         display: none;
-    } 
+    }
 
     .btn-outline-secondary {
         margin: 0 2px 0 2px;
@@ -484,15 +546,15 @@ ul > li {
 
     .carousel-heading {
         font-size: 1em;
-        top: 20%;    
+        top: 20%;
     }
 
-    .main-page-quote > h2 {
+    .main-page-quote>h2 {
         font-size: 1em;
     }
 
     .main-logo {
-        margin: 5px 10px 20px 0px;        
+        margin: 5px 10px 20px 0px;
     }
 
     .input-group {
@@ -506,25 +568,27 @@ ul > li {
     }
 
     .mobile-navigation-topmenu {
-        margin-left: 0.9em;       
+        margin-left: 0.9em;
     }
 
-    .btn-minus, .btn-plus {
+    .btn-minus,
+    .btn-plus {
         display: none;
     }
 
     .form-quantity {
-        display:inline!important;
+        display: inline !important;
         padding-top: 5px;
         padding-bottom: 10px;
-        width:auto;
+        width: auto;
         margin-left: 0.5em;
         margin-right: 0.5em;
     }
 
-    .features-bulletpoint, .features-text {
+    .features-bulletpoint,
+    .features-text {
         margin-left: 0.25em;
-        font-size:medium;
+        font-size: medium;
     }
 
     .product-filter-boxes {
@@ -535,23 +599,31 @@ ul > li {
         font-size: 1.2em;
     }
 
-  }
-  /*- 321px - 499px -*/
-  @media only screen and (min-width: 321px) and (max-width: 499px) {
+}
 
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us, .shopping-bag-total-desktop, .display-on-smallscreen, .brands {
+/*- 321px - 499px -*/
+@media only screen and (min-width: 321px) and (max-width: 499px) {
+
+    .telephone-number,
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .display-on-smallscreen,
+    .brands {
         display: none;
     }
-    
+
     .main-logo {
         margin: 0 10px 10px 0px;
         padding: 3px 3px 3px 3px;
     }
 
     .form-control {
-        width:auto;
+        width: auto;
     }
-    
+
     .btn-outline-secondary {
         margin: 0 2px 0 2px;
     }
@@ -564,10 +636,10 @@ ul > li {
 
     .carousel-heading {
         font-size: 1.5em;
-        top: 50%;   
+        top: 50%;
     }
 
-    .main-page-quote > h2 {
+    .main-page-quote>h2 {
         font-size: 1em;
     }
 
@@ -581,7 +653,7 @@ ul > li {
 
     .brands-logo {
         width: 100%;
-        height: 100%; 
+        height: 100%;
         object-fit: contain;
     }
 
@@ -591,36 +663,44 @@ ul > li {
         margin: 0;
     }
 
-    .features-bulletpoint, .features-text {
+    .features-bulletpoint,
+    .features-text {
         margin-left: 0.25em;
-        font-size:medium;
+        font-size: medium;
     }
 
     .product-filter-boxes {
         font-size: smaller;
     }
-   
-  }
-  
-  /*- 500px - 767px -*/
-  @media only screen and (min-width: 500px) and (max-width: 767px) {
-    
-    .telephone-number, .shopping-cart-desktop, .desktop-navigation, .desktop-caret, .desktop-contact-us, .shopping-bag-total-desktop, .display-on-smallscreen, .brands {
+
+}
+
+/*- 500px - 767px -*/
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+
+    .telephone-number,
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .display-on-smallscreen,
+    .brands {
         display: none;
     }
-    
+
     .carousel-heading {
-        font-size: 2em;        
+        font-size: 2em;
     }
 
-    .main-page-quote > h2 {
+    .main-page-quote>h2 {
         font-size: 1em;
     }
 
     .mobile-navigation-topmenu {
         margin-left: 0.9em;
     }
-    
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -632,20 +712,25 @@ ul > li {
         text-align: center;
     }
 
-  }
+}
 
-  /*- 767px - 992px -*/
-  @media only screen and (min-width: 767px) and (max-width: 992px) {
-    
-     .mobile-navigation, .mobile-caret, .mobile-contact-us, .shopping-bag-total-desktop, .display-on-smallscreen, .desktop-navigation {
-     display: none;
+/*- 767px - 992px -*/
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+
+    .mobile-navigation,
+    .mobile-caret,
+    .mobile-contact-us,
+    .shopping-bag-total-desktop,
+    .display-on-smallscreen,
+    .desktop-navigation {
+        display: none;
     }
 
     .carousel-heading {
-     font-size: 3em;        
+        font-size: 3em;
     }
 
-    .main-page-quote > h2 {
+    .main-page-quote>h2 {
         font-size: 1.5em;
     }
 
@@ -662,7 +747,7 @@ ul > li {
     .main-logo {
         height: 110px;
         width: 110px;
-        margin: 5px 10px 20px 20px;        
+        margin: 5px 10px 20px 20px;
     }
 
     .mobile-navigation-topmenu {
@@ -676,9 +761,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.75em 0 0 0;
-        
+
     }
-    
+
     .brand-carousel-2 {
         background-image: url('/media/brand-shimano.png');
         width: 40vw;
@@ -686,9 +771,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.75em 5em 0 5em;
-        
+
     }
-    
+
     .brand-carousel-3 {
         background-image: url('/media/brand-continental.png');
         width: 40vw;
@@ -696,9 +781,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.9em 0 0 0;
-        
+
     }
-    
+
     .brand-carousel-4 {
         background-image: url('/media/brand-giant.png');
         width: 40vw;
@@ -707,7 +792,7 @@ ul > li {
         background-position: center;
         margin: 2.5em 4.5em 0 4.5em;
     }
-    
+
     .brand-carousel-5 {
         background-image: url('/media/brand-oakley.png');
         width: 40vw;
@@ -716,7 +801,7 @@ ul > li {
         background-position: center;
         margin: 2.25em 0 0 0;
     }
-    
+
     .brand-carousel-6 {
         background-image: url('/media/brand-sis.png');
         width: 40vw;
@@ -734,7 +819,7 @@ ul > li {
         background-position: center;
         margin: 2.25em 0 0 0;
     }
-    
+
     .brand-carousel-8 {
         background-image: url('/media/brand-schwalbe.png');
         width: 40vw;
@@ -743,7 +828,7 @@ ul > li {
         background-position: center;
         margin: 2.75em 3em 0 2.5em;
     }
-    
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -756,21 +841,26 @@ ul > li {
         text-align: center;
     }
 
-  }
-  
-  /*- 992px - 1023px -*/
-  @media only screen and (min-width: 992px) and (max-width: 1023px) {
+}
 
-    .shopping-cart-mobile, .hide-on-desktop, .mobile-caret, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
-        display:none;
+/*- 992px - 1023px -*/
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+
+    .shopping-cart-mobile,
+    .hide-on-desktop,
+    .mobile-caret,
+    .mobile-contact-us,
+    .telephone-number,
+    .display-on-smallscreen {
+        display: none;
     }
 
     .carousel-heading {
-        font-size: 3.5em;        
+        font-size: 3.5em;
     }
 
     .shopping-bag-total-desktop {
-        display:contents;
+        display: contents;
     }
 
     .text-font-weight {
@@ -784,9 +874,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.75em 0 0 0;
-        
+
     }
-    
+
     .brand-carousel-2 {
         background-image: url('/media/brand-shimano.png');
         width: 40vw;
@@ -794,9 +884,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.75em 5em 0 5em;
-        
+
     }
-    
+
     .brand-carousel-3 {
         background-image: url('/media/brand-continental.png');
         width: 40vw;
@@ -804,9 +894,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.9em 0 0 0;
-        
+
     }
-    
+
     .brand-carousel-4 {
         background-image: url('/media/brand-giant.png');
         width: 40vw;
@@ -815,7 +905,7 @@ ul > li {
         background-position: center;
         margin: 2.5em 4.5em 0 4.5em;
     }
-    
+
     .brand-carousel-5 {
         background-image: url('/media/brand-oakley.png');
         width: 40vw;
@@ -824,7 +914,7 @@ ul > li {
         background-position: center;
         margin: 2.25em 0 0 0;
     }
-    
+
     .brand-carousel-6 {
         background-image: url('/media/brand-sis.png');
         width: 40vw;
@@ -842,7 +932,7 @@ ul > li {
         background-position: center;
         margin: 2.25em 0 0 0;
     }
-    
+
     .brand-carousel-8 {
         background-image: url('/media/brand-schwalbe.png');
         width: 40vw;
@@ -851,7 +941,7 @@ ul > li {
         background-position: center;
         margin: 2.75em 3em 0 2.5em;
     }
-    
+
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -864,20 +954,26 @@ ul > li {
     }
 
 }
-  
-  /*- 1024px - 1200px -*/
-  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
-  
-    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
-        display:none;
+
+/*- 1024px - 1200px -*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .telephone-number,
+    .display-on-smallscreen {
+        display: none;
     }
 
     .carousel-heading {
-        font-size: 3.5em;        
+        font-size: 3.5em;
     }
 
     .shopping-bag-total-desktop {
-        display:contents;
+        display: contents;
     }
 
     .text-font-weight {
@@ -891,9 +987,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.75em 0 0 0;
-        
+
     }
-    
+
     .brand-carousel-2 {
         background-image: url('/media/brand-shimano.png');
         width: 40vw;
@@ -901,9 +997,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.75em 5em 0 5em;
-        
+
     }
-    
+
     .brand-carousel-3 {
         background-image: url('/media/brand-continental.png');
         width: 40vw;
@@ -911,9 +1007,9 @@ ul > li {
         background-size: cover;
         background-position: center;
         margin: 2.9em 0 0 0;
-        
+
     }
-    
+
     .brand-carousel-4 {
         background-image: url('/media/brand-giant.png');
         width: 40vw;
@@ -922,7 +1018,7 @@ ul > li {
         background-position: center;
         margin: 2.5em 4.5em 0 4.5em;
     }
-    
+
     .brand-carousel-5 {
         background-image: url('/media/brand-oakley.png');
         width: 40vw;
@@ -931,7 +1027,7 @@ ul > li {
         background-position: center;
         margin: 2.25em 0 0 0;
     }
-    
+
     .brand-carousel-6 {
         background-image: url('/media/brand-sis.png');
         width: 40vw;
@@ -949,7 +1045,7 @@ ul > li {
         background-position: center;
         margin: 2.25em 0 0 0;
     }
-    
+
     .brand-carousel-8 {
         background-image: url('/media/brand-schwalbe.png');
         width: 40vw;
@@ -970,21 +1066,27 @@ ul > li {
         text-align: center;
     }
 
-  }
+}
 
-  /* 1200px - 1300px */
-  @media only screen and (min-width: 1200px) and (max-width: 1300px){
+/* 1200px - 1300px */
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
 
-    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
-        display:none;
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .telephone-number,
+    .display-on-smallscreen {
+        display: none;
     }
 
     .carousel-heading {
-        font-size: 4em;        
+        font-size: 4em;
     }
-    
+
     .shopping-bag-total-desktop {
-        display:contents;
+        display: contents;
     }
 
     .text-font-weight {
@@ -998,16 +1100,22 @@ ul > li {
     }
 
     .product-filter-boxes {
-       text-align: center;
+        text-align: center;
     }
-    
+
 }
 
 /* 1300px - 2000px */
-@media only screen and (min-width: 1300px) and (max-width: 2000px){
+@media only screen and (min-width: 1300px) and (max-width: 2000px) {
 
-    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
-        display:none;
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .telephone-number,
+    .display-on-smallscreen {
+        display: none;
     }
 
     .main-logo {
@@ -1017,14 +1125,14 @@ ul > li {
     }
 
     .shopping-bag-total-desktop {
-        display:contents;
-        
+        display: contents;
+
     }
 
     .carousel-heading {
-        font-size: 4em;        
+        font-size: 4em;
     }
-    
+
     body {
         font-size: 1.2em;
     }
@@ -1041,14 +1149,21 @@ ul > li {
 
     .product-filter-boxes {
         text-align: center;
-        font-size:medium;
+        font-size: medium;
     }
 
-  }
-@media only screen and (min-width: 2000px){
+}
 
-    .shopping-cart-mobile, .mobile-navigation, .mobile-caret, .hide-on-desktop, .mobile-contact-us, .telephone-number, .display-on-smallscreen {
-        display:none;
+@media only screen and (min-width: 2000px) {
+
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .telephone-number,
+    .display-on-smallscreen {
+        display: none;
     }
 
     .main-logo {
@@ -1058,12 +1173,12 @@ ul > li {
     }
 
     .shopping-bag-total-desktop {
-        display:contents;
-        
+        display: contents;
+
     }
 
     h2 {
-        font-size: 1.4em;        
+        font-size: 1.4em;
     }
 
     .search-box {
@@ -1092,7 +1207,6 @@ ul > li {
     .product-filter-boxes {
         text-align: center;
         font-size: small;
-     }
+    }
 
 }
-
