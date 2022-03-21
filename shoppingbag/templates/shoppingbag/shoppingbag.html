@@ -25,11 +25,21 @@
 </tbody>
 </table>
 {% else %}
-<div class="container">
+<div class="container-fluid no-products-found">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <h3 class="text-center">"Your shopping bag appears to be empty, why not add some items"</h3>
-      <a href="{% url 'products' %}" class="navlink-alignment nav-link" aria="All Products">Shop All Products</a>
+      <div class="text-center text-font-weight ">
+          <h2 class="pt-5">Hmm your Shopping Bag Appears Empty....</h2>
+          <h3 class="mt-5">Why not add some items</h3>
+          <i class="fas fa-shopping-bag bike-spinner fa-3x mt-5 mb-3"></i>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="text-center">
+            <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg mt-5 fw-bold">ALL PRODUCTS</a>
+      </div>
     </div>
   </div>
 </div>
