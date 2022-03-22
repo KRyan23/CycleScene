@@ -98,7 +98,7 @@ ul {
     background-color: #a0a0a0;
 }
 
-.fa-home {
+.fa-home, .item-number {
     color: orange;
 }
 
@@ -398,6 +398,22 @@ ul>li {
 
 .date-product-row {
     background-color: #E9E9EB;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+.date {
+    padding: 0.2em 0.8em 0.2em 0.8em;
+}
+
+.products-listed {
+    margin-top: 0.65em;
+}
+
+.fa-lock {
+    color:gold;
 }
  
  /* --------- Keyframes Calls -------------- */
@@ -554,8 +570,9 @@ ul>li {
     }
 
     .date {
-        line-height:5;
+        line-height:7;
         white-space: nowrap;
+        
     }
 }
 

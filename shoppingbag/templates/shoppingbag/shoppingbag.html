@@ -10,46 +10,65 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-      <h2 class="mt-5">Welcome to your shopping bag</h2>
+      <h2 class="mt-5 fw-bold">Welcome to your shopping bag</h2>
     </div>
   </div>
+  <!-- Date and Product count-->
   <div class="row mt-5 date-product-row" >
-    <div class=" col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3" >
-      <span class="date mx-3 fw-bold">{% now "jS F Y" %}</span>
+    <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3" >
+      <span class="date mx-3 mt-2 fw-bold rounded-pill bg-secondary text-light fs-6">{% now "jS F Y" %}</span>
     </div>
-    <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-      <span class="badge rounded-pill bg-secondary text-light float-end mt-3 mb-3 mx-3"><a class="results-number mx-1">{{ shoppingbag_items|length }}</a>
+    <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 products-listed">
+      <span class="badge rounded-pill bg-secondary fw-bold text-light float-end fs-6 mb-3 mx-3"><a class="results-number mx-1">{{ shoppingbag_items|length }}</a>
           Products Listed</span>
     </div>
   </div>
+</div>
+<!-- Individual Product Rows -->  
+<div class="container-fluid my-0">
+  <div class="row">
+    {% for shop in shoppingbag_items %}
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+      <div class="card grow-effect">
+        <p class="list-group-item"><span class="float-start fw-bold">{{ shop.product.name|lower|title }}</span><span class="float-end fw-bold">Item: <span class="item-number">{{ forloop.counter }}</span></span></p>
+        <p class="list-group-item"><span class="float-start fs-6">Ean: {{ shop.product.ean|lower|title }}</span><span class="float-end">Quantity: <span class="item-number">{{ shop.quantity }}</span></span></p>
 
- 
+        <img src="{{ shop.product.image1.url }}" alt="{{ product.name }}" class="w-25" />
+
+
+
+<!-- Need to add buttons to increment/decrement and remove a product-->
+
+  </div>
+</div>
+
+{% endfor %}
+<div class="row">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="text-center fs-4 fw-bold" style="line-height:5;" >Sub Total: €{{ bagtotal|floatformat:2 }}</div>
+  </div>
+</div>
+
+<div class="row">
+   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <a href="{% url 'products' %}" class="btn btn-outline-secondary float-start mx-3"
+    role="button"><span
+    class="product-details-navigation-buttons text-wrap"></span><i
+    class="fas fa-arrow-left mx-2 my-0"></i>Shop Products</a>
+
+    <a href="#" class="btn btn-outline-secondary float-end"
+    role="button"><span
+    class="product-details-navigation-buttons text-wrap mx-0">Secure Checkout</span><i
+    class="fas fa-lock mx-2 my-0"></i></a>
+  </div>
+</div>
+
+
 
 </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Name</th>
-            <th>Ean</th>
-          </tr>
-          </thead>
-          <tbody>
-            {% for i in shoppingbag_items %}
-            <tr> {% if forloop.counter %}
-              <td><li class="list-group-item">{{ forloop.counter }}</li></td>
-              <td><li class="list-group-item">{{ i.product.name }}</li></td>
-              <td><li class="list-group-item">{{ i.product.ean }}</li></td>
-              <td><li class="list-group-item"><img src='{{ i.product.image1.url }}' class="w-25"></li></td>
-              {% endif %}
-              
-              
-             
+</div>
+</div>
 
-</tr>
-{% endfor %}   
-</tbody>
-</table>
 {% else %}
 <div class="container-fluid no-products-found">
   <div class="row">
