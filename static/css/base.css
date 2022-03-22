@@ -395,6 +395,10 @@ ul>li {
     white-space: nowrap;
     animation: textscrolling 4s steps(200, end);
 }
+
+.date-product-row {
+    background-color: #E9E9EB;
+}
  
  /* --------- Keyframes Calls -------------- */
 
@@ -548,6 +552,11 @@ ul>li {
     .product-details-navigation-buttons {
         font-size: 1.2em;
     }
+
+    .date {
+        line-height:5;
+        white-space: nowrap;
+    }
 }
 
 /*- 250px - 320px -*/
@@ -628,6 +637,9 @@ ul>li {
         font-size: 1.2em;
     }
 
+    .date {
+        line-height:5;
+    }
 }
 
 /*- 321px - 499px -*/

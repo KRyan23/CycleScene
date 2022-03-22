@@ -11,17 +11,21 @@ def shoppingbag_contents(request):
         product_total = 0
         product_count = 0
         free_delivery = 1
+        zed = 0
         mybag = request.session.get('shopping_bag', {})
 
         for item_id, quantity in mybag.items():
             product = get_object_or_404(Product, pk=item_id)
             bagtotal += quantity * product.price
-            product_count += quantity
+            product_total += quantity
+            product_count = shoppingbag_items
+
             shoppingbag_items.append({
                 'item_id': item_id,
                 'quantity': quantity,
                 'product': product,
             })  
+            
         # Basically dont compare to zero!
         if bagtotal > settings.FREE_DELIVERY_DELTA:
             delivery_local = 0
@@ -39,11 +43,14 @@ def shoppingbag_contents(request):
                 'shoppingbag_items': shoppingbag_items,
                 'bagtotal': bagtotal,
                 'product_total': product_total,
+                'product_count': product_count,
                 'delivery_local': delivery_local,
                 'delivery_international': delivery_international,
                 'delivery_pickup': delivery_pickup,
                 'free_delivery': free_delivery,
                 'total_bag_cost': total_bag_cost,
                 'free_delivery_delta': settings.FREE_DELIVERY_DELTA,
-            }           
+                
+            }
+              
         return context

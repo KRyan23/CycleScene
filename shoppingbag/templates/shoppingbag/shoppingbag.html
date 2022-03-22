@@ -5,23 +5,49 @@
 
 
 
-{% if shoppingbag_items > 100 %}
+{% if shoppingbag_items %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+      <h2 class="mt-5">Welcome to your shopping bag</h2>
+    </div>
+  </div>
+  <div class="row mt-5 date-product-row" >
+    <div class=" col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3" >
+      <span class="date mx-3 fw-bold">{% now "jS F Y" %}</span>
+    </div>
+    <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+      <span class="badge rounded-pill bg-secondary text-light float-end mt-3 mb-3 mx-3"><a class="results-number mx-1">{{ shoppingbag_items|length }}</a>
+          Products Listed</span>
+    </div>
+  </div>
+
+ 
+
+</div>
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>Item</th>
+            <th>Name</th>
+            <th>Ean</th>
           </tr>
+          </thead>
           <tbody>
-            <tr>
-              {{ shoppingbag_items }}
-              <td></td>
-              <td></td>
-
-<td></td>
+            {% for i in shoppingbag_items %}
+            <tr> {% if forloop.counter %}
+              <td><li class="list-group-item">{{ forloop.counter }}</li></td>
+              <td><li class="list-group-item">{{ i.product.name }}</li></td>
+              <td><li class="list-group-item">{{ i.product.ean }}</li></td>
+              <td><li class="list-group-item"><img src='{{ i.product.image1.url }}' class="w-25"></li></td>
+              {% endif %}
+              
+              
+             
 
 </tr>
+{% endfor %}   
 </tbody>
 </table>
 {% else %}
