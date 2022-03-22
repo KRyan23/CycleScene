@@ -109,10 +109,9 @@ ul {
     animation: fadein 5s;
 }
 
-.bike-spinner {
-    color: white;
-    animation: rotate 10s forwards;
-    
+.bag-spinner {
+    color: #5C636A;
+    animation: rotatebag 5s forwards;
 }
 
 ul>li {
@@ -135,7 +134,7 @@ ul>li {
 .btn-outline-secondary,
 .features-bulletpoint,
 .desktop-nav-link:hover,
-.bike-spinner:hover {
+.bag-spinner:hover {
     color: orange;
 }
 
@@ -146,7 +145,11 @@ ul>li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fadein 3.5s;
+    overflow: hidden;
+    letter-spacing: .10em;
+    margin: 0 auto; 
+    white-space: nowrap;
+    animation: textscrolling 3.5s steps(120, end);
 }
 
 .image-opacity-9 {
@@ -200,7 +203,6 @@ ul>li {
     background-size: cover;
     background-position: center;
     margin: 4em 0 3em 0;
-
 }
 
 .brand-carousel-2 {
@@ -210,7 +212,6 @@ ul>li {
     background-size: cover;
     background-position: center;
     margin: 4em 5em 3em 5em;
-
 }
 
 .brand-carousel-3 {
@@ -220,7 +221,6 @@ ul>li {
     background-size: cover;
     background-position: center;
     margin: 3.75em 0 3em 0;
-
 }
 
 .brand-carousel-4 {
@@ -281,7 +281,6 @@ ul>li {
 .star-color-effect:hover {
     transform: scale(1, 1.25);
     transition: transform 0.1s;
-
 }
 
 .description-highlights:hover {
@@ -389,7 +388,15 @@ ul>li {
     font-style: italic;
 }
 
-/* --------- Keyframes Calls -------------- */
+.empty-bag-message, .search-results-empty {
+    overflow: hidden;
+    letter-spacing:normal;
+    margin: 0 auto; 
+    white-space: nowrap;
+    animation: textscrolling 4s steps(200, end);
+}
+ 
+ /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
 @keyframes rotate {
@@ -397,7 +404,12 @@ ul>li {
         transform: rotate(360deg);
     }
 }
-
+/* Rotates objects by 180degrees for example the empty shopping bag */
+@keyframes rotatebag {
+    100% {
+        transform: rotate(180deg);
+    }
+}
 /* Controls the animation on the top-discount-banner text */
 @keyframes pulse {
     0% {
@@ -469,7 +481,16 @@ ul>li {
         transform: scale(1);
     }
 }
+/* Scrolling effect for carousel headings */
+@keyframes textscrolling {
+    from {
+        width: 0
+    }
 
+    to {
+        width: 50%
+    }
+}
 
 
 /* --------- Media queries ---------------- */
