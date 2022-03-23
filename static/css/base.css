@@ -98,7 +98,7 @@ ul {
     background-color: #a0a0a0;
 }
 
-.fa-home, .item-number {
+.fa-home, .item-number, .rating-number {
     color: orange;
 }
 
@@ -416,9 +416,9 @@ ul>li {
     color:gold;
 }
  
-.zee {
-    max-width: 50%;
-    max-height: 50%;
+.sub-total {
+    line-height:5;
+    background-color: #E9E9EB; 
 }
  /* --------- Keyframes Calls -------------- */
 
@@ -903,6 +903,12 @@ ul>li {
         text-align: center;
     }
 
+    .shopping-bag-image {  
+        height:50%;
+        width: 50%;
+        transform: translate(50%, 0);        
+    }
+
 }
 
 /*- 992px - 1023px -*/
@@ -1015,6 +1021,11 @@ ul>li {
         text-align: center;
     }
 
+    .shopping-bag-image {  
+        height:50%;
+        width: 50%;
+        transform: translate(50%, 0);        
+    }
 }
 
 /*- 1024px - 1200px -*/
@@ -1128,6 +1139,12 @@ ul>li {
         text-align: center;
     }
 
+    .shopping-bag-image {  
+        height:50%;
+        width: 50%;
+        transform: translate(50%, 0);        
+    }
+
 }
 
 /* 1200px - 1300px */
@@ -1163,6 +1180,12 @@ ul>li {
 
     .product-filter-boxes {
         text-align: center;
+    }
+
+    .shopping-bag-image {  
+        height:50%;
+        width: 50%;
+        transform: translate(50%, 0);        
     }
 
 }
@@ -1214,6 +1237,11 @@ ul>li {
         font-size: medium;
     }
 
+    .shopping-bag-image {  
+        height:50%;
+        width: 50%;
+        transform: translate(50%, 0);        
+    }
 }
 
 @media only screen and (min-width: 2000px) {
@@ -1270,4 +1298,9 @@ ul>li {
         font-size: small;
     }
 
+    .shopping-bag-image {  
+        height:50%;
+        width: 50%;
+        transform: translate(50%, 0);        
+    }
 }

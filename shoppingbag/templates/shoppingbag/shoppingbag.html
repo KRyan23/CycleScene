@@ -24,69 +24,60 @@
     </div>
   </div>
 </div>
+
 <!-- Individual Product Rows -->  
-<div class="container-fluid my-0">
+<div class="container-fluid my-0 mt-5">
   <div class="row">
     {% for shop in shoppingbag_items %}
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
       <div class="card grow-effect">
         <p class="list-group-item"><span class="float-start fw-bold">{{ shop.product.name|lower|title }}</span><span class="float-end fw-bold">Item: <span class="item-number">{{ forloop.counter }}</span></span></p>
-        <p class="list-group-item"><span class="float-start fs-6">Ean: {{ shop.product.ean|lower|title }}</span><span class="float-end">Quantity: <span class="item-number">{{ shop.quantity }}</span></span></p>
-      
-        <form action="#" method="POST" class="mt-5 form">
+        <p class="list-group-item"><span class="float-start fw-bold fs-6">Ean: {{ shop.product.ean|lower|title }}</span><span class="text-center fs-6 float-end fw-bold">Rating: <span class="rating-number">{{ shop.product.rating }}</span></span></p>
+        <img src="{{ shop.product.image1.url }}" alt="{{ shop.product.name }}" class="shopping-bag-image" />
+        <!-- Form to update the product quantity -->
+        <form action="#" method="POST" class="mt-5 form text-center">
           {% csrf_token %}
           <span id="quantity-message" class="quantity-error-message"></span>
           <a class="btn btn-outline-success btn-minus" onclick="decrement()"><i class="fa fa-minus"></i></a>
-          <input readonly class="form-control form-quantity text-center" type="number" name="quantity" value="1" min="1"
-            max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+          <input readonly class="form-control form-quantity text-center" type="number" name="quantity" value="{{ shop.quantity }}" min="1"
+            max="10" data-item_id="{{ product.id }}" id="id_qty_{{ shop.product.name }}">
           <a class="btn btn-outline-success btn-plus" onclick="increment()">
             <i class="fa fa-plus"></i></a>
           <div class="text-center">
-            <input type="submit" class="btn btn-outline-success mt-3" value="Add Item To Bag">
+            <input type="submit" class="btn btn-success mt-4 mb-4" value="Update Quantity">
+            <input type="submit" class="btn btn-danger mt-4 mb-4" value="Remove Item">
           </div>
           <!-- Hidden input to redirect the user back to the same page once the item is added to the bag -->
           <input type="hidden" name="current_page_url" value="{{ request.path }}">
         </form>
-
-
-        <img src="{{ shop.product.image1.url }}" alt="{{ product.name }}" class="" /><span style="display: inline-flex;"> Hellwo bos</span>
-      
     </div>
   </div>
 </div>
 </div>
 <div class="mb-5"></div>
-<!-- Need to add buttons to increment/decrement and remove a product-->
-
-  
-
 {% endfor %}
+<!-- Subtotal before shipping -->
 <div class="row">
   <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    <div class="text-center fs-4 fw-bold" style="line-height:5;" >Sub Total: €{{ bagtotal|floatformat:2 }}</div>
+    <div class="text-center fs-4 fw-bold sub-total">Sub Total: €{{ bagtotal|floatformat:2 }}</div>
   </div>
 </div>
-
+<!-- Keep shopping / Secure checkout buttons -->
 <div class="row">
    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    <a href="{% url 'products' %}" class="btn btn-outline-secondary float-start mx-3"
+    <a href="{% url 'products' %}" class="btn btn-outline-secondary float-start mt-3"
     role="button"><span
     class="product-details-navigation-buttons text-wrap"></span><i
     class="fas fa-arrow-left mx-2 my-0"></i>Shop Products</a>
-
-    <a href="#" class="btn btn-outline-secondary float-end"
-    role="button"><span
+    <a href="#" class="btn btn-outline-secondary float-end mt-3" role="button"><span
     class="product-details-navigation-buttons text-wrap mx-0">Secure Checkout</span><i
     class="fas fa-lock mx-2 my-0"></i></a>
   </div>
 </div>
-
-
-
+<hr>
 </div>
 </div>
 </div>
-
 {% else %}
 <div class="container-fluid no-products-found">
   <div class="row">
