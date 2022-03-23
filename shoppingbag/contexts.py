@@ -18,7 +18,7 @@ def shoppingbag_contents(request):
             product = get_object_or_404(Product, pk=item_id)
             bagtotal += quantity * product.price
             product_total += quantity
-            product_count = shoppingbag_items
+            
 
             shoppingbag_items.append({
                 'item_id': item_id,

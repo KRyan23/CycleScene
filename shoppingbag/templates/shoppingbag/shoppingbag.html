@@ -32,15 +32,33 @@
       <div class="card grow-effect">
         <p class="list-group-item"><span class="float-start fw-bold">{{ shop.product.name|lower|title }}</span><span class="float-end fw-bold">Item: <span class="item-number">{{ forloop.counter }}</span></span></p>
         <p class="list-group-item"><span class="float-start fs-6">Ean: {{ shop.product.ean|lower|title }}</span><span class="float-end">Quantity: <span class="item-number">{{ shop.quantity }}</span></span></p>
+      
+        <form action="#" method="POST" class="mt-5 form">
+          {% csrf_token %}
+          <span id="quantity-message" class="quantity-error-message"></span>
+          <a class="btn btn-outline-success btn-minus" onclick="decrement()"><i class="fa fa-minus"></i></a>
+          <input readonly class="form-control form-quantity text-center" type="number" name="quantity" value="1" min="1"
+            max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+          <a class="btn btn-outline-success btn-plus" onclick="increment()">
+            <i class="fa fa-plus"></i></a>
+          <div class="text-center">
+            <input type="submit" class="btn btn-outline-success mt-3" value="Add Item To Bag">
+          </div>
+          <!-- Hidden input to redirect the user back to the same page once the item is added to the bag -->
+          <input type="hidden" name="current_page_url" value="{{ request.path }}">
+        </form>
 
-        <img src="{{ shop.product.image1.url }}" alt="{{ product.name }}" class="w-25" />
 
-
-
-<!-- Need to add buttons to increment/decrement and remove a product-->
-
+        <img src="{{ shop.product.image1.url }}" alt="{{ product.name }}" class="" /><span style="display: inline-flex;"> Hellwo bos</span>
+      
+    </div>
   </div>
 </div>
+</div>
+<div class="mb-5"></div>
+<!-- Need to add buttons to increment/decrement and remove a product-->
+
+  
 
 {% endfor %}
 <div class="row">
@@ -96,4 +114,6 @@
 
 {% block scripts %}
 <script src="/static/js/hidebase.js"></script>
+<script src="/static/js/rating.js"></script>
+<script src="/static/js/quantity.js"></script>
 {% endblock %}

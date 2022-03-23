@@ -416,6 +416,10 @@ ul>li {
     color:gold;
 }
  
+.zee {
+    max-width: 50%;
+    max-height: 50%;
+}
  /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
