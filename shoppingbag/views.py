@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 # Create your views here.
 
+
 def view_shoppingbag(request):
     """ renders the shopping bag template  """
     return render(request, 'shoppingbag/shoppingbag.html')
@@ -26,15 +27,27 @@ def add_product_to_shoppingbag(request, item_id):
 
 def changebag_quantity(request, item_id):
     """ Change the quantity of an item in the shopping bag """
-
-    quantity = request.POST.get('quantity')
-    quantity = int(quantity)
-
+    
+    quantity = int(request.POST.get('quantity'))
+    
+    shopping_bag = request.session.get('shopping_bag', {})
     if quantity > 0 or quantity < 11:
-        shopping_bag = request.session.get('shopping_bag', {})
+        
         shopping_bag[item_id] = quantity
     else:
         shopping_bag.pop(item_id)
 
     request.session['shopping_bag'] = shopping_bag
     return redirect(reverse('view_shoppingbag'))
+
+
+def delete_items_from_shoppingbag(request, item_id):
+    """Remove the item from the shopping bag"""
+    try:
+        shopping_bag = request.session.get('shopping_bag', {})
+        shopping_bag.pop(item_id)
+        request.session['shopping_bag'] = shopping_bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
