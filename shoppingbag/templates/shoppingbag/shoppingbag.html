@@ -36,15 +36,16 @@
         <img src="{{ shop.product.image1.url }}" alt="{{ shop.product.name }}" class="shopping-bag-image" />
         <!-- Form to update the product quantity -->
         <form action="{% url 'changebag_quantity' shop.item_id %}" method="POST"
-          class="mt-5 form text-center shopping-bag-form">
-          {% csrf_token %}
-          <a class="btn btn-outline-success btn-minus" data-item_id="{{ shop.item_id }}"
+          class="mt-5 form text-center shopping-bag-form">{% csrf_token %}
+                          <div class="text-center">
+          <span id="error_id_{{ shop.item_id }}" class="quantity-error-message"></span></div>
+          <a class="btn btn-outline-success btn-minus decrement-value" data-item_id="{{ shop.item_id }}"
             id="decrement-qty_{{ shop.item_id }}">
             <i class="fa fa-minus"></i></a>
-          <input class="form-control form-quantity qty_input text-center" type="number" name="quantity"
+          <input class="form-control form-quantity qty_input text-center qt" type="number" name="quantity"
             value="{{ shop.quantity }}" min="1" max="10" data-item_id="{{ shop.item_id }}"
             id="id_qty_{{ shop.item_id }}">
-          <a class="btn btn-outline-success btn-plus increment-qty" data-item_id="{{ shop.item_id }}"
+          <a class="btn btn-outline-success btn-plus increment-value" data-item_id="{{ shop.item_id }}"
             id="increment-qty_{{ shop.item_id }}">
             <i class="fa fa-plus"></i></a>
           <div class="text-center">
@@ -60,13 +61,13 @@
     </div>
     <div class="mb-5"></div>
     {% endfor %}
-    <div class="row">
+    <div class="row mx-0">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="text-center fs-4 fw-bold sub-total">Sub Total: €{{ bagtotal|floatformat:2 }}</div>
       </div>
     </div>
     <!-- Keep shopping / Secure checkout buttons -->
-    <div class="row">
+    <div class="row mx-0">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <a href="{% url 'products' %}" class="btn btn-outline-secondary float-start mt-3 mx-0" role="button"><span
             class="product-details-navigation-buttons text-wrap"></span><i class="fas fa-arrow-left mx-2"></i>Shop
@@ -126,5 +127,5 @@
   })
 </script>
 <script src="/static/js/hidebase.js"></script>
-
+<script src="/static/js/quantityShoppingBag.js"></script>
 {% endblock %}
