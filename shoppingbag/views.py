@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+''' Imports needed '''
+from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import get_object_or_404
 from django.contrib import messages
-# Create your views here.
-
+from products.models import Product
 
 def view_shoppingbag(request):
     """ renders the shopping bag template  """
@@ -10,7 +11,7 @@ def view_shoppingbag(request):
 
 def add_product_to_shoppingbag(request, item_id):
     ''' Adds products to shopping bag function '''
-    
+
     bag_quantity = request.POST.get('quantity')
     bag_quantity = int(bag_quantity)
     current_page = request.POST.get('current_page_url')
@@ -23,16 +24,16 @@ def add_product_to_shoppingbag(request, item_id):
 
     request.session['shopping_bag'] = shopping_bag
     return redirect(current_page)
-    
+
 
 def changebag_quantity(request, item_id):
     """ Change the quantity of an item in the shopping bag """
-    
+
     quantity = int(request.POST.get('quantity'))
-    
+
     shopping_bag = request.session.get('shopping_bag', {})
     if quantity > 0 or quantity < 11:
-        
+
         shopping_bag[item_id] = quantity
     else:
         shopping_bag.pop(item_id)
