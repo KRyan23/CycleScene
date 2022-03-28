@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load humanize %}
 {% block content %}
 {% firstof product.category.id as categorynum %} {{ categorynum }}
 <!-- for debug only-->
@@ -90,7 +90,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3 text-center">
-        <span class="fs-4">Price €</span><span class="fs-4 fw-bold">{{ product.price|upper }}</span>
+        <span class="fs-4">Price €</span><span class="fs-4 fw-bold">{{ product.price|upper|intcomma }}</span>
         <hr class="price-hr mt-2">
         <form action="{% url 'add_product_to_shoppingbag' product.id %}" method="POST" class="mt-5 form">
           {% csrf_token %}

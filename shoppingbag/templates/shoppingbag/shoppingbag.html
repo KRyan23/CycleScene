@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-<!-- id say next thing is to log a tutor session to see whats going on -->
+{% load humanize %}
 {% block content %}
 
 {% if shoppingbag_items %}
@@ -29,10 +29,10 @@
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
       <div class="card ">
         <p class="list-group-item"><span class="float-start fw-bold">Name: {{ shop.product.name|lower|title }}</span><span
-            class="float-end fw-bold">Item: <span class="item-number">{{ forloop.counter }}</span></span></p>
+            class="float-end fw-bold">Item: <span class="item-number">{{ forloop.counter }} <span class="item-of">of </span> {{ shoppingbag_items|length }}</span></span></p>
         <p class="list-group-item"><span class="float-start fw-bold fs-6">Ean:
             {{ shop.product.ean|lower|title }}</span><span class="text-center fs-6 float-end fw-bold">Price: €<span
-              class="rating-number">{{ shop.product.price }}</span></span></p>
+              class="rating-number">{{ shop.product.price|intcomma }}</span></span></p>
         <img src="{{ shop.product.image1.url }}" alt="{{ shop.product.name }}" class="shopping-bag-image" />
         <!-- Form to update the product quantity -->
         <form action="{% url 'changebag_quantity' shop.item_id %}" method="POST"
@@ -63,7 +63,7 @@
     {% endfor %}
     <div class="row mx-0">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <div class="text-center fs-4 fw-bold sub-total">Sub Total: €{{ bagtotal|floatformat:2 }}</div>
+        <div class="text-center fs-4 fw-bold sub-total">Sub Total: €{{ bagtotal|floatformat:2|intcomma }}</div>
       </div>
     </div>
     <!-- Keep shopping / Secure checkout buttons -->

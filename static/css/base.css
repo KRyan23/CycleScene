@@ -283,7 +283,7 @@ ul>li {
     transition: transform 0.1s;
 }
 
-.description-highlights:hover {
+.description-highlights:hover, .item-of {
     background-color: #fafafa;
     color: black;
     transform: scale(1, 1.05);

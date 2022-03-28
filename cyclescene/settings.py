@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'home',
     'products',
     'mathfilters',
-    'shoppingbag'
+    'shoppingbag',
+    'django.contrib.humanize'
 
 ]
 
