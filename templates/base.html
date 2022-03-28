@@ -18,7 +18,6 @@
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   <title>CycleScene</title>
 </head>
-
 <body>
   {% if request.user.is_authenticated %}
   <div id="discount" class="top-discount-banner text-center">
@@ -196,19 +195,27 @@
   <!--Navigation end-->
   {% block nav %}
   {% endblock %}
+  
   {% if messages %}
+  <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-end align-items-end w-100">
+    <div class="toast-container">
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" >
   {% for message in messages %}
       {% if message.tags == 'success'%}
-      {% include 'includes/toasts/info.html' %}
+      {% include 'includes/toasts/success.html' %}
       {% elif message.tags == 'info' %}
       {% include 'includes/toasts/info.html' %}   
       {% elif message.tags == 'warning' %}
-      {% include 'includes/toasts/info.html' %}
+      {% include 'includes/toasts/warning.html' %}
       {% elif message.tags == 'error' %}
-      {% include 'includes/toasts/info.html' %}
+      {% include 'includes/toasts/error.html' %}
       {% endif %}
   {% endfor %}
+  </div>
+</div>
+</div>
 {% endif %}
+
   <div id="hideMainContent">
     <!-- Start hide main page content -->
     <!--carousel-->

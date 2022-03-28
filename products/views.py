@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-
 from .models import Product, Category
 
 # Create your views here.
@@ -43,9 +42,7 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(
-                    request, "your search criteria was blank!")
-                print("Sorry your search criteria was blank so we returend all products!")
+                messages.add_message(request, messages.ERROR, 'Were Sorry But Your Search Criteria Was Blank !')
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(highlights__icontains=query)
