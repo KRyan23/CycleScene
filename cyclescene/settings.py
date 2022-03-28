@@ -84,6 +84,8 @@ TEMPLATES = [
     },
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+#needed because of gitpod
 #Added from the documentation here https://readthedocs.org/projects/django-allauth/downloads/pdf/stable/
 AUTHENTICATION_BACKENDS = [
 

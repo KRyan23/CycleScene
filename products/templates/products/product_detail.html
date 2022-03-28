@@ -128,8 +128,13 @@
   </div>
   </div>
   {% endblock %}
+  {% block postloadjs %}
+  {{ block.super }}
+  {% endblock %}
   {% block scripts %}
+  {{ block.super }}
   <script src="/static/js/hidebase.js"></script>
   <script src="/static/js/rating.js"></script>
   <script src="/static/js/quantityProductDetails.js"></script>
   {% endblock %}
+

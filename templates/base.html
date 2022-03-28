@@ -195,7 +195,19 @@
   <!--Navigation end-->
   {% block nav %}
   {% endblock %}
-
+  {% if messages %}
+  {% for message in messages %}
+      {% if message.tags == 'success'%}
+      {% include 'includes/toasts/info.html' %}
+      {% elif message.tags == 'info' %}
+      {% include 'includes/toasts/info.html' %}   
+      {% elif message.tags == 'warning' %}
+      {% include 'includes/toasts/info.html' %}
+      {% elif message.tags == 'error' %}
+      {% include 'includes/toasts/info.html' %}
+      {% endif %}
+  {% endfor %}
+{% endif %}
   <div id="hideMainContent">
     <!-- Start hide main page content -->
     <!--carousel-->
@@ -361,7 +373,7 @@
     </div>
   </div>
   <!-- Brands we use carousel end -->
-
+  
   <!-- footer start-->
   <footer class="panel-primary">
     <div class="desktop-footer bg-light">
@@ -503,7 +515,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <!-- For Tiny Slider 2-->
   <script src="/static/js/brandcarousel.js"></script>
+  {% block postloadjs %}
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.toast').toast('show');
+    });
+  </script>
+  {% endblock %}
   {% block scripts %}
+  
   {% endblock %}
 </body>
 
