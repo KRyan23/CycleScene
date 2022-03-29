@@ -69,7 +69,8 @@ ul {
 .fa-search,
 .starcolor,
 .results-number,
-.toast-shopping-bag {
+.toast-shopping-bag,
+.product-rating  {
     color: orange;
     border-color: orange;
 }

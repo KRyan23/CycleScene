@@ -32,7 +32,7 @@ def all_products(request):
                     sortkey = f'-{sortkey}'
 
             products = products.order_by(sortkey)
-
+            
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -41,8 +41,9 @@ def all_products(request):
     if request.GET:
         if 'q' in request.GET:
             query = request.GET['q']
+            
             if not query:
-                messages.add_message(request, messages.ERROR, 'Were Sorry But Your Search Criteria Was Blank !')
+                messages.add_message(request, messages.WARNING, 'Were Sorry But Your Search Criteria Was Blank, so we have listed all of our products for you!')
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(highlights__icontains=query)
@@ -56,7 +57,9 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting
     }
-    
+    if query:
+        messages.add_message(request, messages.INFO, f'Here Are Your Search Requests For "{query.upper()}"')
+
     return render(request, 'products/products.html', context)
 
 
