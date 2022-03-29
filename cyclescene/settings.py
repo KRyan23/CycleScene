@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     'products',
     'mathfilters',
     'shoppingbag',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'checkout'
 
 ]
 
@@ -169,7 +170,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FREE_DELIVERY_DELTA = 30
 STANDARD_DELIVERY_COST = 10
-INTERNATIONAL_DELIVERY_COST = 10
 LOCAL_PICKUP_COST = 1
 
 
