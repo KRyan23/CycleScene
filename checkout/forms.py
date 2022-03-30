@@ -7,7 +7,7 @@ class OrderForm(forms.ModelForm):
         fields = ('first_name', 'last_name', 'email',
                   'mobile_number', 'address1',
                   'address2', 'county', 'city',
-                  'country','postcode', 'date',)
+                  'country','postcode', )
 # Mostly from BA project
     def __init__(self, *args, **kwargs):
         ''' Place holders for fields to overwrite the default labels and 

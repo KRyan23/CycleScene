@@ -31,7 +31,7 @@ def shoppingbag_contents(request):
     else:
         delivery_local = bagtotal + Decimal(settings.STANDARD_DELIVERY_COST)
         delivery_pickup = bagtotal * Decimal(settings.LOCAL_PICKUP_COST)
-        total_bag_cost = bagtotal + delivery_local + delivery_pickup + free_delivery
+        #total_bag_cost = bagtotal + delivery_local + delivery_pickup + free_delivery
 
     context = {
                 'shoppingbag_items': shoppingbag_items,
@@ -41,7 +41,7 @@ def shoppingbag_contents(request):
                 'delivery_local': delivery_local,
                 'delivery_pickup': delivery_pickup,
                 'free_delivery': free_delivery,
-                'total_bag_cost': total_bag_cost,
+                #'total_bag_cost': total_bag_cost,
                 'free_delivery_delta': settings.FREE_DELIVERY_DELTA,
             }
     return context
