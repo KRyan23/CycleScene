@@ -1,5 +1,5 @@
-/* Script to increment and decrement the quantity value in the products details 
-'add to bag' input box hard min and max set to 1 and 10 repectively + max and min messages*/
+// Script to increment and decrement the quantity value in the products details 
+// 'add to bag' input box hard min and max set to 1 and 10 repectively + max and min messages
 
 $(document).ready(function(){
     $(".increment-value").click(function() {

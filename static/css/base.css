@@ -70,7 +70,7 @@ ul {
 .starcolor,
 .results-number,
 .toast-shopping-bag,
-.product-rating  {
+.product-rating {
     color: orange;
     border-color: orange;
 }
@@ -101,7 +101,7 @@ ul {
     background-color: #a0a0a0;
 }
 
-.fa-home, .item-number{
+.fa-home, .item-number {
     color: orange;
 }
 
@@ -435,6 +435,19 @@ ul>li {
     color: #5C636A;
     font-weight: 900;
     animation: pulse 1.5s forwards;
+}
+
+.fa-clock {
+    color: orange;
+}
+
+.secure-checkout-header {
+    background-color: #E9E9EB;
+    line-height: 1;
+    white-space: nowrap;
+    height:200px;
+    vertical-align: baseline;
+    border-radius: .25rem;
 }
  /* --------- Keyframes Calls -------------- */
 

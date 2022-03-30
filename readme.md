@@ -153,6 +153,7 @@
     - Balsamiq 4.2.1 was used to create the WireFraming during the design process.
 8. [Django:](https://www.djangoproject.com/)
     - Django was the chosen framework for the project, I found it very useful that it was so similar to flask in many ways.
+9. [Crispy Forms for Bootstrap 5:](https://github.com/django-crispy-forms/crispy-bootstrap5) - Crispy form for Boostrap 5 were used. 
 
 
 ----

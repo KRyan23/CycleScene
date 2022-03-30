@@ -50,7 +50,10 @@ INSTALLED_APPS = [
     'shoppingbag',
     'django.contrib.humanize',
     'checkout'
-
+    
+    #Third party apps
+    'crispy_forms',
+    'crispy_bootstrap5'
 ]
 
 MIDDLEWARE = [
@@ -82,6 +85,11 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'shoppingbag.contexts.shoppingbag_contents',
             ],
+
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -172,7 +180,8 @@ FREE_DELIVERY_DELTA = 30
 STANDARD_DELIVERY_COST = 10
 LOCAL_PICKUP_COST = 1
 
-
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
