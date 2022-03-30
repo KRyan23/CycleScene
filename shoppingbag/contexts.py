@@ -26,14 +26,12 @@ def shoppingbag_contents(request):
 
     if bagtotal > settings.FREE_DELIVERY_DELTA:
         delivery_local = 0
-        delivery_international = 0
         delivery_pickup = 0
         free_delivery = 0
     else:
         delivery_local = bagtotal + Decimal(settings.STANDARD_DELIVERY_COST)
-        delivery_international = bagtotal + Decimal(settings.INTERNATIONAL_DELIVERY_COST)
         delivery_pickup = bagtotal * Decimal(settings.LOCAL_PICKUP_COST)
-    total_bag_cost = bagtotal + delivery_local + delivery_international + delivery_pickup + free_delivery
+        total_bag_cost = bagtotal + delivery_local + delivery_pickup + free_delivery
 
     context = {
                 'shoppingbag_items': shoppingbag_items,
@@ -41,7 +39,6 @@ def shoppingbag_contents(request):
                 'product_total': product_total,
                 'product_count': product_count,
                 'delivery_local': delivery_local,
-                'delivery_international': delivery_international,
                 'delivery_pickup': delivery_pickup,
                 'free_delivery': free_delivery,
                 'total_bag_cost': total_bag_cost,
