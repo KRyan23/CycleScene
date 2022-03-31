@@ -49,9 +49,8 @@ INSTALLED_APPS = [
     'mathfilters',
     'shoppingbag',
     'django.contrib.humanize',
-    'checkout'
-    
-    #Third party apps
+    'checkout',
+    #3rd party apps
     'crispy_forms',
     'crispy_bootstrap5'
 ]
@@ -89,7 +88,7 @@ TEMPLATES = [
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
                 'crispy_forms.templatetags.crispy_forms_field',
-            ]
+            ],
         },
     },
 ]
