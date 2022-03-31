@@ -355,7 +355,7 @@ ul>li {
     margin: 0 0 0 0;
 }
 
-.text-grow {
+.text-grow, .items {
     animation: pulse 3s forwards;
     color: orange;
     font-weight: 900;
@@ -376,7 +376,7 @@ ul>li {
     background-color: #E9E9EB;
 }
 
-.price-hr {
+.price-hr, .myorder {
     max-width: 200px;
     margin: auto;
     color: #198754;
@@ -690,6 +690,7 @@ ul>li {
     .date {
         line-height:5;
     }
+
 }
 
 /*- 321px - 499px -*/
@@ -709,10 +710,6 @@ ul>li {
     .main-logo {
         margin: 0 10px 10px 0px;
         padding: 3px 3px 3px 3px;
-    }
-
-    .form-control {
-        width: auto;
     }
 
     .btn-outline-secondary {
