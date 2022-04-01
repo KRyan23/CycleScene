@@ -80,6 +80,7 @@ ul {
     box-shadow: 0 0 7px #6C757D !important;
 }
 
+
 .btn-outline-secondary {
     margin: 0 2px 0 20px;
 }
@@ -448,6 +449,12 @@ ul>li {
     height:200px;
     vertical-align: baseline;
     border-radius: .25rem;
+}
+
+.stripe-card-input {
+    border-color: #6C757D !important;
+    box-shadow: 0 0 7px #6C757D !important;"
+    
 }
  /* --------- Keyframes Calls -------------- */
 

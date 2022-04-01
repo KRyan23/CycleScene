@@ -35,7 +35,7 @@ class Order(models.Model):
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
         print(order_total)
 
-        if self.order_total < settings.FREE_DELIVERY_DELTA or self.order_total > 600:
+        if self.order_total < settings.FREE_DELIVERY_DELTA:
             self.delivery_cost = STANDARD_DELIVERY_COST
         else:
             self.delivery_cost = 0
