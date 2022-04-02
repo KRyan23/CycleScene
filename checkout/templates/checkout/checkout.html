@@ -70,14 +70,21 @@
                 <p class="my-0">Delivery: </p>
                 <p class="my-0">Grand Total:</p>
             </div>
-            <div class="col-3">
+            <div class="col-3"> 
                 <p class="my-0">€{{ bagtotal|floatformat:2|intcomma }}</p>
-                <p class="my-0">€{{ FREE_DELIVERY_DELTA }}test</p>
-                <p class="my-0"><strong>€{{ order.total }}not correct</strong></p>
+                {% if delivery == 0 %}
+                <p class="my-0"><span class="free-delivery-text">FREE!</span></p>
+                    {% else %}
+                <p class="my-0 fw-bold text-primary">€<u>{{ delivery|floatformat:2 }}</u></p>
+                {% endif %}
+                <p class="my-0"><strong>€{{ total_bag_cost }}</strong></p>
             </div>
         </div>
     </div>
 </div>
+{% if delivery != 0 %}
+<p class="text-center text-primary fw-bold"><u>Spend €{{ free_delivery_delta }} or more for free delivery!</u></p>
+{% endif %}
 <!-- end summary-->
 <!-- start details-->
 <div class="row">
@@ -95,7 +102,6 @@
             {{ order_form.email | as_crispy_field }}
             {{ order_form.mobile_number | as_crispy_field }}
         </fieldset>
-
         <fieldset>
             <legend class="fieldset-label small fw-bold mt-2 px-2 w-auto">Delivery</legend>
             {{ order_form.address1| as_crispy_field }}
@@ -126,7 +132,6 @@
             <div class="mb-3 text-danger stripe-style-input" id="card-errors" role="alert"></div>
         </fieldset>
     </div>
-
 </div>
 </div>
 <div class="row text-center">
@@ -135,7 +140,7 @@
         <span class="icon">
             <i class="fas fa-exclamation-circle text-danger"></i>
         </span>
-        <span>Your card will be charged <strong class="text-danger">€{{ bagtotal|floatformat:2|intcomma }}</strong></span>
+        <span>Your card will be charged <strong class="text-danger">€{{ total_bag_cost }}</strong></span>
     </p>
 </div>
 </div>

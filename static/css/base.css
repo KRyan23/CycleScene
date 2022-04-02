@@ -456,6 +456,11 @@ ul>li {
     box-shadow: 0 0 7px #6C757D !important;"
     
 }
+
+.free-delivery-text {
+    font-weight: bold;
+    color:#198754;
+}
  /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
