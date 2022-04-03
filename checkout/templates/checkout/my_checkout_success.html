@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block content %}
+
+<div style="background-color:#E9E9EB">
+<div class="row mt-5">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
+        <h2 class="fw-bold mb-4 text-center">Order Confirmation</h2>
+    </div>
+</div>
+<!-- start summary -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <h3 class="mb-3">Congratulations</h3>
+        </div>
+    </div>
+    <p class="mt-4 mb-5 text-center"> Your order has been successfully received, CycleScene work feverishly 7 days a week so you can be rest assured your order is being prepared as we speak! </p>
+    <div class="row mt-3">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
+            <p class="float-start fw-bold">For your records your order number is:</p>
+            <p class="float-start px-1"><span class="fw-bold order-email"> {{ order.order_number}}</span> </p>
+        </div>
+    </div>  
+    <div class="row mt-3">
+         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
+            <p class="float-start fw-bold">An email confirmation has been sent to: </p>
+            <p class="float-start px-1"><span class="fw-bold order-email">{{ order.email }}</span></p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+           <p class="fw-bold">Need a hard copy? Click the button below</p>
+           <a onclick="window.print()" class="fas fa-print fa-4x"></a>
+       </div>
+   </div>        
+</div>
+     <div class="row mt-2">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="text-center">
+          <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg mt-5 mb-5 fw-bold bg-light text-dark">BACK TO PRODUCTS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="mt-5">
+</div>
+</div>
+<!-- end summary-->
+</div>
+{% endblock %}
+{% block scripts %}
+{{ block.super }}
+<script src="/static/js/hidebase.js"></script>
+{% endblock %}

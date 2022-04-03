@@ -21,7 +21,7 @@
 <body>
   {% if request.user.is_authenticated %}
   <div id="discount" class="top-discount-banner text-center">
-    <div class="text-grow">Get 10% off your order Today !<p>Free Delivery on orders over €{{ free_delivery_delta }}</p></div>
+    <div class="text-grow"><p>Free Delivery on orders over €{{ free_delivery_delta }}</p></div>
   </div>
   {% endif %}
   <!--Navigation start-->

@@ -32,7 +32,7 @@ class Order(models.Model):
     def update_total(self):
         ''' Update the shopping bag total each time an item is added with delivery cost '''
         
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         print(order_total)
 
         if self.order_total < settings.FREE_DELIVERY_DELTA:

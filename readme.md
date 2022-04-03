@@ -339,8 +339,8 @@ The project was deployed using the steps below.
 | [Search](https://fontawesome.com/v5/icons/search?s=solid) | [Map-Pin](https://fontawesome.com/v5/icons/map-marker-alt?s=solid) | [Carret Left](https://fontawesome.com/v5/icons/caret-left?s=solid) |
 | [Home](https://fontawesome.com/v5/icons/home?s=solid)  | [Facebook](https://fontawesome.com/v5.15/icons/facebook?style=brands) | [Carret Right](https://fontawesome.com/v5/icons/caret-right?s=solid) | 
 | [Bag](https://fontawesome.com/v5/icons/shopping-bag?s=solid) | [YouTube](https://fontawesome.com/v5.15/icons/youtube-square?style=brands) | [Created Favicon](http://faviconer.com/icon/index) |
-| [Bicycle](https://fontawesome.com/v5/icons/bicycle?s=solid) | [Twitter](https://fontawesome.com/v5.15/icons/twitter?style=brands) |
-| | [Instagram](https://fontawesome.com/v5.15/icons/instagram?style=brands) |
+| [Bicycle](https://fontawesome.com/v5/icons/bicycle?s=solid) | [Twitter](https://fontawesome.com/v5.15/icons/twitter?style=brands) |[Printer](https://fontawesome.com/v5/icons/print?s=solid)
+| | [Instagram](https://fontawesome.com/v5.15/icons/instagram?style=brands) | 
 | | [Mastercard](https://fontawesome.com/v5/icons/cc-mastercard?s=brands) |
 | | [Stripe](https://fontawesome.com/v5/icons/cc-stripe?s=brands) |
 | | [Visa](https://fontawesome.com/v5/icons/cc-visa?s=brands) |

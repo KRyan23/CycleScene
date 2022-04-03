@@ -138,7 +138,8 @@ ul>li {
 .btn-outline-secondary,
 .features-bulletpoint,
 .desktop-nav-link:hover,
-.bag-spinner:hover {
+.bag-spinner:hover,
+.order-email  {
     color: orange;
 }
 
