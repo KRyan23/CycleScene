@@ -1,15 +1,35 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-import stripe
-from products.models import Product
-from shoppingbag.contexts import shoppingbag_contents
+
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-from django.utils.safestring import mark_safe
+from products.models import Product
+from shoppingbag.contexts import shoppingbag_contents
 
+import stripe
+import json
 
 # Mostly from BA project
+
+@require_POST
+def cache_checkout_data(request):
+    ''' cache user data in order to save info in the event of a unexpected event'''
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'shoppingbag': json.dumps(request.session.get('shoppingbag', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Were sorry your payment was not successful \
+            Please try again later.')
+        return HttpResponse(content=e, status=400)
+
 def checkout(request):
     ''' handle checkout requests and save to order '''
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
