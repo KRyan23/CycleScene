@@ -6,6 +6,7 @@ from products.models import Product
 from shoppingbag.contexts import shoppingbag_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+from django.utils.safestring import mark_safe
 
 
 # Mostly from BA project
@@ -87,9 +88,9 @@ def my_checkout_success(request, order_number):
     ''' used to handle checkout success '''
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.add_message(request, messages.SUCCESS, f' your order has been successfully processed! \
-        your order reference is {order}.A confirmation \
-        email will be sent to {order.email}. ')
+    messages.add_message(request, messages.SUCCESS, f'Great your order has been successfully processed!\
+        Reference: {order} \
+        Confirmation email will be sent to {order.email}. ')
     
 
     if 'shopping_bag' in request.session:

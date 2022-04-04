@@ -6,6 +6,8 @@
 {% endblock %}
 {% block content %}
 
+
+<div class="overlay"></div>
 {% if shoppingbag_items %}
 <!-- Date and Time + Header-->
 <div>
@@ -160,6 +162,13 @@
 </form>
 <hr class="mt-5">
 </div>
+</div>
+<div id="loading-overlay">
+    <h1 class="text-light logo-font loading-spinner">
+        <span class="icon">
+            <i class="fas fa-bicycle bike-rotate fa-3x"></i>
+        </span>
+    </h1>
 </div>
 {% endblock %}
 
