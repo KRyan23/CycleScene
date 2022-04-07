@@ -7,8 +7,8 @@
 <div class="container mt-5">
   <div class="row d-flex">
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes">
-        Price
+      <ul class="product-filter-boxes product-filter-boxes-mobile">
+        <span class="sort-by-price">Price</span>
         <li><a class="nav-link" href="{% url 'products' %}?sort=price&direction=asc"><i class="fas fa-angle-up"></i></a>
         </li>
         <li><a class="nav-link" href="{% url 'products' %}?sort=price&direction=desc"><i
@@ -16,7 +16,7 @@
       </ul>
     </div>
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes">
+      <ul class="product-filter-boxes product-filter-boxes-mobile">
         Rating
         <li><a class="nav-link" href="{% url 'products' %}?sort=rating&direction=asc"><i
               class="fas fa-angle-up"></i></a></li>
@@ -25,7 +25,7 @@
       </ul>
     </div>
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes">
+      <ul class="product-filter-boxes product-filter-boxes-mobile">
         Category
         <li><a class="nav-link" href="{% url 'products' %}?sort=category&direction=asc"><i
               class="fas fa-angle-up"></i></a></li>
@@ -34,7 +34,7 @@
       </ul>
     </div>
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes">
+      <ul class="product-filter-boxes product-filter-boxes-mobile">
         Name
         <li><a class="nav-link" href="{% url 'products' %}?sort=name&direction=asc"><i class="fas fa-angle-up"></i></a>
         </li>

@@ -102,7 +102,8 @@ ul {
     background-color: #a0a0a0;
 }
 
-.fa-home, .item-number {
+.fa-home,
+.item-number {
     color: orange;
 }
 
@@ -152,7 +153,7 @@ ul>li {
     transform: translate(-50%, -50%);
     overflow: hidden;
     letter-spacing: .10em;
-    margin: 0 auto; 
+    margin: 0 auto;
     white-space: nowrap;
     animation: textscrolling 3.5s steps(120, end);
 }
@@ -288,7 +289,8 @@ ul>li {
     transition: transform 0.1s;
 }
 
-.description-highlights:hover, .item-of {
+.description-highlights:hover,
+.item-of {
     background-color: #fafafa;
     color: black;
     transform: scale(1, 1.05);
@@ -329,7 +331,8 @@ ul>li {
     animation: rotate 3s linear;
 }
 
-.product-bike-features:hover, .no-products-found:hover {
+.product-bike-features:hover,
+.no-products-found:hover {
     transform: scale(1, 1.01);
     transition: transform 0.01s;
     background-color: #E9E9EB;
@@ -357,17 +360,23 @@ ul>li {
     margin: 0 0 0 0;
 }
 
-.text-grow, .items {
+.text-grow,
+.items {
     animation: pulse 3s forwards;
     color: orange;
     font-weight: 900;
 }
 
 .product-filter-boxes {
-    border: 1px solid #E9E9EB;
+    border: 1px solid #a0a0a0;
     border-radius: 5px;
     margin: 0 0 0 0;
     padding-left: 5px;
+    background-color: #E9E9EB;
+}
+
+.sort-by-price {
+    padding-left: 1.6em;
 }
 
 .no-products-found {
@@ -378,7 +387,8 @@ ul>li {
     background-color: #E9E9EB;
 }
 
-.price-hr, .myorder {
+.price-hr,
+.myorder {
     max-width: 200px;
     margin: auto;
     color: #198754;
@@ -393,10 +403,11 @@ ul>li {
     font-style: italic;
 }
 
-.empty-bag-message, .search-results-empty {
+.empty-bag-message,
+.search-results-empty {
     overflow: hidden;
-    letter-spacing:normal;
-    margin: 0 auto; 
+    letter-spacing: normal;
+    margin: 0 auto;
     white-space: nowrap;
     animation: textscrolling 4s steps(200, end);
 }
@@ -418,12 +429,12 @@ ul>li {
 }
 
 .fa-lock {
-    color:gold;
+    color: gold;
 }
- 
+
 .sub-total {
-    line-height:5;
-    background-color: #E9E9EB; 
+    line-height: 5;
+    background-color: #E9E9EB;
 }
 
 .toast-container {
@@ -447,26 +458,27 @@ ul>li {
     background-color: #E9E9EB;
     line-height: 1;
     white-space: nowrap;
-    height:200px;
+    height: 200px;
     vertical-align: baseline;
     border-radius: .25rem;
 }
 
 .stripe-card-input {
     border-color: #6C757D !important;
-    box-shadow: 0 0 7px #6C757D !important;"
-    
+    box-shadow: 0 0 7px #6C757D !important;
+    "
+
 }
 
 .free-delivery-text {
     font-weight: bold;
-    color:#198754;
+    color: #198754;
 }
 
 /* --------- From BA checkout spinner and overlay ---------------------*/
 #loading-overlay {
-	display: none;
-	position: fixed;
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -476,14 +488,14 @@ ul>li {
 }
 
 .loading-spinner {
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     height: 100%;
 }
 
- /* --------- Keyframes Calls -------------- */
+/* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
 @keyframes rotate {
@@ -491,12 +503,14 @@ ul>li {
         transform: rotate(360deg);
     }
 }
+
 /* Rotates objects by 180degrees for example the empty shopping bag */
 @keyframes rotatebag {
     100% {
         transform: rotate(180deg);
     }
 }
+
 /* Controls the animation on the top-discount-banner text */
 @keyframes pulse {
     0% {
@@ -568,6 +582,7 @@ ul>li {
         transform: scale(1);
     }
 }
+
 /* Scrolling effect for carousel headings */
 @keyframes textscrolling {
     from {
@@ -637,9 +652,9 @@ ul>li {
     }
 
     .date {
-        line-height:7;
+        line-height: 7;
         white-space: nowrap;
-        
+
     }
 }
 
@@ -722,7 +737,7 @@ ul>li {
     }
 
     .date {
-        line-height:5;
+        line-height: 5;
     }
 
 }
@@ -963,10 +978,10 @@ ul>li {
         text-align: center;
     }
 
-    .shopping-bag-image {  
-        height:50%;
+    .shopping-bag-image {
+        height: 50%;
         width: 50%;
-        transform: translate(50%, 0);        
+        transform: translate(50%, 0);
     }
 
 }
@@ -1081,10 +1096,10 @@ ul>li {
         text-align: center;
     }
 
-    .shopping-bag-image {  
-        height:50%;
+    .shopping-bag-image {
+        height: 50%;
         width: 50%;
-        transform: translate(50%, 0);        
+        transform: translate(50%, 0);
     }
 }
 
@@ -1199,10 +1214,10 @@ ul>li {
         text-align: center;
     }
 
-    .shopping-bag-image {  
-        height:50%;
+    .shopping-bag-image {
+        height: 50%;
         width: 50%;
-        transform: translate(50%, 0);        
+        transform: translate(50%, 0);
     }
 
 }
@@ -1242,10 +1257,10 @@ ul>li {
         text-align: center;
     }
 
-    .shopping-bag-image {  
-        height:50%;
+    .shopping-bag-image {
+        height: 50%;
         width: 50%;
-        transform: translate(50%, 0);        
+        transform: translate(50%, 0);
     }
 
 }
@@ -1297,10 +1312,10 @@ ul>li {
         font-size: medium;
     }
 
-    .shopping-bag-image {  
-        height:50%;
+    .shopping-bag-image {
+        height: 50%;
         width: 50%;
-        transform: translate(50%, 0);        
+        transform: translate(50%, 0);
     }
 }
 
@@ -1358,9 +1373,9 @@ ul>li {
         font-size: small;
     }
 
-    .shopping-bag-image {  
-        height:50%;
+    .shopping-bag-image {
+        height: 50%;
         width: 50%;
-        transform: translate(50%, 0);        
+        transform: translate(50%, 0);
     }
 }

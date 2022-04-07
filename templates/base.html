@@ -2,7 +2,6 @@
 {% load humanize %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -52,14 +51,13 @@
                 class="override-link-color text-font-weight">Login</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
                 class="override-link-color text-font-weight">Register</span></a></li>
-
           <li class="mx-5"><span class="shopping-bag-total-desktop hide-on-desktop">
             <a href="{% url 'view_shoppingbag' %}">
             <i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
               </i>€{{ bagtotal|floatformat:2|intcomma }}</span></li></a>
               <li class="nav-item dropdown hide-on-desktop">
                 <a class="dropdown-toggle  mobile-dropdown-heading"
-                  id="bikesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
                 <div class="dropdown-menu" aria-labelledby="bikesDropdown">
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=mountainbikes">Mountain Bikes</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=roadbikes">Road Bikes</a>
@@ -68,72 +66,54 @@
               </li>
               <li class="nav-item dropdown hide-on-desktop">
                 <a class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
-                  id="componentsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
                 <div class="dropdown-menu" aria-labelledby="componentsDropdown">
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=chainset">Chainsets</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=cassettes">Cassettes</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=saddles">Saddles</a>
+                 <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=saddles">Saddles</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=wheels">Wheels</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=pedals">Pedals</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=brakes">Brakes</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=grips">Grips</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=tyres">Tyres</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown hide-on-desktop">
-                <a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading" id="nutritionDropdown"
-                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
-                <div class="dropdown-menu" aria-labelledby="bikesDropdown">
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=gels">Gels</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=bars">Bars</a>
                 </div>
               </li>
               <li class="nav-item dropdown hide-on-desktop">
                 <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
-                  id="accesoriesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
                 <div class="dropdown-menu">
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=bottlesandcages">Bottles & Cages</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=bikelocks">Bike Locks</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=pumps">Pumps</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=lights">Lights</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=tools">Tools</a>                </div>
+                </div>
               </li>
               <li class="nav-item dropdown hide-on-desktop"><a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
-                  id="riderDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
                 <div class="dropdown-menu" aria-labelledby="riderDropdown">
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=eyewear">Eyewear</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=helmets">Helmets</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=gloves">Gloves</a>
                 </div>
               </li>
               <li class="nav-item dropdown hide-on-desktop"><a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
-                  id="servicesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                 <div class="dropdown-menu" aria-labelledby="servicesDropdown">
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="#">Road Rescue</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="#">Bike Repair</a>
                 </div>
               </li>
+              <li class="nav-item dropdown hide-on-desktop"><a href="{% url 'products' %}" class="navlink-alignment mobile-dropdown-heading">All Products</a></li>
         </ul>
       </div>
     </nav>
   </div>
-  <div>
-    <div class="row">
       <div class="col-12 text-center mb-0">
         <div class="shopping-cart-mobile"><a href="{% url 'view_shoppingbag' %}">
           <i class="fas fa-shopping-bag fa-lg shopping-bag"><span class="shopping-bag-total">€{{ bagtotal|floatformat:2|intcomma }}</span></i></a>
         </div>
       </div>
-    </div>
-  </div>
   <div class="desktop-navigation">
     <nav>
       <ul class="text-center bg-light">
         <li><a href="{% url 'home' %}" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
               class="fas fa-bicycle bike"></i></a></li>
+          <li class="nav-item"><a href="{% url 'products' %}" class="navlink-alignment desktop-nav-link">All Products</a></li>
         <li class="nav-item dropdown">
           <a class="dropdown-toggle navlink-alignment desktop-nav-link"
-            id="bikesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
           <div class="dropdown-menu" aria-labelledby="bikesDropdown">
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=mountainbikes">Mountain Bikes</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=roadbikes">Road Bikes</a>
@@ -142,48 +122,30 @@
         </li>
         <li class="nav-item dropdown">
           <a href="{% url 'products' %}?category=components" class="dropdown-toggle navlink-alignment desktop-nav-link"
-            id="componentsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
           <div class="dropdown-menu" aria-labelledby="componentsDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=chainset">Chainsets</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=cassettes">Cassettes</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=saddles">Saddles</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=wheels">Wheels</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=frames">Frames</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=pedals">Pedals</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=brakes">Brakes</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=grips">Grips</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=tyres">Tyres</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link" id="nutritionDropdown"
-            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nutrition</a>
-          <div class="dropdown-menu" aria-labelledby="bikesDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bars">Bars</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=gels">Gels and Energy</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment desktop-nav-link"
-            id="accesoriesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
           <div class="dropdown-menu">
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=tools">Tools</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=lights">Lights</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=pumps">Pumps</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bikelocks">Bike Locks</a>
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bottlesandcages">Bottles & Cages</a>
           </div>
         </li>
         <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
-            id="riderDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
           <div class="dropdown-menu" aria-labelledby="riderDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=eyewear">Eyewear</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=helmets">Helmets</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=gloves">Gloves</a>
           </div>
         </li>
         <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
-            id="servicesDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-menu" aria-labelledby="servicesDropdown">
             <a class="nav-link dropdown-item text-font-weight" href="#">Bike Repair</a>
             <a class="nav-link dropdown-item text-font-weight" href="#">Road Rescue</a>
@@ -304,9 +266,9 @@
         </div>
         <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
           <div class="card my-3 grow-effect">
-            <img src="../media/bottle-card.jpg" alt="bottles and cages" />
+            <img src="../media/lock1-2.jpg" alt="bike locks" />
             <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">BOTTLES & CAGES</h3>
+              <h3 class="card-title">LOCKS</h3>
               <a href="{% url 'products' %}?category=bottlesandcages" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
             </div>
           </div>
@@ -480,23 +442,11 @@
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=mountainbikes" class="nav-link">Mountain Bikes</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=saddles" class="nav-link">Saddles</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=wheels" class="nav-link">Wheels</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=pedals" class="nav-link">Pedals</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=tyres" class="nav-link">Tyres</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=brakes" class="nav-link">Brakes</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=bottlesandcages" class="nav-link">Bottles & Cages</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=pumps" class="nav-link">Pumps</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=bikelocks" class="nav-link">Bike Locks</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=tools" class="nav-link">Tools</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=lights" class="nav-link">Lights</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=cassettes" class="nav-link">Cassettes</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=bars" class="nav-link">Bars</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=gels" class="nav-link">Gels & Energy</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=helmets" class="nav-link">Helmets</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=gloves" class="nav-link">Gloves</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=frames" class="nav-link">Frames</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=grips" class="nav-link">Bar Grips</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=chainset" class="nav-link">Chainsets</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=eyewear" class="nav-link">Eyewear</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Repair</a></div><!-- link to a shared template road rescue-->
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Rescue</a></div><!-- link to a shared template Bike Repair ^-->
       </div>
