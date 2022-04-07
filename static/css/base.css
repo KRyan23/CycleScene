@@ -62,10 +62,6 @@ ul {
     line-height: -5;
 }
 
-.telephone-number {
-    font-size: 1.25em;
-}
-
 .fa-search,
 .starcolor,
 .results-number,
@@ -599,7 +595,6 @@ ul>li {
 /*- < 250px-*/
 @media only screen and (max-width: 249px) {
 
-    .telephone-number,
     .shopping-cart-desktop,
     .desktop-navigation,
     .desktop-caret,
@@ -651,6 +646,16 @@ ul>li {
         font-size: 1.2em;
     }
 
+    .main-logo {
+        margin: 0 0 10px 5px;
+    }
+
+    .mobile-searchbar {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 1em;
+    }
+
     .date {
         line-height: 7;
         white-space: nowrap;
@@ -661,7 +666,6 @@ ul>li {
 /*- 250px - 320px -*/
 @media only screen and (min-width: 250px) and (max-width: 320px) {
 
-    .telephone-number,
     .shopping-cart-desktop,
     .desktop-navigation,
     .desktop-caret,
@@ -691,17 +695,13 @@ ul>li {
     }
 
     .main-logo {
-        margin: 5px 10px 20px 0px;
+        margin: 0 0 10px 5px;
     }
 
-    .input-group {
-        width: 100%;
-    }
-
-    .search-box {
-        max-width: 160px;
-        margin-left: 0.2em;
-        margin-right: 0;
+    .mobile-searchbar {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 1em;
     }
 
     .mobile-navigation-topmenu {
@@ -745,9 +745,9 @@ ul>li {
 /*- 321px - 499px -*/
 @media only screen and (min-width: 321px) and (max-width: 499px) {
 
-    .telephone-number,
     .shopping-cart-desktop,
     .desktop-navigation,
+    .hide-on-smallscreen,
     .desktop-caret,
     .desktop-contact-us,
     .shopping-bag-total-desktop,
@@ -757,18 +757,17 @@ ul>li {
     }
 
     .main-logo {
-        margin: 0 10px 10px 0px;
-        padding: 3px 3px 3px 3px;
+        margin: 0 0 10px 5px;
     }
 
     .btn-outline-secondary {
         margin: 0 2px 0 2px;
     }
 
-    .search-box {
-        max-width: 140px;
-        margin-left: -2.2em;
-        margin-right: 0;
+    .mobile-searchbar {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 1em;
     }
 
     .carousel-heading {
@@ -815,13 +814,14 @@ ul>li {
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
 
-    .telephone-number,
+  
     .shopping-cart-desktop,
     .desktop-navigation,
     .desktop-caret,
     .desktop-contact-us,
     .shopping-bag-total-desktop,
     .display-on-smallscreen,
+    .hide-on-mediumlarge,
     .brands {
         display: none;
     }
@@ -849,6 +849,8 @@ ul>li {
         text-align: center;
     }
 
+    
+
 }
 
 /*- 767px - 992px -*/
@@ -859,6 +861,7 @@ ul>li {
     .mobile-contact-us,
     .shopping-bag-total-desktop,
     .display-on-smallscreen,
+    .hide-on-mediumlarge,
     .desktop-navigation {
         display: none;
     }
@@ -871,16 +874,7 @@ ul>li {
         font-size: 1.5em;
     }
 
-    .search-box {
-        width: 400px;
-        margin-left: -5em;
-    }
-
-    .btn-outline-secondary {
-        margin-left: -1em;
-        padding: 0.40em 2em 0.40em 2em;
-    }
-
+        
     .main-logo {
         height: 110px;
         width: 110px;
@@ -972,6 +966,9 @@ ul>li {
         margin: 0;
     }
 
+    .search-box {
+       
+    }
 
     .product-filter-boxes {
         font-size: smaller;
@@ -993,7 +990,7 @@ ul>li {
     .hide-on-desktop,
     .mobile-caret,
     .mobile-contact-us,
-    .telephone-number,
+    .hide-on-mediumlarge,
     .display-on-smallscreen {
         display: none;
     }
@@ -1111,7 +1108,7 @@ ul>li {
     .mobile-caret,
     .hide-on-desktop,
     .mobile-contact-us,
-    .telephone-number,
+    .hide-on-mediumlarge,
     .display-on-smallscreen {
         display: none;
     }
@@ -1230,7 +1227,7 @@ ul>li {
     .mobile-caret,
     .hide-on-desktop,
     .mobile-contact-us,
-    .telephone-number,
+    .hide-on-mediumlarge,
     .display-on-smallscreen {
         display: none;
     }
@@ -1273,7 +1270,7 @@ ul>li {
     .mobile-caret,
     .hide-on-desktop,
     .mobile-contact-us,
-    .telephone-number,
+    .hide-on-mediumlarge,
     .display-on-smallscreen {
         display: none;
     }
@@ -1326,7 +1323,7 @@ ul>li {
     .mobile-caret,
     .hide-on-desktop,
     .mobile-contact-us,
-    .telephone-number,
+    .hide-on-mediumlarge,
     .display-on-smallscreen {
         display: none;
     }

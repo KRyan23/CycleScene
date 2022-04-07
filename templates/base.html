@@ -24,11 +24,11 @@
   </div>
   {% endif %}
   <!--Navigation start-->
-  <div>
+  <div><!-- displays this searchbar on screen sizes 500px and above -->
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
         <img class="main-logo" alt="main logo" src="../media/logo101.png">
         <span class="brand-heading"></span></a>
-      <div class="col-xm-4 col-sm-6 col-md-4 col-lg-4 col-xl-6">
+      <div class="col-xm-4 col-sm-6 col-md-8 col-lg-4 col-xl-6 hide-on-smallscreen">
         <form method="GET" action="{% url 'products' %}" class="d-flex alpha">
           <input type="text" class="form-control search-box" name="q" placeholder="Search here...">
           <button type="submit" class="btn btn-outline-secondary desktop-search-button"><i
@@ -41,12 +41,6 @@
       </button>
       <div class="collapse navbar-collapse" id="toggleMobileMenu">
         <ul class="navbar-nav ms-auto">
-          <li class="hide-on-desktop display-on-smallscreen">
-            <form method="GET" action="{% url 'products' %}" class="d-flex">
-              <input type="text" class="mx-3" placeholder="Search here...">
-              <button type="submit" class="btn btn-outline-secondary"><i class="fa fa-search"></i></button>
-            </form>
-          </li>
           <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
                 class="override-link-color text-font-weight">Login</span></a></li>
           <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
@@ -99,6 +93,14 @@
         </ul>
       </div>
     </nav>
+  </div>
+  <!-- Displays searchbar on screens 499px and below-->
+  <div class="col-12 text-center hide-on-mediumlarge">
+    <form method="GET" action="{% url 'products' %}" class="d-flex alpha mobile-searchbar">
+      <input type="text" class="form-control" name="q" placeholder="Search here...">
+      <button type="submit" class="btn btn-outline-secondary"><i
+          class="fa fa-search"></i></button>
+    </form>
   </div>
       <div class="col-12 text-center mb-0">
         <div class="shopping-cart-mobile"><a href="{% url 'view_shoppingbag' %}">
