@@ -2,8 +2,6 @@
 {% load static %}
 {% load humanize %}
 {% block content %}
-{% firstof product.category.id as categorynum %} {{ categorynum }}
-<!-- for debug only-->
 <!-- This is just targetted by rating.js to pull the rating value -->
 <span id="readStarRating" class="d-none">{{ product.rating }}</span>
 <!-- breadcrumb nav -->
@@ -58,19 +56,6 @@
     <h3 class="text-center mt-4 mb-3">Description</h3>
     <p class="card-text description-highlights">{{ product.description|lower|capfirst }}</p>
   </div>
-  {% if product.category.id == 19  %}
-  <h3 class="mt-4 text-center">Features</h3>
-  <ul class="list-group list-group-flush mt-4">
-    <li class="list-group-item h5 product-bike-features"><span>Fork:</span><small class="lead">
-        {{ product.feature1|title }}</small></li>
-    <li class="list-group-item h5 product-bike-features"><span>Frame:</span><small class="lead">
-        {{ product.feature2|title}}</small></li>
-    <li class="list-group-item h5 product-bike-features"><span>Wheels:</span><small class="lead">
-        {{ product.feature3|title }}</small></li>
-    <li class="list-group-item h5 product-bike-features"><span>Groupset:</span><small class="lead">
-        {{ product.feature4|title }}</small></li>
-  </ul>
-  {% else %}
   <h3 class="mt-5 mx-3">Features</h3>
   <ul class="list-group list-group-flush mb-5">
     <li class="list-group-item h5 product-bike-features"><i
@@ -86,7 +71,6 @@
         class="fas fa-bicycle bike-rotate features-bulletpoint"></i><span class="features-text">-
         {{ product.feature4|title }}</span></li>
   </ul>
-  {% endif %}
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-3 text-center">
