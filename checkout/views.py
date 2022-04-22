@@ -2,12 +2,10 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-
-from .forms import OrderForm
-from .models import Order, OrderLineItem
 from products.models import Product
 from shoppingbag.contexts import shoppingbag_contents
-
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 import stripe
 import json
 
@@ -50,8 +48,14 @@ def checkout(request):
             'postcode': request.POST['postcode'],
         }
         order_form = OrderForm(form_data)
+
         if order_form.is_valid():
-            order = order_form.save()
+            order = order_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            order.stripe_pid = pid
+            order.original_shoppingbag = json.dumps(bag)
+            order.save()
+
             for item_id, item_data in bag.items(): 
                 try:
                     product = Product.objects.get(id=item_id)
@@ -65,7 +69,7 @@ def checkout(request):
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "A products in your bag wasn't found in our \
-                        database. Please call us for assistance!")
+                        database. Please call us on (01) 8551522")
                     )
                     order.delete()
                     return redirect(reverse('view_shoppingbag'))
@@ -88,13 +92,11 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
-
-        
         order_form = OrderForm()
 
     if not stripe_public_key:
         messages.warning(request, 'stripe Public key missing check gitpod env also set all ports to public!')
-    
+
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
@@ -111,7 +113,6 @@ def my_checkout_success(request, order_number):
     messages.add_message(request, messages.SUCCESS, f'Great your order has been successfully processed!\
         Reference: {order} \
         Confirmation email will be sent to {order.email}. ')
-    
 
     if 'shopping_bag' in request.session:
         del request.session['shopping_bag']

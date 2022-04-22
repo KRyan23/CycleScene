@@ -132,6 +132,8 @@
 
             <!--For Form errors -->
             <div class="mb-3 text-danger stripe-style-input" id="card-errors" role="alert"></div>
+             <!-- hidden input for the view payment intent id -->
+             <input type="hidden" value="{{ client_secret }}" name="client_secret">
         </fieldset>
     </div>
 </div>

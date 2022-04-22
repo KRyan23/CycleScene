@@ -19,9 +19,13 @@ class Order(models.Model):
     country = models.CharField(max_length=50, null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)    
     date = models.DateTimeField(auto_now_add=True)
+    
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     bag_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+
+    original_shoppingbag = models.TextField(null=False, blank=False,  default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
         """
@@ -31,14 +35,15 @@ class Order(models.Model):
 
     def update_total(self):
         ''' Update the shopping bag total each time an item is added with delivery cost '''
+
+        print("updating total")
         
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
-        print(order_total)
 
         if self.order_total < settings.FREE_DELIVERY_DELTA:
-            self.delivery_cost = STANDARD_DELIVERY_COST
+            self.delivery_cost = settings.STANDARD_DELIVERY_COST
         elif self.delivery_cost < 600:
-            self.delivery_cost = STANDARD_DELIVERY_COST
+            self.delivery_cost = settings.STANDARD_DELIVERY_COST
         else:
             self.delivery_cost = 0
         self.bag_total = self.order_total + self.delivery_cost
@@ -73,3 +78,8 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'EAN {self.product.ean} on order {self.order.order_number}'
+
+    def update_total(self):
+        ''' Update the shopping bag total each time an item is added with delivery cost '''
+
+        print("updating total")
