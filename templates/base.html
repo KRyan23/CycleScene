@@ -1,5 +1,6 @@
 {% load static %}
 {% load humanize %}
+{% load custom_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,8 +86,8 @@
               <li class="nav-item dropdown hide-on-desktop"><a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
                 <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="#">Road Rescue</a>
-                  <a class="nav-link dropdown-item text-font-weight mx-3" href="#">Bike Repair</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% section 'service' 'rescue' %}">Road Rescue</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% section 'service' 'repair' %}">Bike Repair</a>
                 </div>
               </li>
               <li class="nav-item dropdown hide-on-desktop"><a href="{% url 'products' %}" class="navlink-alignment mobile-dropdown-heading">All Products</a></li>
@@ -149,8 +150,8 @@
         <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
           <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-            <a class="nav-link dropdown-item text-font-weight" href="#">Bike Repair</a>
-            <a class="nav-link dropdown-item text-font-weight" href="#">Road Rescue</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% section 'service' 'repair' %}">Bike Repair</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% section 'service' 'rescue' %}">Road Rescue</a>
           </div>
         </li>
       </ul>
@@ -458,8 +459,8 @@
     <div class="container-fluid mt-5 mb-4">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-          <p class="text-wrap">© Copyright 2022 CycleScene all rights reserved. <a href="#" class="footer-link">Privacy
-              Policy</a> | <a href="#" class="footer-link">Terms and Conditions.</a> | <a href="#"
+          <p class="text-wrap">© Copyright 2022 CycleScene all rights reserved. <a href="{% section 'legal' 'privacy' %}" class="footer-link">Privacy
+              Policy</a> | <a href="{% section 'legal' 'terms' %}" class="footer-link">Terms and Conditions.</a> | <a href="{% section 'legal' 'returns' %}"
               class="footer-link">Returns Policy.</a></p>
         </div>
       </div>

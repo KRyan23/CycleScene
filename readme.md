@@ -271,8 +271,11 @@ The project was deployed using the steps below.
 
 ### Content
 
--   Privacy Policy - Some of the privacy policy was borrowed from [this link]() to save time on the project. 
+-   Privacy Policy - Some of the privacy policy was borrowed from [this link](https://www.wiggle.co.uk/h/option/PrivacyPolicy) to save time on the project.
+-   Privacy Policy - Some of the returns policy was borrowed from [this link](https://www.wiggle.co.uk/h/option/returnsprocedure) to save time on the project. 
 -   The remaining content was written by myself with some minor contributions by family and friends.
+
+-  Some of the bike services content was adapted from [this link](https://www.360cycles.ie/our-services/bike-repair-bookings/)
 
 -   The quote on the main page is by a famous long distance cyclist - Heinz Stucke
 &nbsp;
@@ -340,10 +343,9 @@ The project was deployed using the steps below.
 | [Home](https://fontawesome.com/v5/icons/home?s=solid)  | [Facebook](https://fontawesome.com/v5.15/icons/facebook?style=brands) | [Carret Right](https://fontawesome.com/v5/icons/caret-right?s=solid) | 
 | [Bag](https://fontawesome.com/v5/icons/shopping-bag?s=solid) | [YouTube](https://fontawesome.com/v5.15/icons/youtube-square?style=brands) | [Created Favicon](http://faviconer.com/icon/index) |
 | [Bicycle](https://fontawesome.com/v5/icons/bicycle?s=solid) | [Twitter](https://fontawesome.com/v5.15/icons/twitter?style=brands) |[Printer](https://fontawesome.com/v5/icons/print?s=solid)
-| | [Instagram](https://fontawesome.com/v5.15/icons/instagram?style=brands) | 
-| | [Mastercard](https://fontawesome.com/v5/icons/cc-mastercard?s=brands) |
-| | [Stripe](https://fontawesome.com/v5/icons/cc-stripe?s=brands) |
-| | [Visa](https://fontawesome.com/v5/icons/cc-visa?s=brands) |
+| [Cog](https://fontawesome.com/v5/icons/cog?s=solid) | [Instagram](https://fontawesome.com/v5.15/icons/instagram?style=brands) | [Times](https://fontawesome.com/v5/icons/times?s=solid) | [Tools](https://fontawesome.com/v5/icons/tools?s=solid) | [Mastercard](https://fontawesome.com/v5/icons/cc-mastercard?s=brands) |
+| [Ambulance](https://fontawesome.com/v5/icons/ambulance?s=solid) | [Stripe](https://fontawesome.com/v5/icons/cc-stripe?s=brands) |
+| [Check](https://fontawesome.com/v5/icons/check?s=solid) | [Visa](https://fontawesome.com/v5/icons/cc-visa?s=brands) |
 &nbsp;
 
 

@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'shoppingbag',
     'django.contrib.humanize',
     'checkout',
+    'legal',
+    'service',
     #3rd party apps
     'crispy_forms',
     'crispy_bootstrap5'

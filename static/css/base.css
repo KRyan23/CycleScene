@@ -66,7 +66,11 @@ ul {
 .starcolor,
 .results-number,
 .toast-shopping-bag,
-.product-rating {
+.product-rating,
+.fa-cog,
+.fa-tools,
+.fa-ambulance,
+.fa-check {
     color: orange;
     border-color: orange;
 }
@@ -293,7 +297,7 @@ ul>li {
     transition: transform 0.01s;
 }
 
-.star-color-effect {
+.star-color-effect, .fa-tools  {
     animation: rotate 2s reverse;
 }
 
@@ -323,7 +327,7 @@ ul>li {
 
 }
 
-.bike-rotate {
+.bike-rotate, .service-cog  {
     animation: rotate 3s linear;
 }
 
@@ -490,7 +494,18 @@ ul>li {
     margin: 0;
     height: 100%;
 }
+/* ----------------------------------------*/
+.fa-ambulance {
+    overflow: hidden;
+    letter-spacing: normal;
+    white-space: nowrap;
+    animation: textscrolling 40s steps(1000, end);
+}
 
+.services-background {
+    background-color: whitesmoke;
+    padding: 1em 0 1em 0;
+}
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */
@@ -582,11 +597,11 @@ ul>li {
 /* Scrolling effect for carousel headings */
 @keyframes textscrolling {
     from {
-        width: 0
+        width: 0;
     }
 
     to {
-        width: 50%
+        width: 50%;
     }
 }
 
