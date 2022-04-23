@@ -466,8 +466,6 @@ ul>li {
 .stripe-card-input {
     border-color: #6C757D !important;
     box-shadow: 0 0 7px #6C757D !important;
-    "
-
 }
 
 .free-delivery-text {
@@ -519,7 +517,7 @@ ul>li {
 }
 
 #id_default_country option:first-child {
-    color: #5C636A;
+    color: red;
 }
 /* --------- From BA hack for Country dropdown ---------------------*/
 
@@ -528,7 +526,7 @@ select, select option {
 }
 
 select:invalid, select option[value=""] {
-    color:#E9E9EB !important;
+    color: #6C7781 !important;
 }
 
 /* --------- Keyframes Calls -------------- */

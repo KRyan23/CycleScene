@@ -1,13 +1,14 @@
+import stripe
+import json
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf import settings
 from products.models import Product
 from shoppingbag.contexts import shoppingbag_contents
 from .forms import OrderForm
 from .models import Order, OrderLineItem
-import stripe
-import json
 
 # Mostly from BA project
 
@@ -28,6 +29,7 @@ def cache_checkout_data(request):
             Please try again later.')
         return HttpResponse(content=e, status=400)
 
+@login_required
 def checkout(request):
     ''' handle checkout requests and save to order '''
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -77,7 +79,8 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('my_checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. Please double check your info.')
+            messages.error(request, 'There was an error with your form. \
+            Please double check your info.')
     else:
         shoppingbag = request.session.get('shopping_bag', {})
         if not shoppingbag:
@@ -95,7 +98,7 @@ def checkout(request):
         order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'stripe Public key missing check gitpod env also set all ports to public!')
+        messages.warning(request, 'stripe Public key missing')
 
     template = 'checkout/checkout.html'
     context = {
@@ -106,11 +109,12 @@ def checkout(request):
 
     return render(request, template, context)
 
+@login_required
 def my_checkout_success(request, order_number):
     ''' used to handle checkout success '''
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.add_message(request, messages.SUCCESS, f'Great your order has been successfully processed!\
+    messages.add_message(request, messages.SUCCESS, f'Great your order has been processed! \
         Reference: {order} \
         Confirmation email will be sent to {order.email}. ')
 
