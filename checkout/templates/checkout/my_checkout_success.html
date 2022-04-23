@@ -143,6 +143,15 @@
        </div>
    </div>        
 </div>
+{% if from_profile %}
+<div class="row mt-2">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="text-center">
+        <a href="{% url 'profile' %}" class="btn btn-outline-secondary btn-lg mt-5 mb-5 fw-bold">BACK TO PROFILE</a>
+      </div>
+    </div>
+  </div>
+{% else %}
      <div class="row mt-2">
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
         <div class="text-center">
@@ -150,12 +159,12 @@
         </div>
       </div>
     </div>
+    {% endif %}
   </div>
-<hr class="mt-5">
+</div>
 
+</div>
+</div>
 <!-- end summary-->
 {% endblock %}
-{% block scripts %}
-{{ block.super }}
-<script src="{% static '/js/hidebase.js' %}"></script>
-{% endblock %}
+
