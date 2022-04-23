@@ -344,8 +344,7 @@ The project was deployed using the steps below.
 | [Bag](https://fontawesome.com/v5/icons/shopping-bag?s=solid) | [YouTube](https://fontawesome.com/v5.15/icons/youtube-square?style=brands) | [Created Favicon](http://faviconer.com/icon/index) |
 | [Bicycle](https://fontawesome.com/v5/icons/bicycle?s=solid) | [Twitter](https://fontawesome.com/v5.15/icons/twitter?style=brands) |[Printer](https://fontawesome.com/v5/icons/print?s=solid)
 | [Cog](https://fontawesome.com/v5/icons/cog?s=solid) | [Instagram](https://fontawesome.com/v5.15/icons/instagram?style=brands) | [Times](https://fontawesome.com/v5/icons/times?s=solid) | [Tools](https://fontawesome.com/v5/icons/tools?s=solid) | [Mastercard](https://fontawesome.com/v5/icons/cc-mastercard?s=brands) |
-| [Ambulance](https://fontawesome.com/v5/icons/ambulance?s=solid) | [Stripe](https://fontawesome.com/v5/icons/cc-stripe?s=brands) |
-| [Check](https://fontawesome.com/v5/icons/check?s=solid) | [Visa](https://fontawesome.com/v5/icons/cc-visa?s=brands) |
+| [Ambulance](https://fontawesome.com/v5/icons/ambulance?s=solid) | [Stripe](https://fontawesome.com/v5/icons/cc-stripe?s=brands) |[Envelope](https://fontawesome.com/v5/icons/envelope?s=solid)| [Check](https://fontawesome.com/v5/icons/check?s=solid) | [Visa](https://fontawesome.com/v5/icons/cc-visa?s=brands) |
 &nbsp;
 
 

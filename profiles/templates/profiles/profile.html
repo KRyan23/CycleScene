@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_tags %}
+{% block content %}
+<!-- If logged in and user is a superuser -->
+{% if usertype %}
+<!-- start header -->
+<div class="services-background">
+  <hr class="mt-5">
+  <div class="row d-flex justify-content-around">
+    <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+      <h3 class="mt-1 text-center">Product Manager</h3>
+      <hr>
+      <p class="text-center">You are now logged in as a superuser, from here you can manage all products in the database.</p>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+        <h4 class="mt-4 mb-4">Actions Availible:</h4>
+        <i class="fas fa-user-cog fa-2x mt-1 mb-4"></i>
+        <div class="row d-flex justify-content-around">
+        <div class="rounded-pill bg-light col-sm-6 col-md-4 col-lg-3 col-xl-3 fs-4"><span class="mx-2 text-success">Create</span><span class="mx-2 text-warning">Update</span><span class="mx-2 text-danger">Delete</span></div>
+      </div>
+    </div>
+      <!-- end header -->
+      <!-- If there are no products found-->
+      {% if products|length == 0 %}
+      <div class="container-fluid no-products-found">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="text-center text-font-weight ">
+              <h2 class="pt-5">Sorry no results found</h2>
+              <h3 class="mt-5">Use the button below to browse all products</h3>
+              <i class="fas fa-bicycle bike-spinner fa-3x mt-3"></i>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="text-center">
+              <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg mt-5 fw-bold">ALL PRODUCTS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      <div class="mx-0 mt-5">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                    <a href="{% url 'add_product' %}"
+                      class="btn btn-success fw-bold d-block stretched-link override-link-color">Create A New Product</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Renders out each product -->
+        <div class="mx-0 mt-5">
+          <div class="row">
+            {% for product in products %}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-2">
+              <div class="card">
+                <img src="{{ product.image1.url }}" alt="{{ product.name }}" />
+                <div class="card-body">
+                  <p class="card-title fw-bold">{{ product.category.friendly_name }}</p>
+                  <p class="card-text">{{ product.name|upper|truncatechars:20}}</p>
+                  <p class="card-text"><small class="text-muted">€ {{ product.price }}</small></p>
+                  <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                      <a href="{% url 'product_detail' product.id %}"
+                        class="btn btn-sm btn-secondary d-block override-link-color">More Details</a>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                      <a href="{% url 'edit_product' product.id %}"
+                        class="btn btn-sm btn-outline-warning float-start fw-bold text-dark my-1">Update
+                        Product</a>
+                    </div>
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                      <a href="{% url 'delete_product' product.id  %}"
+                        class="btn btn-sm btn-outline-danger float-end fw-bold text-dark my-1">Delete
+                        Product</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- end superuser-->
+      {% endif %}
+      {% if not usertype %}
+      <!-- If just a standard user and has order history -->
+      <div class="mx-5 mt-3">
+        <div class="row services-background">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <h2 class="mt-5">Welcome to Your Profile Page <em
+                class="profile-name fw-bold">{{ profile|lower|title }}</em> </h2>
+          </div>
+        </div>
+      </div>
+       <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 float-start">
+            <h3 class="mt-5 text-center">Default Delivery Information </h3>
+            <hr class="mx-5">
+            <form method="POST" action="{% url 'profile' %}" id="profile-update-form" class="mx-5">
+              {% csrf_token %}
+              {{ form|crispy }}
+              <div class="row">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-start">
+                  <button class="primaryAction btn btn-outline-success" type="submit">Update My Information</button>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-end">
+                  <a href="{% url 'products' %}" class="btn btn-warning float-end">Back to all Products</a>
+                </div>
+              </div>
+            </form>
+        </div> 
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+          <h3 class="mt-5">Your Order History </h3>
+          <hr class="mx-5">
+          {% if orders %}
+          <div class="table-responsive mx-5">
+            <table class="table table-sm table-borderless">
+              <thead>
+                <tr>
+                  <th>Order Number</th>
+                  <th>Order Date</th>
+                  <th>Order Items</th>
+                  <th>Order Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for ord in orders %}
+                <tr>
+                  <td>
+                    <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number}}">
+                      {{ ord.order_number|truncatechars:8 }}</a>
+                  </td>
+                  <td>{{ ord.date }}</td>
+                  <td>
+                    <ul class="list-unstyled">
+                      <li class="small">{% for item in ord.lineitems.all %}</li>
+                      {% endfor %}
+                    </ul>
+                  </td>
+                  <td>€{{ ord.bag_total }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+          {% else %}
+          <!-- If standard user and has no order history-->
+          <p class="fw-bold mx-4">Hi <em class="fw-bold">{{ profile|lower|title }}</em> you havent generated any orders with
+            us yet, happy shopping!</p>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <a href="{% url 'home' %}" class="btn btn-success mt-5">Continue Shopping</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      <hr class="mt-5">
+      {% endblock %}
+      {% block scripts %}
+      {{ block.super }}
+      <script src="/static/js/hidebase.js"></script>
+      {% endblock %}

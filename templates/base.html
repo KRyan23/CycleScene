@@ -19,12 +19,10 @@
   <title>CycleScene</title>
 </head>
 <body>
-  {% if request.user.is_authenticated %}
   <div id="discount" class="top-discount-banner text-center">
     <div class="text-grow"><p>Free Delivery on orders over €{{ free_delivery_delta }}</p></div>
   </div>
-  {% endif %}
-  <!--Navigation start-->
+    <!--Navigation start-->
   <div><!-- displays this searchbar on screen sizes 500px and above -->
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
         <img class="main-logo" alt="main logo" src="{% static 'media/logo101.png' %}">
@@ -40,12 +38,31 @@
         aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="ToggleNavigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="toggleMobileMenu">
-        <ul class="navbar-nav ms-auto">
-          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
-                class="override-link-color text-font-weight">Login</span></a></li>
-          <li><a href="#" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
-                class="override-link-color text-font-weight">Register</span></a></li>
+        <ul>
+          {% if user.is_authenticated %}
+          <!-- superuser menu -->
+            {% if request.user.is_superuser %}
+            <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+              <span class="override-link-color fs-5">Product Manager</span></a></li>
+            <li><a href="{% url 'account_logout' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+              <span class="override-link-color text-font-weight fs-5">Logout</span></a></li>
+            <!-- standard user menu -->
+            {% else %}
+              <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+              <span class="override-link-color text-font-weight ">My Profile</span></a></li>
+              <li><a href="{% url 'account_logout' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+                <span class="override-link-color text-font-weight">Logout</span></a></li>
+            {% endif %}
+            <!-- not logged in -->
+        {% else %}
+        <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'account_login' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+          class="override-link-color text-font-weight">Login</span></a></li>
+    <li><a href="{% url 'account_signup' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+          class="override-link-color text-font-weight">Register</span></a></li>
+    {% endif %}
+
           <li class="mx-5"><span class="shopping-bag-total-desktop hide-on-desktop">
             <a href="{% url 'view_shoppingbag' %}">
             <i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
