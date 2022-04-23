@@ -1,34 +1,141 @@
 {% extends "base.html" %}
 {% load static %} 
-
+{% load humanize %}
 {% block content %}
 
-<div style="background-color:#E9E9EB">
+<div style="background-color:#E9E9EB" class="pb-5 mx-0">
 <div class="row mt-5">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
         <h2 class="fw-bold mb-4 text-center">Order Confirmation</h2>
     </div>
 </div>
 <!-- start summary -->
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-            <h3 class="mb-3">Congratulations</h3>
+<div class="container">
+    <div class="row text-center">
+    <p class="mt-3 mb-3">Congratulations! Your order has been successfully received,</p>
+    <p>CycleScene work feverishly 7 days a week so you can be rest assured your order is being prepared as we speak!</p>
+    <!-- started -->
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <h3 class="mt-3 mb-3">My Order</h3>
+            <hr>
+            </div>
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 float-start order-summary">
+            <table class="mx-3">
+                <tr>
+                    <th class="mb-5"><u>Personal Information</u></th>
+                </tr>
+
+                <tr>
+                    <th>Date</th>
+                </tr>
+
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ order.date }}</td>
+                </tr>
+                <tr>
+                    <th>Number</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ order.order_number}}</td>
+                </tr>
+                <tr>
+                    <th>Mobile</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ order.mobile_number }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ order.email }}</td>
+                </tr>
+                <tr>
+                    <th>Delivery</th>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="fas fa-bicycle order-summary-bike"> :
+                            {% if order.delivery_cost == 0 %}
+                        </i><span class="free-delivery-text">FREE!</span></td>
+                        {% else %}
+                        </i>€{{ order.delivery_cost|floatformat:2|intcomma }}</td>
+                        {% endif %}
+                </tr>
+                    <tr>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-bicycle order-summary-bike"> :</i>€ {{ order.order_total|floatformat:2|intcomma }}</td>
+                    </tr>
+            </table>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 order-summary">
+            <table class="mx-3">
+                <tr>
+                    <th class="mb-5"><u>Shipping Information</u></th>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr><td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ order.first_name|title }}{{ order.last_name|title }}</td></tr>
+                <tr>
+                    <th>Address</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ order.address1|title }},</td>
+                </tr>
+                <tr >
+                    <td><span  class="mx-5">{{ order.address2|title }},</span></td>
+                </tr>
+                <tr>
+                    <td><span  class="mx-5">{{ order.county|title }},</span></td>
+                </tr>
+                <tr>
+                    <td><span  class="mx-5">{{ order.city|title }},</span></td>
+                </tr>
+                <tr>
+                    <td><span  class="mx-5">{{ order.country|title }}</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 float-end order-summary">
+            <table class="mx-3">
+                <tr>
+                    <th class="mb-5"><u>Item Information</u></th>
+                </tr>
+                {% for i in order.lineitems.all %}
+                <tr>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ i.product.name|title }}</td>
+                </tr>
+                <tr>
+                    <th>Quantity</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ i.quantity|intcomma }}</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td><i class="fas fa-bicycle order-summary-bike"> :</i>€{{ i.product.price|floatformat:2|intcomma }}</td>
+                </tr>
+                {% endfor %}
+                </table>
         </div>
     </div>
-    <p class="mt-4 mb-5 text-center"> Your order has been successfully received, CycleScene work feverishly 7 days a week so you can be rest assured your order is being prepared as we speak! </p>
-    <div class="row mt-3">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
-            <p class="float-start fw-bold">For your records your order number is:</p>
-            <p class="float-start px-1"><span class="fw-bold order-email"> {{ order.order_number}}</span> </p>
-        </div>
-    </div>  
-    <div class="row mt-3">
-         <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 text-center">
-            <p class="float-start fw-bold">An email confirmation has been sent to: </p>
-            <p class="float-start px-1"><span class="fw-bold order-email">{{ order.email }}</span></p>
-        </div>
-    </div>
+
+</div>
+</div>
+</div>
+</div>
+           
+    <!--end---->
     <div class="row mt-5">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
            <p class="fw-bold">Need a hard copy? Click the button below</p>
@@ -44,12 +151,9 @@
       </div>
     </div>
   </div>
-</div>
 <hr class="mt-5">
-</div>
-</div>
+
 <!-- end summary-->
-</div>
 {% endblock %}
 {% block scripts %}
 {{ block.super }}

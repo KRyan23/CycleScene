@@ -29,6 +29,12 @@ ul {
 
 }
 
+.order-summary-bike {
+    color: orange;
+    padding-right: 0.5em;
+    text-decoration: underline;
+}
+
 .shopping-bag {
     color: orange;
     font-size: 1.25em;
@@ -49,6 +55,11 @@ ul {
     color: #5C636A;
     padding: 0 1em 0 1em;
     font-weight: bold;
+}
+
+.order-summary {
+    border: 5px solid #fafafa; 
+    border-radius: 10px;
 }
 
 .desktop-nav-link {
