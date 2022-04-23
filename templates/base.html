@@ -7,8 +7,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="{% static 'media/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../media/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="preconnect">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     type="text/css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -19,18 +19,24 @@
   <title>CycleScene</title>
 </head>
 <body>
-  <div id="discount" class="top-discount-banner text-center">
+  {% if request.user.is_superuser %}
+  <div class="top-discount-banner-super text-center">
+    <div class="text-grow"><p>You are currently logged in as Superuser, dont forget to logout!</p></div>
+  </div>
+  {% else %}
+  <div id="discount" class="top-discount-banner-user text-center">
     <div class="text-grow"><p>Free Delivery on orders over €{{ free_delivery_delta }}</p></div>
   </div>
-    <!--Navigation start-->
+  {% endif %}
+  <!--Navigation start-->
   <div><!-- displays this searchbar on screen sizes 500px and above -->
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
-        <img class="main-logo" alt="main logo" src="{% static 'media/logo101.png' %}">
+        <img class="main-logo" alt="Cyclescenes brand new logo" src="../media/logo101.png">
         <span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-8 col-lg-4 col-xl-6 hide-on-smallscreen">
         <form method="GET" action="{% url 'products' %}" class="d-flex alpha">
           <input type="text" class="form-control search-box" name="q" placeholder="Search here...">
-          <button type="submit" class="btn btn-outline-secondary desktop-search-button"><i
+          <button type="submit" class="btn btn-outline-secondary desktop-search-button" aria-label="Search"><i
               class="fa fa-search"></i></button>
         </form>
       </div>
@@ -38,53 +44,52 @@
         aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="ToggleNavigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="toggleMobileMenu">
-        <ul>
+<div class="collapse navbar-collapse" id="toggleMobileMenu">
+  <div class="navbar-nav ms-auto">
+    <ul>
           {% if user.is_authenticated %}
-          <!-- superuser menu -->
-            {% if request.user.is_superuser %}
-            <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
-              <span class="override-link-color fs-5">Product Manager</span></a></li>
-            <li><a href="{% url 'account_logout' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
-              <span class="override-link-color text-font-weight fs-5">Logout</span></a></li>
-            <!-- standard user menu -->
-            {% else %}
+            <!-- superuser menu -->
+              {% if request.user.is_superuser %}
               <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
-              <span class="override-link-color text-font-weight ">My Profile</span></a></li>
+                <span class="override-link-color fs-5">Product Manager</span></a></li>
               <li><a href="{% url 'account_logout' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
-                <span class="override-link-color text-font-weight">Logout</span></a></li>
-            {% endif %}
-            <!-- not logged in -->
-        {% else %}
-        <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'account_login' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
-          class="override-link-color text-font-weight">Login</span></a></li>
-    <li><a href="{% url 'account_signup' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
-          class="override-link-color text-font-weight">Register</span></a></li>
-    {% endif %}
-
+                <span class="override-link-color text-font-weight fs-5">Logout</span></a></li>
+              <!-- standard user menu -->
+              {% else %}
+                <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+                <span class="override-link-color text-font-weight ">My Profile</span></a></li>
+                <li><a href="{% url 'account_logout' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+                  <span class="override-link-color text-font-weight">Logout</span></a></li>
+              {% endif %}
+              <!-- not logged in -->
+          {% else %}
+          <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'account_login' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+                class="override-link-color text-font-weight">Login</span></a></li>
+          <li><a href="{% url 'account_signup' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+                class="override-link-color text-font-weight">Register</span></a></li>
+          {% endif %}
           <li class="mx-5"><span class="shopping-bag-total-desktop hide-on-desktop">
             <a href="{% url 'view_shoppingbag' %}">
             <i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
-              </i>€{{ bagtotal|floatformat:2|intcomma }}</span></li></a>
-              <li class="nav-item dropdown hide-on-desktop">
-                <a class="dropdown-toggle  mobile-dropdown-heading"
+              </i>€{{ bagtotal|floatformat:2|intcomma }}</a></span></li>
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle  mobile-dropdown-heading"
                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
-                <div class="dropdown-menu" aria-labelledby="bikesDropdown">
+                <div class="dropdown-menu" title="bikesDropdown">
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=mountainbikes">Mountain Bikes</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=roadbikes">Road Bikes</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=citybikes">City Bikes</a>
                 </div>
               </li>
-              <li class="nav-item dropdown hide-on-desktop">
-                <a class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
-                <div class="dropdown-menu" aria-labelledby="componentsDropdown">
+                <div class="dropdown-menu" title="componentsDropdown">
                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=saddles">Saddles</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=wheels">Wheels</a>
                 </div>
               </li>
-              <li class="nav-item dropdown hide-on-desktop">
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
                 <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accesories</a>
                 <div class="dropdown-menu">
@@ -93,22 +98,25 @@
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=lights">Lights</a>
                 </div>
               </li>
-              <li class="nav-item dropdown hide-on-desktop"><a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
-                <div class="dropdown-menu" aria-labelledby="riderDropdown">
+                <div class="dropdown-menu" title="riderDropdown">
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=helmets">Helmets</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=eyewear">Eyewear</a>
                 </div>
               </li>
-              <li class="nav-item dropdown hide-on-desktop"><a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-                <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <div class="dropdown-menu" title="servicesDropdown">
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% section 'service' 'rescue' %}">Road Rescue</a>
                   <a class="nav-link dropdown-item text-font-weight mx-3" href="{% section 'service' 'repair' %}">Bike Repair</a>
                 </div>
               </li>
-              <li class="nav-item dropdown hide-on-desktop"><a href="{% url 'products' %}" class="navlink-alignment mobile-dropdown-heading">All Products</a></li>
-        </ul>
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none"><a href="{% url 'products' %}" class="navlink-alignment mobile-dropdown-heading">All Products</a></li>
+            </ul>
+          </div>
       </div>
     </nav>
   </div>
@@ -116,7 +124,7 @@
   <div class="col-12 text-center hide-on-mediumlarge">
     <form method="GET" action="{% url 'products' %}" class="d-flex alpha mobile-searchbar">
       <input type="text" class="form-control" name="q" placeholder="Search here...">
-      <button type="submit" class="btn btn-outline-secondary"><i
+      <button type="submit" class="btn btn-outline-secondary" aria-label="Search"><i
           class="fa fa-search"></i></button>
     </form>
   </div>
@@ -132,9 +140,9 @@
               class="fas fa-bicycle bike"></i></a></li>
           <li class="nav-item"><a href="{% url 'products' %}" class="navlink-alignment desktop-nav-link">All Products</a></li>
         <li class="nav-item dropdown">
-          <a class="dropdown-toggle navlink-alignment desktop-nav-link"
+          <a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
-          <div class="dropdown-menu" aria-labelledby="bikesDropdown">
+          <div class="dropdown-menu" title="bikesDropdown">
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=mountainbikes">Mountain Bikes</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=roadbikes">Road Bikes</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=citybikes">City Bikes</a>
@@ -143,7 +151,7 @@
         <li class="nav-item dropdown">
           <a href="{% url 'products' %}?category=components" class="dropdown-toggle navlink-alignment desktop-nav-link"
              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
-          <div class="dropdown-menu" aria-labelledby="componentsDropdown">
+          <div class="dropdown-menu" title="componentsDropdown">
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=saddles">Saddles</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=wheels">Wheels</a>
           </div>
@@ -159,14 +167,14 @@
         </li>
         <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
-          <div class="dropdown-menu" aria-labelledby="riderDropdown">
+          <div class="dropdown-menu" title="riderDropdown">
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=helmets">Helmets</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=eyewear">Eyewear</a>
           </div>
         </li>
         <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-          <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+          <div class="dropdown-menu" title="servicesDropdown">
             <a class="nav-link dropdown-item text-font-weight" href="{% section 'service' 'repair' %}">Bike Repair</a>
             <a class="nav-link dropdown-item text-font-weight" href="{% section 'service' 'rescue' %}">Road Rescue</a>
           </div>
@@ -198,134 +206,10 @@
 </div>
 {% endif %}
 
-  <div id="hideMainContent">
-    <!-- Start hide main page content -->
-    <!--carousel-->
-    <div id="mainCarousel" class="carousel slide carousel-fade carousel-dark my-1 shadow p-3 mb-5 bg-body"
-      data-bs-ride="carousel" data-bs-pause="hover">
-      <div class="carousel-inner">
-        <div class="carousel-item active " data-bs-interval="6000">
-          <img src="../media/hero-1.jpg" class="d-block w-100 image-opacity-9" alt="hero1">
-          <h2 class="carousel-heading w-mt-2">ADVENTURE AWAITS</h2>
-        </div>
-        <div class="carousel-item" data-bs-interval="6000">
-          <img src="../media/hero-2.jpg" class="d-block w-100 image-opacity-9" alt="hero2">
-          <h2 class="carousel-heading w-mt-2">GET RIDE READY</h2>
-        </div>
-        <div class="carousel-item" data-bs-interval="6000">
-          <img src="../media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="hero3">
-          <h2 class="carousel-heading mx-3">CHOOSE A STYLE</h2>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-          <i class="fas fa-caret-left mobile-caret"></i>
-          <i class="fas fa-caret-left desktop-caret fa-3x"></i>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-          <i class="fas fa-caret-right mobile-caret"></i>
-          <i class="fas fa-caret-right desktop-caret fa-3x"></i>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </div>
-    <!-- Inspriational quote -->
-    <div class="main-page-quote text-center">
-      <h2>" It is the unknown around the corner that turns my wheels "</h2>
-      <p class="my-4">long distance cyclist - <em>Heinz Stucke</em></p>
-    </div>
-    <hr class="text-center">
-    <div class="container-fluid my-0">
-      <h2 class="text-center mb-5 mt-5">Popular Categories</h2>
-      <div class="row ">
-        <!-- Bike Row -->
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
-          <div class="card my-3 grow-effect">
-            <img src="../media/road-card.jpg" alt="road bike" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title ">ROAD BIKES</h3>
-              <a href="{% url 'products' %}?category=roadbikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/mountain-card.jpg" alt="mountain bike" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">MOUNTAIN BIKES</h3>
-              <a href="{% url 'products' %}?category=mountainbikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/city-card.jpg" alt="city bike" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">CITY BIKES</h3>
-              <a href="{% url 'products' %}?category=citybikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <!--Components -->
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/wheels-card.jpg" alt="wheels" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">WHEELS</h3>
-              <a href="{% url 'products' %}?category=wheels" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/saddle-card.jpg" alt="saddles" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">SADDLES</h3>
-              <a href="{% url 'products' %}?category=saddles" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/lock1-2.jpg" alt="bike locks" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">LOCKS</h3>
-              <a href="{% url 'products' %}?category=bikelocks" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/pump-card.jpg" alt="pumps" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">PUMPS</h3>
-              <a href="{% url 'products' %}?category=pumps" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/helmet-card.jpg" alt="helmet" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">HELMETS</h3>
-              <a href="{% url 'products' %}?category=helmets" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-          <div class="card my-3 grow-effect">
-            <img src="../media/light-card.jpg" alt="lights" />
-            <div class="card-body card-thumbnails-body">
-              <h3 class="card-title">LIGHTS</h3>
-              <a href="{% url 'products' %}?category=lights" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
   <!-- End hide main page content -->
 
-  <!-- This will be for the hero image at the top of each category, bike, part, clothes-->
+  
   {% block content %}
   {% endblock %}
   <!-- This will be for products inside in each category-->
@@ -370,39 +254,45 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-            <h5 class="mx-3 mt-5">Newsletter</h5>
+            <span class="mx-3 fs-5">Opening Hours</span>
           </div>
-          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-            <h5 class="mx-3 mt-5 desktop-contact-us">Contact Us</h5>
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <span class="mx-3 fs-5 desktop-contact-us">Contact Us</span>
           </div>
         </div>
       </div>
       <hr>
-      <!--Newsletter-->
+      <!--Opening hours -->
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <p class="mx-3 mt-3">Sign up to our newsletter for great deals, discounts and much much more.</p>
-            <div class="input-group w-75 mt-4">
-              <label for="email"></label>
-              <input type="email" id="email" class="form-control mt-4 mx-3" placeholder="Please Enter Email"
-                aria-label="enter email address">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary mt-4" type="button">Sign Up</button>
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+            <div class="w-75 mt-4">
+              <div class="float-start">
+                <span class="mx-3 d-block">Mon - Fri</span> 
+                  <span class="mx-3 d-block">Saturday</span>
+                    <span class="mx-3 d-block">Sundays</span>
+                      <span class="mx-3 d-block">Bank Holidays</span>
               </div>
+              <div class="float-end">
+                <span class="mx-2 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i> 7am - 11pm</span>
+                <span class="mx-2 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i> 9am - 9pm</span>
+                <span class="mx-2 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i> 9am - 6pm</span>
+                <span class="mx-2 mb-5 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i>10am - 5pm</span>
+              </div>
+             
             </div>
           </div>
           <!--Contact-->
-          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
-            <h5 class="mx-3 mt-5 mobile-contact-us">Contact Us</h5>
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <span class="mx-3 mt-5 fs-5 mobile-contact-us">Contact Us</span>
             <hr class="mobile-contact-us px-0">
             <p class="mx-3 mt-3">CycleScene Ltd. 101 Snugborough Road, Blanchardstown,
               Dublin 15, D15 CXC2 | <a href="https://goo.gl/maps/B68KscoY3XgKWkRD6" class="maps-location">Map<i
                   class="fas fa-map-marker-alt fa-1x mx-1"></i></a></p>
             <p class="mx-3">Landline:<a href="tel:018551522" class="footer-link"><span class="text-font-weight"> (01)
                   8551522</span></a></p>
-            <a class="btn btn-lg" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="facebook"
-              title="facebook" role="button">
+            <a class="btn btn-lg" href="https://www.facebook.com/" target="_blank" rel="noopener"
+              title="facebook" role="button" aria-label="facebook">
               <i class="fab fa-facebook social-media fa-2x"></i></a>
             <a class="btn btn-lg" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="youtube"
               title="youtube" role="button">
@@ -420,13 +310,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-            <h5 class="mt-3 mx-3">About CycleScene</h5>
+            <span class="mt-3 mx-3 fs-5">About CycleScene</span>
             <hr>
             <p class="mx-3 mt-4">CycleScene was formed in 1992 by 2 passionate riders from very different backgrounds.
               There goal was simply to deliver great products at competitve prices.</p>
           </div>
           <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
-            <h5 class="mt-3 mx-3">Payment</h5>
+            <span class="mt-3 mx-3 fs-5">Payment</span>
             <hr>
             <a class="btn btn-lg payment-types" href="https://stripe.com/" target="_blank" rel="noopener"
               aria-label="stripe" title="stripe" role="button">
@@ -448,7 +338,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6 col-lg-6 col-xl-6 pt-5">
-          <h5 class="mx-3">Shop By Category</h5>
+          <span class="mx-3 fs-5">Shop By Category</span>
         </div>
       </div>
     </div>
@@ -467,8 +357,10 @@
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=lights" class="nav-link">Lights</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=helmets" class="nav-link">Helmets</a></div>
         <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=eyewear" class="nav-link">Eyewear</a></div>
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Bike Repair</a></div><!-- link to a shared template road rescue-->
-        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="#" class="nav-link">Road Rescue</a></div><!-- link to a shared template Bike Repair ^-->
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% section 'service' 'repair' %}" class="nav-link">Bike Repair</a></div>
+		<!-- link to a shared template road rescue-->
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% section 'service' 'rescue' %}" class="nav-link">Road Rescue</a></div>
+		<!-- link to a shared template Bike Repair ^-->
       </div>
     </div>
     <!--copyright and terms and conditions-->
@@ -494,13 +386,13 @@
   <script src="https://js.stripe.com/v3/"></script>
   <!-- For Tiny Slider 2-->
   <script src="/static/js/brandcarousel.js"></script>
-  {% block postloadjs %}
-  <script type="text/javascript">
+   {% block postloadjs %}
+  <script>
     $(document).ready(function(){
       $('.toast').toast('show');
     });
   </script>
-  {% endblock %}
+   {% endblock %}
   {% block scripts %}
   
   {% endblock %}
