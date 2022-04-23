@@ -11,7 +11,8 @@
     </div>
   </div>
   <hr>
-  {% if bagtotal %}
+  <!-- if there are items in your shopping -->
+  {% if bagtotal and not on_profile_page %}
   <p class="logo-font bg-white text-black py-1">Your Shopping Bag ({{ shoppingbag_items|length }})</p>
             <div class="bag-notification-wrapper">
                 {% for shop in shoppingbag_items  %}
@@ -25,15 +26,19 @@
                         </div>
                     </div>
                 {% endfor %}
-               
+                <div class="row pt-2">
+                  <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-success btn-sm float-end"><i class="fas fa-shopping-bag toast-shopping-bag fa-lg mx-1"></i>Shopping Bag</a>
+                    <button type="button" class="btn btn-outline-secondary btn-sm float-end mx-1" data-bs-dismiss="toast">Close</button>
+                  </div>
+                </div>
             </div>
-            {% endif %}
+            {% else %}
+            <!-- if the shopping bag does not contain any items -->
   <div class="row pt-2">
     <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <a href="{% url 'view_shoppingbag' %}" type="button" class="btn btn-outline-success btn-sm float-end"><i class="fas fa-shopping-bag toast-shopping-bag fa-lg mx-1"></i>Shopping Bag</a>
-      <a type="button" class="btn btn-outline-secondary btn-sm float-end mx-1" data-bs-dismiss="toast">Close</a>
+      <button type="button" class="btn btn-outline-secondary btn-sm float-end mx-1" data-bs-dismiss="toast">Close</button>
     </div>
   </div>
-  
 </div>
-</div>
+{% endif %}
