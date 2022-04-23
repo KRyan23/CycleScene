@@ -506,6 +506,31 @@ ul>li {
     background-color: whitesmoke;
     padding: 1em 0 1em 0;
 }
+/* ------------ Mostly from BA Dropdown classes for Country ------ */
+
+
+#profile-update-form input::placeholder {
+    color:#5C636A;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color:#000000;
+}
+
+#id_default_country option:first-child {
+    color: #5C636A;
+}
+/* --------- From BA hack for Country dropdown ---------------------*/
+
+select, select option {
+    color:black;
+}
+
+select:invalid, select option[value=""] {
+    color:#E9E9EB !important;
+}
+
 /* --------- Keyframes Calls -------------- */
 
 /* Rotates the CycleScence icon on load to simulate a bike wheel */

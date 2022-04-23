@@ -3,7 +3,7 @@ from products.models import Product
 import uuid
 from django.db.models import Sum
 from django.conf import settings
-# Create your models here.
+from django_countries.fields import CountryField
 
 class Order(models.Model):
     '''This defines the fields required to create an order in the DB'''
@@ -16,7 +16,7 @@ class Order(models.Model):
     address2 = models.CharField(max_length=100, null=True, blank=True)
     county = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=40, null=False, blank=False)
-    country = models.CharField(max_length=50, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)    
     date = models.DateTimeField(auto_now_add=True)
     
