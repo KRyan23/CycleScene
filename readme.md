@@ -87,14 +87,11 @@
         -  The main carousel imagery was chosen to covey a particular message to range of different cycling enthusiasts, from the 'lone wolf' to the serious group rider and lastly to the casual cyclist. The rest of the product images were chosen from 1 or 2 cycling sites, from previous projects I had found mixing images from a lot of different sources produced an inconsistent look and feel to the site.
 
     - #### Wireframes
-        - Sitemap and Desktop Wireframes - [View here](/assets/docs/wireframes/cyclescene-sitemap-desktop.pdf)
-        - Sitemap and Tablet Wireframes - [View here](/assets/docs/wireframes/cyclescene-sitemap-tablet.pdf)
-        - Sitemap and Mobile Wireframes - [View here](/assets/docs/wireframes/cyclescene-sitemap-mobile.pdf)
+        - Sitemap Desktop, Tablet & Mobile Wireframes - [View here](/assets/docs/wireframes/cyclescene-sitemap-desktop-tablet-mobile.pdf)
 
     -  #### Diagrams
-        - Data Flow Chart - [View Here](/assets/docs/diagrams/cyclescene-dataflowchart.pdf)
-        - ERD Table - [View Here](/assets/docs/diagrams/cyclescene-erd.pdf)
-        - ERD Flow Chart - [View Here](/assets/docs/diagrams/cyclescene-relationship.pdf)
+        - Data Flow Chart - [View Here](/assets/docs/diagrams/CycleScene-dataflowchart.pdf)
+        - ERD Table - [View Here](/assets/docs/diagrams/CycleSceneERD.pdf)
 
     -  ### Screenshots
         - Some screenshots of the site - [View here](/assets/docs/)
