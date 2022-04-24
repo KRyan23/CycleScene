@@ -7,43 +7,36 @@
 <div class="container mt-5">
   <div class="row d-flex">
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes product-filter-boxes-mobile">
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
         <span class="sort-by-price">Price</span>
-        <li><a class="nav-link" href="{% url 'products' %}?sort=price&direction=asc"><i class="fas fa-angle-up"></i></a>
-        </li>
-        <li><a class="nav-link" href="{% url 'products' %}?sort=price&direction=desc"><i
-              class="fas fa-angle-down"></i></a></li>
-      </ul>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=price&direction=asc"><i class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=price&direction=desc"><i class="fas fa-angle-down"></i></a>
+        </div>
     </div>
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes product-filter-boxes-mobile">
-        Rating
-        <li><a class="nav-link" href="{% url 'products' %}?sort=rating&direction=asc"><i
-              class="fas fa-angle-up"></i></a></li>
-        <li><a class="nav-link" href="{% url 'products' %}?sort=rating&direction=desc"><i
-              class="fas fa-angle-down"></i></a></li>
-      </ul>
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
+        <span>Rating</span>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=rating&direction=asc"><i
+              class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=rating&direction=desc"><i
+              class="fas fa-angle-down"></i></a>
+        </div>
     </div>
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes product-filter-boxes-mobile">
-        Category
-        <li><a class="nav-link" href="{% url 'products' %}?sort=category&direction=asc"><i
-              class="fas fa-angle-up"></i></a></li>
-        <li><a class="nav-link" href="{% url 'products' %}?sort=category&direction=desc"><i
-              class="fas fa-angle-down"></i></a></li>
-      </ul>
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
+        <span>Category</span>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=category&direction=asc"><i class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=category&direction=desc"><i class="fas fa-angle-down"></i></a>
+        </div>
     </div>
     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
-      <ul class="product-filter-boxes product-filter-boxes-mobile">
-        Name
-        <li><a class="nav-link" href="{% url 'products' %}?sort=name&direction=asc"><i class="fas fa-angle-up"></i></a>
-        </li>
-        <li><a class="nav-link" href="{% url 'products' %}?sort=name&direction=desc"><i
-              class="fas fa-angle-down"></i></a></li>
-      </ul>
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
+        <span>Name</span>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=name&direction=asc"><i class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=name&direction=desc"><i class="fas fa-angle-down"></i></a>
+        </div>
     </div>
   </div>
-</div>
 </div>
 <hr>
 {% endif %}
@@ -60,7 +53,6 @@
             <span class="mx-1">{{ category.friendly_name }}</span></li>
           {% endif %}
           {% endfor %}
-          </li>
         </ul>
       </nav>
     </div>
@@ -115,8 +107,10 @@
     {% endfor %}
   </div>
 </div>
+</div>
+</div>
 {% endblock %}
 {% block scripts %}
-<script src="/static/js/hidebase.js"></script>
 <script src="https://js.stripe.com/v3/"></script>
 {% endblock %}
+

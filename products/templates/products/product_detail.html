@@ -1,7 +1,7 @@
 {% extends "base.html" %}
-{% load static %}
-{% load humanize %}
+
 {% block content %}
+{% load humanize %}
 <!-- This is just targetted by rating.js to pull the rating value -->
 <span id="readStarRating" class="d-none">{{ product.rating }}</span>
 <!-- breadcrumb nav -->
@@ -92,6 +92,30 @@
         </form>
       </div>
     </div>
+    <!-- Extra buttons for managing products if logged in as a superuser-->
+    {% if request.user.is_superuser %}
+    <hr class="mt-5">
+    <div class="row mt-5">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+    <a href="{% url 'profile' %}"
+  class="btn btn-secondary override-link-color float-end px-5">Product Manager</a>
+</div>
+<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-4 text-center">
+  <a href="{#% url 'edit_product' product.id %#}"
+    class="btn btn-outline-warning override-link-color text-dark float-start px-5">Update
+    Product</a>
+</div>
+</div>
+    </div>
+    <div class="row justify-content-around mt-4">
+      <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+        <hr class="mb-5">
+        <a href="{#% url 'delete_product' product.id  %#}"
+          class="btn btn-outline-danger d-block fw-bold text-dark mb-5">Delete
+          Product</a>
+      </div>
+      </div>
+    {% else %}
     <hr class="mt-5">
     <div class="row d-flex">
       <div class="col-5 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
@@ -111,15 +135,15 @@
   <div class="mt-5">
   </div>
   </div>
+    {% endif %}
+  </div>
   {% endblock %}
   {% block postloadjs %}
   {{ block.super }}
   {% endblock %}
   {% block scripts %}
   {{ block.super }}
-  <script src="/static/js/hidebase.js"></script>
   <script src="/static/js/rating.js"></script>
   <script src="/static/js/quantityProductDetails.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
-
