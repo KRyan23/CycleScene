@@ -3,9 +3,12 @@ from django.db.models import Sum
 from django.conf import settings
 from django.db import models
 from django_countries.fields import CountryField
-
 from products.models import Product
 from profiles.models import UserProfile
+# for signals line
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
+
 
 
 class Order(models.Model):
@@ -22,7 +25,7 @@ class Order(models.Model):
     country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)    
     date = models.DateTimeField(auto_now_add=True)
-    
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     bag_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
@@ -81,3 +84,15 @@ class OrderLineItem(models.Model):
 
     def update_total(self):
         ''' Update the shopping bag total each time an item is added with delivery cost '''
+
+
+# Signal Functions
+@receiver(post_save, sender=OrderLineItem)
+def update_on_save(sender, instance, created, **kwargs):
+    ''' Update order total on lineitem update/create '''
+    instance.order.update_total()
+
+@receiver(post_delete, sender=OrderLineItem)
+def update_on_delete(sender, instance, **kwargs):
+    ''' Update order total on lineitem delete '''
+    instance.order.update_total()

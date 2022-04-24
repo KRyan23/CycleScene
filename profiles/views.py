@@ -28,7 +28,7 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
-
+    # the error is point to this line
     template = 'profiles/profile.html'
     context = {
         'profile':profile,
@@ -36,7 +36,7 @@ def profile(request):
         'orders': orders,
         'on_profile_page': True,
         'usertype': usertype,
-        'products': products
+        'products': products,
     }
     return render(request, template, context)
 
