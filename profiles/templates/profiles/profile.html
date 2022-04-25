@@ -142,13 +142,14 @@
                 {% for order in orders %}
                 <tr>
                   <td>
-                    <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number}}">
-                      {{ order.order_number|truncatechars:8 }}</a>
+                    <a href="{% url 'order_history' order.order_number %}" class="order-number" title="{{ order.order_number}}">
+                      {{ order.order_number|truncatechars:7 }}</a>
                   </td>
-                  <td>{{ order.date }}</td>
+                  <td><small>{{ order.date }}</small></td>
                   <td>
                     <ul class="list-unstyled">
                       <li class="small">{% for item in order.lineitems.all %}</li>
+                      <span title="{{ item.product.name|lower|title }}">{{ item.product.name|lower|title|truncatechars:8 }}</span>
                       {% endfor %}
                     </ul>
                   </td>

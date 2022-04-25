@@ -81,7 +81,8 @@ ul {
 .fa-cog,
 .fa-tools,
 .fa-ambulance,
-.fa-check {
+.fa-check,
+.order-number {
     color: orange;
     border-color: orange;
 }
