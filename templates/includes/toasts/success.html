@@ -18,12 +18,15 @@
                 {% for shop in shoppingbag_items  %}
                     <div class="row">
                         <div class="col-3 my-1">
-                            <img class="w-100" src="{{ shop.product.image1.url }}">
+                            <img class="w-100" src="{{ shop.product.image1.url }}" alt="product image">
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ shop.product.name|lower|title }}</strong></p>
                             <p class="my-0 small text-muted">Quantity: {{ shop.quantity }}</p>
                         </div>
+                    </div>
+
+
                     </div>
                 {% endfor %}
                 <div class="row pt-2">

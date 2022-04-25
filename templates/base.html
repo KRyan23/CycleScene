@@ -7,7 +7,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../media/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="{% static 'media/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="preconnect">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     type="text/css">
@@ -31,7 +31,7 @@
   <!--Navigation start-->
   <div><!-- displays this searchbar on screen sizes 500px and above -->
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
-        <img class="main-logo" alt="Cyclescenes brand new logo" src="../media/logo101.png">
+        <img class="main-logo" alt="My logo" src="{% static 'media/logo101.png' %}">
         <span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-8 col-lg-4 col-xl-6 hide-on-smallscreen">
         <form method="GET" action="{% url 'products' %}" class="d-flex alpha">
@@ -50,9 +50,9 @@
           {% if user.is_authenticated %}
             <!-- superuser menu -->
               {% if request.user.is_superuser %}
-              <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+              <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link mobile-navigation-topmenu">
                 <span class="override-link-color fs-5">Product Manager</span></a></li>
-              <li><a href="{% url 'account_logout' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+              <li><a href="{% url 'account_logout' %}" class="nav-link mobile-navigation-topmenu">
                 <span class="override-link-color text-font-weight fs-5">Logout</span></a></li>
               <!-- standard user menu -->
               {% else %}
@@ -68,10 +68,18 @@
           <li><a href="{% url 'account_signup' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
                 class="override-link-color text-font-weight">Register</span></a></li>
           {% endif %}
-          <li class="mx-5"><span class="shopping-bag-total-desktop hide-on-desktop">
+          <!-- Reduce the text size slightly to make room for extra digits if over €9999.99 -->
+          {% if bagtotal > 9999.99 %}
+          <li class="mx-4"><span class="shopping-bag-total-desktop hide-on-desktop">
             <a href="{% url 'view_shoppingbag' %}">
-            <i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
+          <i class="fas fa-shopping-bag shopping-bag shopping-cart-desktop fs-5">
+          </i>€{{ bagtotal|floatformat:2|intcomma }}</a></span></li>
+              {% else %}
+              <li class="mx-4"><span class="shopping-bag-total-desktop hide-on-desktop">
+                <a href="{% url 'view_shoppingbag' %}">
+              <i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
               </i>€{{ bagtotal|floatformat:2|intcomma }}</a></span></li>
+              {% endif %}
               <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
                 <a href="#" class="dropdown-toggle  mobile-dropdown-heading"
                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
