@@ -1,6 +1,7 @@
 ''' Required imports '''
 import json
 import stripe
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
@@ -11,6 +12,7 @@ from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from .forms import OrderForm
 from .models import Order, OrderLineItem
+
 
 
 
@@ -33,6 +35,7 @@ def cache_checkout_data(request):
             Please try again later.')
         return HttpResponse(content=e, status=400)
 
+@login_required
 def checkout(request):
     ''' handle checkout requests and save to order '''
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -104,9 +107,10 @@ def checkout(request):
             try:
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
-                    #'first_name': profile.user.get_first_name(),
+                    'first_name': profile.user.first_name,
+                    'last_name': profile.user.last_name,
                     'email': profile.user.email,
-                    'mobile_phone': profile.default_mobile_phone,
+                    'mobile_number': profile.default_mobile_phone,
                     'country': profile.default_country,
                     'postcode': profile.default_postcode,
                     'city': profile.default_city,
@@ -152,7 +156,7 @@ def my_checkout_success(request, order_number):
                 'default_address2': order.address2,
                 'default_county': order.county,
             }
-            #Doesnt seem to be liking 'UserProfileForm' either ?
+            
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
