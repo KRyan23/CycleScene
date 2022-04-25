@@ -82,7 +82,8 @@ ul {
 .fa-tools,
 .fa-ambulance,
 .fa-check,
-.order-number {
+.order-number,
+.register {
     color: orange;
     border-color: orange;
 }
