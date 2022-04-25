@@ -13,11 +13,11 @@ from profiles.forms import UserProfileForm
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
-
-
-
 # Mostly from BA project
 
+
+
+@login_required
 @require_POST
 def cache_checkout_data(request):
     ''' cache user data in order to save info in the event of a unexpected event'''
@@ -135,6 +135,8 @@ def checkout(request):
 
     return render(request, template, context)
 
+
+@login_required()
 def my_checkout_success(request, order_number):
     ''' used to handle checkout success '''
     save_info = request.session.get('save_info')

@@ -25,11 +25,11 @@ class Order(models.Model):
     country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=20, null=True, blank=True)    
     date = models.DateTimeField(auto_now_add=True)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, 
+    null=True, blank=True, related_name='orders')
     delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
     order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
     bag_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-
     original_shoppingbag = models.TextField(null=False, blank=False,  default='')
     stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
 
