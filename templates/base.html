@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
   <!-- For Tiny Slider 2-->
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="apple-touch-icon" href="{% static 'media/apple-touch-icon.png' %}">
   <title>CycleScene</title>
 </head>
 <body>
@@ -31,7 +32,7 @@
   <!--Navigation start-->
   <div><!-- displays this searchbar on screen sizes 500px and above -->
     <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
-        <img class="main-logo" alt="My logo" src="{% static 'media/logo101.png' %}">
+      <img class="main-logo" alt="My logo" src="{% static 'media/logo101.png' %}">
         <span class="brand-heading"></span></a>
       <div class="col-xm-4 col-sm-6 col-md-8 col-lg-4 col-xl-6 hide-on-smallscreen">
         <form method="GET" action="{% url 'products' %}" class="d-flex alpha">

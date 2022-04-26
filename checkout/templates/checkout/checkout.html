@@ -43,15 +43,15 @@
         {% for shop in shoppingbag_items %}
             <div class="row">
                 <div class="col-2 mb-1">
-                    <a href="{% url 'product_detail' shop.product.id %}">
+                    <a href="{% url 'product_detail' shop.product.id %}" title="{{ shop.product.name|lower|title }}">
                         {% if shop.product.image1.url %}
-                          <img class="w-100" src="{{ shop.product.image1.url }}" alt="{{ product.name|lower|title }}">
+                          <img class="w-100" src="{{ shop.product.image1.url }}" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
                         {% elif shop.product.image2.url %}
-                          <img class="w-100" src="{{ shop.product.image2.url }}" alt="{{ product.name|lower|title }}">
+                          <img class="w-100" src="{{ shop.product.image2.url }}" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
                         {% elif shop.product.image3.url %}
-                          <img class="w-100" src="{{ shop.product.image3.url }}" alt="{{ product.name|lower|title }}">
+                          <img class="w-100" src="{{ shop.product.image3.url }}" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
                         {% else %}
-                        <img class="w-75" src="{{ MEDIA_URL }}imageNotFound.jpg" alt="{{ product.name|lower|title }}">
+                        <img class="w-75" src="{{ MEDIA_URL }}imageNotFound.jpg" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
                         {% endif %}
                     </a>
                 </div>
@@ -125,32 +125,34 @@
             <div class="mb-3 text-danger stripe-style-input" id="card-errors" role="alert"></div>
              <!-- hidden input for the view payment intent id -->
              <input type="hidden" value="{{ client_secret }}" name="client_secret">
-    </div>
-</div>
-<div class="row text-center">
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    <p class="small my-0">
-        <span class="icon">
-            <i class="fas fa-exclamation-circle text-danger"></i>
-        </span>
-        <span>Your card will be charged <strong class="text-danger">€{{ total_bag_cost }}</strong></span>
-    </p>
-</div>
-</div>
+
+
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <p class="small my-0">
+                    <span class="icon">
+                        <i class="fas fa-exclamation-circle text-danger"></i>
+                    </span>
+                    <span>Your card will be charged <strong class="text-danger">€{{ total_bag_cost }}</strong></span>
+                </p>
+            </div>
+            </div>
 {% endif %}
 <!-- Back to Shopping bag & Complete Payment buttons -->
-<div class="row mx-0">
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-secondary float-start mt-3 mx-2" role="button"><span
-          class="product-details-navigation-buttons text-wrap"></span><i class="fas fa-arrow-left mx-2"></i>Review Bag
-        </a>
-      <button class="btn btn-success float-end mt-3 mx-2" id="submit-button"><span
-          class="product-details-navigation-buttons text-wrap fw-bold">Make Payment</span><i
-          class="fas fa-lock mx-2 my-0"></i></button>
-    </div>
-  </div>
-  
-</form>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-secondary float-start mt-3 mx-0" role="button"><span
+                    class="product-details-navigation-buttons text-wrap"></span><i class="fas fa-arrow-left mx-2"></i>Review Bag
+                    </a>
+                <button class="btn btn-success float-end mt-3 mx-0" id="submit-button"><span
+                    class="product-details-navigation-buttons text-wrap fw-bold">Make Payment</span><i
+                    class="fas fa-lock mx-2 my-0"></i></button>
+                </div>
+            </div>
+        </form>          
+</div>
+</div> 
+</div> 
 <hr class="mt-5">
 <div id="loading-overlay">
     <span class="fs-1 text-light logo-font loading-spinner">
