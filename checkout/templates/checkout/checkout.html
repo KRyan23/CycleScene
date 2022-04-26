@@ -84,7 +84,6 @@
             </div>
         </div>
     </div>
-</div>
 {% if delivery != 0 %}
 <p class="text-center text-primary fw-bold"><u>Spend €{{ free_delivery_delta }} or more for free delivery!</u></p>
 {% endif %}
@@ -113,24 +112,20 @@
             {{ order_form.city | as_crispy_field }}
             {{ order_form.country | as_crispy_field }}
             {{ order_form.postcode | as_crispy_field }}
-            <div class="form-check form-check-inline mr-0">
+            <div class="form-check form-check-inline mt-2 mr-0">
             <label class="form-check-label" for="id-save-info">Save my info for next time</label>
             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>   
             </div>
         </fieldset>
-        <fieldset class="px-3">
+        <fieldset class="mt-2">
+            <span class="fieldset-label float-start fw-bold fs-6 mt-1 mb-3 w-auto">Payment Info</span>
             </fieldset>
-            <legend class="fieldset-label fw-bold fs-6 mt-4 mb-3 mx-2 w-auto">Payment Info</legend>
-            
             <div class="mb-3 form-control stripe-card-input stripe-style-input" id="card-element"></div>
-
             <!--For Form errors -->
             <div class="mb-3 text-danger stripe-style-input" id="card-errors" role="alert"></div>
              <!-- hidden input for the view payment intent id -->
              <input type="hidden" value="{{ client_secret }}" name="client_secret">
-        </fieldset>
     </div>
-</div>
 </div>
 <div class="row text-center">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -146,10 +141,10 @@
 <!-- Back to Shopping bag & Complete Payment buttons -->
 <div class="row mx-0">
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-secondary float-start mt-3 mx-0" role="button"><span
+      <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-secondary float-start mt-3 mx-2" role="button"><span
           class="product-details-navigation-buttons text-wrap"></span><i class="fas fa-arrow-left mx-2"></i>Review Bag
         </a>
-      <button class="btn btn-success float-end mt-3" id="submit-button"><span
+      <button class="btn btn-success float-end mt-3 mx-2" id="submit-button"><span
           class="product-details-navigation-buttons text-wrap fw-bold">Make Payment</span><i
           class="fas fa-lock mx-2 my-0"></i></button>
     </div>
@@ -157,8 +152,6 @@
   
 </form>
 <hr class="mt-5">
-</div>
-</div>
 <div id="loading-overlay">
     <span class="fs-1 text-light logo-font loading-spinner">
         <span class="icon">
