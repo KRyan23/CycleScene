@@ -56,7 +56,6 @@
         </ul>
       </nav>
     </div>
-    {% if current_categories or search_term  %}
     <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-12">
       <div class="float-start float-sm-end float-md-end float-lg-end float-xl-end mx-3 mb-3"><span
           class="badge rounded-pill bg-secondary text-light"><a class="results-number mx-1">{{ products|length }}</a>
@@ -64,7 +63,6 @@
     </div>
   </div>
 </div>
-{% endif %}
 {% if products|length == 0 %}
 <div class="container-fluid no-products-found">
   <div class="row">
