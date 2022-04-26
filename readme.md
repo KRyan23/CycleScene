@@ -175,7 +175,7 @@ The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to val
 JSHint was used for the javascript linter, and pylint for the python linter.
 
 -   [W3C Html Mark-up Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/html-validation.pdf)
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/css-results.pdf)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/css-results.png)
 - [JSHint ](https://jshint.com/) - [Results](/assets/docs/testing-and-troubleshooting/jshintresults.pdf)
 -   [pylint ](https://pylint.org/) - [Results](/assets/docs/testing-and-troubleshooting/pylint-results.pdf)
 -    Code Refactoring  - [Results](/assets/docs/testing-and-troubleshooting/code-refactoring.pdf)

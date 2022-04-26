@@ -58,7 +58,7 @@ ul {
 }
 
 .order-summary {
-    border: 5px solid #fafafa; 
+    border: 5px solid #fafafa;
     border-radius: 10px;
 }
 
@@ -70,7 +70,7 @@ ul {
 
 .navlink-alignment {
     font-size: 1.25em;
-    line-height: -5;
+    line-height: 5;
 }
 
 .fa-search,
@@ -83,7 +83,13 @@ ul {
 .fa-ambulance,
 .fa-check,
 .order-number,
-.register {
+.register,
+.sign-up,
+.sign-in,
+.fa-envelope,
+.profile-name,
+.fa-user-cog,
+.bicycle-admin {
     color: orange;
     border-color: orange;
 }
@@ -191,7 +197,6 @@ ul>li {
 .main-page-quote {
     padding: 2em 1em 1em 1em;
     font-weight: 900;
-    background-clip: text;
     color: transparent;
     background: #5C636A;
     text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.9);
@@ -308,7 +313,8 @@ ul>li {
     transition: transform 0.01s;
 }
 
-.star-color-effect, .fa-tools  {
+.star-color-effect,
+.fa-tools {
     animation: rotate 2s reverse;
 }
 
@@ -338,7 +344,8 @@ ul>li {
 
 }
 
-.bike-rotate, .service-cog  {
+.bike-rotate,
+.service-cog {
     animation: rotate 3s linear;
 }
 
@@ -503,6 +510,7 @@ ul>li {
     margin: 0;
     height: 100%;
 }
+
 /* ----------------------------------------*/
 .fa-ambulance {
     overflow: hidden;
@@ -515,28 +523,32 @@ ul>li {
     background-color: whitesmoke;
     padding: 1em 0 1em 0;
 }
+
 /* ------------ Mostly from BA Dropdown classes for Country ------ */
 
 
 #profile-update-form input::placeholder {
-    color:#5C636A;
+    color: #5C636A;
 }
 
 #id_default_country,
 #id_default_country option:not(:first-child) {
-    color:#000000;
+    color: #000000;
 }
 
 #id_default_country option:first-child {
     color: red;
 }
+
 /* --------- From BA hack for Country dropdown ---------------------*/
 
-select, select option {
-    color:black;
+select,
+select option {
+    color: black;
 }
 
-select:invalid, select option[value=""] {
+select:invalid,
+select option[value=""] {
     color: #6C7781 !important;
 }
 
@@ -574,39 +586,6 @@ select:invalid, select option[value=""] {
 
 /* fades in an element */
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* -- Firefox -- */
-@-moz-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* -- Safari, Opera and Chrome --  */
-@-webkit-keyframes fadein {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/* --- IE --- */
-@-ms-keyframes fadein {
     from {
         opacity: 0;
     }
@@ -863,7 +842,7 @@ select:invalid, select option[value=""] {
 /*- 500px - 767px -*/
 @media only screen and (min-width: 500px) and (max-width: 767px) {
 
-  
+
     .shopping-cart-desktop,
     .desktop-navigation,
     .desktop-caret,
@@ -898,7 +877,7 @@ select:invalid, select option[value=""] {
         text-align: center;
     }
 
-    
+
 
 }
 
@@ -923,7 +902,7 @@ select:invalid, select option[value=""] {
         font-size: 1.5em;
     }
 
-        
+
     .main-logo {
         margin: 5px 10px 20px 20px;
     }
@@ -1013,9 +992,7 @@ select:invalid, select option[value=""] {
         margin: 0;
     }
 
-    .search-box {
-       
-    }
+    .search-box {}
 
     .product-filter-boxes {
         font-size: smaller;
