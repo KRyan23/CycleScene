@@ -94,7 +94,21 @@
         - ERD Table - [View Here](/assets/docs/diagrams/CycleSceneERD.pdf)
 
     -  ### Screenshots
-        - Some screenshots of the site - [View here](/assets/docs/)
+        - Some screenshots of the site see below
+
+
+| Home  |Profile | Products  | Authorization | Checkout | Shoppingbag | Categories  | Other |
+| :--- | :--- | :--- | :--- | :--- |:--- | :--- | :--- |
+| [Logged out](/assets/docs/screenshots/homenologin.png)  | [Standard User](/assets/docs/screenshots/profilestduser.png)  |[All Products](/assets/docs/screenshots/allprod.png)   | [Logout](/assets/docs/screenshots/logout.png)  | [Checkout](/assets/docs/screenshots/checkout.png)  | [Shopping Bag](/assets/docs/screenshots/shoppingbag.png)  | [Road Bike](/assets/docs/screenshots/catroad.png)  | [Legal](/assets/docs/screenshots/legal.png)  |
+|  [Standard User](/assets/docs/screenshots/homestduser.png) |  [Product Manager](/assets/docs/screenshots/productmanager.png) |  [Standard User Details](/assets/docs/screenshots/productdetailsstduser.png) | [Password Reset](/assets/docs/screenshots/passreset.png)  | [Checkout Success](/assets/docs/screenshots/checkoutsuccess.png)  | -  | [City Bike](/assets/docs/screenshots/catcity.png)  | [Services](/assets/docs/screenshots/services.png)  |
+|  [Super User](/assets/docs/screenshots/homesuper.png) | [Super User Add](/assets/docs/screenshots/productmanageradd.png)  | [Super User Details](/assets/docs/screenshots/productdetailssuper.png)  |[Register](/assets/docs/screenshots/register.png)   |  - | - | [Mountain Bike](/assets/docs/screenshots/catmtb.png)  |  - |
+|  -| [Super User Edit](/assets/docs/screenshots/productmanageredit.png)  | -  |[Sign In](/assets/docs/screenshots/signin.png)   |  - | - | [Eyewear](/assets/docs/screenshots/cateyewear.png)  |  - |
+|  - | -  | -  |-   |  - | - | [Helmets](/assets/docs/screenshots/cathelmet.png)  |  - |
+|  - | -  | -  |-   |  - | -  | [Lights](/assets/docs/screenshots/catlights.png)  |  - |
+|  - | - | - |-   |  - | -  | [Pumps](/assets/docs/screenshots/catpump.png)  |  - |
+|  - | -  | -  |-   |  - | -  | [Saddles](/assets/docs/screenshots/catsaddles.png)  |  - |
+|  - | -  | -  |-   |  - | -  | [Wheels](/assets/docs/screenshots/catwheels.png)  |  - |
+|  -| -  | - |-   |  - | -  | [Locks](/assets/docs/screenshots/catlocks.png)  |  - |
 
 
 ----
