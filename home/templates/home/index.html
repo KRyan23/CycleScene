@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block content %}
-  <!-- Start hide main page content -->
   <!--carousel-->
   <div id="mainCarousel" class="carousel slide carousel-fade carousel-dark my-1 shadow p-3 mb-5 bg-body"
     data-bs-ride="carousel" data-bs-pause="hover">
@@ -55,7 +54,10 @@
       <!-- Bike Row -->
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/road-card.jpg" alt="GIANT PROPEL ADVANCED PRO DISC ROAD BIKE" />
+          <picture>
+            <source srcset="../media/road-card.webp" type="image/webp" alt="GIANT PROPEL ADVANCED PRO DISC ROAD BIKE">
+          <img src="../media/road-card.jpg" alt="GIANT PROPEL ADVANCED PRO DISC ROAD BIKE" class="w-100" />
+          </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title ">ROAD BIKES</h3>
             <a href="{% url 'products' %}?category=roadbikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -64,7 +66,10 @@
       </div>
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/mountain-card.jpg" alt="GIANT REIGN SX 29 MOUNTAIN BIKE" />
+          <picture>
+          <source srcset="../media/mountain-card.webp" type="image/webp" alt="GIANT REIGN SX 29 MOUNTAIN BIKE">
+          <img src="../media/mountain-card.jpg" alt="GIANT REIGN SX 29 MOUNTAIN BIKE" class="w-100" />
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">MOUNTAIN BIKES</h3>
             <a href="{% url 'products' %}?category=mountainbikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -73,7 +78,10 @@
       </div>
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/city-card.jpg" alt="GIANT CITY FLOURISH 1 CITY BIKE" />
+          <picture>
+            <source srcset="../media/city-card.webp" type="image/webp" alt="GIANT CITY FLOURISH 1 CITY BIKE">
+          <img src="../media/city-card.jpg" alt="GIANT CITY FLOURISH 1 CITY BIKE" class="w-100"/>
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">CITY BIKES</h3>
             <a href="{% url 'products' %}?category=citybikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -83,7 +91,10 @@
       <!--Components -->
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/wheels-card.jpg" alt="GIANT SLR 1 65MM DISC AERO CARBON ROAD WHEELS" />
+          <picture>
+            <source srcset="../media/wheels-card.webp" type="image/webp" alt="GIANT SLR 1 65MM DISC AERO CARBON ROAD WHEELS">
+          <img src="../media/wheels-card.jpg" alt="GIANT SLR 1 65MM DISC AERO CARBON ROAD WHEELS" class="w-100" />
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">WHEELS</h3>
             <a href="{% url 'products' %}?category=wheels" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -92,7 +103,10 @@
       </div>
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/saddle-card.jpg" alt="GIANT CADEX 2 SADDLE" />
+          <picture>
+            <source srcset="../media/saddle-card.webp" type="image/webp" alt="GIANT CADEX 2 SADDLE">
+          <img src="../media/saddle-card.jpg" alt="GIANT CADEX 2 SADDLE" class="w-100"/>
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">SADDLES</h3>
             <a href="{% url 'products' %}?category=saddles" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -101,7 +115,10 @@
       </div>
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/lock1-2.jpg" alt="GIANT SURELOCK FLEX KEY 15" />
+          <picture>
+            <source srcset="../media/lock-card.webp" type="image/webp" alt="GIANT SURELOCK FLEX KEY 15">
+          <img src="../media/lock1-2.jpg" alt="GIANT SURELOCK FLEX KEY 15" class="w-100"/>
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">LOCKS</h3>
             <a href="{% url 'products' %}?category=bikelocks" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -110,7 +127,10 @@
       </div>
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/pump-card.jpg" alt="GIANT CONTROL MINI COMBO PUMP" />
+          <picture>
+            <source srcset="../media/pump-card.webp" type="image/webp" alt="GIANT CONTROL MINI COMBO PUMP">
+          <img src="../media/pump-card.jpg" alt="GIANT CONTROL MINI COMBO PUMP" class="w-100"/>
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">PUMPS</h3>
             <a href="{% url 'products' %}?category=pumps" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -119,7 +139,10 @@
       </div>
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/helmet-card.jpg" alt="GIANT REV PRO MIPS MENS HELMET" />
+        <picture>
+          <source srcset="../media/helmet-card.webp" type="image/webp" alt="GIANT REV PRO MIPS MENS HELMET">
+          <img src="../media/helmet-card.jpg" alt="GIANT REV PRO MIPS MENS HELMET" class="w-100"/>
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">HELMETS</h3>
             <a href="{% url 'products' %}?category=helmets" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
@@ -128,7 +151,10 @@
       </div>
       <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card my-3 grow-effect">
-          <img src="../media/light-card.jpg" alt="GIANT RECON TL 200 REAR LIGHT" />
+        <picture>
+          <source srcset="../media/light-card.webp" type="image/webp" alt="GIANT RECON TL 200 REAR LIGHT">
+          <img src="../media/light-card.jpg" alt="GIANT RECON TL 200 REAR LIGHT" class="w-100"/>
+        </picture>
           <div class="card-body card-thumbnails-body">
             <h3 class="card-title">LIGHTS</h3>
             <a href="{% url 'products' %}?category=lights" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
