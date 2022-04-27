@@ -4,9 +4,11 @@ from .models import UserProfile
 
 class UserProfileForm(forms.ModelForm):
     ''' User Profile Form '''
+
     class Meta:
         model = UserProfile
         exclude = ('user', )
+
     # Mostly from BA project
     def __init__(self, *args, **kwargs):
         ''' Place holders for fields to overwrite the default labels and

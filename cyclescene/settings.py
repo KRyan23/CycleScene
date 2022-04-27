@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-i8=6+!n$_@vie80+h#h6%ttmh*9swft*jr0syl*@^s@e)i0#7s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True # if os.environ.get("DEBUG") == "ON" else False
 
 
 ALLOWED_HOSTS = []
@@ -100,12 +100,10 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 #needed because of gitpod
 #Added from the documentation here https://readthedocs.org/projects/django-allauth/downloads/pdf/stable/
 AUTHENTICATION_BACKENDS = [
-
-# Needed to login by username in Django admin, regardless of `allauth`
-'django.contrib.auth.backends.ModelBackend',
-# `allauth` specific authentication methods, such as login by e-mail
-'allauth.account.auth_backends.AuthenticationBackend',
-
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+    # `allauth` specific authentication methods, such as login by e-mail
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 SITE_ID = 1
@@ -170,13 +168,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+STATIC_ROOT = "/staticfiles"
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 FREE_DELIVERY_DELTA = 30
 STANDARD_DELIVERY_COST = 25
