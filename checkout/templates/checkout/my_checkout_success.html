@@ -132,39 +132,28 @@
 
 </div>
 </div>
-</div>
-</div>
            
-    <!--end---->
+    <!-- end -->
     <div class="row mt-5">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
            <p class="fw-bold">Need a hard copy? Click the button below</p>
            <a onclick="window.print()" class="fas fa-print fa-4x"></a>
        </div>
    </div>        
-</div>
-{% if from_profile %}
 <div class="row mt-2">
-    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
       <div class="text-center">
-        <a href="{% url 'profile' %}" class="btn btn-outline-secondary btn-lg mt-5 mb-5 fw-bold">BACK TO PROFILE</a>
+        <a href="{% url 'profile' %}" class="btn btn-outline-secondary mt-5 mb-5 mx-0 fw-bold">BACK TO PROFILE</a>
       </div>
     </div>
   </div>
-{% else %}
      <div class="row mt-2">
-      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
         <div class="text-center">
-          <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg mt-5 mb-5 fw-bold">BACK TO PRODUCTS</a>
+          <a href="{% url 'products' %}" class="btn btn-outline-success mb-5 mx-0 fw-bold">ALL PRODUCTS</a>
         </div>
       </div>
     </div>
-    {% endif %}
-  </div>
-</div>
-
-</div>
-</div>
 <!-- end summary-->
 {% endblock %}
 

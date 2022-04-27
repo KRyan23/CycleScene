@@ -147,9 +147,9 @@
                   </td>
                   <td><small>{{ order.date }}</small></td>
                   <td>
-                    <ul class="list-unstyled">
-                      <li class="small">{% for item in order.lineitems.all %}</li>
-                      <span title="{{ item.product.name|lower|title }}">{{ item.product.name|lower|title|truncatechars:8 }}</span>
+                    <ul class="list-unstyled">{% for item in order.lineitems.all %}
+                      <li class="small">
+                      <span title="{{ item.product.name|lower|title }}">{{ item.product.name|lower|title|truncatechars:8 }}</span></li>
                       {% endfor %}
                     </ul>
                   </td>
