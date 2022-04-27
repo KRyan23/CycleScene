@@ -158,7 +158,7 @@ def my_checkout_success(request, order_number):
                 'default_address2': order.address2,
                 'default_county': order.county,
             }
-            
+
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()

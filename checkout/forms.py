@@ -12,7 +12,7 @@ class OrderForm(forms.ModelForm):
                   'country','postcode', )
 # Mostly from BA project
     def __init__(self, *args, **kwargs):
-        ''' Place holders for fields to overwrite the default labels and 
+        ''' Place holders for fields to overwrite the default labels and
         set autofocus on first_name '''
         super().__init__(*args, **kwargs)
 

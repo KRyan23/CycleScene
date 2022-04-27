@@ -16,10 +16,11 @@ def add_product_to_shoppingbag(request, item_id):
     bag_quantity = int(bag_quantity)
     current_page = request.POST.get('current_page_url')
     shopping_bag = request.session.get('shopping_bag', {})
-    messages.add_message(request, messages.SUCCESS, f' "{product.name.title()}" was just added to your shopping bag!')
+    messages.add_message(
+        request, messages.SUCCESS, f' "{product.name.title()}" was just added to your shoppingbag!')
     if item_id in list(shopping_bag.keys()):
         shopping_bag[item_id] += bag_quantity
-        
+
     else:
         shopping_bag[item_id] = bag_quantity
     request.session['shopping_bag'] = shopping_bag
@@ -34,7 +35,9 @@ def changebag_quantity(request, item_id):
     shopping_bag = request.session.get('shopping_bag', {})
     if quantity > 0 or quantity < 11:
         shopping_bag[item_id] = quantity
-        messages.add_message(request, messages.SUCCESS, f'The quantity for "{product.name.title()}" has been updated to {shopping_bag[item_id]}')
+        messages.add_message(
+            request, messages.SUCCESS, f'The quantity for "{product.name.title()}" \
+            has been updated to {shopping_bag[item_id]}')
     else:
         shopping_bag.pop(item_id)
 
@@ -49,7 +52,8 @@ def delete_items_from_shoppingbag(request, item_id):
         shopping_bag = request.session.get('shopping_bag', {})
         shopping_bag.pop(item_id)
         request.session['shopping_bag'] = shopping_bag
-        messages.add_message(request, messages.SUCCESS, f'The Item "{product.name.title()}" was just removed from your shopping bag!')
+        messages.add_message(request, messages.SUCCESS, f'The Item "{product.name.title()}" \
+             was just removed from your shopping bag!')
         return HttpResponse(status=200)
 
     except Exception as e:

@@ -32,7 +32,7 @@ def shoppingbag_contents(request):
     else:
         total_bag_cost = bagtotal + Decimal(settings.STANDARD_DELIVERY_COST)
         delivery = delivery + Decimal(settings.STANDARD_DELIVERY_COST)
-       
+
     context = {
                 'shoppingbag_items': shoppingbag_items,
                 'bagtotal': bagtotal,
