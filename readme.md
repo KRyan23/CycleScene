@@ -176,7 +176,19 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 
 -   [W3C Html Mark-up Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/html-validation.pdf)
 
-WILL NEED A TABLE HERE FOR THE HTML
+| Home  |Profile | Products  | Authorization | Checkout | Shoppingbag | Categories  | Other |
+| :--- | :--- | :--- | :--- | :--- |:--- | :--- | :--- |
+|[Home No login](/assets/docs/testing-and-troubleshooting/html/home.png)|[Profile Std User](/assets/docs/testing-and-troubleshooting/html/profile-stduser.png) |[Product Details Std User](/assets/docs/testing-and-troubleshooting/html/productdetails-stduser.png) |[Password Reset](/assets/docs/testing-and-troubleshooting/html/passwordreset.png) |[Checkout](/assets/docs/testing-and-troubleshooting/html/checkout.png) |[Shopping Bag](/assets/docs/testing-and-troubleshooting/html/shoppingbag.png) |[City Bikes](/assets/docs/testing-and-troubleshooting/html/citybikes.png) |[Services](/assets/docs/testing-and-troubleshooting/html/services.png) |
+|[Home Std User](/assets/docs/testing-and-troubleshooting/html/home-stduser.png) |[Profile Super User](/assets/docs/testing-and-troubleshooting/html/profile-superuser.png) |[Product Details Super User](/assets/docs/testing-and-troubleshooting/html/productdetails-superuser.png) |[Register](/assets/docs/testing-and-troubleshooting/html/register.png) |[Checkout Success](/assets/docs/testing-and-troubleshooting/html/checkoutsuccess.png) |-|[Eye Wear](/assets/docs/testing-and-troubleshooting/html/eyewear.png) |[Legal](/assets/docs/testing-and-troubleshooting/html/legal.png) |
+|[Home Super User](/assets/docs/testing-and-troubleshooting/html/home-superuser.png) |[Product Manager Add](/assets/docs/testing-and-troubleshooting/html/productmanager-add.png) |[All Products](/assets/docs/testing-and-troubleshooting/html/allproducts.png) |[Registration Verification](/assets/docs/testing-and-troubleshooting/html/registration-verification.png) |- |- |[Helmets](/assets/docs/testing-and-troubleshooting/html/helmets.png) |- |
+|- |[Product Manager Update](/assets/docs/testing-and-troubleshooting/html/productmanager-update.png) | - |[Sign In](/assets/docs/testing-and-troubleshooting/html/signin.png) | - |- |[Lights](assets/docs/testing-and-troubleshooting/html/lights.png) |-|
+|- |- |- |[Sign Out](/assets/docs/testing-and-troubleshooting/html/signout.png)|- |- |[Locks](/assets/docs/testing-and-troubleshooting/html/locks.png) |-|
+|- |- |- |-|- |- |[Mountain Bike](/assets/docs/testing-and-troubleshooting/html/mtbbikes.png) |-|
+|- |- |- |-|- |- |[Pumps](/assets/docs/testing-and-troubleshooting/html/pumps.png) |-|
+|- |- |- |-|- |- |[Road Bikes](/assets/docs/testing-and-troubleshooting/html/roadbikes.png) |-|
+|- |- |- |-|- |- |[Saddles](/assets/docs/testing-and-troubleshooting/html/saddles.png) |-|
+|- |- |- |-|- |- |[Wheels](/assets/docs/testing-and-troubleshooting/html/wheels.png) |-|
+
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/css/css-results.png)
 - [JSHint ](https://jshint.com/) - [Results](/assets/docs/testing-and-troubleshooting/jshintresults.pdf)
 -   [pylint ](https://pylint.org/) - [Results](/assets/docs/testing-and-troubleshooting/pylint-results.pdf)
