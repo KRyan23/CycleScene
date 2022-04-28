@@ -1,13 +1,15 @@
 import uuid
+# for signals functions
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
+
 from django.db.models import Sum
 from django.conf import settings
 from django.db import models
 from django_countries.fields import CountryField
 from products.models import Product
 from profiles.models import UserProfile
-# for signals line
-from django.db.models.signals import post_save, post_delete
-from django.dispatch import receiver
+
 
 
 
@@ -23,7 +25,7 @@ class Order(models.Model):
     county = models.CharField(max_length=50, null=True, blank=True)
     city = models.CharField(max_length=40, null=False, blank=False)
     country = CountryField(blank_label='Country *', null=False, blank=False)
-    postcode = models.CharField(max_length=20, null=True, blank=True)    
+    postcode = models.CharField(max_length=20, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
     null=True, blank=True, related_name='orders')

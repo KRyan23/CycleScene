@@ -1,5 +1,5 @@
 '''Required Imports'''
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render
 from .models import Legal
 
 def view_legal(request):

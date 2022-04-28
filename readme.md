@@ -194,10 +194,10 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 |- |- |- |-|- |- |[Wheels](/assets/docs/testing-and-troubleshooting/html/wheels.png) |-|
 
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/css/css-results.png)
-- [JSHint ](https://jshint.com/) - [Results](/assets/docs/testing-and-troubleshooting/jshintresults.pdf)
--   [pylint ](https://pylint.org/) - [Results](/assets/docs/testing-and-troubleshooting/pylint-results.pdf)
--    Code Refactoring  - [Results](/assets/docs/testing-and-troubleshooting/code-refactoring.pdf)
-
+- [JSHint ](https://jshint.com/) - [Results](/assets/docs/testing-and-troubleshooting/javascript/jshintresults.pdf)
+-   [pylint ](https://pylint.org/) - [Results](/assets/docs/testing-and-troubleshooting/python/pylintscores.pdf)
+-    #####Code Refactoring  - [Results](/assets/docs/testing-and-troubleshooting/code-refactoring.pdf)
+- #####Python Test Case
 &nbsp;
 
 

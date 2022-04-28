@@ -62,7 +62,7 @@ def all_products(request):
         'current_sorting': current_sorting
     }
     if query:
-        messages.add_message(request, messages.INFO, 
+        messages.add_message(request, messages.INFO,
         f'Here Are Your Search Requests For "{query.upper()}"')
 
     return render(request, 'products/products.html', context)

@@ -8,7 +8,7 @@ $(document).ready(function(){
         var inputFieldValue = document.getElementById('id_qty_'+thenum).value;
         inputFieldValue = Number(inputFieldValue);        
         if (inputFieldValue === 10){
-            inputFieldValue = 10
+            inputFieldValue = 10;
             document.getElementById('error_id_'+thenum).innerHTML="Hi items are limited to 10 / Order";
         }else{
             inputFieldValue++;
@@ -25,7 +25,7 @@ $(document).ready(function(){
         var inputFieldValue = document.getElementById('id_qty_'+thenum).value;
         inputFieldValue = Number(inputFieldValue);        
         if (inputFieldValue === 1 ){
-            inputFieldValue = 1
+            inputFieldValue = 1;
             document.getElementById('error_id_'+thenum).innerHTML="Hi the minimum order is 1!";
         }else{
             inputFieldValue--;

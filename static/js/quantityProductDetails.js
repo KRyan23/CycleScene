@@ -6,7 +6,7 @@ function increment(){
     var bagvalue = $('.form-quantity').val();
     bagvalue = Number(bagvalue);
     if (bagvalue === 10){
-        bagvalue = 10
+        bagvalue = 10;
         document.getElementById('quantity-message').innerHTML="Hi items are limited to 10 / Order";
     }else{
         bagvalue = bagvalue + 1;
