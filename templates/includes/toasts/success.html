@@ -7,13 +7,16 @@
 <div class="toast-body">
   <div class="row float-start">
     <div class="col-12 toast-message">
+      {% if bagtotal and user.is_anonymous %}
+      <p class="fs-5">Please Sign In to Make a Purchase</p>
+      {% else %}
       {{ message }}
+      {% endif %}
     </div>
   </div>
-  <hr>
   <!-- if there are items in your shopping -->
   {% if bagtotal and not on_profile_page %}
-  <p class="logo-font bg-white text-black py-1">Your Shopping Bag ({{ shoppingbag_items|length }})</p>
+  <p class="logo-font bg-white text-black mx-5">Your Shopping Bag ({{ shoppingbag_items|length }})</p>
             <div class="bag-notification-wrapper">
                 {% for shop in shoppingbag_items  %}
                     <div class="row">
@@ -25,8 +28,6 @@
                             <p class="my-0 small text-muted">Quantity: {{ shop.quantity }}</p>
                         </div>
                     </div>
-
-
                     </div>
                 {% endfor %}
                 <div class="row pt-2">
