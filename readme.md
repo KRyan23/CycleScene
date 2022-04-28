@@ -71,7 +71,7 @@
        
         &nbsp;
 -   ### Design
-    -   #### Colour Scheme
+    -   #### Colour Scheme 
         -   The colour palette used for the site is listed below.
             - ![#FFA500](https://via.placeholder.com/15/FFA500/000000?text=+) `Orange`
             - ![#FAFAFA](https://via.placeholder.com/15/FAFAFA/000000?text=+) `Off White`
@@ -82,6 +82,10 @@
             - ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000?text=+) `White`
             - ![#5C636A](https://via.placeholder.com/15/5C636A/000000?text=+) `Darker Grey`
             - ![#198754](https://via.placeholder.com/15/198754/000000?text=+) `Green`
+            - ![#d9534f](https://via.placeholder.com/15/d9534f/000000?text=+) `Red`
+            - ![#f0ad4e](https://via.placeholder.com/15/f0ad4e/000000?text=+) `Yellow`
+            - ![#5cb85c](https://via.placeholder.com/15/5cb85c/000000?text=+) `Lighter Green`
+
             
             
     -   #### Typography
@@ -98,7 +102,7 @@
         - ERD Table - [View Here](/assets/docs/diagrams/CycleSceneERD.pdf)
 
     -  ### Screenshots
-        - Some screenshots of the site see below
+        - Screenshots of the site see below
 
 
 | Home  |Profile | Products  | Authorization | Checkout | Shoppingbag | Categories  | Other |
@@ -178,7 +182,7 @@
 The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 JSHint was used for the javascript linter, and pylint for the python linter.
 
--   [W3C Html Mark-up Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/html-validation.pdf)
+-   [W3C Html Mark-up Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - See table below for results.
 
 | Home  |Profile | Products  | Authorization | Checkout | Shoppingbag | Categories  | Other |
 | :--- | :--- | :--- | :--- | :--- |:--- | :--- | :--- |
@@ -196,8 +200,8 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](/assets/docs/testing-and-troubleshooting/css/css-results.png)
 - [JSHint ](https://jshint.com/) - [Results](/assets/docs/testing-and-troubleshooting/javascript/jshintresults.pdf)
 -   [pylint ](https://pylint.org/) - [Results](/assets/docs/testing-and-troubleshooting/python/pylintscores.pdf)
--    #####Code Refactoring  - [Results](/assets/docs/testing-and-troubleshooting/code-refactoring.pdf)
-- #####Python Test Case
+- [Code Refactoring ](/assets/docs/testing-and-troubleshooting/coderefactoring.pdf)
+- [Lighthouse](/assets/docs/testing-and-troubleshooting/lighthouse/lighthouse.pdf)
 &nbsp;
 
 
