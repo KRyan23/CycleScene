@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load custom_tags %}
+{% load static %}
+
+{% block content %}
+{% for leg in legal %}
+<hr class="mt-5">
+<div class="mx-5">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <h2 class="mt-5">{{ leg.name|lower|title }}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h3 class="mt-5" id="privacy">{{ leg.titleprivacypolicy|lower|title }}</h3>
+            {{ leg.bodyprivacypolicy|safe  }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h3 class="mt-5" id="terms">{{ leg.titletermsandconditions|lower|title }}</h3>
+            {{ leg.bodytermsandconditions|safe  }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <h3 class="mt-5" id="returns">{{ leg.titlereturnspolicy|lower|title }}</h3>
+            {{ leg.bodyreturnspolicy|safe }}
+        </div>
+    </div>
+</div>
+{% endfor %}
+<hr class="mt-5">
+
+{% endblock %}
+
+
+
+{% block scripts %}
+{{ block.super }}
+{% endblock %}

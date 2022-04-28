@@ -1,0 +1,1398 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fafafa;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #5C636A;
+}
+
+a:active,
+a:focus {
+    color: orange;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.top-navigation {
+    background-color: #fafafa;
+
+}
+
+.order-summary-bike {
+    color: orange;
+    padding-right: 0.5em;
+    text-decoration: underline;
+}
+
+.shopping-bag {
+    color: orange;
+    font-size: 1.25em;
+    margin: 0.35em 0.5em 0 1em;
+    border-radius: 5px;
+    border-color: orange;
+    padding: 5px 5px 5px 5px;
+}
+
+.shopping-bag-total-desktop {
+    font-size: 1.25em;
+    color: #6C757D;
+    padding: 0 1em 0 1em;
+}
+
+.shopping-bag-total {
+    font-size: 0.85em;
+    color: #5C636A;
+    padding: 0 1em 0 1em;
+    font-weight: bold;
+}
+
+.order-summary {
+    border: 5px solid #fafafa;
+    border-radius: 10px;
+}
+
+.desktop-nav-link {
+    font-size: 1.25em;
+    color: #6C757D;
+    padding: 0 0.5em 0 0.5em;
+}
+
+.navlink-alignment {
+    font-size: 1.25em;
+    line-height: 5;
+}
+
+.fa-search,
+.starcolor,
+.results-number,
+.toast-shopping-bag,
+.product-rating,
+.fa-cog,
+.fa-tools,
+.fa-ambulance,
+.fa-check,
+.order-number,
+.register,
+.sign-up,
+.sign-in,
+.fa-envelope,
+.profile-name,
+.fa-user-cog,
+.bicycle-admin {
+    color: orange;
+    border-color: orange;
+}
+
+.form-control:focus {
+    border-color: #6C757D !important;
+    box-shadow: 0 0 7px #6C757D !important;
+}
+
+
+.btn-outline-secondary {
+    margin: 0 2px 0 20px;
+}
+
+.main-logo {
+    margin: 20px 10px 30px 20px;
+    padding: 5px 5px 5px 5px;
+    animation: rotate 3s linear;
+}
+
+.shopping-cart-mobile {
+    background-color: #E9E9EB;
+    height: 42px;
+}
+
+.desktop-navigation {
+    background-color: #a0a0a0;
+}
+
+.fa-home,
+.item-number {
+    color: orange;
+}
+
+.bike {
+    color: #fafafa;
+    margin-left: -1.75em;
+    margin-top: 1.5em;
+    animation: fadein 5s;
+}
+
+.bag-spinner {
+    color: #5C636A;
+    animation: rotatebag 5s forwards;
+}
+
+ul>li {
+    display: inline-block;
+}
+
+.nav-link {
+    color: #6C757D;
+}
+
+.nav-link:hover,
+.breadcrumb,
+.override-link-color:hover,
+.footer-link:hover,
+.social-media:hover,
+.payment-types:hover,
+.maps-location:hover,
+.btn-secondary:hover,
+.btn-outline-success:hover,
+.btn-outline-secondary,
+.features-bulletpoint,
+.desktop-nav-link:hover,
+.bag-spinner:hover,
+.fa-print:hover {
+    color: orange;
+}
+
+.carousel-heading {
+    color: white;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    letter-spacing: .10em;
+    margin: 0 auto;
+    white-space: nowrap;
+    animation: textscrolling 3.5s steps(120, end);
+}
+
+.image-opacity-9 {
+    opacity: 0.85;
+}
+
+.categories {
+    border: 1px solid #fafafa;
+    color: #6C757D;
+    background-color: #E9E9EB;
+    height: 42px;
+}
+
+.grow-effect:hover,
+.grow-effect:active {
+    transform: scale(1, 1.02);
+    transition: transform .55s;
+    background-color: #fafafa;
+    border: 1px solid #5C636A;
+}
+
+.main-page-quote {
+    padding: 2em 1em 1em 1em;
+    font-weight: 900;
+    color: transparent;
+    background: #5C636A;
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.9);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+.text-font-weight {
+    font-weight: 900;
+}
+
+.disabled-feature {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.brands-logo {
+    height: 17.2vh;
+    width: 13vw;
+}
+
+.brand-carousel-1 {
+    background-image: url('/media/brand-altura.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 4em 0 3em 0;
+}
+
+.brand-carousel-2 {
+    background-image: url('/media/brand-shimano.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 4em 5em 3em 5em;
+}
+
+.brand-carousel-3 {
+    background-image: url('/media/brand-continental.png');
+    width: 100vw;
+    height: 15vh;
+    background-size: cover;
+    background-position: center;
+    margin: 3.75em 0 3em 0;
+}
+
+.brand-carousel-4 {
+    background-image: url('/media/brand-giant.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 3.75em 5em 3em 5em;
+}
+
+.brand-carousel-5 {
+    background-image: url('/media/brand-oakley.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 3.5em 0 3em 0;
+}
+
+.brand-carousel-6 {
+    background-image: url('/media/brand-sis.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 4em 0.5em 3em 2em;
+}
+
+.brand-carousel-7 {
+    background-image: url('/media/brand-liv.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 3.5em 0 3em 0;
+}
+
+.brand-carousel-8 {
+    background-image: url('/media/brand-schwalbe.png');
+    width: 100vw;
+    height: 12vh;
+    background-size: cover;
+    background-position: center;
+    margin: 4em 3em 3em 2em;
+}
+
+.brand-carousel-link:hover {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.empty-star {
+    color: #E9E9EB;
+}
+
+.star-color-effect:hover {
+    transform: scale(1, 1.25);
+    transition: transform 0.1s;
+}
+
+.description-highlights:hover,
+.item-of {
+    background-color: #fafafa;
+    color: black;
+    transform: scale(1, 1.05);
+    transition: transform 0.01s;
+}
+
+.star-color-effect,
+.fa-tools {
+    animation: rotate 2s reverse;
+}
+
+.form-quantity {
+    display: inline !important;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    max-width: 150px;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+
+.grow-element {
+    animation: grow 2s;
+    font-weight: 600;
+}
+
+.reduce-image {
+    margin: 2em 0 2em 0;
+    max-width: 70%;
+    max-height: 50%;
+}
+
+.features-bulletpoint,
+.features-text {
+    margin-left: 1em;
+
+}
+
+.bike-rotate,
+.service-cog {
+    animation: rotate 3s linear;
+}
+
+.product-bike-features:hover,
+.no-products-found:hover {
+    transform: scale(1, 1.01);
+    transition: transform 0.01s;
+    background-color: #E9E9EB;
+    font-weight: 900;
+}
+
+.no-products {
+    background-color: whitesmoke;
+    padding: 10em 0 10em 0;
+}
+
+.mobile-dropdown-heading {
+    color: #6C757D;
+    font-size: 1.25em;
+    font-weight: 900;
+    margin-left: 0.85em;
+    line-height: 2;
+}
+
+.top-discount-banner {
+    max-height: 10%;
+    width: auto;
+    background-color: #E9E9EB;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+.text-grow,
+.items {
+    animation: pulse 3s forwards;
+    color: orange;
+    font-weight: 900;
+}
+
+.product-filter-boxes {
+    border: 1px solid #a0a0a0;
+    border-radius: 5px;
+    margin: 0 0 0 0;
+    padding-left: 5px;
+    background-color: #E9E9EB;
+}
+
+.sort-by-price {
+    padding-left: 1.6em;
+}
+
+.no-products-found {
+    margin: 4em 0 6em 0;
+    height: 500px;
+    width: auto;
+    color: #6C757D;
+    background-color: #E9E9EB;
+}
+
+.price-hr,
+.myorder {
+    max-width: 200px;
+    margin: auto;
+    color: #198754;
+    animation: fadein 15s forwards;
+}
+
+.quantity-error-message {
+    display: block;
+    margin-bottom: 1em;
+    color: red;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.empty-bag-message,
+.search-results-empty {
+    overflow: hidden;
+    letter-spacing: normal;
+    margin: 0 auto;
+    white-space: nowrap;
+    animation: textscrolling 4s steps(200, end);
+}
+
+.date-product-row {
+    background-color: #E9E9EB;
+    line-height: 1;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+.date {
+    padding: 0.2em 0.8em 0.2em 0.8em;
+}
+
+.products-listed {
+    margin-top: 0.65em;
+}
+
+.fa-lock {
+    color: gold;
+}
+
+.sub-total {
+    line-height: 5;
+    background-color: #E9E9EB;
+}
+
+.toast-container {
+    position: fixed;
+    z-index: 1;
+    top: 10%;
+}
+
+
+.toast-message {
+    color: #5C636A;
+    font-weight: 900;
+    animation: pulse 1.5s forwards;
+}
+
+.fa-clock {
+    color: orange;
+}
+
+.secure-checkout-header {
+    background-color: #E9E9EB;
+    line-height: 1;
+    white-space: nowrap;
+    height: 200px;
+    vertical-align: baseline;
+    border-radius: .25rem;
+}
+
+.stripe-card-input {
+    border-color: #6C757D !important;
+    box-shadow: 0 0 7px #6C757D !important;
+}
+
+.free-delivery-text {
+    font-weight: bold;
+    color: #198754;
+}
+
+/* --------- From BA checkout spinner and overlay ---------------------*/
+#loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 136, 7, 0.85);
+    z-index: 9999;
+}
+
+.loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+/* ----------------------------------------*/
+.fa-ambulance {
+    overflow: hidden;
+    letter-spacing: normal;
+    white-space: nowrap;
+    animation: textscrolling 40s steps(1000, end);
+}
+
+.services-background {
+    background-color: whitesmoke;
+    padding: 1em 0 1em 0;
+}
+
+/* ------------ Mostly from BA Dropdown classes for Country ------ */
+
+
+#profile-update-form input::placeholder {
+    color: #5C636A;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000000;
+}
+
+#id_default_country option:first-child {
+    color: red;
+}
+
+/* --------- From BA hack for Country dropdown ---------------------*/
+
+select,
+select option {
+    color: black;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #6C7781 !important;
+}
+
+/* --------- Keyframes Calls -------------- */
+
+/* Rotates the CycleScence icon on load to simulate a bike wheel */
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Rotates objects by 180degrees for example the empty shopping bag */
+@keyframes rotatebag {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+/* Controls the animation on the top-discount-banner text */
+@keyframes pulse {
+    0% {
+        transform: scale(0.85);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+/* fades in an element */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+}
+
+/* Scrolling effect for carousel headings */
+@keyframes textscrolling {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+
+/* --------- Media queries ---------------- */
+/*- < 250px-*/
+@media only screen and (max-width: 249px) {
+
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .search-box,
+    .desktop-search-button,
+    .brands {
+        display: none;
+    }
+
+    .carousel-heading {
+        font-size: 1em;
+        top: 20%;
+    }
+
+    .main-page-quote>h2 {
+        font-size: 1em;
+    }
+
+    body {
+        font-size: 1.1em;
+    }
+
+    .btn-minus,
+    .btn-plus {
+        display: none;
+    }
+
+    .form-quantity {
+        padding-top: 5px;
+        padding-bottom: 10px;
+        width: auto;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .features-bulletpoint,
+    .features-text {
+        margin-left: 0.25em;
+        font-size: small;
+    }
+
+    .product-filter-boxes {
+        font-size: smaller;
+    }
+
+    .product-details-navigation-buttons {
+        font-size: 1.2em;
+    }
+
+    .main-logo {
+        margin: 0 0 10px 5px;
+    }
+
+    .mobile-searchbar {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 1em;
+    }
+
+    .date {
+        line-height: 7;
+        white-space: nowrap;
+
+    }
+}
+
+/*- 250px - 320px -*/
+@media only screen and (min-width: 250px) and (max-width: 320px) {
+
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .search-box,
+    .desktop-search-button,
+    .brands {
+        display: none;
+    }
+
+    .btn-outline-secondary {
+        margin: 0 2px 0 2px;
+    }
+
+    .newsletter-input-box {
+        max-width: 100px;
+    }
+
+    .carousel-heading {
+        font-size: 1em;
+        top: 20%;
+    }
+
+    .main-page-quote>h2 {
+        font-size: 1em;
+    }
+
+    .main-logo {
+        margin: 0 0 10px 5px;
+    }
+
+    .mobile-searchbar {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 1em;
+    }
+
+    .mobile-navigation-topmenu {
+        margin-left: 0.9em;
+    }
+
+    .btn-minus,
+    .btn-plus {
+        display: none;
+    }
+
+    .form-quantity {
+        display: inline !important;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        width: auto;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .features-bulletpoint,
+    .features-text {
+        margin-left: 0.25em;
+        font-size: medium;
+    }
+
+    .product-filter-boxes {
+        font-size: 50%;
+    }
+
+    .product-details-navigation-buttons {
+        font-size: 1.2em;
+    }
+
+    .date {
+        line-height: 5;
+    }
+
+}
+
+/*- 321px - 499px -*/
+@media only screen and (min-width: 321px) and (max-width: 499px) {
+
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .hide-on-smallscreen,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .display-on-smallscreen,
+    .brands {
+        display: none;
+    }
+
+    .main-logo {
+        margin: 0 0 10px 5px;
+    }
+
+    .btn-outline-secondary {
+        margin: 0 2px 0 2px;
+    }
+
+    .mobile-searchbar {
+        max-width: 95%;
+        margin-left: 2.5%;
+        margin-bottom: 1em;
+    }
+
+    .carousel-heading {
+        font-size: 1.5em;
+        top: 50%;
+    }
+
+    .main-page-quote>h2 {
+        font-size: 1em;
+    }
+
+    body {
+        font-size: 1.0em;
+    }
+
+    .mobile-navigation-topmenu {
+        margin-left: 0.9em;
+    }
+
+    .brands-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .features-bulletpoint,
+    .features-text {
+        margin-left: 0.25em;
+        font-size: medium;
+    }
+
+    .product-filter-boxes {
+        font-size: smaller;
+    }
+
+}
+
+/*- 500px - 767px -*/
+@media only screen and (min-width: 500px) and (max-width: 767px) {
+
+
+    .shopping-cart-desktop,
+    .desktop-navigation,
+    .desktop-caret,
+    .desktop-contact-us,
+    .shopping-bag-total-desktop,
+    .display-on-smallscreen,
+    .hide-on-mediumlarge,
+    .brands {
+        display: none;
+    }
+
+    .carousel-heading {
+        font-size: 2em;
+    }
+
+    .main-page-quote>h2 {
+        font-size: 1em;
+    }
+
+    .mobile-navigation-topmenu {
+        margin-left: 0.9em;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .product-filter-boxes {
+        font-size: smaller;
+        text-align: center;
+    }
+
+
+
+}
+
+/*- 767px - 992px -*/
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+
+    .mobile-navigation,
+    .mobile-caret,
+    .mobile-contact-us,
+    .shopping-bag-total-desktop,
+    .display-on-smallscreen,
+    .hide-on-mediumlarge,
+    .desktop-navigation {
+        display: none;
+    }
+
+    .carousel-heading {
+        font-size: 3em;
+    }
+
+    .main-page-quote>h2 {
+        font-size: 1.5em;
+    }
+
+
+    .main-logo {
+        margin: 5px 10px 20px 20px;
+    }
+
+    .mobile-navigation-topmenu {
+        margin-left: 0.9em;
+    }
+
+    .brand-carousel-1 {
+        background-image: url('/media/brand-altura.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 0 0 0;
+
+    }
+
+    .brand-carousel-2 {
+        background-image: url('/media/brand-shimano.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 5em 0 5em;
+
+    }
+
+    .brand-carousel-3 {
+        background-image: url('/media/brand-continental.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.9em 0 0 0;
+
+    }
+
+    .brand-carousel-4 {
+        background-image: url('/media/brand-giant.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 4.5em 0 4.5em;
+    }
+
+    .brand-carousel-5 {
+        background-image: url('/media/brand-oakley.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+
+    .brand-carousel-6 {
+        background-image: url('/media/brand-sis.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 1em 0 3em;
+    }
+
+    .brand-carousel-7 {
+        background-image: url('/media/brand-liv.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+
+    .brand-carousel-8 {
+        background-image: url('/media/brand-schwalbe.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 3em 0 2.5em;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .search-box {}
+
+    .product-filter-boxes {
+        font-size: smaller;
+        text-align: center;
+    }
+
+    .shopping-bag-image {
+        height: 50%;
+        width: 50%;
+        transform: translate(50%, 0);
+    }
+
+}
+
+/*- 992px - 1023px -*/
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+
+    .shopping-cart-mobile,
+    .hide-on-desktop,
+    .mobile-caret,
+    .mobile-contact-us,
+    .hide-on-mediumlarge,
+    .display-on-smallscreen {
+        display: none;
+    }
+
+    .carousel-heading {
+        font-size: 3.5em;
+    }
+
+    .shopping-bag-total-desktop {
+        display: contents;
+    }
+
+    .text-font-weight {
+        font-weight: 200;
+    }
+
+    .brand-carousel-1 {
+        background-image: url('/media/brand-altura.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 0 0 0;
+
+    }
+
+    .brand-carousel-2 {
+        background-image: url('/media/brand-shimano.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 5em 0 5em;
+
+    }
+
+    .brand-carousel-3 {
+        background-image: url('/media/brand-continental.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.9em 0 0 0;
+
+    }
+
+    .brand-carousel-4 {
+        background-image: url('/media/brand-giant.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 4.5em 0 4.5em;
+    }
+
+    .brand-carousel-5 {
+        background-image: url('/media/brand-oakley.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+
+    .brand-carousel-6 {
+        background-image: url('/media/brand-sis.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 1em 0 3em;
+    }
+
+    .brand-carousel-7 {
+        background-image: url('/media/brand-liv.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+
+    .brand-carousel-8 {
+        background-image: url('/media/brand-schwalbe.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 3em 0 2.5em;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .product-filter-boxes {
+        font-size: small;
+        text-align: center;
+    }
+
+    .shopping-bag-image {
+        height: 50%;
+        width: 50%;
+        transform: translate(50%, 0);
+    }
+}
+
+/*- 1024px - 1200px -*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .hide-on-mediumlarge,
+    .display-on-smallscreen {
+        display: none;
+    }
+
+    .carousel-heading {
+        font-size: 3.5em;
+    }
+
+    .shopping-bag-total-desktop {
+        display: contents;
+    }
+
+    .text-font-weight {
+        font-weight: 200;
+    }
+
+    .brand-carousel-1 {
+        background-image: url('/media/brand-altura.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 0 0 0;
+
+    }
+
+    .brand-carousel-2 {
+        background-image: url('/media/brand-shimano.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 5em 0 5em;
+
+    }
+
+    .brand-carousel-3 {
+        background-image: url('/media/brand-continental.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.9em 0 0 0;
+
+    }
+
+    .brand-carousel-4 {
+        background-image: url('/media/brand-giant.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 4.5em 0 4.5em;
+    }
+
+    .brand-carousel-5 {
+        background-image: url('/media/brand-oakley.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+
+    .brand-carousel-6 {
+        background-image: url('/media/brand-sis.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.5em 1em 0 3em;
+    }
+
+    .brand-carousel-7 {
+        background-image: url('/media/brand-liv.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.25em 0 0 0;
+    }
+
+    .brand-carousel-8 {
+        background-image: url('/media/brand-schwalbe.png');
+        width: 40vw;
+        height: 5vh;
+        background-size: cover;
+        background-position: center;
+        margin: 2.75em 3em 0 2.5em;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .product-filter-boxes {
+        font-size: small;
+        text-align: center;
+    }
+
+    .shopping-bag-image {
+        height: 50%;
+        width: 50%;
+        transform: translate(50%, 0);
+    }
+
+}
+
+/* 1200px - 1300px */
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .hide-on-mediumlarge,
+    .display-on-smallscreen {
+        display: none;
+    }
+
+    .carousel-heading {
+        font-size: 4em;
+    }
+
+    .shopping-bag-total-desktop {
+        display: contents;
+    }
+
+    .text-font-weight {
+        font-weight: 200;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .product-filter-boxes {
+        text-align: center;
+    }
+
+    .shopping-bag-image {
+        height: 50%;
+        width: 50%;
+        transform: translate(50%, 0);
+    }
+
+}
+
+/* 1300px - 2000px */
+@media only screen and (min-width: 1300px) and (max-width: 2000px) {
+
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .hide-on-mediumlarge,
+    .display-on-smallscreen {
+        display: none;
+    }
+
+    .main-logo {
+        margin: 0 10px 20px 10px;
+    }
+
+    .shopping-bag-total-desktop {
+        display: contents;
+
+    }
+
+    .carousel-heading {
+        font-size: 4em;
+    }
+
+    body {
+        font-size: 1.2em;
+    }
+
+    .text-font-weight {
+        font-weight: 200;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .product-filter-boxes {
+        text-align: center;
+        font-size: medium;
+    }
+
+    .shopping-bag-image {
+        height: 50%;
+        width: 50%;
+        transform: translate(50%, 0);
+    }
+}
+
+@media only screen and (min-width: 2000px) {
+
+    .shopping-cart-mobile,
+    .mobile-navigation,
+    .mobile-caret,
+    .hide-on-desktop,
+    .mobile-contact-us,
+    .hide-on-mediumlarge,
+    .display-on-smallscreen {
+        display: none;
+    }
+
+    .main-logo {
+        margin: 0 10px 20px 10px;
+    }
+
+    .shopping-bag-total-desktop {
+        display: contents;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .search-box {
+        width: 1000px;
+        margin-left: 5em;
+    }
+
+    body {
+        font-size: 1.5em;
+    }
+
+    .text-font-weight {
+        font-weight: 200;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .carousel-heading {
+        font-size: 4em;
+    }
+
+    .product-filter-boxes {
+        text-align: center;
+        font-size: small;
+    }
+
+    .shopping-bag-image {
+        height: 50%;
+        width: 50%;
+        transform: translate(50%, 0);
+    }
+}

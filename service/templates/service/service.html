@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% load custom_tags %}
+{% block content %}
+{% if service %}
+{% for serv in service %}
+<hr class="mt-5">
+<!-- Bike Repair -->
+<div class="mx-5">
+    <div class="row services-background">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+            <h2 class="mt-5">{{ serv.name|lower|title }}</h2>
+            <i class="fas fa-cog fa-4x mt-3 service-cog"></i>
+        </div>
+    </div>
+    <div class="row services-background"> 
+      <div><i class="fas fa-tools fa-1x mx-2 mt-1 fw-bold"></i></div>
+      <h3 id="repair">{{ serv.titlerepair|lower|title }}</h3>
+      <div>
+          {{ serv.bodyrepair|safe  }}
+      </div>  
+<div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+  <div class="card my-3 grow-effect">
+    <h4 class="card-title text-center mt-3 fw-bold">Basic Service</h4>
+    <div class="card-body card-thumbnails-body">
+      {{ serv.service1|safe }}
+      <h5 class="mx-2 my-3">Price: <strong>€49.99</strong> parts Excluded**</h5>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+  <div class="card my-3 grow-effect">
+    <h4 class="card-title text-center mt-3 fw-bold">Advanced Service</h4>
+    <div class="card-body card-thumbnails-body">
+      {{ serv.service2|safe }}
+      <h5 class="mx-3 my-3">Price: <strong>€99.99</strong> parts Included**</h5>
+    </div>
+  </div>
+</div>
+<!-- Road Rescue -->
+<div class="row services-background">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div><i class="fas fa-ambulance fa-1x mt-3 mx-2 fw-bold"></i></div>
+      <h3 id="rescue">{{ serv.titlerescue|lower|title }}</h3>
+      {{ serv.bodyrescue|safe  }}
+  </div>
+</div>
+</div>
+</div>
+{% endfor %}
+{% else %}
+<h3> Sorry no services found</h3>
+{% endif %}
+<hr class="mt-5">
+{% endblock %}
+
+{% block scripts %}
+{{ block.super }}
+{% endblock %}

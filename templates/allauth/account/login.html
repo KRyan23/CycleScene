@@ -1,0 +1,40 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% load i18n %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+<hr class="mt-5">
+<div class="container contrast-background">
+  <div class="row mt-5 text-center">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
+      <h2>{% trans "Sign In" %}</h2>
+      <p>{% blocktrans %}If you have not created an account yet, then please
+        <a href="{{ signup_url }}" class="sign-up register fw-bold">Register</a> first.{% endblocktrans %}</p>
+    </div>
+  </div>
+</div>
+<div class="container contrast-background">
+  <div class="row justify-content-around">
+    <div class="col-8 col-sm-12 col-md-4 offset-lg-1 col-lg-4 offset-xl-1 col-xl-4">
+      <div class="row mt-5">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <form class="login float-start" method="POST" action="{% url 'account_login' %}">
+            {% csrf_token %}
+            {{ form|crispy }}
+            {% if redirect_field_value %}
+            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <div class="mb-5">
+              <a class="button secondaryAction"
+                href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+              <button class="primaryAction btn btn-outline-secondary" type="submit">{% trans "Sign In" %}</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="mt-5">
+{% endblock %}

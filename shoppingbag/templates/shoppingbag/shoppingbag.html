@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+{% block content %}
+
+{% if shoppingbag_items %}
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center mt-3">
+      <h2 class="fw-bold">Welcome to your shopping bag</h2>
+    </div>
+  </div>
+  <!-- Date and Product count-->
+  <div class="row mt-5 date-product-row">
+    <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3">
+      <span class="date mx-3 mt-2 fw-bold rounded-pill bg-secondary text-light fs-6">{% now "jS F Y" %}</span>
+    </div>
+    <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 products-listed">
+      <span class="badge rounded-pill bg-secondary fw-bold text-light float-end fs-6 mb-3 mx-3"><a
+          class="results-number mx-1">{{ shoppingbag_items|length }}</a>
+        Products Listed</span>
+    </div>
+  </div>
+</div>
+<!-- Individual Product Rows -->
+<div class="container-fluid my-0 mt-5">
+  <div class="row">
+    {% for shop in shoppingbag_items %}
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+      <div class="card ">
+        <p class="list-group-item"><span class="float-start fw-bold">Name: {{ shop.product.name|lower|title }}</span><span
+            class="float-end fw-bold">Item: <span class="item-number">{{ forloop.counter }} <span class="item-of">of </span> {{ shoppingbag_items|length }}</span></span></p>
+        <p class="list-group-item"><span class="float-start fw-bold fs-6">Ean:
+            {{ shop.product.ean|lower|title }}</span><span class="text-center fs-6 float-end fw-bold">Price: €<span
+              class="rating-number">{{ shop.product.price|intcomma }}</span></span></p>
+        <img src="{{ shop.product.image1.url }}" alt="{{ shop.product.name }}" class="shopping-bag-image" />
+        <!-- Form to update the product quantity -->
+        <form action="{% url 'changebag_quantity' shop.item_id %}" method="POST"
+          class="mt-5 form text-center shopping-bag-form">{% csrf_token %}
+                          <div class="text-center">
+          <span id="error_id_{{ shop.item_id }}" class="quantity-error-message"></span></div>
+          <a class="btn btn-outline-success btn-minus decrement-value" data-item_id="{{ shop.item_id }}"
+            id="decrement-qty_{{ shop.item_id }}">
+            <i class="fa fa-minus"></i></a>
+          <input class="form-control form-quantity qty_input text-center qt" type="number" name="quantity"
+            value="{{ shop.quantity }}" min="1" max="10" data-item_id="{{ shop.item_id }}"
+            id="id_qty_{{ shop.item_id }}">
+          <a class="btn btn-outline-success btn-plus increment-value" data-item_id="{{ shop.item_id }}"
+            id="increment-qty_{{ shop.item_id }}">
+            <i class="fa fa-plus"></i></a>
+          <div class="text-center">
+            <button class="btn btn-outline-success mt-4 mb-4 change-product-quantity text-center">Update
+              Quantity</button>
+          </div>
+        </form>
+        <div class="text-center">
+          <button class="btn btn-outline-danger mt-4 mb-4 delete-item-from-bag fw-bold" id="{{ shop.item_id }}">Remove
+            Item</button>
+        </div>
+      </div>
+    </div>
+    <div class="mb-5"></div>
+    {% endfor %}
+    <div class="row mx-0">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="text-center fs-4 fw-bold sub-total">Sub Total: €{{ bagtotal|floatformat:2|intcomma }}</div>
+      </div>
+    </div>
+    <!-- Keep shopping / Secure checkout buttons -->
+    <div class="row mx-0">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <a href="{% url 'products' %}" class="btn btn-outline-secondary float-start mt-3 mx-0" role="button"><span
+            class="product-details-navigation-buttons text-wrap"></span><i class="fas fa-arrow-left mx-2"></i>Shop
+          Products</a>
+        <a href="{% url 'checkout' %}" class="btn btn-success float-end mt-3" role="button"><span
+            class="product-details-navigation-buttons text-wrap fw-bold">Secure Checkout</span><i
+            class="fas fa-lock mx-2 my-0"></i></a>
+      </div>
+    </div>
+    <hr class="mt-5">
+  </div>
+</div>
+{% else %}
+<div class="container-fluid no-products-found">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="text-center text-font-weight ">
+        <h2 class="pt-5">Hmm your Shopping Bag Appears Empty #:-(</h2>
+        <h3 class="mt-5 empty-bag-message">Why not add some items ?</h3>
+        <i class="fas fa-shopping-bag bag-spinner fa-3x mt-5 mb-3"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="text-center">
+        <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg mt-5 fw-bold">ALL PRODUCTS</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{{ block.super }}
+<script>
+  // Change the quantity on each shopping bag item
+
+  $('.change-product-quantity').click(function (e) {
+    var readFormQuantity = $(this).prev('.shopping-bag-form');
+    readFormQuantity.submit();
+  })
+
+  // Remove the item from the shopping bag 
+  $('.delete-item-from-bag').click(function (e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id');
+    var url = `/shoppingbag/remove/${itemId}/`;
+    var data = {
+      'csrfmiddlewaretoken': csrfToken
+    };
+    $.post(url, data)
+      .done(function () {
+        location.reload();
+      });
+  })
+</script>
+<script src="/static/js/quantityShoppingBag.js"></script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% load static %}
+{% load humanize %}
+<div class="toast-header bg-secondary text-white">
+  <i class="fas fa-info fa-1x"></i>
+  <span class="text-center px-2 fs-6 fw-bold">Information</span>
+</div>
+<div class="toast-body">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-12 mt-3 toast-message">
+      {{ message }}
+    </div>
+  </div>
+  <div class="row pt-2">
+    <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <button type="button" class="btn btn-outline-secondary btn-sm float-end mx-1" data-bs-dismiss="toast">Close</button>
+    </div>
+  </div>
+</div>

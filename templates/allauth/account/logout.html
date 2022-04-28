@@ -1,0 +1,38 @@
+{% extends "account/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Out" %}{% endblock %}
+
+{% block content %}
+<hr class="mt-5">
+<div class="container contrast-background">
+  <div class="row mt-5 text-center">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5 mb-3">
+      <h2>{% trans "Sign Out" %}</h2>
+      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+    </div>
+  </div>
+</div>
+<div class="container contrast-background">
+  <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+        <form method="post" action="{% url 'account_logout' %}">
+          {% csrf_token %}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
+          {% endif %}
+          <button class="primaryAction btn btn-outline-warning text-dark" type="submit">{% trans 'Sign Out' %}</button>
+        </form>
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center mb-3">
+            <a href="{% url 'products' %}" class="btn btn-sm btn-secondary mt-5">{% trans 'All Products' %}</a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+<hr class="mt-5">
+
+
+{% endblock %}

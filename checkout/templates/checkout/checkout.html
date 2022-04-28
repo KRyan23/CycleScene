@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% load static %}
+{% load humanize %}
+{% block css %}
+{% endblock %}
+{% block content %}
+
+
+<div class="overlay"></div>
+{% if shoppingbag_items %}
+<!-- Date and Time + Header-->
+<div>
+<div class="row mt-5 secure-checkout-header">
+    <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
+        <span class="date mx-3 mt-2 fw-bold rounded-pill bg-secondary text-light fs-6">{% now "jS F Y" %}</span>
+    </div>
+    <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 products-listed">
+        <span class="badge rounded-pill bg-secondary fw-bold text-light float-end fs-6 mb-3 mx-3"><a
+            class="results-number mx-1">{{ shoppingbag_items|length }}</a>
+          Products Listed</span>
+    </div>
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <h2 class="fw-bold mb-4">Secure Checkout</h2>
+          <span class="fw-bold"><i class="fas fa-lock fa-2x"></i></span>
+        </div>  
+      </div> 
+</div>
+<!-- end header -->
+<!-- start summary -->
+<div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+        <h3 class="mt-5">My Order</h3>
+        <hr class="myorder text-muted mt-1">
+        </div>
+        <div class="row mt-2">
+            <div class="col-7 offset-2">
+                <p class="mb-1 mt-0 small">Items:(<span class="items"> {{ shoppingbag_items|length }} </span>)</p>
+            </div>
+            <div class="col-3 text-right">
+                <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+            </div>
+        </div>
+        {% for shop in shoppingbag_items %}
+            <div class="row">
+                <div class="col-2 mb-1">
+                    <a href="{% url 'product_detail' shop.product.id %}" title="{{ shop.product.name|lower|title }}">
+                        {% if shop.product.image1.url %}
+                          <img class="w-100" src="{{ shop.product.image1.url }}" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
+                        {% elif shop.product.image2.url %}
+                          <img class="w-100" src="{{ shop.product.image2.url }}" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
+                        {% elif shop.product.image3.url %}
+                          <img class="w-100" src="{{ shop.product.image3.url }}" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
+                        {% else %}
+                        <img class="w-75" src="{{ MEDIA_URL }}imageNotFound.jpg" alt="{{ shop.product.name|lower|title }}" title="{{ shop.product.name|lower|title }}">
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-7">
+                    <p class="my-0 fw-bold text-wrap">{{ shop.product.name|lower|title }}</p>
+                    <p class="my-0 small text-muted">Quantity: {{ shop.quantity }}</p>
+                    <p class="mb-1 mt-0 small">Instock:{% if shop.product.instock %}<span class="free-delivery-text"> Yes</span> {% else %}{{ shop.product.discount }}{% endif %}</p>
+                <p class="mb-1 mt-0 small">Discount:{% if shop.product.discount %}<span class="free-delivery-text">Your In Luck!</span>{% else %}<em>Not Currently</em>{% endif %}</p>
+                </div>
+                <div class="col-3 text-right">
+                    <p class="my-0 small text-muted">€{{ shop.product.price|floatformat:2|intcomma  }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        <hr class="my-0">
+        <div class="row text-black text-right">
+            <div class="col-7 offset-2">
+                <p class="my-0">Order Total: </p>
+                <p class="my-0">Delivery: </p>
+                <p class="my-0">Grand Total:</p>
+            </div>
+            <div class="col-3"> 
+                <p class="my-0">€{{ bagtotal|floatformat:2|intcomma }}</p>
+                {% if delivery == 0 %}
+                <p class="my-0"><span class="free-delivery-text">FREE!</span></p>
+                    {% else %}
+                <p class="my-0 fw-bold text-primary">€<u>{{ delivery|floatformat:2 }}</u></p>
+                {% endif %}
+                <p class="my-0"><strong>€{{ total_bag_cost }}</strong></p>
+            </div>
+        </div>
+    </div>
+{% if delivery != 0 %}
+<p class="text-center text-primary fw-bold"><u>Spend €{{ free_delivery_delta }} or more for free delivery!</u></p>
+{% endif %}
+<!-- end summary-->
+<!-- start details-->
+<div class="row">
+<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center mt-5">
+    <h4>Please fill out the form below so we can process your order</h4>
+    </div>
+<div class="row d-flex justify-content-around">
+    <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 text-center mt-5">
+    <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+        {% csrf_token %}
+        <fieldset>
+            <legend class="fieldset-label small fw-bold px-2 w-auto">Details</legend>
+            {{ order_form.first_name | as_crispy_field }}
+            {{ order_form.last_name | as_crispy_field }}
+            {{ order_form.email | as_crispy_field }}
+            {{ order_form.mobile_number | as_crispy_field }}
+        </fieldset>
+        <fieldset>
+            <legend class="fieldset-label small fw-bold mt-2 px-2 w-auto">Delivery</legend>
+            {{ order_form.address1| as_crispy_field }}
+            {{ order_form.address2 | as_crispy_field }}
+            {{ order_form.county | as_crispy_field }}
+            {{ order_form.city | as_crispy_field }}
+            {{ order_form.country | as_crispy_field }}
+            {{ order_form.postcode | as_crispy_field }}
+            <div class="form-check form-check-inline mt-2 mr-0">
+            <label class="form-check-label" for="id-save-info">Save my info for next time</label>
+            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>   
+            </div>
+        </fieldset>
+        <fieldset class="mt-2">
+            <span class="fieldset-label float-start fw-bold fs-6 mt-1 mb-3 w-auto">Payment Info</span>
+            </fieldset>
+            <div class="mb-3 form-control stripe-card-input stripe-style-input" id="card-element"></div>
+            <!--For Form errors -->
+            <div class="mb-3 text-danger stripe-style-input" id="card-errors" role="alert"></div>
+             <!-- hidden input for the view payment intent id -->
+             <input type="hidden" value="{{ client_secret }}" name="client_secret">
+
+
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <p class="small my-0">
+                    <span class="icon">
+                        <i class="fas fa-exclamation-circle text-danger"></i>
+                    </span>
+                    <span>Your card will be charged <strong class="text-danger">€{{ total_bag_cost }}</strong></span>
+                </p>
+            </div>
+            </div>
+{% endif %}
+<!-- Back to Shopping bag & Complete Payment buttons -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-secondary float-start mt-3 mx-0" role="button"><span
+                    class="product-details-navigation-buttons text-wrap"></span><i class="fas fa-arrow-left mx-2"></i>Review Bag
+                    </a>
+                <button class="btn btn-success float-end mt-3 mx-0" id="submit-button"><span
+                    class="product-details-navigation-buttons text-wrap fw-bold">Make Payment</span><i
+                    class="fas fa-lock mx-2 my-0"></i></button>
+                </div>
+            </div>
+        </form>          
+</div>
+</div> 
+</div> 
+<hr class="mt-5">
+<div id="loading-overlay">
+    <span class="fs-1 text-light logo-font loading-spinner">
+        <span class="icon">
+            <i class="fas fa-bicycle bike-rotate fa-3x"></i>
+        </span>
+    </span>
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{{ block.super }}
+<script src="https://js.stripe.com/v3/"></script>
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %}

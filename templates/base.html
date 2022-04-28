@@ -1,0 +1,409 @@
+{% load static %}
+{% load humanize %}
+{% load custom_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'media/favicon.ico' %}" rel="shortcut icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="preconnect">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <!-- For Tiny Slider 2-->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <link rel="apple-touch-icon" href="{% static 'media/apple-touch-icon.png' %}">
+  <title>CycleScene</title>
+</head>
+<body>
+  {% if request.user.is_superuser %}
+  <div class="top-discount-banner-super text-center">
+    <div class="text-grow"><p>You are currently logged in as Superuser, dont forget to logout!</p></div>
+  </div>
+  {% else %}
+  <div id="discount" class="top-discount-banner-user text-center">
+    <div class="text-grow"><p>Free Delivery on orders over €{{ free_delivery_delta }}</p></div>
+  </div>
+  {% endif %}
+  <!--Navigation start-->
+  <div><!-- displays this searchbar on screen sizes 500px and above -->
+    <nav class="navbar navbar-expand-lg navbar-light"><a href="{% url 'home' %}" class="navbar-brand">
+      <img class="main-logo" alt="My logo" src="{% static 'media/logo101.png' %}">
+        <span class="brand-heading"></span></a>
+      <div class="col-xm-4 col-sm-6 col-md-8 col-lg-4 col-xl-6 hide-on-smallscreen">
+        <form method="GET" action="{% url 'products' %}" class="d-flex alpha">
+          <input type="text" class="form-control search-box" name="q" placeholder="Search here...">
+          <button type="submit" class="btn btn-outline-secondary desktop-search-button" aria-label="Search"><i
+              class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <button class="navbar-toggler mx-2" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
+        aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="ToggleNavigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<div class="collapse navbar-collapse" id="toggleMobileMenu">
+  <div class="navbar-nav ms-auto">
+    <ul>
+          {% if user.is_authenticated %}
+            <!-- superuser menu -->
+              {% if request.user.is_superuser %}
+              <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link mobile-navigation-topmenu">
+                <span class="override-link-color fs-5">Product Manager</span></a></li>
+              <li><a href="{% url 'account_logout' %}" class="nav-link mobile-navigation-topmenu">
+                <span class="override-link-color text-font-weight fs-5">Logout</span></a></li>
+              <!-- standard user menu -->
+              {% else %}
+                <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'profile' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+                <span class="override-link-color text-font-weight ">My Profile</span></a></li>
+                <li><a href="{% url 'account_logout' %}" class="nav-link navlink-alignment mobile-navigation-topmenu">
+                  <span class="override-link-color text-font-weight">Logout</span></a></li>
+              {% endif %}
+              <!-- not logged in -->
+          {% else %}
+          <li class="d-block d-lg-inline-block d-xl-inline-block"><a href="{% url 'account_login' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+                class="override-link-color text-font-weight">Login</span></a></li>
+          <li><a href="{% url 'account_signup' %}" class="nav-link navlink-alignment mobile-navigation-topmenu"><span
+                class="override-link-color text-font-weight">Register</span></a></li>
+          {% endif %}
+          <!-- Reduce the text size slightly to make room for extra digits if over €9999.99 -->
+          {% if bagtotal > 9999.99 %}
+          <li class="mx-4"><span class="shopping-bag-total-desktop hide-on-desktop">
+            <a href="{% url 'view_shoppingbag' %}">
+          <i class="fas fa-shopping-bag shopping-bag shopping-cart-desktop fs-5">
+          </i>€{{ bagtotal|floatformat:2|intcomma }}</a></span></li>
+              {% else %}
+              <li class="mx-4"><span class="shopping-bag-total-desktop hide-on-desktop">
+                <a href="{% url 'view_shoppingbag' %}">
+              <i class="fas fa-shopping-bag shopping-bag fa-lg shopping-cart-desktop">
+              </i>€{{ bagtotal|floatformat:2|intcomma }}</a></span></li>
+              {% endif %}
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle  mobile-dropdown-heading"
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
+                <div class="dropdown-menu" title="bikesDropdown">
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=mountainbikes">Mountain Bikes</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=roadbikes">Road Bikes</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=citybikes">City Bikes</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+                <div class="dropdown-menu" title="componentsDropdown">
+                 <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=saddles">Saddles</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=wheels">Wheels</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
+                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
+                <div class="dropdown-menu">
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=bikelocks">Bike Locks</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=pumps">Pumps</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=lights">Lights</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
+                <div class="dropdown-menu" title="riderDropdown">
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=helmets">Helmets</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% url 'products' %}?category=eyewear">Eyewear</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none">
+                <a href="#" class="dropdown-toggle navlink-alignment mobile-dropdown-heading"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                <div class="dropdown-menu" title="servicesDropdown">
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% section 'service' 'rescue' %}">Road Rescue</a>
+                  <a class="nav-link dropdown-item text-font-weight mx-3" href="{% section 'service' 'repair' %}">Bike Repair</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown hide-on-desktop d-block d-lg-none d-xl-none"><a href="{% url 'products' %}" class="navlink-alignment mobile-dropdown-heading">All Products</a></li>
+            </ul>
+          </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Displays searchbar on screens 499px and below-->
+  <div class="col-12 text-center hide-on-mediumlarge">
+    <form method="GET" action="{% url 'products' %}" class="d-flex alpha mobile-searchbar">
+      <input type="text" class="form-control" name="q" placeholder="Search here...">
+      <button type="submit" class="btn btn-outline-secondary" aria-label="Search"><i
+          class="fa fa-search"></i></button>
+    </form>
+  </div>
+      <div class="col-12 text-center mb-0">
+        <div class="shopping-cart-mobile"><a href="{% url 'view_shoppingbag' %}">
+          <i class="fas fa-shopping-bag fa-lg shopping-bag"><span class="shopping-bag-total">€{{ bagtotal|floatformat:2|intcomma }}</span></i></a>
+        </div>
+      </div>
+  <div class="desktop-navigation">
+    <nav>
+      <ul class="text-center bg-light">
+        <li><a href="{% url 'home' %}" class="nav-link navlink-alignment"><i class="fas fa-home fa-2x"></i><i
+              class="fas fa-bicycle bike"></i></a></li>
+          <li class="nav-item"><a href="{% url 'products' %}" class="navlink-alignment desktop-nav-link">All Products</a></li>
+        <li class="nav-item dropdown">
+          <a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bikes</a>
+          <div class="dropdown-menu" title="bikesDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=mountainbikes">Mountain Bikes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=roadbikes">Road Bikes</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=citybikes">City Bikes</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="{% url 'products' %}?category=components" class="dropdown-toggle navlink-alignment desktop-nav-link"
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+          <div class="dropdown-menu" title="componentsDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=saddles">Saddles</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=wheels">Wheels</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="{% url 'products' %}?category=accessories" class="dropdown-toggle navlink-alignment desktop-nav-link"
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
+          <div class="dropdown-menu">
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=lights">Lights</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=pumps">Pumps</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=bikelocks">Bike Locks</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rider Safety</a>
+          <div class="dropdown-menu" title="riderDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=helmets">Helmets</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% url 'products' %}?category=eyewear">Eyewear</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown"><a href="#" class="dropdown-toggle navlink-alignment desktop-nav-link"
+             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu" title="servicesDropdown">
+            <a class="nav-link dropdown-item text-font-weight" href="{% section 'service' 'repair' %}">Bike Repair</a>
+            <a class="nav-link dropdown-item text-font-weight" href="{% section 'service' 'rescue' %}">Road Rescue</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--Navigation end-->
+  {% block nav %}
+  {% endblock %}
+  
+  {% if messages %}
+  <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-end align-items-end w-100">
+    <div class="toast-container">
+      <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false" >
+  {% for message in messages %}
+      {% if message.tags == 'success'%}
+      {% include 'includes/toasts/success.html' %}
+      {% elif message.tags == 'info' %}
+      {% include 'includes/toasts/info.html' %}   
+      {% elif message.tags == 'warning' %}
+      {% include 'includes/toasts/warning.html' %}
+      {% elif message.tags == 'error' %}
+      {% include 'includes/toasts/error.html' %}
+      {% endif %}
+  {% endfor %}
+  </div>
+</div>
+</div>
+{% endif %}
+
+  
+  <!-- End hide main page content -->
+
+  
+  {% block content %}
+  {% endblock %}
+  <!-- This will be for products inside in each category-->
+  <!-- Brands we use carousel start -->
+  <div class="brands">
+    <h3 class="text-center my-5">Some of our brands</h3>
+    <hr class="text-center">
+    <div class="container">
+      <div class="slider">
+        <div class="brand-carousel-1">
+          <!--Altura-->
+        </div>
+        <div class="brand-carousel-2">
+          <!--Shimano-->
+        </div>
+        <div class="brand-carousel-3">
+          <!--Continental-->
+        </div>
+        <div class="brand-carousel-4">
+          <!--Giant-->
+        </div>
+        <div class="brand-carousel-5">
+          <!--Oakley-->
+        </div>
+        <div class="brand-carousel-6">
+          <!--SiS-->
+        </div>
+        <div class="brand-carousel-7">
+          <!--Liv-->
+        </div>
+        <div class="brand-carousel-8">
+          <!--Schwalbe-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Brands we use carousel end -->
+  
+  <!-- footer start-->
+  <footer class="panel-primary">
+    <div class="desktop-footer bg-light">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+            <span class="mx-3 fs-5">Opening Hours</span>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <span class="mx-3 fs-5 desktop-contact-us">Contact Us</span>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!--Opening hours -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ">
+            <div class="w-75 mt-4">
+              <div class="float-start">
+                <span class="mx-3 d-block">Mon - Fri</span> 
+                  <span class="mx-3 d-block">Saturday</span>
+                    <span class="mx-3 d-block">Sundays</span>
+                      <span class="mx-3 d-block">Bank Holidays</span>
+              </div>
+              <div class="float-end">
+                <span class="mx-2 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i> 7am - 11pm</span>
+                <span class="mx-2 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i> 9am - 9pm</span>
+                <span class="mx-2 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i> 9am - 6pm</span>
+                <span class="mx-2 mb-5 d-block fw-bold"><i class="fas fa-bicycle bicycle-admin mx-2"></i>10am - 5pm</span>
+              </div>
+             
+            </div>
+          </div>
+          <!--Contact-->
+          <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <span class="mx-3 mt-5 fs-5 mobile-contact-us">Contact Us</span>
+            <hr class="mobile-contact-us px-0">
+            <p class="mx-3 mt-3">CycleScene Ltd. 101 Snugborough Road, Blanchardstown,
+              Dublin 15, D15 CXC2 | <a href="https://goo.gl/maps/B68KscoY3XgKWkRD6" class="maps-location">Map<i
+                  class="fas fa-map-marker-alt fa-1x mx-1"></i></a></p>
+            <p class="mx-3">Landline:<a href="tel:018551522" class="footer-link"><span class="text-font-weight"> (01)
+                  8551522</span></a></p>
+            <a class="btn btn-lg" href="https://www.facebook.com/" target="_blank" rel="noopener"
+              title="facebook" role="button" aria-label="facebook">
+              <i class="fab fa-facebook social-media fa-2x"></i></a>
+            <a class="btn btn-lg" href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="youtube"
+              title="youtube" role="button">
+              <i class="fab fa-youtube-square social-media fa-2x"></i></a>
+            <a class="btn btn-lg" href="https://twitter.com/?lang=en/" target="_blank" rel="noopener"
+              aria-label="twitter" title="twitter" role="button">
+              <i class="fab fa-twitter social-media fa-2x"></i></a>
+            <a class="btn btn-lg" href="https://instagram.com/?lang=en/" target="_blank" rel="noopener"
+              aria-label="instagram" title="instagram" role="button">
+              <i class="fab fa-instagram social-media fa-2x"></i></a>
+          </div>
+        </div>
+      </div>
+      <!--About-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+            <span class="mt-3 mx-3 fs-5">About CycleScene</span>
+            <hr>
+            <p class="mx-3 mt-4">CycleScene was formed in 1992 by 2 passionate riders from very different backgrounds.
+              There goal was simply to deliver great products at competitve prices.</p>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 ">
+            <span class="mt-3 mx-3 fs-5">Payment</span>
+            <hr>
+            <a class="btn btn-lg payment-types" href="https://stripe.com/" target="_blank" rel="noopener"
+              aria-label="stripe" title="stripe" role="button">
+              <i class="fab fa-cc-stripe fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.visa.ie/" target="_blank"
+              rel="noopener" aria-label="visa" title="visa" role="button">
+              <i class="fab fa-cc-visa fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.mastercard.ie/" target="_blank"
+              rel="noopener" aria-label="mastercard" title="mastercard" role="button">
+              <i class="fab fa-cc-mastercard fa-2x mt-2"></i></a>
+            <a class="btn btn-lg payment-types disabled-feature" href="https://www.paypal.com/" target="_blank"
+              rel="noopener" aria-label="paypal" title="paypal" role="button">
+              <i class="fab fa-cc-paypal fa-2x mt-2"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Shop by category -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-lg-6 col-xl-6 pt-5">
+          <span class="mx-3 fs-5">Shop By Category</span>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+          <hr>
+        </div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=roadbikes" class="nav-link">Road Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=citybikes" class="nav-link">City Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=mountainbikes" class="nav-link">Mountain Bikes</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=saddles" class="nav-link">Saddles</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=wheels" class="nav-link">Wheels</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=pumps" class="nav-link">Pumps</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=bikelocks" class="nav-link">Bike Locks</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=lights" class="nav-link">Lights</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=helmets" class="nav-link">Helmets</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% url 'products' %}?category=eyewear" class="nav-link">Eyewear</a></div>
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% section 'service' 'repair' %}" class="nav-link">Bike Repair</a></div>
+		<!-- link to a shared template road rescue-->
+        <div class="col-xm-3 col-sm-6 col-md-2 col-6"><a href="{% section 'service' 'rescue' %}" class="nav-link">Road Rescue</a></div>
+		<!-- link to a shared template Bike Repair ^-->
+      </div>
+    </div>
+    <!--copyright and terms and conditions-->
+    <hr>
+    <div class="container-fluid mt-5 mb-4">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+          <p class="text-wrap">© Copyright 2022 CycleScene all rights reserved. <a href="{% section 'legal' 'privacy' %}" class="footer-link">Privacy
+              Policy</a> | <a href="{% section 'legal' 'terms' %}" class="footer-link">Terms and Conditions.</a> | <a href="{% section 'legal' 'returns' %}"
+              class="footer-link">Returns Policy.</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--footer end-->
+  <!--scripts-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <!-- For Tiny Slider 2-->
+  <script src="/static/js/brandcarousel.js"></script>
+   {% block postloadjs %}
+  <script>
+    $(document).ready(function(){
+      $('.toast').toast('show');
+    });
+  </script>
+   {% endblock %}
+  {% block scripts %}
+  {% endblock %}
+</body>
+
+</html>

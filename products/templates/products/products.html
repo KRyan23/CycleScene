@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% if current_categories %}
+<div class="mt-5"></div>
+<hr class="mb-4">
+{% else %}
+<div class="container mt-5">
+  <div class="row d-flex">
+    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
+        <span class="sort-by-price">Price</span>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=price&direction=asc"><i class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=price&direction=desc"><i class="fas fa-angle-down"></i></a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
+        <span>Rating</span>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=rating&direction=asc"><i
+              class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=rating&direction=desc"><i
+              class="fas fa-angle-down"></i></a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
+        <span>Category</span>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=category&direction=asc"><i class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=category&direction=desc"><i class="fas fa-angle-down"></i></a>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-6">
+      <div class="product-filter-boxes product-filter-boxes-mobile py-1 my-1">
+        <span>Name</span>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=name&direction=asc"><i class="fas fa-angle-up"></i></a>
+        <a class="nav-link d-inline" href="{% url 'products' %}?sort=name&direction=desc"><i class="fas fa-angle-down"></i></a>
+        </div>
+    </div>
+  </div>
+</div>
+<hr>
+{% endif %}
+<!-- breadcrumb nav for each category  -->
+<div class="container">
+  <div class="row d-flex">
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-12">
+      <nav aria-label="breadcrumb">
+        <ul class="breadcrumb mt-0">
+          <li class="breadcrumb-item bg-gradient-secondary fs-5 mx-3 px-0"><a href="{% url 'home' %}">Home</a></li>
+          {% for category in current_categories %}
+          {% if forloop.last %}
+          <li class="breadcrumb-item bg-gradient-secondary fs-5">
+            <span class="mx-1">{{ category.friendly_name }}</span></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-12">
+      <div class="float-start float-sm-end float-md-end float-lg-end float-xl-end mx-3 mb-3"><span
+          class="badge rounded-pill bg-secondary text-light"><a class="results-number mx-1">{{ products|length }}</a>
+          Products Found</span></div>
+    </div>
+  </div>
+</div>
+{% if products|length == 0 %}
+<div class="container-fluid no-products-found">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="text-center text-font-weight ">
+        <h2 class="pt-5">Sorry no results found</h2>
+        <h3 class="mt-5">Use the button below to browse all products</h3>
+        <i class="fas fa-bicycle bike-spinner fa-3x mt-3"></i>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="text-center">
+        <a href="{% url 'products' %}" class="btn btn-outline-secondary btn-lg mt-5 fw-bold">ALL PRODUCTS</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+<!-- Renders out each product -->
+<div class="container-fluid my-0">
+  <div class="row">
+    {% for product in products %}
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4 ">
+      <div class="card my-3 grow-effect">
+        <span class="text-center my-2">{{ product.category.friendly_name }}</span>
+        <hr class="my-1">
+        <img src="{{ product.image1.url }}" alt="{{ product.name }}" />
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">{{ product.name|upper|truncatechars:20}}</h3>
+          <p class="fw-bold">€ {{ product.price }}</p>
+          <a href="{% url 'product_detail' product.id %}"
+            class="btn btn-secondary stretched-link override-link-color">More Details</a>
+          <span class="float-end">Rating:<span class="product-rating px-1">{{ product.rating }} </span><i
+              class='fas fa-star fa-sm starcolor star-color-effect'></i></span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="https://js.stripe.com/v3/"></script>
+{% endblock %}
+
