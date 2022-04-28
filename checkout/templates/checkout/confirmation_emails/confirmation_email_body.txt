@@ -1,0 +1,22 @@
+Congratulations {{ order.first_name }}
+
+This is confirmation that you order at CycleScene has been processed.
+
+Your Order information is below:
+
+Order Number:
+Order Date:
+Order Total:   € {{ order.order.total }}
+Delivery Cost: € {{ order.delivery_cost }}
+Grand Total:   € {{ order.grand_total }} (maybe bag total)
+
+Your Contact details are below:
+
+Contact Number: {{ order.mobile_phone }}
+Address First Line:{{ order.address1 }}
+Address Second Line:{{ order.address2 }}
+Address City:{{ order.city }}
+Address County:{{ order.county }}
+Address Country:{{ order.country }}
+
+Thank you for your order, Best reagrds the crew at CycleScene.
