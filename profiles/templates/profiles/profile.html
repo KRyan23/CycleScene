@@ -11,14 +11,17 @@
     <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
       <h3 class="mt-1 text-center">Product Manager</h3>
       <hr>
-      <p class="text-center">You are now logged in as a superuser, from here you can manage all products in the database.</p>
+      <p class="text-center">You are now logged in as a superuser, from here you can manage all products in the
+        database.</p>
       <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
         <h4 class="mt-4 mb-4">Actions Availible:</h4>
         <i class="fas fa-user-cog fa-2x mt-1 mb-4"></i>
         <div class="row d-flex justify-content-around">
-        <div class="rounded-pill bg-light col-sm-6 col-md-4 col-lg-3 col-xl-3 fs-4"><span class="mx-2 text-success">Create</span><span class="mx-2 text-warning">Update</span><span class="mx-2 text-danger">Delete</span></div>
+          <div class="rounded-pill bg-light col-sm-6 col-md-4 col-lg-3 col-xl-3 fs-4"><span
+              class="mx-2 text-success">Create</span><span class="mx-2 text-warning">Update</span><span
+              class="mx-2 text-danger">Delete</span></div>
+        </div>
       </div>
-    </div>
       <!-- end header -->
       <!-- If there are no products found-->
       {% if products|length == 0 %}
@@ -49,7 +52,8 @@
                 <div class="row">
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
                     <a href="{% url 'add_product' %}"
-                      class="btn btn-success fw-bold d-block stretched-link override-link-color">Create A New Product</a>
+                      class="btn btn-success fw-bold d-block stretched-link override-link-color">Create A New
+                      Product</a>
                   </div>
                 </div>
               </div>
@@ -95,81 +99,83 @@
     </div>
   </div>
 </div>
-      <!-- end superuser-->
-      {% endif %}
-      {% if not usertype %}
-      <!-- If just a standard user and has order history -->
-      <div class="mx-5 mt-3">
-        <div class="row services-background">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-            <h2 class="mt-5">Welcome to Your Profile Page <em
-                class="profile-name fw-bold">{{ profile|lower|title }}</em> </h2>
-          </div>
+<!-- end superuser-->
+{% endif %}
+{% if not usertype %}
+<!-- If just a standard user and has order history -->
+<div class="mx-5 mt-3">
+  <div class="row services-background">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+      <h2 class="mt-5">Welcome to Your Profile Page <em class="profile-name fw-bold">{{ profile|lower|title }}</em>
+      </h2>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 float-start">
+    <h3 class="mt-5 text-center">Default Delivery Information </h3>
+    <hr class="mx-5">
+    <form method="POST" action="{% url 'profile' %}" id="profile-update-form" class="mx-5">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <div class="row">
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-start">
+          <button class="primaryAction btn btn-outline-success" type="submit">Update My Information</button>
+        </div>
+        <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-end">
+          <a href="{% url 'products' %}" class="btn btn-warning float-end">Back to all Products</a>
         </div>
       </div>
-       <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 float-start">
-            <h3 class="mt-5 text-center">Default Delivery Information </h3>
-            <hr class="mx-5">
-            <form method="POST" action="{% url 'profile' %}" id="profile-update-form" class="mx-5">
-              {% csrf_token %}
-              {{ form|crispy }}
-              <div class="row">
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-start">
-                  <button class="primaryAction btn btn-outline-success" type="submit">Update My Information</button>
-                </div>
-                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 float-end">
-                  <a href="{% url 'products' %}" class="btn btn-warning float-end">Back to all Products</a>
-                </div>
-              </div>
-            </form>
-        </div> 
-        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
-          <h3 class="mt-5">Your Order History </h3>
-          <hr class="mx-5">
-          {% if orders %}
-          <div class="table-responsive mx-5">
-            <table class="table table-sm table-borderless">
-              <thead>
-                <tr>
-                  <th>Order Number</th>
-                  <th>Order Date</th>
-                  <th>Order Items</th>
-                  <th>Order Total</th>
-                </tr>
-              </thead>
-              <tbody>
-                {% for order in orders %}
-                <tr>
-                  <td>
-                    <a href="{% url 'order_history' order.order_number %}" class="order-number" title="{{ order.order_number}}">
-                      {{ order.order_number|truncatechars:7 }}</a>
-                  </td>
-                  <td><small>{{ order.date }}</small></td>
-                  <td>
-                    <ul class="list-unstyled">{% for item in order.lineitems.all %}
-                      <li class="small">
-                      <span title="{{ item.product.name|lower|title }}">{{ item.product.name|lower|title|truncatechars:8 }}</span></li>
-                      {% endfor %}
-                    </ul>
-                  </td>
-                  <td>€{{ order.bag_total }}</td>
-                </tr>
+    </form>
+  </div>
+  <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+    <h3 class="mt-5">Your Order History </h3>
+    <hr class="mx-5">
+    {% if orders %}
+    <div class="table-responsive mx-5">
+      <table class="table table-sm table-borderless">
+        <thead>
+          <tr>
+            <th>Order Number</th>
+            <th>Order Date</th>
+            <th>Order Items</th>
+            <th>Order Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+          <tr>
+            <td>
+              <a href="{% url 'order_history' order.order_number %}" class="order-number"
+                title="{{ order.order_number}}">
+                {{ order.order_number|truncatechars:7 }}</a>
+            </td>
+            <td><small>{{ order.date }}</small></td>
+            <td>
+              <ul class="list-unstyled">{% for item in order.lineitems.all %}
+                <li class="small">
+                  <span
+                    title="{{ item.product.name|lower|title }}">{{ item.product.name|lower|title|truncatechars:8 }}</span>
+                </li>
                 {% endfor %}
-              </tbody>
-            </table>
-          </div>
-          {% else %}
-          <!-- If standard user and has no order history-->
-          <p class="fw-bold mx-4">Hi <em class="fw-bold">{{ profile|lower|title }}</em> you havent generated any orders with
-            us yet, happy shopping!</p>
-          <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-            <a href="{% url 'home' %}" class="btn btn-success mt-5">Continue Shopping</a>
-          </div>
-          {% endif %}
-        </div>
-      </div>
-      {% endif %}
-      <hr class="mt-5">
-      {% endblock %}
-      
+              </ul>
+            </td>
+            <td>€{{ order.bag_total }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <!-- If standard user and has no order history-->
+    <p class="fw-bold mx-4">Hi <em class="fw-bold">{{ profile|lower|title }}</em> you havent generated any orders with
+      us yet, happy shopping!</p>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+      <a href="{% url 'home' %}" class="btn btn-success mt-5">Continue Shopping</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+<hr class="mt-5">
+{% endblock %}

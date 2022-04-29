@@ -3,41 +3,42 @@
 {% block content %}
 <!-- Date and User + Header-->
 <div>
-    <div class="row mt-5 services-background">
-        <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
-            <span class="date mx-3 mt-2 fw-bold rounded-pill bg-secondary text-light fs-6">{% now "jS F Y" %}</span>
-        </div>
-        <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 products-listed">
-          <span class="badge rounded-pill bg-secondary fw-bold text-light float-end fs-6 mt-1 mx-3">
-              <span>{{ profile|lower|title }}</span></span>
-      </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-              <h2 class="mt-2 mb-4">Product Manager</h2>
-              <span class="fw-bold"><i class="fas fa-user-cog fa-2x"></i></span>
-              <h3 class="mt-4 mb-3">Add A Product</h3><span class="rounded-pill bg-secondary text-light"><i class="fas fa-plus mb-2 mx-4"></i></span><i class="fas fa-bicycle fa-2x bicycle-admin d-block"></i>
-            </div>
-          </div> 
+  <div class="row mt-5 services-background">
+    <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
+      <span class="date mx-3 mt-2 fw-bold rounded-pill bg-secondary text-light fs-6">{% now "jS F Y" %}</span>
     </div>
-    <!-- end header -->
-    <!-- Product Form -->
-    <div>
-      <div class="row justify-content-around mt-3">
-        <div class=" col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8">
-          <form method="POST" action="{% url 'add_product' %}" class="form mb-3" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <div>
-              <a class="btn btn-secondary float-start mb-3 mt-3" href="{% url 'products' %}">All Products</a>
-              <button class="btn btn-success float-end mb-3 mt-3" type="submit">Add Product</button>
-            </div>
-          </form>
-        </div>
-      </div>
+    <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 products-listed">
+      <span class="badge rounded-pill bg-secondary fw-bold text-light float-end fs-6 mt-1 mx-3">
+        <span>{{ profile|lower|title }}</span></span>
     </div>
-    <div class="row justify-content-around mt-4">
-    <div class="col-10 col-sm-10 col-md-10 col-lg-2 col-xl-2">
-      <a class="btn btn-outline-warning d-block text-dark fw-bold" href="{% url 'profile' %}">Cancel</a>
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+      <h2 class="mt-2 mb-4">Product Manager</h2>
+      <span class="fw-bold"><i class="fas fa-user-cog fa-2x"></i></span>
+      <h3 class="mt-4 mb-3">Add A Product</h3><span class="rounded-pill bg-secondary text-light"><i
+          class="fas fa-plus mb-2 mx-4"></i></span><i class="fas fa-bicycle fa-2x bicycle-admin d-block"></i>
     </div>
   </div>
-    <hr class="mt-5">
+</div>
+<!-- end header -->
+<!-- Product Form -->
+<div>
+  <div class="row justify-content-around mt-3">
+    <div class=" col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8">
+      <form method="POST" action="{% url 'add_product' %}" class="form mb-3" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div>
+          <a class="btn btn-secondary float-start mb-3 mt-3" href="{% url 'products' %}">All Products</a>
+          <button class="btn btn-success float-end mb-3 mt-3" type="submit">Add Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="row justify-content-around mt-4">
+  <div class="col-10 col-sm-10 col-md-10 col-lg-2 col-xl-2">
+    <a class="btn btn-outline-warning d-block text-dark fw-bold" href="{% url 'profile' %}">Cancel</a>
+  </div>
+</div>
+<hr class="mt-5">
 {% endblock %}

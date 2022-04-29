@@ -5,162 +5,176 @@
 {% endblock %}
 
 {% block content %}
-  <!--carousel-->
-  <div id="mainCarousel" class="carousel slide carousel-fade carousel-dark my-1 shadow p-3 mb-5 bg-body"
-    data-bs-ride="carousel" data-bs-pause="hover">
-    <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="6000">
-        <picture>
-          <source srcset="../media/hero-1.webp" type="image/webp">
-        <img src="../media/hero-1.jpg" class="d-block w-100 image-opacity-9" alt="Cyclescene rider on the mountain pass near the knockboy Co.Cork">
+<!--carousel-->
+<div id="mainCarousel" class="carousel slide carousel-fade carousel-dark my-1 shadow p-3 mb-5 bg-body"
+  data-bs-ride="carousel" data-bs-pause="hover">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="6000">
+      <picture>
+        <source srcset="https://cyclescene.herokuapp.com/media/hero-1.webp" type="image/webp">
+        <img src="https://cyclescene.herokuapp.com/media/hero-1.jpg" class="d-block w-100 image-opacity-9"
+          alt="Cyclescene rider on the mountain pass near the knockboy Co.Cork">
       </picture>
-        <h2 class="carousel-heading w-mt-2">ADVENTURE AWAITS</h2>
-      </div>
-      <div class="carousel-item" data-bs-interval="6000">
-        <picture>
-          <source srcset="../media/hero-2.webp" type="image/webp">
-        <img src="../media/hero-2.jpg" class="d-block w-100 image-opacity-9" alt="Cyclescene training session on the straight road Cork">
-      </picture>
-        <h2 class="carousel-heading w-mt-2">GET RIDE READY</h2>
-      </div>
-      <div class="carousel-item" data-bs-interval="6000">
-        <picture>
-          <source srcset="../media/hero-3.webp" type="image/webp">
-          <img src="../media/hero-3.jpg" class="d-block w-100 image-opacity-9" alt="A Cyclescene family day with riders entering Cork City">
-        </picture>
-        <h2 class="carousel-heading mx-3">CHOOSE A STYLE</h2>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev" aria-label="Previous">
-        <i class="fas fa-caret-left mobile-caret"></i>
-        <i class="fas fa-caret-left desktop-caret fa-3x"></i>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next" aria-label="Next">
-        <i class="fas fa-caret-right mobile-caret"></i>
-        <i class="fas fa-caret-right desktop-caret fa-3x"></i>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <h2 class="carousel-heading w-mt-2">ADVENTURE AWAITS</h2>
     </div>
+    <div class="carousel-item" data-bs-interval="6000">
+      <picture>
+        <source srcset="https://cyclescene.herokuapp.com/media/hero-2.webp" type="image/webp">
+        <img src="https://cyclescene.herokuapp.com/media//hero-2.jpg" class="d-block w-100 image-opacity-9"
+          alt="Cyclescene training session on the straight road Cork">
+      </picture>
+      <h2 class="carousel-heading w-mt-2">GET RIDE READY</h2>
+    </div>
+    <div class="carousel-item" data-bs-interval="6000">
+      <picture>
+        <source srcset="https://cyclescene.herokuapp.com/media/hero-3.webp" type="image/webp">
+        <img src="https://cyclescene.herokuapp.com/media/hero-3.jpg" class="d-block w-100 image-opacity-9"
+          alt="A Cyclescene family day with riders entering Cork City">
+      </picture>
+      <h2 class="carousel-heading mx-3">CHOOSE A STYLE</h2>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"
+      aria-label="Previous">
+      <i class="fas fa-caret-left mobile-caret"></i>
+      <i class="fas fa-caret-left desktop-caret fa-3x"></i>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next"
+      aria-label="Next">
+      <i class="fas fa-caret-right mobile-caret"></i>
+      <i class="fas fa-caret-right desktop-caret fa-3x"></i>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <!-- Inspriational quote -->
-  <div class="main-page-quote text-center">
-    <h2>" It is the unknown around the corner that turns my wheels "</h2>
-    <p class="my-4">long distance cyclist - <em>Heinz Stucke</em></p>
-  </div>
-  <hr class="text-center">
-  <div class="container-fluid my-0">
-    <h2 class="text-center mb-5 mt-5">Popular Categories</h2>
-    <div class="row ">
-      <!-- Bike Row -->
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-          <picture>
-            <source srcset="../media/road-card.webp" type="image/webp">
-          <img src="../media/road-card.jpg" alt="GIANT PROPEL ADVANCED PRO DISC ROAD BIKE" class="w-100" />
-          </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title ">ROAD BIKES</h3>
-            <a href="{% url 'products' %}?category=roadbikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-          <picture>
-          <source srcset="../media/mountain-card.webp" type="image/webp">
-          <img src="../media/mountain-card.jpg" alt="GIANT REIGN SX 29 MOUNTAIN BIKE" class="w-100" />
-        </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">MOUNTAIN BIKES</h3>
-            <a href="{% url 'products' %}?category=mountainbikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-          <picture>
-            <source srcset="../media/city-card.webp" type="image/webp">
-          <img src="../media/city-card.jpg" alt="GIANT CITY FLOURISH 1 CITY BIKE" class="w-100"/>
-        </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">CITY BIKES</h3>
-            <a href="{% url 'products' %}?category=citybikes" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <!--Components -->
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-          <picture>
-            <source srcset="../media/wheels-card.webp" type="image/webp">
-          <img src="../media/wheels-card.jpg" alt="GIANT SLR 1 65MM DISC AERO CARBON ROAD WHEELS" class="w-100" />
-        </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">WHEELS</h3>
-            <a href="{% url 'products' %}?category=wheels" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-          <picture>
-            <source srcset="../media/saddle-card.webp" type="image/webp">
-          <img src="../media/saddle-card.jpg" alt="GIANT CADEX 2 SADDLE" class="w-100"/>
-        </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">SADDLES</h3>
-            <a href="{% url 'products' %}?category=saddles" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-          <picture>
-            <source srcset="../media/lock-card.webp" type="image/webp">
-          <img src="../media/lock1-2.jpg" alt="GIANT SURELOCK FLEX KEY 15" class="w-100"/>
-        </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">LOCKS</h3>
-            <a href="{% url 'products' %}?category=bikelocks" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-          <picture>
-            <source srcset="../media/pump-card.webp" type="image/webp">
-          <img src="../media/pump-card.jpg" alt="GIANT CONTROL MINI COMBO PUMP" class="w-100"/>
-        </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">PUMPS</h3>
-            <a href="{% url 'products' %}?category=pumps" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
+</div>
+<!-- Inspriational quote -->
+<div class="main-page-quote text-center">
+  <h2>" It is the unknown around the corner that turns my wheels "</h2>
+  <p class="my-4">long distance cyclist - <em>Heinz Stucke</em></p>
+</div>
+<hr class="text-center">
+<div class="container-fluid my-0">
+  <h2 class="text-center mb-5 mt-5">Popular Categories</h2>
+  <div class="row ">
+    <!-- Bike Row -->
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
         <picture>
-          <source srcset="../media/helmet-card.webp" type="image/webp">
-          <img src="../media/helmet-card.jpg" alt="GIANT REV PRO MIPS MENS HELMET" class="w-100"/>
+          <source srcset="https://cyclescene.herokuapp.com/media/road-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/road-card.jpg" alt="GIANT PROPEL ADVANCED PRO DISC ROAD BIKE" class="w-100" />
         </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">HELMETS</h3>
-            <a href="{% url 'products' %}?category=helmets" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-        <div class="card my-3 grow-effect">
-        <picture>
-          <source srcset="../media/light-card.webp" type="image/webp">
-          <img src="../media/light-card.jpg" alt="GIANT RECON TL 200 REAR LIGHT" class="w-100"/>
-        </picture>
-          <div class="card-body card-thumbnails-body">
-            <h3 class="card-title">LIGHTS</h3>
-            <a href="{% url 'products' %}?category=lights" class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
-          </div>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title ">ROAD BIKES</h3>
+          <a href="{% url 'products' %}?category=roadbikes"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
         </div>
       </div>
     </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/mountain-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/mountain-card.jpg" alt="GIANT REIGN SX 29 MOUNTAIN BIKE" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">MOUNTAIN BIKES</h3>
+          <a href="{% url 'products' %}?category=mountainbikes"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/city-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/city-card.jpg" alt="GIANT CITY FLOURISH 1 CITY BIKE" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">CITY BIKES</h3>
+          <a href="{% url 'products' %}?category=citybikes"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <!--Components -->
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/wheels-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/wheels-card.jpg" alt="GIANT SLR 1 65MM DISC AERO CARBON ROAD WHEELS" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">WHEELS</h3>
+          <a href="{% url 'products' %}?category=wheels"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/saddle-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/saddle-card.jpg" alt="GIANT CADEX 2 SADDLE" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">SADDLES</h3>
+          <a href="{% url 'products' %}?category=saddles"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/lock-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/lock1-2.jpg" alt="GIANT SURELOCK FLEX KEY 15" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">LOCKS</h3>
+          <a href="{% url 'products' %}?category=bikelocks"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/pump-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/pump-card.jpg" alt="GIANT CONTROL MINI COMBO PUMP" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">PUMPS</h3>
+          <a href="{% url 'products' %}?category=pumps"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/helmet-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/pump-card.jpg" alt="GIANT REV PRO MIPS MENS HELMET" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">HELMETS</h3>
+          <a href="{% url 'products' %}?category=helmets"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-xm-3 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+      <div class="card my-3 grow-effect">
+        <picture>
+          <source srcset="https://cyclescene.herokuapp.com/media/light-card.webp" type="image/webp">
+          <img src="https://cyclescene.herokuapp.com/media/light-card.jpg" alt="GIANT RECON TL 200 REAR LIGHT" class="w-100" />
+        </picture>
+        <div class="card-body card-thumbnails-body">
+          <h3 class="card-title">LIGHTS</h3>
+          <a href="{% url 'products' %}?category=lights"
+            class="btn btn-secondary stretched-link override-link-color">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 {% endblock %}
