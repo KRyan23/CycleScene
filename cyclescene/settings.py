@@ -24,7 +24,6 @@ ALLOWED_HOSTS = ['cyclescene.herokuapp.com', 'localhost']
 INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
-    'storages',
      #3rd party apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,14 +38,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
-    'mathfilters',
     'shoppingbag',
     'django.contrib.humanize',
     'checkout',
     'legal',
     'service',
     'profiles',
-    
+    'custom_storages',
 ]
 
 MIDDLEWARE = [
