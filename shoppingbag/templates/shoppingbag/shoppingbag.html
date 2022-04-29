@@ -28,8 +28,10 @@
     {% for shop in shoppingbag_items %}
     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
       <div class="card ">
-        <p class="list-group-item"><span class="float-start fw-bold">Name: {{ shop.product.name|lower|title }}</span><span
-            class="float-end fw-bold">Item: <span class="item-number">{{ forloop.counter }} <span class="item-of">of </span> {{ shoppingbag_items|length }}</span></span></p>
+        <p class="list-group-item"><span class="float-start fw-bold">Name:
+            {{ shop.product.name|lower|title }}</span><span class="float-end fw-bold">Item: <span
+              class="item-number">{{ forloop.counter }} <span class="item-of">of </span>
+              {{ shoppingbag_items|length }}</span></span></p>
         <p class="list-group-item"><span class="float-start fw-bold fs-6">Ean:
             {{ shop.product.ean|lower|title }}</span><span class="text-center fs-6 float-end fw-bold">Price: €<span
               class="rating-number">{{ shop.product.price|intcomma }}</span></span></p>
@@ -37,8 +39,8 @@
         <!-- Form to update the product quantity -->
         <form action="{% url 'changebag_quantity' shop.item_id %}" method="POST"
           class="mt-5 form text-center shopping-bag-form">{% csrf_token %}
-                          <div class="text-center">
-          <span id="error_id_{{ shop.item_id }}" class="quantity-error-message"></span></div>
+          <div class="text-center">
+            <span id="error_id_{{ shop.item_id }}" class="quantity-error-message"></span></div>
           <a class="btn btn-outline-success btn-minus decrement-value" data-item_id="{{ shop.item_id }}"
             id="decrement-qty_{{ shop.item_id }}">
             <i class="fa fa-minus"></i></a>

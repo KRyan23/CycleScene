@@ -96,57 +96,55 @@
     <!-- Extra buttons for managing products if logged in as a superuser-->
     {% if request.user.is_superuser %}
   </div>
-    <hr class="mt-5">
-    <div class="row mt-5">
-      <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-    <a href="{% url 'profile' %}"
-  class="btn btn-secondary override-link-color float-end px-5">Product Manager</a>
-</div>
-<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-4 text-center">
-  <a href="{% url 'edit_product' product.id %}"
-    class="btn btn-outline-warning override-link-color text-dark float-start px-5">Update
-    Product</a>
-</div>
-</div>
+  <hr class="mt-5">
+  <div class="row mt-5">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+      <a href="{% url 'profile' %}" class="btn btn-secondary override-link-color float-end px-5">Product Manager</a>
     </div>
-    <div class="row justify-content-around mt-4">
-      <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
-        <hr class="mb-5">
-        <a href="{% url 'delete_product' product.id  %}"
-          class="btn btn-outline-danger d-block fw-bold text-dark mb-5">Delete
-          Product</a>
-      </div>
-      </div>
-    {% else %}
-    <hr class="mt-5">
-    <div class="row d-flex">
-      <div class="col-5 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
-        <a href="#" class="btn btn-outline-secondary mt-5 ps-0" role="button"><i class="fas fa-arrow-up mx-2"></i><span
-            class="product-details-navigation-buttons">Back to
-            top</span></a>
-      </div>
-      <div class="col-7 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
-        <a href="{% url 'products' %}?category={{ product.category }}" class="btn btn-outline-secondary mt-5 pe-0"
-          role="button"><span
-            class="product-details-navigation-buttons">{{ product.category.friendly_name|capfirst }}</span><i
-            class="fas fa-arrow-right mx-2 my-0"></i>
-        </a>
-      </div>
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-4 text-center">
+      <a href="{% url 'edit_product' product.id %}"
+        class="btn btn-outline-warning override-link-color text-dark float-start px-5">Update
+        Product</a>
     </div>
-  </div><!-- Spacing between content and footer-->
-  <div class="mt-5">
   </div>
+</div>
+<div class="row justify-content-around mt-4">
+  <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+    <hr class="mb-5">
+    <a href="{% url 'delete_product' product.id  %}"
+      class="btn btn-outline-danger d-block fw-bold text-dark mb-5">Delete
+      Product</a>
   </div>
-  
-    {% endif %}
-  
-  {% endblock %}
-  {% block postloadjs %}
-  {{ block.super }}
-  {% endblock %}
-  {% block scripts %}
-  {{ block.super }}
-  <script src="/static/js/rating.js"></script>
-  <script src="/static/js/quantityProductDetails.js"></script>
-  <script src="https://js.stripe.com/v3/"></script>
-  {% endblock %}
+</div>
+{% else %}
+<hr class="mt-5">
+<div class="row d-flex">
+  <div class="col-5 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
+    <a href="#" class="btn btn-outline-secondary mt-5 ps-0" role="button"><i class="fas fa-arrow-up mx-2"></i><span
+        class="product-details-navigation-buttons">Back to
+        top</span></a>
+  </div>
+  <div class="col-7 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
+    <a href="{% url 'products' %}?category={{ product.category }}" class="btn btn-outline-secondary mt-5 pe-0"
+      role="button"><span
+        class="product-details-navigation-buttons">{{ product.category.friendly_name|capfirst }}</span><i
+        class="fas fa-arrow-right mx-2 my-0"></i>
+    </a>
+  </div>
+</div>
+</div><!-- Spacing between content and footer-->
+<div class="mt-5">
+</div>
+</div>
+{% endif %}
+
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% endblock %}
+{% block scripts %}
+{{ block.super }}
+<script src="/static/js/rating.js"></script>
+<script src="/static/js/quantityProductDetails.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+{% endblock %}

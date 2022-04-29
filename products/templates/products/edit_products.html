@@ -3,63 +3,71 @@
 {% block content %}
 <!-- Date and User + Header-->
 <div>
-    <div class="row mt-5 services-background">
-        <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
-            <span class="date mx-3 mt-2 fw-bold rounded-pill bg-secondary text-light fs-6">{% now "jS F Y" %}</span>
-        </div>
-        <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 products-listed">
-          <span class="badge rounded-pill bg-secondary fw-bold text-light float-end fs-6 mt-1 mx-3">
-              <span>{{ profile|lower|title }}</span></span>
-      </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
-              <h2 class="mt-2 mb-4">Product Manager</h2>
-              <span class="fw-bold"><i class="fas fa-user-cog fa-2x"></i></span>
-              <h3 class="mt-4 mb-3">Update A Product</h3><span class="rounded-pill bg-secondary text-light"><i class="fas fa-plus mb-2 mx-2"></i><span class="fw-bold fs-4 mx-1">|</span><i class="fas fa-minus mb-2 mx-2"></i></span><i class="fas fa-bicycle fa-2x bicycle-admin d-block"></i>
-            </div>
-          </div> 
+  <div class="row mt-5 services-background">
+    <div class="col-8 col-sm-6 col-md-6 col-lg-6 col-xl-6 mt-3 mb-3">
+      <span class="date mx-3 mt-2 fw-bold rounded-pill bg-secondary text-light fs-6">{% now "jS F Y" %}</span>
     </div>
-    <!-- end header -->
-    <!-- Product Form -->
-    <div>
-      <div class="row justify-content-around ">
-        <div class="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8">
-          <h4 class="text-center fw-bold mt-3">" {{ product.name|lower|title }} "</h4>
-          <div class="row mt-5 justify-content-around">
-            <div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8 text-center">
-              <img src="{{ product.image1.url }}" class="w-50 rounded" alt="image1">
-      </div>
-      </div>
-          <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-3" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form|crispy }}
-            <div class="row mt-3">
-              <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <a class="btn btn-secondary float-start mb-3 mt-3" href="{% url 'products' %}">All Products</a>
-              </div>
-              <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                <button class="btn btn-success float-end mb-3 mt-3" type="submit">Update Product</button>
-              </div>
-            </div>
-          </form>
+    <div class="col-4 col-sm-6 col-md-6 col-lg-6 col-xl-6 products-listed">
+      <span class="badge rounded-pill bg-secondary fw-bold text-light float-end fs-6 mt-1 mx-3">
+        <span>{{ profile|lower|title }}</span></span>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+      <h2 class="mt-2 mb-4">Product Manager</h2>
+      <span class="fw-bold"><i class="fas fa-user-cog fa-2x"></i></span>
+      <h3 class="mt-4 mb-3">Update A Product</h3><span class="rounded-pill bg-secondary text-light"><i
+          class="fas fa-plus mb-2 mx-2"></i><span class="fw-bold fs-4 mx-1">|</span><i
+          class="fas fa-minus mb-2 mx-2"></i></span><i class="fas fa-bicycle fa-2x bicycle-admin d-block"></i>
+    </div>
+  </div>
+</div>
+<!-- end header -->
+<!-- Product Form -->
+<div>
+  <div class="row justify-content-around ">
+    <div class="col-10 col-sm-10 col-md-10 col-lg-8 col-xl-8">
+      <h4 class="text-center fw-bold mt-3">" {{ product.name|lower|title }} "</h4>
+      <div class="row mt-5 justify-content-around">
+        <div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8 text-center">
+          <img src="{{ product.image1.url }}" class="w-50 rounded" alt="image1">
         </div>
       </div>
+      <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-3" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="row mt-3">
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <a class="btn btn-secondary float-start mb-3 mt-3" href="{% url 'products' %}">All Products</a>
+          </div>
+          <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <button class="btn btn-success float-end mb-3 mt-3" type="submit">Update Product</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="row justify-content-around mt-4">
-      <div class="col-10 col-sm-10 col-md-10 col-lg-2 col-xl-2">
-        <a class="btn btn-outline-warning d-block text-dark fw-bold" href="{% url 'profile' %}">Cancel</a>
-      </div>
-    </div>
-    <!-- Inserts the current 3 images associated with that product -->
-    {% if product.image1.url or product.image2.url or product.image2.url %}
-  <script>
-    window.onload = function(){
-    document.getElementById("div_id_image1").insertAdjacentHTML('beforebegin', `<div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8"><img src="{{ product.image1.url }}" class="w-50 rounded" alt="image1"></div>`);
-    document.getElementById("div_id_image2").insertAdjacentHTML('beforebegin', `<div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8"><img src="{{ product.image2.url }}" class="w-50 rounded" alt="image2"></div>`);
-    document.getElementById("div_id_image3").insertAdjacentHTML('beforebegin', `<div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8"><img src="{{ product.image3.url }}" class="w-50 rounded" alt="image3"></div>`);
-    }
-  </script>
-  {% else %}
-  Were sorry the product images were not able to be be loaded this time please try again.
-  {% endif %}
-  <hr class="mt-5">
+  </div>
+</div>
+<div class="row justify-content-around mt-4">
+  <div class="col-10 col-sm-10 col-md-10 col-lg-2 col-xl-2">
+    <a class="btn btn-outline-warning d-block text-dark fw-bold" href="{% url 'profile' %}">Cancel</a>
+  </div>
+</div>
+<!-- Inserts the current 3 images associated with that product -->
+{% if product.image1.url or product.image2.url or product.image2.url %}
+<script>
+  window.onload = function () {
+    document.getElementById("div_id_image1").insertAdjacentHTML('beforebegin',
+      `<div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8"><img src="{{ product.image1.url }}" class="w-50 rounded" alt="image1"></div>`
+      );
+    document.getElementById("div_id_image2").insertAdjacentHTML('beforebegin',
+      `<div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8"><img src="{{ product.image2.url }}" class="w-50 rounded" alt="image2"></div>`
+      );
+    document.getElementById("div_id_image3").insertAdjacentHTML('beforebegin',
+      `<div class="col-10 col-sm-10 col-md-8 col-lg-8 col-xl-8"><img src="{{ product.image3.url }}" class="w-50 rounded" alt="image3"></div>`
+      );
+  }
+</script>
+{% else %}
+Were sorry the product images were not able to be be loaded this time please try again.
+{% endif %}
+<hr class="mt-5">
 {% endblock %}
