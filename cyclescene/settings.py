@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
-    'mathfilters',
     'shoppingbag',
     'django.contrib.humanize',
     'checkout',
