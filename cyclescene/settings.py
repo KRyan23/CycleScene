@@ -9,10 +9,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-SECRET_KEY = 'django-insecure-i8=6+!n$_@vie80+h#h6%ttmh*9swft*jr0syl*@^s@e)i0#7s'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
-
-DEBUG = True # if os.environ.get("DEBUG") == "ON" else False
+#set debug to false in production only
+DEBUG = 'DEVELOPMENT' in os.environ
 
 
 ALLOWED_HOSTS = ['cyclescene.herokuapp.com', 'localhost']
