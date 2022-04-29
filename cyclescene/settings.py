@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'legal',
     'service',
     'profiles',
-    'storages',
+    'custom_storages',
 ]
 
 MIDDLEWARE = [
