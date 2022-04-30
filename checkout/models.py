@@ -47,8 +47,6 @@ class Order(models.Model):
 
         if self.order_total < settings.FREE_DELIVERY_DELTA:
             self.delivery_cost = settings.STANDARD_DELIVERY_COST
-        elif self.delivery_cost < 600:
-            self.delivery_cost = settings.STANDARD_DELIVERY_COST
         else:
             self.delivery_cost = 0
         self.bag_total = self.order_total + self.delivery_cost
