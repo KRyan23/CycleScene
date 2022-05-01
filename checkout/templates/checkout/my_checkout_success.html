@@ -54,18 +54,6 @@
                         <td><i class="fas fa-bicycle order-summary-bike"> :</i>{{ order.email }}</td>
                     </tr>
                     <tr>
-                        <th>Delivery</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <i class="fas fa-bicycle order-summary-bike"> :
-                                {% if order.delivery_cost == 0 %}
-                            </i><span class="free-delivery-text">FREE!</span></td>
-                        {% else %}
-                        </i>€{{ order.delivery_cost|floatformat:2|intcomma }}</td>
-                        {% endif %}
-                    </tr>
-                    <tr>
                         <th>Total</th>
                     </tr>
                     <tr>

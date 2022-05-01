@@ -1,23 +1,33 @@
-<h1 align="center">Cycle Scene</h1>
+<h1 align="center">Welcome to CycleScene</h1>
 
-- [View the live project here ]()
-<p align="center">CycleScene is a website where cycling enthusisats can browse and purchase bicycles and cycling accesories.</p>
 
-<p align="center">The site can be casually browsed without the need for a login or immediate signup.</p>
 
 
 &nbsp;
 &nbsp;
 
 <p align="center">
-  <img width="50%" height="50%" src="static/images/placeholder.png">
+  <img width="50%" height="50%" src="assets/docs/screenshots/cyclescene-screenshot-main.jpg">
 </p>
 
+[View the live project here](https://cyclescene.herokuapp.com)
+
+----
+&nbsp;
+<p align="center">CycleScene is a website where cycling enthusiasts can browse and purchase bicycles and cycling accessories.</p>
+<p align="center">The site can be casually browsed without the need for a login or immediate signup.</p><p align="center">If the user would like to purchase an item they can register for a new account since a login is required for this action.</p>
+&nbsp;
+
+----
+
+## <center>What is it and what need does it fulfill?</center>
+
+----
+<p>As a big cycling enthusist the topic was an obvious choice for my project, Cyclescene is a culmination of all the technologies, methods and learning outcomes from the full stack course. We use Django here to rapidly put a fully functional site together using the priciples of model view controler design.</p><p>The site was built as an ecommerce store as an extension of a physical shop that sells bikes and cycling related accessories. Its need is to provide an online presence and frontend to the physical shop so over time the 2 become synonymous. The owner would like to sell more products of course and expand upon the services they provide.</p>
 
 ----
 ## <center>User Experience</center> 
 ----
-
 
 -   ### User Stories
     &nbsp;  
@@ -39,10 +49,8 @@
         | :---:        | :---        |    :---  |          :--- |
         | 1 | As a First Time Visitor | I would like to be able to register for a free account| So that I can make my first purchase from the store |
         | 2 | As a Returning or Frequent Visitor | I would like to be able to login and out of my profile | So that I can browse the site without needing to be logged in, and login if I need to make a purchase |
-        | 3 | As a Returning or Frequent Visitor | I would like to be able to reset my password if I forget it| So that I can quickly restore access to my account |
-        | 4 | As a First Time Visitor | I would like to receive an email confirmation upon signup| So that I can verify my registration was successful |
-        | 5 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. |
-        | 6 | As a super user  | I would like to have a tailored profile page | So I or any superuser can quickly create, update and delete products directly from the site.
+        | 3 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. |
+        | 4 | As a super user  | I would like to have a tailored profile page | So I or any superuser can quickly create, update and delete products directly from the site.
         
         &nbsp;
     -   #### SORT AND SEARCH
@@ -179,6 +187,21 @@
 ## <center>Testing</center> 
 ----
 
+### Payment Testing
+<p>The payment system is provided by Stripe</p>
+<p>Test card used:</p>
+
+- Card number: 4242424242424242 (16-digit Card number)
+- CVC: Any 3 digit combination (424 Works).
+- Dates: Any future date (04/24 used).
+- [Stripe Card Docs](https://stripe.com/docs/testing#cards)
+
+&nbsp;
+
+### Validation and Testing
+
+&nbsp;
+
 The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 JSHint was used for the javascript linter, and pylint for the python linter.
 
@@ -201,7 +224,8 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 - [JSHint ](https://jshint.com/) - [Results](/assets/docs/testing-and-troubleshooting/javascript/jshintresults.pdf)
 -   [pylint ](https://pylint.org/) - [Results](/assets/docs/testing-and-troubleshooting/python/pylintscores.pdf)
 - [Code Refactoring ](/assets/docs/testing-and-troubleshooting/coderefactoring.pdf)
-- [Lighthouse](/assets/docs/testing-and-troubleshooting/lighthouse/lighthouse.pdf)
+- [Performance Testing Lighthouse](/assets/docs/testing-and-troubleshooting/lighthouse/lighthouse.pdf)
+- [Functionality Useabilty & Datamanagement Testing](/assets/docs/testing-and-troubleshooting/functionality-useabilty-datamanagement-testing.pdf)
 &nbsp;
 
 
@@ -230,10 +254,8 @@ JSHint was used for the javascript linter, and pylint for the python linter.
         | :---:        | :---        |    :---  |          :--- | :--- | :---: |
         | 1 | As a First Time Visitor | I would like to be able to register for a free account| So that I can make my first purchase from the store | This user story was tested by having the register link present at the top right of the site on dekstop and as the second option on mobile menu. The checkout functions have been secured with the @login_required parameter so they cannot be bypassed by an unregistered user. When an unregisterd user clicks on the shopping bag he is automatically redirected to the 'sign in' page, and from here they can easily access the register link. | &#9745; |
         | 2 | As a Returning or Frequent Visitor | I would like to be able to login and out of my profile | So that I can browse the site without needing to be logged in, and login if I need to make a purchase | This user story was tested first as a logged out user, the user can go as far as added removing and viewing their shopping bag but once the hit the 'Secure Checkout' button they are prompted to login. Similarly after logging into their account, they can view their profile page and make a purchase. | &#9745; |
-        | 3 | As a Returning or Frequent Visitor | I would like to be able to reset my password if I forget it| So that I can quickly restore access to my account | This outcome was first tested with a ficticious email address that doesnt exist on the database and sure enough we get an error to say the 'email address is not assigned to any account'. Next we did a reset of a registered users password and indeed we received the link to reset the email. This was clicked on takes us to the verify page so now we can login.| &#9744; |
-        | 4 | As a First Time Visitor | I would like to receive an email confirmation upon signup| So that I can verify my registration was successful | This user story was tested by signing up as a new user and supplying a valid email address, it was then monitored and the email with the verification link was received. Once clicking on the registration link it brought us to the verification page where we could login.| &#9744; |
-        | 5 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. | This user story was tested by first registering for an account verifying the email address and then logging in using the sign up form. Once logged in the user can click on the 'My Profile' link, from here there are 2 sections, a form to update their personal details and order history of past orders with clickable links.| &#9745; |
-        | 6 | As a super user  | I would like to have a tailored profile page | So I or any superuser can quickly create, update and delete products directly from the site. | This user story has been tested by logging in as a super user, from here they will see a link called 'Product Manager' rather than 'My Profile', also the banner of the site changes to remind the user of this. The normal order history and personal information has been replaced with a listing of all the products with 'Update' and 'Delete' buttons. In addition a very obvious create button is at the top of the page so the user doesnt have to scroll down every time. Also when logged in a as super user, the products on the site can be browsed and each one has an additional 'Update' and 'Delete' button along with a link back to 'Product Manager'. | &#9745; |
+        | 3 | As a Returning or Frequent Visitor | I would like to be able to access a personal profile page | So that I can view my order history, order status and payment information. | This user story was tested by first registering for an account verifying the email address and then logging in using the sign up form. Once logged in the user can click on the 'My Profile' link, from here there are 2 sections, a form to update their personal details and order history of past orders with clickable links.| &#9745; |
+        | 4 | As a super user  | I would like to have a tailored profile page | So I or any superuser can quickly create, update and delete products directly from the site. | This user story has been tested by logging in as a super user, from here they will see a link called 'Product Manager' rather than 'My Profile', also the banner of the site changes to remind the user of this. The normal order history and personal information has been replaced with a listing of all the products with 'Update' and 'Delete' buttons. In addition a very obvious create button is at the top of the page so the user doesnt have to scroll down every time. Also when logged in a as super user, the products on the site can be browsed and each one has an additional 'Update' and 'Delete' button along with a link back to 'Product Manager'. | &#9745; |
         &nbsp;
     -   #### SORT AND SEARCH
         &nbsp;
@@ -269,11 +291,11 @@ JSHint was used for the javascript linter, and pylint for the python linter.
 - The website was checked on a variety of emulated devices under Chromes Developer tools, these included Desktop, iPhoneSE, iPhoneXR, iPhone 12 pro, Pixel 5, Samsung Galaxy S8+, Samsung Galaxy S20 ultra, Ipad Air and Mini, Surface Pro 7, Surface Duo, Galaxy Fold, Samsung Galaxy A51/71 and the newer Nest Hub and Nest Hub Max.
 -   Internal and external linking were tested throughout the project to ensure functionality.
 -   Family members were asked to review the site and to give their initial thoughts and feedback. Their input was used to make small design changes to parts of the site.
-- [Site Testing](/assets/docs/testing-and-troubleshooting/site-testing.pdf)
+
 
 ### Known Bugs
 
--  [Results](/assets/docs/testing-and-troubleshooting/known-bugs.pdf)
+- Havent found any..............yet!
 
 ----
 ## <center>Deployment</center> 
@@ -285,16 +307,23 @@ The project was deployed using the steps below.
 
 ### GitHub
 
-[Steps to setup GitHub](assets/docs/setup-and-deployment/github-setup-and-instructions.pdf)
+[Steps to setup GitHub](assets/docs/setup-and-deployment/github-setup-and-instructions-cyclescene.pdf)
 
 ### GitPod
 
-[Steps to setup GitPod](assets/docs/setup-and-deployment/setting_up_gitpod.pdf)
+[Steps to setup GitPod](assets/docs/setup-and-deployment/setting-up-gitpod.pdf)
 
 ### Heroku
 
 [Steps to deploy to Heroku](assets/docs/setup-and-deployment/deploying_to_heroku.pdf)
 
+### Aws
+
+[Steps to deploy to AWS](assets/docs/setup-and-deployment/deployment_for_aws.pdf)
+
+### Stripe
+
+[Steps to deploy to Stripe](assets/docs/setup-and-deployment/deploying_to_stripe.pdf)
 
 ----
 ## <center>The Code</center> 

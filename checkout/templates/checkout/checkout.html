@@ -90,9 +90,6 @@
         </div>
     </div>
 </div>
-{% if delivery != 0 %}
-<p class="text-center text-primary fw-bold"><u>Spend €{{ free_delivery_delta }} or more for free delivery!</u></p>
-{% endif %}
 <!-- end summary-->
 <!-- start details-->
 <div class="row">
@@ -178,5 +175,5 @@
 <script src="https://js.stripe.com/v3/"></script>
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
-<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+<script src="https://cyclescene.s3.amazonaws.com/static/checkout/js/stripe_elements.js"></script>
 {% endblock %}

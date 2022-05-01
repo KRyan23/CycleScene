@@ -4,45 +4,69 @@
   <i class="fas fa-check-circle fa-2x"></i>
   <span class="text-center px-2 fs-6 fw-bold">Success</span>
 </div>
-<div class="toast-body">
-  <div class="row float-start">
-    <div class="col-12 toast-message">
-      {% if bagtotal and user.is_anonymous %}
-      <p class="fs-5">Please Sign In to Make a Purchase</p>
-      {% else %}
-      {{ message }}
-      {% endif %}
-    </div>
+<!-- if the shopping bag does not contain any items -->
+{% if not bagtotal and user.is_anonymous or on_profile_page %}
+<div class="row pt-2 mx-2">
+  <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <button type="button" class="btn btn-outline-secondary btn-sm mx-3 my-1" data-bs-dismiss="toast">Close</button>
   </div>
-  <!-- if there are items in your shopping -->
-  {% if bagtotal and not on_profile_page %}
-  <p class="logo-font bg-white text-black mx-5">Your Shopping Bag ({{ shoppingbag_items|length }})</p>
-            <div class="bag-notification-wrapper">
-                {% for shop in shoppingbag_items  %}
-                    <div class="row">
-                        <div class="col-3 my-1">
-                            <img class="w-100" src="{{ shop.product.image1.url }}" alt="product image">
-                        </div>
-                        <div class="col-9">
-                            <p class="my-0"><strong>{{ shop.product.name|lower|title }}</strong></p>
-                            <p class="my-0 small text-muted">Quantity: {{ shop.quantity }}</p>
-                        </div>
-                    </div>
-                    </div>
-                {% endfor %}
-                <div class="row pt-2">
-                  <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-success btn-sm float-end"><i class="fas fa-shopping-bag toast-shopping-bag fa-lg mx-1"></i>Shopping Bag</a>
-                    <button type="button" class="btn btn-outline-secondary btn-sm float-end mx-1" data-bs-dismiss="toast">Close</button>
-                  </div>
-                </div>
-            </div>
-            {% else %}
-            <!-- if the shopping bag does not contain any items -->
-  <div class="row pt-2">
-    <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-      <button type="button" class="btn btn-outline-secondary btn-sm float-end mx-1" data-bs-dismiss="toast">Close</button>
-    </div>
-  </div>
+  <p class="mx-3 my-2 fw-bold">{{ message }}</p>
 </div>
+<p class="logo-font bg-white text-black mx-5 mt-3">Your Shopping Bag ({{ shoppingbag_items|length }})</p>
+<div class="bag-notification-wrapper">
+  {% for shop in shoppingbag_items  %}
+  <div class="row">
+    <div class="col-3 my-1">
+      <img class="w-100" src="{{ shop.product.image1.url }}" alt="product image">
+    </div>
+    <div class="col-9">
+      <p class="my-0"><strong>{{ shop.product.name|lower|title }}</strong></p>
+      <p class="my-0 small text-muted">Quantity: {{ shop.quantity }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<!-- The shopping bag does contain items -->
+<div class="row pt-2">
+  <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <a href="{% url 'view_shoppingbag' %}" class="btn btn-outline-success btn-sm float-start mx-3 my-1"><i
+        class="fas fa-shopping-bag toast-shopping-bag fa-lg mx-1"></i>Shopping Bag</a>
+    <button type="button" class="btn btn-outline-secondary btn-sm mx-3 my-1" data-bs-dismiss="toast">Close</button>
+  </div>
+  {% if user.is_anonymous %}
+  <div class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <p class="fs-5 mx-3">Please Sign In to Make a Purchase</p>
+    <a href="/accounts/login/" class="btn btn-secondary btn-sm my-1 mx-3 float-start" data-bs-dismiss="toast">Login</a>
+  </div>
+  <p class="logo-font bg-white text-black mx-5 mt-3">Your Shopping Bag ({{ shoppingbag_items|length }})</p>
+  {% for shop in shoppingbag_items  %}
+  <div class="row">
+    <div class="col-3 my-1">
+      <img class="w-100" src="{{ shop.product.image1.url }}" alt="product image">
+    </div>
+    <div class="col-9">
+      <p class="my-0"><strong>{{ shop.product.name|lower|title }}</strong></p>
+      <p class="my-0 small text-muted">Quantity: {{ shop.quantity }}</p>
+    </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <p class="mx-3 my-2 fw-bold">{{ message }}</p>
+</div>
+<p class="logo-font bg-white text-black mx-5 mt-3">Your Shopping Bag ({{ shoppingbag_items|length }})</p>
+<div class="bag-notification-wrapper">
+  {% for shop in shoppingbag_items  %}
+  <div class="row">
+    <div class="col-3 my-1">
+      <img class="w-100" src="{{ shop.product.image1.url }}" alt="product image">
+    </div>
+    <div class="col-9">
+      <p class="my-0"><strong>{{ shop.product.name|lower|title }}</strong></p>
+      <p class="my-0 small text-muted">Quantity: {{ shop.quantity }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}
 {% endif %}
