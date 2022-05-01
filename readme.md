@@ -1,23 +1,33 @@
-<h1 align="center">Cycle Scene</h1>
+<h1 align="center">Welcome to CycleScene</h1>
 
-- [View the live project here ]()
-<p align="center">CycleScene is a website where cycling enthusisats can browse and purchase bicycles and cycling accesories.</p>
 
-<p align="center">The site can be casually browsed without the need for a login or immediate signup.</p>
 
 
 &nbsp;
 &nbsp;
 
 <p align="center">
-  <img width="50%" height="50%" src="static/images/placeholder.png">
+  <img width="50%" height="50%" src="assets/docs/screenshots/cyclescene-screenshot-main.jpg">
 </p>
 
+[View the live project here](https://cyclescene.herokuapp.com)
+
+----
+&nbsp;
+<p align="center">CycleScene is a website where cycling enthusiasts can browse and purchase bicycles and cycling accessories.</p>
+<p align="center">The site can be casually browsed without the need for a login or immediate signup.</p><p align="center">If the user would like to purchase an item they can register for a new account since a login is required for this action.</p>
+&nbsp;
+
+----
+
+## <center>What is it and what need does it fulfill?</center>
+
+----
+<p>As a big cycling enthusist the topic was an obvious choice for my project, Cyclescene is a culmination of all the technologies, methods and learning outcomes from the full stack course. We use Django here to rapidly put a fully functional site together using the priciples of model view controler design.</p><p>The site was built as an ecommerce store as an extension of a physical shop that sells bikes and cycling related accessories. Its need is to provide an online presence and frontend to the physical shop so over time the 2 become synonymous. The owner would like to sell more products of course and expand upon the services they provide.</p>
 
 ----
 ## <center>User Experience</center> 
 ----
-
 
 -   ### User Stories
     &nbsp;  
@@ -177,6 +187,21 @@
 ## <center>Testing</center> 
 ----
 
+### Payment Testing
+<p>The payment system is provided by Stripe</p>
+<p>Test card used:</p>
+
+- Card number: 4242424242424242 (16-digit Card number)
+- CVC: Any 3 digit combination (424 Works).
+- Dates: Any future date (04/24 used).
+- [Stripe Card Docs](https://stripe.com/docs/testing#cards)
+
+&nbsp;
+
+### Validation and Testing
+
+&nbsp;
+
 The W3C Mark-up Validator and W3C CSS Jigsaw Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 JSHint was used for the javascript linter, and pylint for the python linter.
 
@@ -286,17 +311,20 @@ The project was deployed using the steps below.
 
 ### GitPod
 
-[Steps to setup GitPod](assets/docs/setup-and-deployment/)
+[Steps to setup GitPod](assets/docs/setup-and-deployment/setting-up-gitpod.pdf)
 
 ### Heroku
 
-[Steps to deploy to Heroku](assets/docs/setup-and-deployment/)
+[Steps to deploy to Heroku](assets/docs/setup-and-deployment/deploying_to_heroku.pdf)
 
 ### Aws
-[Stripe](assets/docs/setup-and-deployment/)
+
+[Steps to deploy to AWS](assets/docs/setup-and-deployment/deployment_for_aws.pdf)
 
 ### Stripe
-[Stripe](assets/docs/setup-and-deployment/)
+
+[Steps to deploy to Stripe](assets/docs/setup-and-deployment/deploying_to_stripe.pdf)
+
 ----
 ## <center>The Code</center> 
 ----
