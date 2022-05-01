@@ -158,8 +158,11 @@
 
 ### Services Used
 
--   [Heroku](https://en.wikipedia.org/wiki/Heroku)
+-   [Heroku:](https://en.wikipedia.org/wiki/Heroku)
 -   [GitHub:](https://en.wikipedia.org/wiki/github)
+-   [GitPod:](https://gitpod.io)
+-   [AWS](https://aws.amazon.com)
+-   [Stripe](https://stripe.com/en-ie)
     
 
 ### Frameworks, Libraries & Programs Used
